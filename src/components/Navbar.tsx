@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-const navbar = (props: string | boolean) => {
+const Navbar = (props: string | boolean) => {
     return <div>navbar hello {props}</div>;
 };
 
-export default navbar;
+export default Navbar;
