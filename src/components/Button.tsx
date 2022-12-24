@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Button = () => {
   return (
-    <div>Button</div>
+    <div><h3>button added</h3></div>
   )
 }
