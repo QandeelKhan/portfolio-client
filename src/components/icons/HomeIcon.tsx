@@ -6,8 +6,8 @@ const HomeIcon: React.FC = (props: any) => (
         width={20}
         height={20}
         // viewBox height, width
-        viewBox="0 0 20 20"
         {...props}
+        viewBox="0 0 20 20"
         className="nav-icon"
         fill="white"
         // fill="currentColor"
