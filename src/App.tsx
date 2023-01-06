@@ -1,12 +1,13 @@
 import "./App.css";
 import { Button } from "./components/Button";
+import HomeIcon from "./components/icons/HomeIcon";
+import UserIcon from "./components/icons/UserIcon";
 
 function App() {
     return (
         <>
-            hello react, <h1>We made it</h1>
-            <Button/>
-
+            <Button>{<HomeIcon />}</Button>
+            <Button>{<UserIcon />}</Button>
         </>
     );
 }

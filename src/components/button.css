@@ -1,0 +1,22 @@
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    min-width: 100px;
+    margin: 0 25px;
+    border: 2px solid white;
+}
+
+.nav-icon {
+    background-color: transparent;
+    color: white;
+    opacity: .6;
+    margin-right: 3px;
+}
+
+.nav-btn-link {
+    font-size: 12px;
+    opacity: .6;
+    color: white;
+}

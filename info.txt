@@ -1,0 +1,1 @@
+svgr example: npx @svgr/cli -- src/components/icons/UserIcon.svg
