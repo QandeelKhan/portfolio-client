@@ -3,7 +3,6 @@ export const MenuItems = [
         title: "HOME",
         cName: "achor",
         path: "/",
-        // svg: "./HomeIcon",
     },
     {
         title: "ABOUT ME",

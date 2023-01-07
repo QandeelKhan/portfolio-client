@@ -1,7 +1,6 @@
 import React from "react";
 import "./Navbar.css";
 import { MenuItems } from "./MenuItems";
-// import HomeIcon from "./icons/HomeIcon";
 
 const Navbar = (props: any) => {
     return (
