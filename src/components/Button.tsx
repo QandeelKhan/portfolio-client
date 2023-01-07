@@ -12,7 +12,7 @@ export const Button = (props: any) => {
             <span className="nav-icon">{props.children}</span>
             <span className="lnr lnr-home"></span>
             <a href="#home" className="nav-btn-link">
-                Home
+                usama Home
             </a>
         </div>
     );
