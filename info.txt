@@ -1,1 +1,2 @@
 svgr example: npx @svgr/cli -- src/components/icons/UserIcon.svg
+execute python3 script: python3 ./<filename>.py
