@@ -22,10 +22,11 @@
     font-size: 12px;
     opacity: .6;
     color: rgb(202, 202, 202);
-    transition: 0.3s;   
-    font-weight: bold;
+    transition: 0.3s;
+    /* font-weight: bold; */
 }
-.nav-btn-link:hover{
+
+.nav-btn-link:hover {
     transition: 0.3s;
     color: white;
 }
