@@ -49,7 +49,7 @@ li{
 
 }
 .person-name span{
-    font-size: 25px;
+    font-size: 22px;
     color: white;
 }
 
@@ -64,4 +64,8 @@ li{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.anchor{
+    padding-bottom: 5px;
+    margin-left: 20px;
 }

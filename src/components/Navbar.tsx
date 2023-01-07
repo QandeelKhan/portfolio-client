@@ -10,7 +10,7 @@ const Navbar: React.FC = (props: any) => {
                 <div className="image-area">
                     <img src="profile-img.jpg" alt="profile-img" />
                     <div className="person-name">
-                        <span>Qandeel Khan</span>
+                        <span>QANDEEL KHAN</span>
                     </div>
                 </div>
                 <div className="menubar-area">
