@@ -11,15 +11,21 @@
 
 .nav-icon {
     background-color: transparent;
-    color: white;
+    color: rgb(187, 186, 186);
     opacity: .6;
     margin-right: 10px;
     margin-left: 40px;
+    cursor: pointer;
 }
 
 .nav-btn-link {
     font-size: 12px;
     opacity: .6;
+    color: rgb(202, 202, 202);
+    transition: 0.3s;   
+    font-weight: bold;
+}
+.nav-btn-link:hover{
+    transition: 0.3s;
     color: white;
-    
 }
