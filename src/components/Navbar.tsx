@@ -30,7 +30,21 @@ const Navbar: React.FC = (props: any) => {
                         })}
                     </ul>
                 </div>
-                <div className="footer-area"></div>
+                <div className="footer-area">
+                    <div className="footer-icons">
+                        <i className="fa-brands fa-square-facebook icons-social"></i>
+                        <i className="fa-brands fa-square-twitter icons-social"></i>
+                        <i className="fa-brands fa-square-youtube icons-social"></i>
+                        <i className="fa-brands fa-linkedin icons-social"></i>
+                        <i className="fa-brands fa-square-dribbble icons-social"></i>
+                    </div>
+                    <div className="footer-text">
+                        <span>
+                            2022 © Cosmos-Themes.
+                            <br /> All Right Reserved.
+                        </span>
+                    </div>
+                </div>
             </div>
         </>
     );
