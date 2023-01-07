@@ -19,10 +19,10 @@ const Navbar: React.FC = (props: any) => {
                             return (
                                 <li>
                                     <Button
-                                        ButtonIcon={item.icon}
-                                        buttonHref={item.path}
+                                        NavBtnIcon={item.icon}
+                                        NavBtnHref={item.path}
                                         className={item.cName}
-                                        buttonTitle={item.title}
+                                        NavBtnTitle={item.title}
                                     ></Button>
                                 </li>
                             );
