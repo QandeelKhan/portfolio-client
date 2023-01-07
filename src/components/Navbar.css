@@ -1,16 +1,18 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-a{
+
+a {
     text-decoration: none;
 }
-li{
+
+li {
     list-style: none;
 }
 
-.sidebar-main{
+.sidebar-main {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -21,7 +23,7 @@ li{
 /* imag area css */
 
 
-.image-area{
+.image-area {
     width: 200px;
     height: 200px;
     /* border: 1px solid red; */
@@ -29,10 +31,12 @@ li{
     display: flex;
     flex-direction: column;
 }
-.image-area img{
+
+.image-area img {
     width: 100%;
-    height: auto;
+    height: 270px;
     object-fit: contain;
+    z-index: -1;
 }
 
 .person-name {
@@ -48,7 +52,8 @@ li{
     opacity: 0.9;
 
 }
-.person-name span{
+
+.person-name span {
     font-size: 22px;
     color: white;
 }
@@ -59,13 +64,15 @@ li{
     display: flex;
     flex-direction: column;
 }
-.menubar-area ul{
+
+.menubar-area ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.anchor{
+
+.anchor {
     padding-bottom: 5px;
     margin-left: 20px;
 }
