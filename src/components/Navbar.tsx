@@ -1,8 +1,9 @@
 import React from "react";
 import "./Navbar.css";
 import { MenuItems } from "./MenuItems";
+import { Button } from "./Button";
 
-const Navbar = (props: any) => {
+const Navbar: React.FC = (props: any) => {
     return (
         <>
             <div className="sidebar-main">
@@ -17,9 +18,13 @@ const Navbar = (props: any) => {
                         {MenuItems.map((item, index) => {
                             return (
                                 <li>
-                                    <a href={item.path} className={item.cName}>
+                                    <Button
+                                        href={item.path}
+                                        className={item.cName}
+                                    >
+                                        {item.icon}
                                         {item.title}
-                                    </a>
+                                    </Button>
                                 </li>
                             );
                         })}
