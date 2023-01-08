@@ -286,7 +286,7 @@ li {
     font-weight: 700;
     font-size: 22px;
     margin-bottom: 20px;
-    margin-right: 50px;
+    margin-right: 47px;
 }
 
 .personal-info-list {
@@ -299,12 +299,12 @@ li {
     font-family: "Playfair Display", serif;
     font-size: 16px;
     font-weight: 700;
-    letter-spacing: .5px;
+    /* letter-spacing: .5px; */
     position: relative;
     display: inline-block;
     margin-right: 15px;
     padding-bottom: 1px;
-    border-bottom: 2px solid #00a3e1;
+    border-bottom: 3px solid #00a3e1;
     color: #fff;
 }
 
@@ -322,6 +322,8 @@ li {
 
 .uiux-dummy-text {
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .personal-info-title ::after{
@@ -329,4 +331,16 @@ li {
     top: 0;
     position: absolute;
     right: -10px;
+}
+.about-right-info ul li{
+    padding: 3px 0px;
+}
+.download-resume-btn{
+    color: var(--primaryColor);
+    border: 2px solid #00709c;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    line-height: 10px;
+    font-size: 15px;
+
 }

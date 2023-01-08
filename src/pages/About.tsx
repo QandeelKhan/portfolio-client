@@ -94,6 +94,9 @@ const About: React.FC = (props: any) => {
                                     <span> Available </span>
                                 </span>
                             </li>
+                            <a href="/" className="download-resume-btn">
+                                DOWNLOAD RESUME
+                            </a>
                         </ul>
                     </div>
                 </div>
