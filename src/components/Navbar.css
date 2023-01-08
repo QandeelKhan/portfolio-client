@@ -13,6 +13,7 @@ body {
 :root {
     --primaryColor: #00a3e1;
     --secondaryColor: #17181b;
+    --backgroundColor: #2c2d2f;
     --borderText: #7a7a7a;
     --hoverColor: #fff;
     --blackColor: black;
@@ -160,22 +161,28 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:var(--backgroundColor) ;
+
 }
 
 .main-about-area {
     width: 100%;
     height: 100vh;
-    background: rgb(0, 0, 0, 0.5) url('/public/home-bg.jpg');
-    background-blend-mode: darken;
+    /* background: rgb(0, 0, 0, 0.5) url('/public/home-bg.jpg'); */
+
+    /* background-blend-mode: darken;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: center;
-    background-position-y: center;
+    background-position-y: center; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    object-fit: contain;
+    /* object-fit: contain; */
+    margin-left: 65px;
+    margin-right: 65px;
+    border: 1px solid red;
 }
 
 .banner-text {
@@ -202,6 +209,14 @@ li {
     margin: 0px 10px;
 }
 
+/* ---------ABOUT PAGE STARTS HERE----------- */
+
 .about-container {
     margin-left: 200px;
+}
+
+.about-head-logo-area{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

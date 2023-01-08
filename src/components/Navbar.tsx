@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.css";
 import { MenuItems } from "./MenuItems";
 import { Button } from "./Button";
+import UserIcon from "./icons/UserIcon";
 
 const Navbar: React.FC = (props: any) => {
     return (
@@ -59,14 +60,12 @@ const Navbar: React.FC = (props: any) => {
             </section> */}
             {/* Section About */}
             <section id="about" className="about-container">
-                <div className="main-about-area"></div>
-                <div className="banner-text">
-                    <span className="banner-qandeel">Welcom</span>
-                    <span className="banner-khan">About</span>
-                    <div className="animation-text">
-                        <span className="banner-iam"></span>
-                        <span className="banner-iam"></span>
+                <div className="main-about-area">
+                    <div className="about-head-logo-area">
+                        <h1>About Me</h1>
+                        <UserIcon />
                     </div>
+                    <div className="all-information"></div>
                 </div>
             </section>
         </>
