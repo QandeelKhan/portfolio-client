@@ -8,11 +8,11 @@ const LicenseIcon = (props: any) => (
         {...props}
         viewBox="0 0 20 20"
         className="nav-icon"
-        // fill="white"
+        fill="white"
         // fill="currentColor"
     >
         <path
-            fill=" rgb(187, 186, 186)"
+            // fill=" rgb(187, 186, 186)"
             d="M18.5 18h-17C.673 18 0 17.327 0 16.5v-13C0 2.673.673 2 1.5 2h17c.827 0 1.5.673 1.5 1.5v13c0 .827-.673 1.5-1.5 1.5zM1.5 3a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .5.5h17a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5h-17z"
         />
         <path

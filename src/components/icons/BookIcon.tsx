@@ -8,11 +8,11 @@ const BookIcon = (props: any) => (
         {...props}
         viewBox="0 0 20 20"
         className="nav-icon"
-        // fill="white"
+        fill="white"
         // fill="currentColor"
     >
         <path
-            fill=" rgb(187, 186, 186)"
+            // fill=" rgb(187, 186, 186)"
             d="M14.5 18h-10a.5.5 0 0 1 0-1h10a.5.5 0 0 1 0 1z"
         />
         <path
