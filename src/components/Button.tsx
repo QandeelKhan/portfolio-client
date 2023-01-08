@@ -13,11 +13,13 @@ export const Button = ({
         navigate(`${navigateTo}`);
     };
     return (
-        <div className="nav-btn" onClick={handleNavigate}>
-            {NavBtnIcon}
-            <a href={NavBtnHref} className="nav-btn-link">
-                {NavBtnTitle}
-            </a>
+        <div className="nav-btn">
+            <div className="nav-btn-container" onClick={handleNavigate}>
+                {NavBtnIcon}
+                <a href={NavBtnHref} className="nav-btn-link">
+                    {NavBtnTitle}
+                </a>
+            </div>
         </div>
     );
 };

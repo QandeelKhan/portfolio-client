@@ -32,3 +32,11 @@
     transition: 0.3s;
     color: white;
 }
+
+.nav-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 150px;
+    height: 45px;
+}
