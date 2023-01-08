@@ -73,6 +73,9 @@ li {
 .person-name span {
     font-size: 22px;
     color: var(--hoverColor);
+    font-family: 'Playfair Display' , serif;
+    font-weight: 600;
+
 }
 
 /* menu bar css starts here  */
@@ -138,10 +141,36 @@ li {
 .main-image-area {
     width: 100%;
     height: 100vh;
-    background: url('/public/home-bg.jpg') center center/cover no-repeat;
+    background: rgb(0,0,0,0.4) url('/public/home-bg.jpg');
+    /* opacity: 0.9; */
+    background-blend-mode:darken ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     object-fit: contain;
+    /* position: relative; */
+    margin-left: 200px;
 
+}
+
+.banner-text{
+    position: absolute;
+    color: #00a3e1;
+    font-size: 4rem;
+    margin-left: 150px;
+    margin-bottom: 100px;
+
+}
+.banner-qandeel{
+    color: white;
+    margin: 0px 15px;
+}
+.banner-khan{
+  color: #00a3e1;  
+  margin: 0px 15px;
 }
