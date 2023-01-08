@@ -1,10 +1,10 @@
 .nav-btn {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     background-color: #17181b;
     min-width: 200px;
-    height: 47px;
+    height: 46.8px;
     /* margin: 0 100px; */
     border-bottom: 1px solid rgb(37, 37, 37);
     transition: 0.3s;
@@ -15,22 +15,17 @@
     color: rgb(187, 186, 186);
     opacity: .6;
     margin-right: 10px;
-    margin-left: 40px;
+    margin-left: 13px;
     cursor: pointer;
 }
 
 .nav-btn-link {
     font-size: 12px;
-    opacity: .6;
+    opacity: .9;
     color: rgb(202, 202, 202);
     transition: 0.3s;
     letter-spacing: 1px;
     /* font-weight: bold; */
-}
-
-.nav-btn-link:hover {
-    transition: 0.3s;
-    color: white;
 }
 
 .nav-btn-container {
@@ -38,5 +33,11 @@
     align-items: center;
     justify-content: flex-start;
     width: 150px;
-    height: 45px;
+    height: 45.8px;
+    cursor: pointer;
+}
+
+.nav-btn-container:hover * {
+    color: white !important;
+    fill: white;
 }

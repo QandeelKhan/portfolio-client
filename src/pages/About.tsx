@@ -1,10 +1,11 @@
 import React from "react";
+import ClientsSlide from "../components/ClientsSlide";
 import AboutUserIcon from "../components/icons/AboutUser";
 
 const About: React.FC = (props: any) => {
     return (
-        <>
-            <section id="about" className="about-container">
+        <section>
+            <div id="about" className="about-container">
                 <div className="main-about-area">
                     <div className="about-head-logo-area">
                         <h1 className="aboutme-heading">About Me.</h1>
@@ -109,10 +110,15 @@ const About: React.FC = (props: any) => {
                             </a>
                         </div>
                     </div>
-                    <section className="services-area">kjhjf</section>
+                    {/* service area */}
+                    <section className="services-area">
+                        <h1>service area</h1>
+                    </section>
                 </div>
-            </section>
-        </>
+            </div>
+            {/* Clients Slider */}
+            <ClientsSlide />
+        </section>
     );
 };
 
