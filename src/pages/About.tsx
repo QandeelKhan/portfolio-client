@@ -6,7 +6,7 @@ const About: React.FC = (props: any) => {
         <section id="about" className="about-container">
             <div className="main-about-area">
                 <div className="about-head-logo-area">
-                    <h1>About Me</h1>
+                    <h1 className="aboutme-heading">About Me</h1>
                     <UserIcon />
                 </div>
                 <div className="all-information"></div>

@@ -183,6 +183,7 @@ li {
     margin-left: 65px;
     margin-right: 65px;
     border: 1px solid red;
+    font-family: 'Playfair Display', serif;
 }
 
 .banner-text {
@@ -218,8 +219,18 @@ li {
 .about-head-logo-area{
     width: 100%;
     height: auto;
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid red;
+    margin-top: 35px;
+}
+.aboutme-heading{
+    font-size: 36px;
+    letter-spacing: 1.5px;
+    color: var(--primaryColor);
+}
+.user-icon-aboutme{
+    width: 30px;
+    height: auto;
 }
