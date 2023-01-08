@@ -234,3 +234,9 @@ li {
     width: 30px;
     height: auto;
 }
+.aboutuser-icon{
+    height: 50px;
+    width: 50px;
+    border: 1px solid red;
+    
+}

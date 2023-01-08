@@ -1,5 +1,5 @@
 import React from "react";
-import AboutUserIcon from "../components/icons/AboutUser";
+import UserIcon from "../components/icons/UserIcon";
 
 const About: React.FC = (props: any) => {
     return (
@@ -7,7 +7,9 @@ const About: React.FC = (props: any) => {
             <div className="main-about-area">
                 <div className="about-head-logo-area">
                     <h1 className="aboutme-heading">About Me</h1>
-                    <AboutUserIcon />
+                    <div className="aboutuser-icon">
+                        <UserIcon />
+                    </div>
                 </div>
                 <div className="all-information"></div>
             </div>
