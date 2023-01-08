@@ -23,6 +23,7 @@ const SideNav: React.FC = (props: any) => {
                                         NavBtnHref={item.path}
                                         className={item.cName}
                                         NavBtnTitle={item.title}
+                                        navigateTo={item.navigateTo}
                                     ></Button>
                                 </li>
                             );
