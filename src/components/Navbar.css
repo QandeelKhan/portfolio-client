@@ -222,7 +222,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid red;
+    border-bottom: 1px var(--borderText) dashed;
     margin-top: 35px;
 }
 .aboutme-heading{
@@ -230,10 +230,7 @@ li {
     letter-spacing: 1.5px;
     color: var(--primaryColor);
 }
-.user-icon-aboutme{
-    width: 30px;
-    height: auto;
-}
+
 .aboutuser-icon{
     height: 50px;
     width: 50px;
