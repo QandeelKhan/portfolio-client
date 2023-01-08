@@ -49,7 +49,7 @@ const Navbar: React.FC = (props: any) => {
                 <div className="main-image-area">
                     <img src="home-bg.jpg" alt="main-bg" />
                 </div>
-                <div className="banner-text">Qandeel Khan</div>
+                {/* <div className="banner-text">Qandeel Khan</div> */}
             </div>
         </>
     );
