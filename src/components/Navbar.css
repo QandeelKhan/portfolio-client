@@ -161,7 +161,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--backgroundColor);
+    background-color: var(--backgroundColor); 
 
 }
 
@@ -250,6 +250,7 @@ li {
     display: flex;
     justify-content: start;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     height: auto;
     border: 1px solid red;
@@ -267,9 +268,13 @@ li {
     height: auto;
     display: flex;
     flex-direction: column;
+    align-items:start;
     
     
 }
 .personel-info-heading{
 color: white;
+}
+.uiux-dumy-text{
+    color: white;
 }
