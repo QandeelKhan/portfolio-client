@@ -218,6 +218,7 @@ li {
 .about-head-logo-area{
     width: 100%;
     height: auto;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
