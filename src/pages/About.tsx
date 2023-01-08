@@ -40,40 +40,40 @@ const About: React.FC = (props: any) => {
                         <ul>
                             <li className="personal-info-list">
                                 <span className="personal-info-title">
-                                    <span> Name :</span>
-                                </span>
+                                    <span> Name </span>
+                                </span>{" "}
                                 <span className="personal-info-value">
                                     <span>Qandeel Khan</span>
                                 </span>
                             </li>
                             <li>
                                 <span className="personal-info-title">
-                                    <span>Age :</span>
-                                </span>
+                                    <span>Age </span>
+                                </span>{" "}
                                 <span className="personal-info-value">
                                     <span>26 Years</span>
                                 </span>
                             </li>
                             <li>
                                 <span className="personal-info-title">
-                                    <span>Residence :</span>
-                                </span>
+                                    <span>Residence </span>
+                                </span>{" "}
                                 <span className="personal-info-value">
                                     <span> Punjab, Pakistan </span>
                                 </span>
                             </li>
                             <li>
                                 <span className="personal-info-title">
-                                    <span>Address :</span>
-                                </span>
+                                    <span>Address </span>
+                                </span>{" "}
                                 <span className="personal-info-value">
                                     <span> 123 Lorem Ipsum </span>
                                 </span>
                             </li>
                             <li>
                                 <span className="personal-info-title">
-                                    <span>Email :</span>
-                                </span>
+                                    <span>Email </span>
+                                </span>{" "}
                                 <span className="personal-info-value">
                                     <span>example@example.com</span>
                                 </span>
@@ -81,15 +81,15 @@ const About: React.FC = (props: any) => {
                             <li>
                                 <span className="personal-info-title">
                                     <span> Phone </span>
-                                </span>
+                                </span>{" "}
                                 <span className="personal-info-value">
                                     <span> (+92) 315 7051 720 </span>
                                 </span>
                             </li>
                             <li>
                                 <span className="personal-info-title">
-                                    <span>Freelance :</span>
-                                </span>
+                                    <span>Freelance </span>
+                                </span>{" "}
                                 <span className="personal-info-value">
                                     <span> Available </span>
                                 </span>
