@@ -1,11 +1,18 @@
 import React from "react";
+import UserIcon from "../components/icons/UserIcon";
 
-function About() {
+const About: React.FC = (props: any) => {
     return (
-        <div>
-            <h1>This is About page</h1>
-        </div>
+        <section id="about" className="about-container">
+            <div className="main-about-area">
+                <div className="about-head-logo-area">
+                    <h1>About Me</h1>
+                    <UserIcon />
+                </div>
+                <div className="all-information"></div>
+            </div>
+        </section>
     );
-}
+};
 
 export default About;

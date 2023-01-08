@@ -2,9 +2,8 @@ import React from "react";
 import "./Navbar.css";
 import { MenuItems } from "./MenuItems";
 import { Button } from "./Button";
-import UserIcon from "./icons/UserIcon";
 
-const Navbar: React.FC = (props: any) => {
+const SideNav: React.FC = (props: any) => {
     return (
         <>
             <div className="sidebar-main">
@@ -46,30 +45,8 @@ const Navbar: React.FC = (props: any) => {
                     </div>
                 </div>
             </div>
-            {/* Section Home */}
-            {/* <section id="home" className="home-container">
-                <div className="main-image-area"></div>
-                <div className="banner-text">
-                    <span className="banner-qandeel">QANDEEL</span>
-                    <span className="banner-khan">KHAN</span>
-                    <div className="animation-text">
-                        <span className="banner-iam"></span>
-                        <span className="banner-iam"></span>
-                    </div>
-                </div>
-            </section> */}
-            {/* Section About */}
-            <section id="about" className="about-container">
-                <div className="main-about-area">
-                    <div className="about-head-logo-area">
-                        <h1>About Me</h1>
-                        <UserIcon />
-                    </div>
-                    <div className="all-information"></div>
-                </div>
-            </section>
         </>
     );
 };
 
-export default Navbar;
+export default SideNav;
