@@ -6,7 +6,7 @@ const AboutUserIcon = (props: any) => (
         height={20}
         {...props}
         viewBox="0 0 20 20"
-        className="nav-icon"
+        className="about-user-icon"
         fill="white"
     >
         <path

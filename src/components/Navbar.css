@@ -161,7 +161,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:var(--backgroundColor) ;
+    background-color: var(--backgroundColor);
 
 }
 
@@ -216,7 +216,7 @@ li {
     margin-left: 200px;
 }
 
-.about-head-logo-area{
+.about-head-logo-area {
     width: 100%;
     height: auto;
     display: flex;
@@ -225,15 +225,23 @@ li {
     border-bottom: 1px var(--borderText) dashed;
     margin-top: 35px;
 }
-.aboutme-heading{
+
+.aboutme-heading {
     font-size: 36px;
     letter-spacing: 1.5px;
     color: var(--primaryColor);
 }
 
-.aboutuser-icon{
+.aboutuser-icon {
     height: 50px;
     width: 50px;
     border: 1px solid red;
-    
+
+}
+
+.about-user-icon {
+    height: 40px;
+    width: 40px;
+    fill: #00a3e1;
+    /* background-color: #00a3e1; */
 }
