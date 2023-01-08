@@ -7,11 +7,15 @@ import Navbar from "./components/Navbar";
 //import HomeIcon from "./components/icons/HomeIcon";
 //import LicenseIcon from "./components/icons/LicenseIcon";
 //import UserIcon from "./components/icons/UserIcon";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 function App() {
     return (
         <>
+            {/* <Home /> */}
             <Navbar />
+            {/* <About /> */}
             {/* <Button>{<HomeIcon />}</Button>
             <Button>{<UserIcon />}</Button>
             <Button>{<LicenseIcon />}</Button>
