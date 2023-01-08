@@ -245,3 +245,31 @@ li {
     fill: #00a3e1;
     /* background-color: #00a3e1; */
 }
+
+.about-all-info{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border: 1px solid red;
+}
+.about-left-info{
+    width: 60%;
+    height: auto;
+    
+}
+.ui-ux-designer{
+    color: white;
+}
+.about-right-info{
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.personel-info-heading{
+color: white;
+}

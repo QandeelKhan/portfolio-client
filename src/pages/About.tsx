@@ -10,8 +10,32 @@ const About: React.FC = (props: any) => {
                     <AboutUserIcon />
                 </div>
                 <div className="about-all-info">
-                    <div className="about-left-info"></div>
-                    <div className="about-right-info"></div>
+                    <div className="about-left-info">
+                        <h3 className="ui-ux-designer">
+                            UI/UX Designer & Developer
+                        </h3>
+                        <span>
+                            Dolor reprehenderit aut repudiandae maiores
+                            recusandae. Consequatur dolor nisi labore commodi
+                            ipsa? Excepturi velit laboriosam at voluptatibus
+                            cupiditate est vel. Dolorem praesentium itaque
+                            fugiat placeat quas consequatur? Obcaecati natus
+                            rerum
+                        </span>
+                    </div>
+                    <div className="about-right-info">
+                        <span className="personel-info-heading">
+                            Personal Information
+                        </span>
+                        <span>
+                            Dolor reprehenderit aut repudiandae maiores
+                            recusandae. Consequatur dolor nisi labore commodi
+                            ipsa? Excepturi velit laboriosam at voluptatibus
+                            cupiditate est vel. Dolorem praesentium itaque
+                            fugiat placeat quas consequatur? Obcaecati natus
+                            rerum
+                        </span>
+                    </div>
                 </div>
             </div>
         </section>
