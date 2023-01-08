@@ -67,6 +67,7 @@ li {
     justify-content: center;
     align-items: center;
     opacity: 0.9;
+    
 
 }
 
@@ -75,7 +76,7 @@ li {
     color: var(--hoverColor);
     font-family: 'Playfair Display' , serif;
     font-weight: 600;
-
+    text-shadow: 1px 9px 12px #000;
 }
 
 /* menu bar css starts here  */
@@ -161,16 +162,19 @@ li {
 .banner-text{
     position: absolute;
     color: #00a3e1;
-    font-size: 4rem;
+    font-size: 62px;
     margin-left: 150px;
     margin-bottom: 100px;
+    letter-spacing: 2px;
+    font-weight: 700px;
+    font-family: 'Playfair Display' , serif;
 
 }
 .banner-qandeel{
     color: white;
-    margin: 0px 15px;
+    margin: 0px 10px;
 }
 .banner-khan{
   color: #00a3e1;  
-  margin: 0px 15px;
+  margin: 0px 10px;
 }
