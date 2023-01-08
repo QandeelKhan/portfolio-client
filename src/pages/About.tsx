@@ -14,7 +14,7 @@ const About: React.FC = (props: any) => {
                         <h3 className="ui-ux-designer">
                             UI/UX Designer & Developer
                         </h3>
-                        <span className="uiux-dumy-text">
+                        <span className="uiux-dummy-text">
                             Dolor reprehenderit aut repudiandae maiores
                             recusandae. Consequatur dolor nisi labore commodi
                             ipsa? Excepturi velit laboriosam at voluptatibus
@@ -34,17 +34,67 @@ const About: React.FC = (props: any) => {
                         </span>
                     </div>
                     <div className="about-right-info">
-                        <span className="personel-info-heading">
+                        <h3 className="personel-info-heading">
                             Personal Information
-                        </span>
-                        <span>
-                            Dolor reprehenderit aut repudiandae maiores
-                            recusandae. Consequatur dolor nisi labore commodi
-                            ipsa? Excepturi velit laboriosam at voluptatibus
-                            cupiditate est vel. Dolorem praesentium itaque
-                            fugiat placeat quas consequatur? Obcaecati natus
-                            rerum
-                        </span>
+                        </h3>
+                        <ul>
+                            <li className="personal-info-list">
+                                <span className="personal-info-title">
+                                    <span> Name :</span>
+                                </span>
+                                <span className="personal-info-value">
+                                    <span>Qandeel Khan</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span className="personal-info-title">
+                                    <span>Age :</span>
+                                </span>
+                                <span className="personal-info-value">
+                                    <span>26 Years</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span className="personal-info-title">
+                                    <span>Residence :</span>
+                                </span>
+                                <span className="personal-info-value">
+                                    <span> Punjab, Pakistan </span>
+                                </span>
+                            </li>
+                            <li>
+                                <span className="personal-info-title">
+                                    <span>Address :</span>
+                                </span>
+                                <span className="personal-info-value">
+                                    <span> 123 Lorem Ipsum </span>
+                                </span>
+                            </li>
+                            <li>
+                                <span className="personal-info-title">
+                                    <span>Email :</span>
+                                </span>
+                                <span className="personal-info-value">
+                                    <span>example@example.com</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span className="personal-info-title">
+                                    <span> Phone </span>
+                                </span>
+                                <span className="personal-info-value">
+                                    <span> (+92) 315 7051 720 </span>
+                                </span>
+                            </li>
+                            <li>
+                                <span className="personal-info-title">
+                                    <span>Freelance :</span>
+                                </span>
+                                <span className="personal-info-value">
+                                    <span> Available </span>
+                                </span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
