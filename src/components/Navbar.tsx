@@ -52,6 +52,10 @@ const Navbar: React.FC = (props: any) => {
                 <div className="banner-text">
                     <span className="banner-qandeel">QANDEEL</span>
                     <span className="banner-khan">KHAN</span>
+                    <div className="animation-text">
+                        <span className="banner-iam"></span>
+                        <span className="banner-iam"></span>
+                    </div>
                 </div>
             </div>
         </>
