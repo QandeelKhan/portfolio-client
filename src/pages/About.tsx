@@ -94,10 +94,14 @@ const About: React.FC = (props: any) => {
                                     <span> Available </span>
                                 </span>
                             </li>
-                            <a href="/" className="download-resume-btn">
-                                DOWNLOAD RESUME
-                            </a>
                         </ul>
+                        <a
+                            target="_blank"
+                            href={require("../components/icons/resume.pdf")}
+                            className="download-resume-btn"
+                        >
+                            DOWNLOAD RESUME
+                        </a>
                     </div>
                 </div>
             </div>
