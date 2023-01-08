@@ -6,49 +6,48 @@ import { Button } from "./Button";
 const Navbar: React.FC = (props: any) => {
     return (
         <>
-            <div className="main-of-main">
-                <div className="sidebar-main">
-                    <div className="image-area">
-                        <img src="profile-img.jpg" alt="profile-img" />
-                        <div className="person-name">
-                            <span>QANDEEL KHAN</span>
-                        </div>
-                    </div>
-                    <div className="menubar-area">
-                        <ul>
-                            {MenuItems.map((item, index) => {
-                                return (
-                                    <li>
-                                        <Button
-                                            NavBtnIcon={item.icon}
-                                            NavBtnHref={item.path}
-                                            className={item.cName}
-                                            NavBtnTitle={item.title}
-                                        ></Button>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </div>
-                    <div className="footer-area">
-                        <div className="footer-icons">
-                            <i className="fa-brands fa-square-facebook icons-social"></i>
-                            <i className="fa-brands fa-square-twitter icons-social"></i>
-                            <i className="fa-brands fa-square-youtube icons-social"></i>
-                            <i className="fa-brands fa-linkedin icons-social"></i>
-                            <i className="fa-brands fa-square-dribbble icons-social"></i>
-                        </div>
-                        <div className="footer-text">
-                            <span>
-                                2022 © Cosmos-Themes.
-                                <br /> All Right Reserved.
-                            </span>
-                        </div>
+            <div className="sidebar-main">
+                <div className="image-area">
+                    <img src="profile-img.jpg" alt="profile-img" />
+                    <div className="person-name">
+                        <span>QANDEEL KHAN</span>
                     </div>
                 </div>
-                <div className="main-image-area">
-                    {/* <img src="home-bg.jpg" alt="main-bg" /> */}
+                <div className="menubar-area">
+                    <ul>
+                        {MenuItems.map((item, index) => {
+                            return (
+                                <li>
+                                    <Button
+                                        NavBtnIcon={item.icon}
+                                        NavBtnHref={item.path}
+                                        className={item.cName}
+                                        NavBtnTitle={item.title}
+                                    ></Button>
+                                </li>
+                            );
+                        })}
+                    </ul>
                 </div>
+                <div className="footer-area">
+                    <div className="footer-icons">
+                        <i className="fa-brands fa-square-facebook icons-social"></i>
+                        <i className="fa-brands fa-square-twitter icons-social"></i>
+                        <i className="fa-brands fa-square-youtube icons-social"></i>
+                        <i className="fa-brands fa-linkedin icons-social"></i>
+                        <i className="fa-brands fa-square-dribbble icons-social"></i>
+                    </div>
+                    <div className="footer-text">
+                        <span>
+                            2023 © developed by Qandeel Khan.
+                            <br /> All Right Reserved.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            {/* Section Home */}
+            {/* <section id="home" className="home-container">
+                <div className="main-image-area"></div>
                 <div className="banner-text">
                     <span className="banner-qandeel">QANDEEL</span>
                     <span className="banner-khan">KHAN</span>
@@ -57,7 +56,19 @@ const Navbar: React.FC = (props: any) => {
                         <span className="banner-iam"></span>
                     </div>
                 </div>
-            </div>
+            </section> */}
+            {/* Section About */}
+            <section id="about" className="about-container">
+                <div className="main-about-area"></div>
+                <div className="banner-text">
+                    <span className="banner-qandeel">Welcom</span>
+                    <span className="banner-khan">About</span>
+                    <div className="animation-text">
+                        <span className="banner-iam"></span>
+                        <span className="banner-iam"></span>
+                    </div>
+                </div>
+            </section>
         </>
     );
 };
