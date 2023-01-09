@@ -242,6 +242,7 @@ li {
     justify-content: start;
     width: 100%;
     height: auto;
+    margin-bottom: 50px;
 }
 
 .about-left-info {
@@ -384,6 +385,7 @@ li {
 .service-area {
     display: flex;
     flex-direction: column;
+    /* padding-top: 50px; */
 }
 .services{
     display: flex;
