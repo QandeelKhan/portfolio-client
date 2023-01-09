@@ -252,11 +252,11 @@ li {
     display: flex;
     justify-content: start;
     /* align-items: center; */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     width: 100%;
     height: 100vh;
     /* border: 1px solid red; */
-    margin-top: 25px;
+    /* margin-top: 25px; */
 }
 
 .about-left-info {
@@ -400,46 +400,53 @@ li {
     display: flex;
     flex-direction: column;
     /* background-color: var(--backgroundColor); */
+    /* border: 2px solid red; */
+    
 }
 .services{
     display: flex;
-    justify-content: space-around;
+    justify-content: stretch;
     align-items: center;
+    
 }
 .skills{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* padding: 15px 0px; */
+    /* margin: 15px 15px; */
 }
+.skills-heading{
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 0px;
+
+}
+.skills-description{
+    color: #d4d4d4;
+    text-align: center;
+    padding: 10px 0px;
 
 
-
-
-/* .services-area {
-    width: 100%;
-    height: auto;
-    border: 1px solid red;
-} */
+}
 
 /* Clients slide */
-.clients-slide-container {
-    /* margin-left: 200px; */
-    margin-top:100px;
 
-}
 
 .clients-slide {
     display: flex;
     flex-direction: column;
     /* background-color: var(--backgroundColor); */
+    margin-top: 90px;
 }
 
 .subheading {
     /* position: relative; */
     margin-bottom: 50px;
     text-align: center;
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1em;
     letter-spacing: .5px;
     font-family: "Playfair Display", serif;
