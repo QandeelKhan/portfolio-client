@@ -1,6 +1,7 @@
 import React from "react";
 import ClientsSlide from "../components/ClientsSlide";
 import AboutUserIcon from "../components/icons/AboutUser";
+import ServicesArea from "../components/ServicesArea";
 
 const About: React.FC = (props: any) => {
     return (
@@ -111,9 +112,7 @@ const About: React.FC = (props: any) => {
                         </div>
                     </div>
                     {/* service area */}
-                    <section className="services-area">
-                        <h1>service area</h1>
-                    </section>
+                    <ServicesArea />
                 </div>
             </div>
             {/* Clients Slider */}

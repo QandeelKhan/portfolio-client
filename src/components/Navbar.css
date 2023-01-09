@@ -396,12 +396,24 @@ li {
 
 /* ---------SERVICES AREA CSS START---------- */
 
+.services-area-container {
+    margin-left: 200px;
+}
 
-.services-area {
+.service-area {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--backgroundColor);
+}
+
+
+
+
+/* .services-area {
     width: 100%;
     height: auto;
     border: 1px solid red;
-}
+} */
 
 /* Clients slide */
 .clients-slide-container {
