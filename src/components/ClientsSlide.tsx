@@ -17,7 +17,8 @@ const ClientsSlide = () => {
                     loop
                     margin={10}
                     items={5}
-                    nav
+                    dots={false}
+                    nav={false}
                 >
                     <div className="item">
                         <div className="client-logo">
