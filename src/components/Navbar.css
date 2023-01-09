@@ -395,6 +395,7 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0px 10px;
 }
 .skills-heading{
     color: white;
@@ -464,3 +465,7 @@ li {
     border: 1px solid red;
     font-family: 'Playfair Display', serif;
 }
+
+
+/* -------Testimonial Area starts here------- */
+
