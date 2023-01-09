@@ -114,7 +114,8 @@ const About: React.FC = (props: any) => {
                     {/* service area */}
                     <ServicesArea />
                     {/* Clients Slider */}
-                    {/* <ClientsSlide / > */}
+
+                    <ClientsSlide />
                 </div>
             </div>
         </section>
