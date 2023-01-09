@@ -5,8 +5,8 @@ import ServicesArea from "../components/ServicesArea";
 
 const About: React.FC = (props: any) => {
     return (
-        <section>
-            <div id="about" className="about-container">
+        <section id="about-section">
+            <div className="about-container">
                 <div className="main-about-area">
                     <div className="about-head-logo-area">
                         <h1 className="aboutme-heading">About Me.</h1>

@@ -3,7 +3,6 @@ import WebdevelopmentIcon from "./icons/WebdevelopmentIcon";
 
 const ServicesArea: React.FC = (props) => {
     return (
-        // <div className="service-area-container ">
         <div className="srevice-area">
             <h3 className="subheading">
                 <span>Services</span>
