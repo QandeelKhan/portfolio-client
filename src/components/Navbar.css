@@ -164,13 +164,15 @@ li {
     justify-content: center;
     align-items: center;
     background-color: var(--backgroundColor);
+    margin-left: 200px;
+
 
 
 }
 
 .main-about-area {
     width: 100%;
-    height: 100vh;
+    height: auto;
     /* background: rgb(0, 0, 0, 0.5) url('/public/home-bg.jpg'); */
 
     /* background-blend-mode: darken;
@@ -215,10 +217,6 @@ li {
 
 /* ---------ABOUT PAGE STARTS HERE----------- */
 
-.about-container {
-    margin-left: 200px;
-
-}
 
 .about-head-logo-area {
     width: 100%;
@@ -396,16 +394,12 @@ li {
 
 /* ---------SERVICES AREA CSS START---------- */
 
-.services-area-container {
-    margin-left: 200px;
-    border: 2px solid red;
-    background-color: var(--backgroundColor);
-}
+
 
 .service-area {
     display: flex;
     flex-direction: column;
-    background-color: var(--backgroundColor);
+    /* background-color: var(--backgroundColor); */
 }
 .services{
     display: flex;
@@ -430,15 +424,15 @@ li {
 
 /* Clients slide */
 .clients-slide-container {
-    margin-left: 200px;
-    margin-top:300px;
+    /* margin-left: 200px; */
+    margin-top:100px;
 
 }
 
 .clients-slide {
     display: flex;
     flex-direction: column;
-    background-color: var(--backgroundColor);
+    /* background-color: var(--backgroundColor); */
 }
 
 .subheading {
@@ -459,7 +453,7 @@ li {
 }
 
 .client-logo img {
-    /* height: fit-content; */
+    
     max-width: 100px;
     max-height: 100px;
     margin: auto;

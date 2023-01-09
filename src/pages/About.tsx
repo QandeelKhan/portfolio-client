@@ -113,10 +113,10 @@ const About: React.FC = (props: any) => {
                     </div>
                     {/* service area */}
                     <ServicesArea />
+                    {/* Clients Slider */}
+                    {/* <ClientsSlide /> */}
                 </div>
             </div>
-            {/* Clients Slider */}
-            <ClientsSlide />
         </section>
     );
 };
