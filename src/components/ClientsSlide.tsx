@@ -11,7 +11,13 @@ const ClientsSlide = () => {
                     <span>Clients</span>
                 </h3>
                 {/* owl */}
-                <OwlCarousel className="owl-theme" loop margin={10} nav>
+                <OwlCarousel
+                    className="owl-theme owl-loaded owl-drag"
+                    loop
+                    margin={10}
+                    items={5}
+                    nav
+                >
                     <div className="item">
                         <div className="client-logo">
                             {" "}
