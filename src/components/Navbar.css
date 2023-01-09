@@ -399,6 +399,7 @@ li {
 .services-area-container {
     margin-left: 200px;
     border: 2px solid red;
+    background-color: var(--backgroundColor);
 }
 
 .service-area {
@@ -430,6 +431,8 @@ li {
 /* Clients slide */
 .clients-slide-container {
     margin-left: 200px;
+    margin-top:300px;
+
 }
 
 .clients-slide {

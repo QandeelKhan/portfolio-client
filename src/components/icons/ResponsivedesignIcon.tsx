@@ -8,7 +8,7 @@ const ResponsivedesignIcon = (props: any) => (
         {...props}
         viewBox="0 0 20 20"
         className="nav-icon"
-        fill="white"
+        fill="red"
         //  fill="currentColor"
     >
         <path d="M11.5 14h-8c-.827 0-1.5-.673-1.5-1.5v-8C2 3.673 2.673 3 3.5 3h13c.827 0 1.5.673 1.5 1.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 0-.5-.5h-13a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h8a.5.5 0 0 1 0 1zM11.5 18h-10C.673 18 0 17.327 0 16.5v-1a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1H1v.5a.5.5 0 0 0 .5.5h10a.5.5 0 0 1 0 1z" />
