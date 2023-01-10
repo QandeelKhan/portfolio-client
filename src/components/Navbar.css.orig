@@ -42,7 +42,6 @@ li {
 
 /* imag area css */
 
-
 .image-area {
     width: 200px;
     height: 200px;
@@ -68,14 +67,12 @@ li {
     justify-content: center;
     align-items: center;
     opacity: 0.9;
-
-
 }
 
 .person-name span {
     font-size: 22px;
     color: var(--hoverColor);
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-weight: 600;
     text-shadow: 1px 9px 12px #000;
 }
@@ -143,7 +140,7 @@ li {
 .main-image-area {
     width: 100%;
     height: 100vh;
-    background: rgb(0, 0, 0, 0.5) url('/public/home-bg.jpg');
+    background: rgb(0, 0, 0, 0.5) url("/public/home-bg.jpg");
     background-blend-mode: darken;
     background-position: center;
     background-size: cover;
@@ -177,7 +174,7 @@ li {
     margin-left: 65px;
     margin-right: 65px;
     /* border: 1px solid red; */
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
 }
 
 .banner-text {
@@ -188,10 +185,8 @@ li {
     margin-bottom: 100px;
     letter-spacing: 2px;
     font-weight: 700px;
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-weight: bold;
-
-
 }
 
 .banner-qandeel {
@@ -205,7 +200,6 @@ li {
 }
 
 /* ---------ABOUT PAGE STARTS HERE----------- */
-
 
 .about-head-logo-area {
     width: 100%;
@@ -227,7 +221,6 @@ li {
     height: 50px;
     width: 50px;
     border: 1px solid red;
-
 }
 
 .about-user-icon {
@@ -248,7 +241,6 @@ li {
 .about-left-info {
     width: 60%;
     height: auto;
-
 }
 
 .ui-ux-designer {
@@ -266,8 +258,6 @@ li {
     align-items: center;
     justify-content: start;
     margin-top: 35px;
-
-
 }
 
 .personel-info-heading {
@@ -301,7 +291,7 @@ li {
 .personal-info-value {
     font-size: 16px;
     /* font-weight: 700; */
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     position: relative;
     display: inline-block;
     margin-right: 15px;
@@ -313,11 +303,10 @@ li {
 .uiux-dummy-text {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .personal-info-title ::after {
-    content: ' :';
+    content: " :";
     top: 0;
     position: absolute;
     right: -10px;
@@ -380,8 +369,6 @@ li {
 
 /* ---------SERVICES AREA CSS START---------- */
 
-
-
 .service-area {
     display: flex;
     flex-direction: column;
@@ -417,7 +404,6 @@ li {
 
 /* Clients slide */
 
-
 .clients-slide {
     display: flex;
     flex-direction: column;
@@ -431,7 +417,7 @@ li {
     text-align: center;
     font-size: 24px;
     line-height: 1em;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     font-family: "Playfair Display", serif;
     font-weight: 700;
     color: white;
@@ -446,7 +432,7 @@ li {
     max-width: 100px;
     max-height: 100px;
     margin: auto;
-    opacity: .7;
+    opacity: 0.7;
 }
 
 /* Contact Section */
@@ -469,9 +455,8 @@ li {
     margin-left: 65px;
     margin-right: 65px;
     border: 1px solid red;
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
 }
-
 
 /* -------Testimonial Area starts here------- */
 
@@ -509,7 +494,6 @@ li {
     box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.75);
-
 }
 
 .fa-comments {
@@ -555,14 +539,12 @@ li {
     padding: 0px 15px;
     max-height: 90px;
     overflow: hidden;
-
 }
 
 .name-and-skill {
     display: flex;
     flex-direction: column;
     padding: 0px 15px;
-
 }
 
 .person-info img {
@@ -600,7 +582,7 @@ li {
     /* margin-left: 65px; */
     /* margin-right: 65px; */
     border: 1px solid red;
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
 }
 
 .lets-talk-area {
@@ -612,7 +594,6 @@ li {
     height: auto;
     padding: 0px 160px;
     margin-top: 50px;
-
 }
 
 .messsage-area {
@@ -651,17 +632,13 @@ li {
     border: 2px solid #999999;
     outline: none;
     width: 100%;
-<<<<<<< HEAD
-    height: 120px;
-    padding: 5px 10px;
-=======
     height: 150px;
     padding: 10px 10px;
     color: #dedede;
     font-family: Arial, Helvetica, sans-serif;
->>>>>>> 973b7eddd202407f70c9bd4a0206d8d3ae770bbd
 }
-::placeholder{
+
+::placeholder {
     color: #dedede;
     font-weight: bold;
     font-size: 15px;
@@ -707,3 +684,65 @@ li {
     transition: 0.5s all ease;
     z-index: -1;
 }
+
+<<<<<<< HEAD
+.side-nav-social-links {
+    text-decoration: none;
+    color: grey;
+    cursor: pointer;
+}
+
+.side-nav-social-links:hover {
+    color: white;
+}
+
+.upwork-icon {
+    height: 21px;
+    width: 21px;
+    fill: grey;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.upwork-icon:hover {
+    height: 25px;
+    width: 25px;
+    fill: green;
+    font-weight: bold;
+    transition: 0.5s;
+    transform: rotate(360deg);
+}
+=======
+/* contact area starts here */
+
+.location-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 70px;
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    /* margin: 0px 75px; */
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.location-icons {
+    font-size: 32px;
+    color: #00a3e1;
+    padding-bottom: 12px;
+}
+.location-area span {
+    color: #ffffff;
+    font-size: 17px;
+}
+.map {
+    width: 100%;
+    margin-bottom: 60px;
+}
+>>>>>>> cc85fc75cf25f0faf15d2b9f16a094ddab0c8771

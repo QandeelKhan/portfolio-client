@@ -13,6 +13,8 @@ const Contact = () => {
                         <h1 className="aboutme-heading">Contact Me.</h1>
                         <ContactEnvelopeIcon />
                     </div>
+<<<<<<< HEAD
+=======
                     <div className="lets-talk-area">
                         <div className="subheading">
                             <span>LET'S TALK</span>
@@ -30,6 +32,7 @@ const Contact = () => {
                     </div>
                     {/* need refactor with props */}
                     <Location />
+>>>>>>> cc85fc75cf25f0faf15d2b9f16a094ddab0c8771
                 </div>
             </div>
         </section>
