@@ -42,7 +42,6 @@ li {
 
 /* imag area css */
 
-
 .image-area {
     width: 200px;
     height: 200px;
@@ -68,14 +67,12 @@ li {
     justify-content: center;
     align-items: center;
     opacity: 0.9;
-
-
 }
 
 .person-name span {
     font-size: 22px;
     color: var(--hoverColor);
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-weight: 600;
     text-shadow: 1px 9px 12px #000;
 }
@@ -143,7 +140,7 @@ li {
 .main-image-area {
     width: 100%;
     height: 100vh;
-    background: rgb(0, 0, 0, 0.5) url('/public/home-bg.jpg');
+    background: rgb(0, 0, 0, 0.5) url("/public/home-bg.jpg");
     background-blend-mode: darken;
     background-position: center;
     background-size: cover;
@@ -177,7 +174,7 @@ li {
     margin-left: 65px;
     margin-right: 65px;
     border: 1px solid red;
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
 }
 
 .banner-text {
@@ -188,10 +185,8 @@ li {
     margin-bottom: 100px;
     letter-spacing: 2px;
     font-weight: 700px;
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-weight: bold;
-
-
 }
 
 .banner-qandeel {
@@ -205,7 +200,6 @@ li {
 }
 
 /* ---------ABOUT PAGE STARTS HERE----------- */
-
 
 .about-head-logo-area {
     width: 100%;
@@ -227,7 +221,6 @@ li {
     height: 50px;
     width: 50px;
     border: 1px solid red;
-
 }
 
 .about-user-icon {
@@ -248,7 +241,6 @@ li {
 .about-left-info {
     width: 60%;
     height: auto;
-
 }
 
 .ui-ux-designer {
@@ -266,8 +258,6 @@ li {
     align-items: center;
     justify-content: start;
     margin-top: 35px;
-
-
 }
 
 .personel-info-heading {
@@ -301,7 +291,7 @@ li {
 .personal-info-value {
     font-size: 16px;
     /* font-weight: 700; */
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     position: relative;
     display: inline-block;
     margin-right: 15px;
@@ -313,11 +303,10 @@ li {
 .uiux-dummy-text {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .personal-info-title ::after {
-    content: ' :';
+    content: " :";
     top: 0;
     position: absolute;
     right: -10px;
@@ -380,33 +369,31 @@ li {
 
 /* ---------SERVICES AREA CSS START---------- */
 
-
-
 .service-area {
     display: flex;
     flex-direction: column;
     /* padding-top: 50px; */
 }
 
-.services{
+.services {
     display: flex;
     justify-content: stretch;
     align-items: center;
 }
-.skills{
+.skills {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0px 10px;
 }
-.skills-heading{
+.skills-heading {
     color: white;
     font-size: 17px;
     font-weight: bold;
     padding: 10px 0px;
 }
-.skills-description{
+.skills-description {
     color: #d4d4d4;
     text-align: center;
     padding: 10px 0px;
@@ -414,10 +401,9 @@ li {
 
 /* Clients slide */
 
-
 .clients-slide {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     margin-top: 50px;
     margin-bottom: 20px;
 }
@@ -428,7 +414,7 @@ li {
     text-align: center;
     font-size: 24px;
     line-height: 1em;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     font-family: "Playfair Display", serif;
     font-weight: 700;
     color: white;
@@ -443,7 +429,7 @@ li {
     max-width: 100px;
     max-height: 100px;
     margin: auto;
-    opacity: .7;
+    opacity: 0.7;
 }
 
 /* Contact Section */
@@ -466,13 +452,12 @@ li {
     margin-left: 65px;
     margin-right: 65px;
     border: 1px solid red;
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
 }
-
 
 /* -------Testimonial Area starts here------- */
 
-.testimonials-area{
+.testimonials-area {
     display: flex;
     flex-direction: column;
     /* border: 2px solid red; */
@@ -481,14 +466,14 @@ li {
     margin-bottom: 50px;
     overflow: hidden;
 }
-.testimonials{
+.testimonials {
     display: flex;
     justify-content: space-between;
     align-items: center;
     /* max-height: 300px; */
     max-width: 1080px;
 }
-.review-testimonial{
+.review-testimonial {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -501,10 +486,9 @@ li {
     margin-bottom: 20px;
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
-    box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.75);
--webkit-box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.75);
-
+    box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.75);
 }
 
 .fa-comments {
@@ -529,11 +513,11 @@ li {
 .review-testimonial:after {
     background-color: #17181b;
     content: "";
-  /* bottom: 0px; */
-  left: 35px;
-  bottom: -11px;
-  /* transform: translateX(-50%px); */
-  /* transform: translateY(55px); */
+    /* bottom: 0px; */
+    left: 35px;
+    bottom: -11px;
+    /* transform: translateX(-50%px); */
+    /* transform: translateY(55px); */
     width: 14px;
     height: 20px;
     opacity: 1;
@@ -542,7 +526,7 @@ li {
     /* transition: 0.5s all ease; */
     transform: rotate(45deg);
 }
-.person-info{
+.person-info {
     display: flex;
     justify-content: start;
     color: white;
@@ -555,7 +539,6 @@ li {
     display: flex;
     flex-direction: column;
     padding: 0px 15px;
-
 }
 
 .person-info img {
@@ -569,7 +552,7 @@ li {
     font-size: 18px;
 }
 
-.reviewer-skills{
+.reviewer-skills {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -593,9 +576,9 @@ li {
     /* margin-left: 65px; */
     /* margin-right: 65px; */
     border: 1px solid red;
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
 }
-.lets-talk-area{
+.lets-talk-area {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -604,7 +587,6 @@ li {
     height: auto;
     padding: 0px 160px;
     margin-top: 50px;
-
 }
 
 .messsage-area {
@@ -637,7 +619,7 @@ li {
     width: 100%;
     height: auto;
 }
-.messsage-area textarea{
+.messsage-area textarea {
     background: transparent;
     border: 2px solid #999999;
     outline: none;
@@ -647,7 +629,7 @@ li {
     color: #dedede;
     font-family: Arial, Helvetica, sans-serif;
 }
-::placeholder{
+::placeholder {
     color: #dedede;
     font-weight: bold;
     font-size: 15px;
