@@ -380,6 +380,7 @@ li {
     justify-content: stretch;
     align-items: center;
 }
+
 .skills {
     display: flex;
     flex-direction: column;
@@ -387,12 +388,14 @@ li {
     align-items: center;
     padding: 0px 10px;
 }
+
 .skills-heading {
     color: white;
     font-size: 17px;
     font-weight: bold;
     padding: 10px 0px;
 }
+
 .skills-description {
     color: #d4d4d4;
     text-align: center;
@@ -466,6 +469,7 @@ li {
     margin-bottom: 50px;
     overflow: hidden;
 }
+
 .testimonials {
     display: flex;
     justify-content: space-between;
@@ -473,6 +477,7 @@ li {
     /* max-height: 300px; */
     max-width: 1080px;
 }
+
 .review-testimonial {
     display: flex;
     justify-content: space-around;
@@ -526,6 +531,7 @@ li {
     /* transition: 0.5s all ease; */
     transform: rotate(45deg);
 }
+
 .person-info {
     display: flex;
     justify-content: start;
@@ -578,6 +584,7 @@ li {
     border: 1px solid red;
     font-family: "Playfair Display", serif;
 }
+
 .lets-talk-area {
     display: flex;
     flex-direction: column;
@@ -619,6 +626,7 @@ li {
     width: 100%;
     height: auto;
 }
+
 .messsage-area textarea {
     background: transparent;
     border: 2px solid #999999;
@@ -629,6 +637,7 @@ li {
     color: #dedede;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 ::placeholder {
     color: #dedede;
     font-weight: bold;
@@ -674,4 +683,32 @@ li {
     opacity: 1;
     transition: 0.5s all ease;
     z-index: -1;
+}
+
+.side-nav-social-links {
+    text-decoration: none;
+    color: grey;
+    cursor: pointer;
+}
+
+.side-nav-social-links:hover {
+    color: white;
+}
+
+.upwork-icon {
+    height: 21px;
+    width: 21px;
+    fill: grey;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.upwork-icon:hover {
+    height: 25px;
+    width: 25px;
+    fill: green;
+    font-weight: bold;
+    transition: 0.5s;
+    transform: rotate(360deg);
 }

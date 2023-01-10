@@ -16,26 +16,31 @@ const About: React.FC = (props: any) => {
                     <div className="about-all-info">
                         <div className="about-left-info">
                             <h3 className="ui-ux-designer">
-                                UI/UX Designer & Developer
+                                {/* UI/UX Designer & Developer */}
+                                Fulls-tack Engineer & Author
                             </h3>
                             <span className="uiux-dummy-text">
-                                Dolor reprehenderit aut repudiandae maiores
-                                recusandae. Consequatur dolor nisi labore
-                                commodi ipsa? Excepturi velit laboriosam at
-                                voluptatibus cupiditate est vel. Dolorem
-                                praesentium itaque fugiat placeat quas
-                                consequatur? Obcaecati natus rerum
+                                I am a Python and JavaScript developer with
+                                having bachelor's in Computer Science (B.S).
+                                from GC University Faisalabad and 4 years of
+                                software development experience. I am
+                                experienced in web development with JavaScript
+                                technologies using React JS and React Native and
+                                on the back-end side, I'm using python
+                                technologies. I have experience with MVT/MVC
+                                (Model View Template/Controller) through Django
+                                and DRF (Django rest framework) and have been
+                                involved in maintaining versions of source code
+                                using git version control. I use a containerized
+                                system using Docker/Kubernetes for the
+                                portability of my web and mobile projects and
+                                deployment. When working on a new project, I
+                                like to speak with my clients to understand
+                                their needs and version of the project clearly.
+                                Thanks for going through my profile, looking
+                                forward to be working with you.
                                 <br />
                                 <br />
-                                Consectetur consectetur nesciunt nesciunt
-                                blanditiis amet? Quod quis unde aliquid
-                                excepturi laudantium? Illo architecto aliquam
-                                velit illo magnam neque perferendis sint
-                                Incidunt eius ipsa inventore labore eos velit.
-                                Minus hic magni reiciendis necessitatibus ex
-                                Quidem officia deleniti accusamus obcaecati
-                                dolores. Porro culpa quibusdam impedit porro
-                                praesentium excepturi. Alias ab consequatur?
                             </span>
                             <div className="signature-area">
                                 <img src="signature.png" alt="signature" />

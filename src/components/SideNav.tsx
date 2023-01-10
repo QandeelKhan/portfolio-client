@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.css";
 import { MenuItems } from "./MenuItems";
 import { Button } from "./Button";
+import UpworkIcon from "./icons/UpworkIcon";
 
 const SideNav: React.FC = (props: any) => {
     return (
@@ -32,11 +33,38 @@ const SideNav: React.FC = (props: any) => {
                 </div>
                 <div className="footer-area">
                     <div className="footer-icons">
-                        <i className="fa-brands fa-square-facebook icons-social"></i>
-                        <i className="fa-brands fa-square-twitter icons-social"></i>
-                        <i className="fa-brands fa-square-youtube icons-social"></i>
-                        <i className="fa-brands fa-linkedin icons-social"></i>
-                        <i className="fa-brands fa-square-dribbble icons-social"></i>
+                        <a
+                            href="https://www.facebook.com/people/Qandeel-Haider/100089025738070/"
+                            className="side-nav-social-links"
+                            rel="noreferrer"
+                            target="_blank"
+                        >
+                            <i className="fa-brands fa-square-facebook icons-social"></i>
+                        </a>
+                        <a
+                            href="https://twitter.com/CQandeelhaider"
+                            className="side-nav-social-links"
+                            rel="noreferrer"
+                            target="_blank"
+                        >
+                            <i className="fa-brands fa-square-twitter icons-social"></i>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/qandeel-khan-b89a851a0/"
+                            className="side-nav-social-links"
+                            rel="noreferrer"
+                            target="_blank"
+                        >
+                            <i className="fa-brands fa-linkedin icons-social"></i>
+                        </a>
+                        <a
+                            href="https://www.upwork.com/freelancers/~014d77a2fec0748c13"
+                            className="side-nav-social-links side-nav-upwork-link"
+                            rel="noreferrer"
+                            target="_blank"
+                        >
+                            <UpworkIcon />
+                        </a>
                     </div>
                     <div className="footer-text">
                         <span>
