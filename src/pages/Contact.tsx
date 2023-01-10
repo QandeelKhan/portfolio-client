@@ -1,6 +1,7 @@
 import React from "react";
 import AboutUserIcon from "../components/icons/AboutUser";
 import ContactEnvelopeIcon from "../components/icons/ContactEnvelopIcon";
+import Location from "../components/Location";
 
 const Contact = () => {
     return (
@@ -28,6 +29,7 @@ const Contact = () => {
                         </div>
                     </div>
                     {/* need refactor with props */}
+                    <Location />
                 </div>
             </div>
         </section>

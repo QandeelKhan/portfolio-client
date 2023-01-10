@@ -173,7 +173,7 @@ li {
     /* object-fit: contain; */
     margin-left: 65px;
     margin-right: 65px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-family: "Playfair Display", serif;
 }
 
@@ -674,4 +674,36 @@ li {
     opacity: 1;
     transition: 0.5s all ease;
     z-index: -1;
+}
+
+/* contact area starts here */
+
+.location-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 70px;
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    /* margin: 0px 75px; */
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.location-icons {
+    font-size: 32px;
+    color: #00a3e1;
+    padding-bottom: 12px;
+}
+.location-area span {
+    color: #ffffff;
+    font-size: 17px;
+}
+.map {
+    width: 100%;
+    margin-bottom: 60px;
 }
