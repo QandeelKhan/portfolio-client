@@ -176,7 +176,7 @@ li {
     /* object-fit: contain; */
     margin-left: 65px;
     margin-right: 65px;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     font-family: 'Playfair Display', serif;
 }
 
@@ -446,29 +446,6 @@ li {
     opacity: .7;
 }
 
-/* Contact Section */
-
-.contact-area-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--backgroundColor);
-    margin-left: 200px;
-}
-
-.contact-area {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* object-fit: contain; */
-    margin-left: 65px;
-    margin-right: 65px;
-    border: 1px solid red;
-    font-family: 'Playfair Display', serif;
-}
-
 
 /* -------Testimonial Area starts here------- */
 
@@ -562,4 +539,112 @@ li {
 }
 .reviewer-skills{
     font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Contact Section */
+
+.contact-area-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    margin-left: 200px;
+}
+
+.contact-area {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* object-fit: contain; */
+    /* margin-left: 65px; */
+    /* margin-right: 65px; */
+    border: 1px solid red;
+    font-family: 'Playfair Display', serif;
+}
+.lets-talk-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0px 160px;
+
+}
+.messsage-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0px 15px;
+}
+.name-email-area input{
+    background: transparent;
+    border: 2px solid #dedede;
+    outline: none;
+    width: 100%;
+    height: auto;
+    margin: 50px 15px;
+    line-height: 35px;
+    padding: 0px 10px;
+}
+.name-email-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+.messsage-area textarea{
+    background: transparent;
+    border: 2px solid #dedede;
+    outline: none;
+    width: 100%;
+    height: 120px;
+    padding: 5px 10px;
+    
+
+}
+
+.send-messsage-btn {
+    color: var(--primaryColor);
+    border: 2px solid #0082b6;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px 0px;
+    /* margin-right: 70px; */
+    padding: 6px 18px;
+    font-size: 14px;
+    position: relative;
+    transition: ease-out 0.5s;
+    z-index: 1;
+}
+
+.send-messsage-btn:hover {
+    color: black;
+}
+
+.send-messsage-btn::after {
+    content: "";
+    left: 90%;
+    right: 90%;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: #0082b6;
+    position: absolute;
+    transition: 0.5s all ease;
+}
+
+.send-messsage-btn:hover::after {
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transition: 0.5s all ease;
+    z-index: -1;
 }
