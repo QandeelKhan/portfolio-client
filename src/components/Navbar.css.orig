@@ -176,7 +176,7 @@ li {
     /* object-fit: contain; */
     margin-left: 65px;
     margin-right: 65px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-family: 'Playfair Display', serif;
 }
 
@@ -421,7 +421,6 @@ li {
 .clients-slide {
     display: flex;
     flex-direction: column;
-
     margin-top: 50px;
     margin-bottom: 20px;
 }
@@ -448,6 +447,29 @@ li {
     max-height: 100px;
     margin: auto;
     opacity: .7;
+}
+
+/* Contact Section */
+
+.contact-area-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    margin-left: 200px;
+}
+
+.contact-area {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* object-fit: contain; */
+    margin-left: 65px;
+    margin-right: 65px;
+    border: 1px solid red;
+    font-family: 'Playfair Display', serif;
 }
 
 
@@ -496,12 +518,13 @@ li {
 }
 
 .left-testimonial {
-    margin-right: 15px;
-
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .right-testimonial {
-    margin-left: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .testimonial-icon {
@@ -523,9 +546,6 @@ li {
     position: absolute;
     /* transition: 0.5s all ease; */
     transform: rotate(45deg);
-
-
-
 }
 
 .person-info {
@@ -560,12 +580,6 @@ li {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-<<<<<<< HEAD
-.owl-stage {
-    max-height: 200px;
-    overflow: hidden;
-
-=======
 /* Contact Section */
 
 .contact-area-container {
@@ -588,7 +602,8 @@ li {
     border: 1px solid red;
     font-family: 'Playfair Display', serif;
 }
-.lets-talk-area{
+
+.lets-talk-area {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -596,9 +611,11 @@ li {
     width: 100%;
     height: auto;
     padding: 0px 160px;
+    margin-top: 50px;
 
 }
-.messsage-area{
+
+.messsage-area {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -607,39 +624,56 @@ li {
     height: auto;
     padding: 0px 15px;
 }
-.name-email-area input{
+
+.name-email-area input {
     background: transparent;
-    border: 2px solid #dedede;
+    border: 2px solid #999999;
     outline: none;
     width: 100%;
     height: auto;
-    margin: 50px 15px;
-    line-height: 35px;
+    margin: 10px 15px;
+    margin-bottom: 50px;
+    line-height: 40px;
     padding: 0px 10px;
+    color: #dedede;
 }
-.name-email-area{
+
+.name-email-area {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: auto;
 }
-.messsage-area textarea{
+
+.messsage-area textarea {
     background: transparent;
-    border: 2px solid #dedede;
+    border: 2px solid #999999;
     outline: none;
     width: 100%;
+<<<<<<< HEAD
     height: 120px;
     padding: 5px 10px;
-    
-
+=======
+    height: 150px;
+    padding: 10px 10px;
+    color: #dedede;
+    font-family: Arial, Helvetica, sans-serif;
+>>>>>>> 973b7eddd202407f70c9bd4a0206d8d3ae770bbd
 }
+::placeholder{
+    color: #dedede;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* button css starts here */
 
 .send-messsage-btn {
     color: var(--primaryColor);
     border: 2px solid #0082b6;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 20px 0px;
+    margin: 35px 0px;
     /* margin-right: 70px; */
     padding: 6px 18px;
     font-size: 14px;
@@ -672,5 +706,4 @@ li {
     opacity: 1;
     transition: 0.5s all ease;
     z-index: -1;
->>>>>>> e687d5e0274f283ef486333df6f83d3588919baa
 }
