@@ -1,7 +1,7 @@
 import React from "react";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const ClientsSlide = () => {
     return (
@@ -12,15 +12,13 @@ const ClientsSlide = () => {
             </h3>
             {/* owl */}
             <div style={{ maxWidth: "1050px" }}>
-                <OwlCarousel
-                    className="owl-theme owl-loaded owl-drag"
-                    loop
-                    margin={10}
-                    items={5}
+                <Slider
                     dots={false}
-                    nav={false}
+                    slidesToShow={5}
+                    slidesToScroll={1}
+                    arrows={false}
                 >
-                    <div className="item">
+                    <div className="slide-container">
                         <div className="client-logo">
                             {" "}
                             <a href="#">
@@ -33,7 +31,7 @@ const ClientsSlide = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="item">
+                    <div>
                         <div className="client-logo">
                             {" "}
                             <a href="#">
@@ -46,7 +44,7 @@ const ClientsSlide = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="item">
+                    <div>
                         <div className="client-logo">
                             {" "}
                             <a href="#">
@@ -59,7 +57,7 @@ const ClientsSlide = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="item">
+                    <div>
                         <div className="client-logo">
                             {" "}
                             <a href="#">
@@ -72,7 +70,7 @@ const ClientsSlide = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="item">
+                    <div>
                         <div className="client-logo">
                             {" "}
                             <a href="#">
@@ -85,7 +83,7 @@ const ClientsSlide = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="item">
+                    <div>
                         <div className="client-logo">
                             {" "}
                             <a href="#">
@@ -98,7 +96,7 @@ const ClientsSlide = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="item">
+                    <div>
                         <div className="client-logo">
                             {" "}
                             <a href="#">
@@ -111,7 +109,7 @@ const ClientsSlide = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="item">
+                    <div>
                         <div className="client-logo">
                             {" "}
                             <a href="#">
@@ -124,7 +122,7 @@ const ClientsSlide = () => {
                             </a>
                         </div>
                     </div>
-                </OwlCarousel>
+                </Slider>
             </div>
             {/* owl */}
             {/* <div className="owl-nav disabled">

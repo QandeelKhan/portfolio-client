@@ -1,7 +1,7 @@
 import React from "react";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Testimonial: React.FC = (props) => {
     return (
@@ -11,16 +11,14 @@ const Testimonial: React.FC = (props) => {
                     <span>TESTOMONIALS</span>
                 </h3>
                 <div className="testimonials">
-                    <div>
-                        <OwlCarousel
-                            className="owl-theme owl-loaded owl-drag"
-                            loop
-                            margin={10}
-                            items={2}
+                    <div style={{ maxWidth: "1050px" }}>
+                        <Slider
                             dots={false}
-                            nav={false}
+                            arrows={false}
+                            slidesToShow={2}
+                            slidesToScroll={1}
                         >
-                            <div className="item">
+                            <div>
                                 {/* left side */}
                                 <div className="left-testimonial">
                                     <div className="review-testimonial">
@@ -61,7 +59,7 @@ const Testimonial: React.FC = (props) => {
                                 </div>
                             </div>
                             {/* right side */}
-                            <div className="item">
+                            <div>
                                 <div className="right-testimonial">
                                     <div className="review-testimonial">
                                         <div className="testimonial-icon">
@@ -98,7 +96,7 @@ const Testimonial: React.FC = (props) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="item">
+                            <div>
                                 {/* left side */}
                                 <div className="left-testimonial">
                                     <div className="review-testimonial">
@@ -137,7 +135,7 @@ const Testimonial: React.FC = (props) => {
                                 </div>
                             </div>
                             {/* left side */}
-                            <div className="item">
+                            <div>
                                 <div className="right-testimonial">
                                     <div className="review-testimonial">
                                         <div className="testimonial-icon">
@@ -174,7 +172,7 @@ const Testimonial: React.FC = (props) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="item">
+                            <div>
                                 {/* left side */}
                                 <div className="left-testimonial">
                                     <div className="review-testimonial">
@@ -213,7 +211,7 @@ const Testimonial: React.FC = (props) => {
                                 </div>
                             </div>
                             {/* left side */}
-                            <div className="item">
+                            <div>
                                 <div className="right-testimonial">
                                     <div className="review-testimonial">
                                         <div className="testimonial-icon">
@@ -250,7 +248,7 @@ const Testimonial: React.FC = (props) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="item">
+                            <div>
                                 {/* left side */}
                                 <div className="left-testimonial">
                                     <div className="review-testimonial">
@@ -289,7 +287,7 @@ const Testimonial: React.FC = (props) => {
                                 </div>
                             </div>
                             {/* left side */}
-                            <div className="item">
+                            <div>
                                 <div className="right-testimonial">
                                     <div className="review-testimonial">
                                         <div className="testimonial-icon">
@@ -326,7 +324,7 @@ const Testimonial: React.FC = (props) => {
                                     </div>
                                 </div>
                             </div>
-                        </OwlCarousel>
+                        </Slider>
                     </div>
                 </div>
             </div>
