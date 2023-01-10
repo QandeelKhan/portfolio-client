@@ -176,7 +176,7 @@ li {
     /* object-fit: contain; */
     margin-left: 65px;
     margin-right: 65px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-family: 'Playfair Display', serif;
 }
 
@@ -595,6 +595,7 @@ li {
     width: 100%;
     height: auto;
     padding: 0px 160px;
+    margin-top: 50px;
 
 }
 .messsage-area{
@@ -608,13 +609,15 @@ li {
 }
 .name-email-area input{
     background: transparent;
-    border: 2px solid #dedede;
+    border: 2px solid #999999;
     outline: none;
     width: 100%;
     height: auto;
-    margin: 50px 15px;
-    line-height: 35px;
+    margin: 10px 15px;
+    margin-bottom: 50px;
+    line-height: 40px;
     padding: 0px 10px;
+    color: #dedede;
 }
 .name-email-area{
     display: flex;
@@ -625,20 +628,27 @@ li {
 }
 .messsage-area textarea{
     background: transparent;
-    border: 2px solid #dedede;
+    border: 2px solid #999999;
     outline: none;
     width: 100%;
-    height: 120px;
-    padding: 5px 10px;
-    
-
+    height: 150px;
+    padding: 10px 10px;
+    color: #dedede;
+    font-family: Arial, Helvetica, sans-serif;
 }
+::placeholder{
+    color: #dedede;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* button css starts here */
 
 .send-messsage-btn {
     color: var(--primaryColor);
     border: 2px solid #0082b6;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 20px 0px;
+    margin: 35px 0px;
     /* margin-right: 70px; */
     padding: 6px 18px;
     font-size: 14px;
