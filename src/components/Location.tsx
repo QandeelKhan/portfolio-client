@@ -6,15 +6,15 @@ const Location: React.FC = (props) => {
             <div className="location-area">
                 <div className="telegram box">
                     <i className="fa-brands fa-telegram location-icons"></i>
-                    <span>example@example.com</span>
+                    <span>com.qandeelhaider@gmail.com</span>
                 </div>
                 <div className="location box">
                     <i className="fa-solid fa-location-dot location-icons"></i>
-                    <span>123 Lorem Ipsum, USA</span>
+                    <span>University Road SGD, Pakistan</span>
                 </div>
                 <div className="contact box">
                     <i className="fa-solid fa-phone-flip location-icons"></i>
-                    <span>(+1) 123 456 7890</span>
+                    <span>(+92) 315 70 51720</span>
                 </div>
             </div>
             <div className="map">
