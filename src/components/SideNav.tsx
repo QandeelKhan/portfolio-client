@@ -34,7 +34,7 @@ const SideNav: React.FC = (props: any) => {
                 <div className="footer-area">
                     <div className="footer-icons">
                         <a
-                            href="https://www.facebook.com/people/Qandeel-Haider/100089025738070/"
+                            href="https://www.facebook.com/qandeelhaiderkhan"
                             className="side-nav-social-links"
                             rel="noreferrer"
                             target="_blank"
