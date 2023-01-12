@@ -2,10 +2,10 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./clients-slide.css";
 
-const ClientsSlide = () => {
+const ClientsSlide: React.FC = (props) => {
     return (
-        // <div className="clients-slide-container">
         <div className="clients-slide">
             <h3 className="subheading">
                 <span>CLIENTS</span>
@@ -125,17 +125,7 @@ const ClientsSlide = () => {
                 </Slider>
             </div>
             {/* owl */}
-            {/* <div className="owl-nav disabled">
-                    <button
-                        type="button"
-                        role="presentation"
-                        className="owl-prev"
-                    >
-                        <span aria-label="Previous">‹</span>
-                    </button>
-                </div> */}
         </div>
-        // </div>
     );
 };
 

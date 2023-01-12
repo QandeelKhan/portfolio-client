@@ -1,0 +1,23 @@
+.location-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+}
+
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.map {
+    width: 100%;
+    margin-bottom: 60px;
+}

@@ -403,39 +403,6 @@ li {
     padding: 10px 0px;
 }
 
-/* Clients slide */
-
-.clients-slide {
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    margin-bottom: 20px;
-}
-
-.subheading {
-    /* position: relative; */
-    margin-bottom: 50px;
-    text-align: center;
-    font-size: 24px;
-    line-height: 1em;
-    letter-spacing: 0.5px;
-    font-family: "Playfair Display", serif;
-    font-weight: 700;
-    color: white;
-}
-
-.subheading span {
-    border-bottom: 2px solid var(--primaryColor);
-    padding: 0 9px;
-}
-
-.client-logo img {
-    max-width: 100px;
-    max-height: 100px;
-    margin: auto;
-    opacity: 0.7;
-}
-
 /* Contact Section */
 
 .contact-area-container {
@@ -579,9 +546,6 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* object-fit: contain; */
-    /* margin-left: 65px; */
-    /* margin-right: 65px; */
     border: 1px solid red;
     font-family: "Playfair Display", serif;
 }
@@ -752,25 +716,6 @@ textarea:valid {
 
 /* contact area starts here */
 
-.location-area {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 70px;
-    margin-top: 50px;
-    width: 100%;
-    height: auto;
-    /* margin: 0px 75px; */
-}
-
-.box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .location-icons {
     font-size: 32px;
     color: #00a3e1;
@@ -780,11 +725,6 @@ textarea:valid {
 .location-area span {
     color: #ffffff;
     font-size: 17px;
-}
-
-.map {
-    width: 100%;
-    margin-bottom: 60px;
 }
 
 .side-nav-social-links {
