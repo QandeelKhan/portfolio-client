@@ -3,6 +3,7 @@ import ClientsSlide from "../components/ClientsSlide";
 import AboutUserIcon from "../components/icons/AboutUser";
 import ServicesArea from "../components/ServicesArea";
 import Testimonial from "../components/Testimonial";
+import "./about.css";
 
 const About: React.FC = (props: any) => {
     return (

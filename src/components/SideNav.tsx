@@ -1,5 +1,5 @@
 import React from "react";
-import "./Navbar.css";
+import "./SideNav.css";
 import { MenuItems } from "./MenuItems";
 import { Button } from "./Button";
 import UpworkIcon from "./icons/UpworkIcon";

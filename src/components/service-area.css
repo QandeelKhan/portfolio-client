@@ -1,0 +1,33 @@
+/* ---------SERVICES AREA CSS ---------- */
+.service-area {
+    display: flex;
+    flex-direction: column;
+    /* padding-top: 50px; */
+}
+
+.services {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.skills-heading {
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 0px;
+}
+
+.skills-description {
+    color: #d4d4d4;
+    text-align: center;
+    padding: 10px 0px;
+}

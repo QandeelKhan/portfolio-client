@@ -3,6 +3,7 @@ import PhotographyIcon from "./icons/PhotographyIcon";
 import ResponsivedesignIcon from "./icons/ResponsivedesignIcon";
 import WebdesignIcon from "./icons/WebdesignIcon";
 import WebdevelopmentIcon from "./icons/WebdevelopmentIcon";
+import "./service-area.css";
 
 const ServicesArea: React.FC = (props) => {
     return (
@@ -45,7 +46,6 @@ const ServicesArea: React.FC = (props) => {
                 </div>
             </div>
         </div>
-        // </div>
     );
 };
 
