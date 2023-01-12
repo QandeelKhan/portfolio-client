@@ -1,7 +1,8 @@
 import React from "react";
-import BriefcaseIcon from "../components/icons/BriefcaseIcon";
+import PortfolioBriefcase from "../components/icons/PortfolioBriefcase";
 // import LicenseIcon from "../components/icons/LicenseIcon";
 import PortfolioProject from "../components/PortfolioProject";
+import "../components/Portfolio.css";
 
 const Portfolio = () => {
     return (
@@ -10,7 +11,7 @@ const Portfolio = () => {
                 <div className="main-about-area">
                     <div className="about-head-logo-area">
                         <h1 className="aboutme-heading">Portfolio.</h1>
-                        <BriefcaseIcon />
+                        <PortfolioBriefcase />
                     </div>
                     <PortfolioProject />
                 </div>
