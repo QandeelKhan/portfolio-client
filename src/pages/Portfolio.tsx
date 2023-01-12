@@ -2,7 +2,7 @@ import React from "react";
 import PortfolioBriefcase from "../components/icons/PortfolioBriefcase";
 // import LicenseIcon from "../components/icons/LicenseIcon";
 import PortfolioProject from "../components/PortfolioProject";
-import "../components/Portfolio.css";
+import "./Portfolio.css";
 
 const Portfolio = () => {
     return (
