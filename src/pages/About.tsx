@@ -2,7 +2,7 @@ import React from "react";
 import ClientsSlide from "../components/ClientsSlide";
 import AboutUserIcon from "../components/icons/AboutUser";
 import ServicesArea from "../components/ServicesArea";
-import Testimonial from "../components/Testimonial";
+import TestimonialsSection from "../components/TestimonialsSection";
 import "./about.css";
 
 const About: React.FC = (props: any) => {
@@ -124,7 +124,7 @@ const About: React.FC = (props: any) => {
 
                     <ClientsSlide />
                     {/* Testimonials area */}
-                    <Testimonial />
+                    <TestimonialsSection />
                 </div>
             </div>
         </section>

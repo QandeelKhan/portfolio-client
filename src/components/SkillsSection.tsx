@@ -1,6 +1,7 @@
 import React from "react";
+import "./skills-section.css";
 
-const SkillsResume = () => {
+const ResumeSkills: React.FC = (props) => {
     return (
         <>
             <div className="skills-area">
@@ -81,4 +82,4 @@ const SkillsResume = () => {
     );
 };
 
-export default SkillsResume;
+export default ResumeSkills;

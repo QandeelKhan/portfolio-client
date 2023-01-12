@@ -2,8 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./testimonials-section.css";
 
-const Testimonial: React.FC = (props) => {
+const TestimonialsSection: React.FC = (props) => {
     return (
         <>
             <div className="testimonials-area">
@@ -37,7 +38,7 @@ const Testimonial: React.FC = (props) => {
                                         </div>
                                     </div>
                                     <div className="person-info">
-                                        <div className="testimonial-img">
+                                        <div>
                                             <img
                                                 style={{
                                                     maxHeight: "70px",
@@ -332,4 +333,4 @@ const Testimonial: React.FC = (props) => {
     );
 };
 
-export default Testimonial;
+export default TestimonialsSection;
