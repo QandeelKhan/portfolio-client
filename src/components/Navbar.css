@@ -162,6 +162,7 @@ li {
     align-items: center;
     background-color: var(--backgroundColor);
     margin-left: 200px;
+    border: 1px solid red;
 }
 
 .main-about-area {
