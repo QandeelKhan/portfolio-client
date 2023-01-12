@@ -2,6 +2,7 @@ import React from "react";
 import "../components/resume.css";
 import LicenseResume from "../components/icons/LicenseResume";
 import ResumeInfoBlock from "../components/ResumeInfoBlock";
+import SkillsResume from "../components/SkillsResume";
 
 const Resume = () => {
     return (
@@ -18,6 +19,7 @@ const Resume = () => {
                     />
                     <ResumeInfoBlock mainHeadingLeft="" mainHeadingRight="" />
                     <ResumeInfoBlock mainHeadingLeft="" mainHeadingRight="" />
+                    <SkillsResume />
                 </div>
             </div>
         </section>
