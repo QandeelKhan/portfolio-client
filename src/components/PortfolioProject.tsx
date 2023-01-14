@@ -19,7 +19,41 @@ const PortfolioProject = () => {
                     </li>
                 </ul>
             </div>
-            <div className="projects-div"></div>
+            <div className="projects-div">
+                <div className="images">
+                    <img src="portfolio-1.jpg" alt="img-1" />
+                </div>
+                <div className="images">
+                    <img src="portfolio-2.jpg" alt="img-1" />
+                </div>
+                <div className="images">
+                    <img src="portfolio-3.jpg" alt="img-1" />
+                </div>
+                <div className="images">
+                    <img src="portfolio-4.jpg" alt="img-1" />
+                </div>
+                <div className="images">
+                    <img src="portfolio-5.jpg" alt="img-1" />
+                </div>
+                <div className="images">
+                    <img src="portfolio-6.jpg" alt="img-1" />
+                </div>
+                <div className="images">
+                    <img src="portfolio-7.jpg" alt="img-1" />
+                </div>
+                <div className="images">
+                    <img src="portfolio-8.jpg" alt="img-1" />
+                </div>
+                <div className="images">
+                    <img src="portfolio-9.jpg" alt="img-1" />
+                </div>
+                <div className="images">
+                    <img src="portfolio-10.jpg" alt="img-1" />
+                </div>
+                <div className="images">
+                    <img src="portfolio-11.jpg" alt="img-1" />
+                </div>
+            </div>
         </div>
     );
 };
