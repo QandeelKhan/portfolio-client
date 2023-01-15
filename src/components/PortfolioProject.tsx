@@ -33,6 +33,10 @@ const PortfolioProject: React.FC = (props) => {
             >
                 <div className="grid-item">
                     <a className="card-wrapper" href="#">
+                        <div className="overlay">
+                            <span>Book Design</span>
+                            <span>Graphic</span>
+                        </div>
                         <img
                             className="card-image"
                             src="portfolio-1.jpg"

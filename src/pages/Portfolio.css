@@ -76,3 +76,29 @@
     height: auto;
     border-radius: 10px;
 }
+
+/* Hover starts here */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    border-radius: 10px;
+    background-color: rgba(0, 163, 225, 0.6);
+    opacity: 0;
+}
+.overlay span {
+    color: white;
+    /* right: -20px; */
+    margin-left: 20px;
+}
+
+.grid-item {
+    position: relative;
+}
+.grid-item:hover .overlay {
+    opacity: 1;
+}
