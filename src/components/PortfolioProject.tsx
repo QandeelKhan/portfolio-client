@@ -40,7 +40,7 @@ const PortfolioProject: React.FC = (props) => {
                         </div>
                         <img
                             className="card-image"
-                            src="portfolio-1.jpg"
+                            src="images/portfolio/portfolio-1.jpg"
                             alt="img-1"
                         />
                     </a>
@@ -49,7 +49,7 @@ const PortfolioProject: React.FC = (props) => {
                     <a className="card-wrapper" href="#">
                         <img
                             className="card-image"
-                            src="portfolio-10.jpg"
+                            src="images/portfolio/portfolio-10.jpg"
                             alt="img-1"
                         />
                     </a>
@@ -58,7 +58,7 @@ const PortfolioProject: React.FC = (props) => {
                     <a className="card-wrapper" href="#">
                         <img
                             className="card-image"
-                            src="portfolio-9.jpg"
+                            src="images/portfolio/portfolio-9.jpg"
                             alt="img-1"
                         />
                     </a>
@@ -67,7 +67,7 @@ const PortfolioProject: React.FC = (props) => {
                     <a className="card-wrapper" href="#">
                         <img
                             className="card-image"
-                            src="portfolio-8.jpg"
+                            src="images/portfolio/portfolio-8.jpg"
                             alt="img-1"
                         />
                     </a>
@@ -76,7 +76,7 @@ const PortfolioProject: React.FC = (props) => {
                     <a className="card-wrapper" href="#">
                         <img
                             className="card-image"
-                            src="portfolio-11.jpg"
+                            src="images/portfolio/portfolio-11.jpg"
                             alt="img-1"
                         />
                     </a>
@@ -85,7 +85,7 @@ const PortfolioProject: React.FC = (props) => {
                     <a className="card-wrapper" href="#">
                         <img
                             className="card-image"
-                            src="portfolio-6.jpg"
+                            src="images/portfolio/portfolio-6.jpg"
                             alt="img-1"
                         />
                     </a>
@@ -94,7 +94,7 @@ const PortfolioProject: React.FC = (props) => {
                     <a className="card-wrapper" href="#">
                         <img
                             className="card-image"
-                            src="portfolio-5.jpg"
+                            src="images/portfolio/portfolio-5.jpg"
                             alt="img-1"
                         />
                     </a>
@@ -103,7 +103,7 @@ const PortfolioProject: React.FC = (props) => {
                     <a className="card-wrapper" href="#">
                         <img
                             className="card-image"
-                            src="portfolio-7.jpg"
+                            src="images/portfolio/portfolio-7.jpg"
                             alt="img-1"
                         />
                     </a>
@@ -112,7 +112,7 @@ const PortfolioProject: React.FC = (props) => {
                     <a className="card-wrapper" href="#">
                         <img
                             className="card-image"
-                            src="portfolio-3.jpg"
+                            src="images/portfolio/portfolio-3.jpg"
                             alt="img-1"
                         />
                     </a>
@@ -121,7 +121,7 @@ const PortfolioProject: React.FC = (props) => {
                     <a className="card-wrapper" href="#">
                         <img
                             className="card-image"
-                            src="portfolio-2.jpg"
+                            src="images/portfolio/portfolio-2.jpg"
                             alt="img-1"
                         />
                     </a>
@@ -130,7 +130,7 @@ const PortfolioProject: React.FC = (props) => {
                     <a className="card-wrapper" href="#">
                         <img
                             className="card-image"
-                            src="portfolio-4.jpg"
+                            src="images/portfolio/portfolio-4.jpg"
                             alt="img-1"
                         />
                     </a>

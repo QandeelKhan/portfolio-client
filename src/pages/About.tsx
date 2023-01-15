@@ -44,7 +44,10 @@ const About: React.FC = (props: any) => {
                                 <br />
                             </span>
                             <div className="signature-area">
-                                <img src="signature.png" alt="signature" />
+                                <img
+                                    src="images/other/signature.png"
+                                    alt="signature"
+                                />
                             </div>
                         </div>
                         <div className="about-right-info">

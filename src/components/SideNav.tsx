@@ -9,7 +9,7 @@ const SideNav: React.FC = (props: any) => {
         <>
             <div className="sidebar-main">
                 <div className="image-area">
-                    <img src="profile-img.jpg" alt="profile-img" />
+                    <img src="images/other/profile-img.jpg" alt="profile-img" />
                     <div className="person-name">
                         <span>QANDEEL KHAN</span>
                     </div>

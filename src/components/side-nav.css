@@ -140,7 +140,7 @@ li {
 .main-image-area {
     width: 100%;
     height: 100vh;
-    background: rgb(0, 0, 0, 0.5) url("/public/home-bg.jpg");
+    background: rgb(0, 0, 0, 0.5) url("/public/images/other/home-bg.jpg");
     background-blend-mode: darken;
     background-position: center;
     background-size: cover;
