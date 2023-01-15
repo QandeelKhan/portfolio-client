@@ -88,7 +88,7 @@
     align-items: stretch;
     border-radius: 10px;
     background-color: rgba(0, 163, 225, 0.6);
-    opacity: 0;
+    opacity: 1;
 }
 .overlay span {
     color: white;
@@ -102,3 +102,7 @@
 .grid-item:hover .overlay {
     opacity: 1;
 }
+/* .fa-file {
+    text-align: end;
+    margin-top: 100px;
+} */

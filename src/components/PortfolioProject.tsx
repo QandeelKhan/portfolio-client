@@ -36,6 +36,7 @@ const PortfolioProject: React.FC = (props) => {
                         <div className="overlay">
                             <span>Book Design</span>
                             <span>Graphic</span>
+                            <i className="fa-solid fa-file"></i>
                         </div>
                         <img
                             className="card-image"
