@@ -9,23 +9,26 @@ import Portfolio from "./pages/Portfolio";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
 import PortfolioCardClick from "./PortfolioCardClick";
+import Layout from "./pages/Layout";
 
 function App() {
     return (
         <Router>
-            <SideNav />
-
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/home" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/resume" element={<Resume />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog-detail" element={<BlogDetail />} />
-                <Route path="/contact" element={<Contact />} />
+                <Route
+                    path="/portfolio-card-click"
+                    element={<PortfolioCardClick />}
+                />
+                <Route path="/" element={<Layout />}>
+                    <Route path="/home" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/resume" element={<Resume />} />
+                    <Route path="/portfolio" element={<Portfolio />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/blog-detail" element={<BlogDetail />} />
+                    <Route path="/contact" element={<Contact />} />
+                </Route>
             </Routes>
-            <PortfolioCardClick />
         </Router>
     );
 }

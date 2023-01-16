@@ -176,17 +176,15 @@ const BlogDetail = () => {
                                 </div>
                                 <nav className="post-navigation" aria-label=" ">
                                     <div className="nav-links">
-                                        <div className="nav-previous">
-                                            <i
-                                                className="fa fa-chevron-left prev-icon"
-                                                aria-hidden="true"
-                                            ></i>
-                                            <a href="#" rel="prev">
-                                                <span className="post-nav-next post-nav-text">
-                                                    Prev
-                                                </span>
-                                            </a>
-                                        </div>
+                                        <i
+                                            className="fa fa-chevron-left prev-icon"
+                                            aria-hidden="true"
+                                        ></i>
+                                        <a href="#" rel="prev">
+                                            <span className="post-nav-next post-nav-text">
+                                                Prev
+                                            </span>
+                                        </a>
                                     </div>
                                 </nav>
                             </div>
