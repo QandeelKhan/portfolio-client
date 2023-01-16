@@ -8,11 +8,13 @@ import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
+import PortfolioCardClick from "./PortfolioCardClick";
 
 function App() {
     return (
         <Router>
-            <SideNav />
+            {/* <SideNav /> */}
+
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
@@ -23,6 +25,7 @@ function App() {
                 <Route path="/blog-detail" element={<BlogDetail />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>
+            <PortfolioCardClick />
         </Router>
     );
 }
