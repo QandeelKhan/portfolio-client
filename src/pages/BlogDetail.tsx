@@ -177,7 +177,10 @@ const BlogDetail = () => {
                                 <nav className="post-navigation" aria-label=" ">
                                     <div className="nav-links">
                                         <div className="nav-previous">
-                                            <div className="prev-icon"></div>
+                                            <i
+                                                className="fa fa-chevron-left prev-icon"
+                                                aria-hidden="true"
+                                            ></i>
                                             <a href="#" rel="prev">
                                                 <span className="post-nav-next post-nav-text">
                                                     Prev

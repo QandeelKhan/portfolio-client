@@ -13,7 +13,7 @@ import PortfolioCardClick from "./PortfolioCardClick";
 function App() {
     return (
         <Router>
-            {/* <SideNav /> */}
+            <SideNav />
 
             <Routes>
                 <Route path="/" element={<Home />} />

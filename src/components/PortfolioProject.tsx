@@ -1,5 +1,6 @@
 import React from "react";
 import Masonry from "react-masonry-css";
+import { Link } from "react-router-dom";
 
 const PortfolioProject: React.FC = (props) => {
     const breakpointColumnsObj = {
@@ -33,7 +34,7 @@ const PortfolioProject: React.FC = (props) => {
             >
                 <div className="grid-item">
                     <a className="card-wrapper" href="#">
-                        <div className="overlay">
+                        <Link to="/portfolio-card-click" className="overlay">
                             <div className="onhover-text">
                                 <span className="text-1">Book Design</span>
                                 <span className="text-2">Graphic</span>
@@ -41,7 +42,7 @@ const PortfolioProject: React.FC = (props) => {
                             <div className="onhover-icon onhover-icon-1 ">
                                 <i className="fa-solid fa-file"></i>
                             </div>
-                        </div>
+                        </Link>
                         <img
                             className="card-image"
                             src="images/portfolio/portfolio-1.jpg"
