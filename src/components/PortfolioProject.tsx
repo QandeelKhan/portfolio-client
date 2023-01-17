@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Masonry from "react-masonry-css";
-import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { setCardClicked } from "../redux/eventsSlice";
+import { RootState } from "../redux/store";
 
-const PortfolioProject: React.FC = (props) => {
+export const clickContext = React.createContext("");
+const PortfolioProject: React.FC = (props: any) => {
     const breakpointColumnsObj = {
         default: 3,
         1100: 3,
         900: 2,
         700: 1,
     };
+
+    const dispatch = useDispatch();
+
     return (
         <div className="projects-area">
             <div className="menu-div">
@@ -27,6 +34,10 @@ const PortfolioProject: React.FC = (props) => {
                     </li>
                 </ul>
             </div>
+            {/* <PortfolioDetail
+                trigger={pagePupup}
+                setTrigger={setPagePupup}
+            ></PortfolioDetail> */}
             <Masonry
                 className="masonry-grid"
                 columnClassName="masonry-grid_column"
@@ -34,7 +45,11 @@ const PortfolioProject: React.FC = (props) => {
             >
                 <div className="grid-item">
                     <a className="card-wrapper" href="#">
-                        <Link to="/portfolio-card-click" className="overlay">
+                        {/* old place */}
+                        <div
+                            onClick={() => dispatch(setCardClicked(true))}
+                            className="overlay"
+                        >
                             <div className="onhover-text">
                                 <span className="text-1">Book Design</span>
                                 <span className="text-2">Graphic</span>
@@ -42,7 +57,7 @@ const PortfolioProject: React.FC = (props) => {
                             <div className="onhover-icon onhover-icon-1 ">
                                 <i className="fa-solid fa-file"></i>
                             </div>
-                        </Link>
+                        </div>
                         <img
                             className="card-image"
                             src="images/portfolio/portfolio-1.jpg"

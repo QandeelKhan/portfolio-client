@@ -23,7 +23,9 @@
     // for mui
     "noImplicitAny": true,
     "noImplicitThis": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    // for portfolioDetail page
+    "allowSyntheticDefaultImports" : true,
   },
   "include": [
     "src"

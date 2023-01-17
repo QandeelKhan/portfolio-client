@@ -1,6 +1,5 @@
 import React from "react";
 import PortfolioBriefcase from "../components/icons/PortfolioBriefcase";
-// import LicenseIcon from "../components/icons/LicenseIcon";
 import PortfolioProject from "../components/PortfolioProject";
 import "./Portfolio.css";
 
