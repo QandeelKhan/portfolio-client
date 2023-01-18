@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const eventsState = {
     cardClicked: false,
     crossClicked: false,
-    myClassName: "portfolio-detail-container",
+    myClassName: "deactive",
     animate: "",
 };
 

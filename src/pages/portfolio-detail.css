@@ -1,15 +1,26 @@
-/* .active {
-    transition: 350ms;    
+.active {
+    transition: 1s;
+    left: 0%;
 }
 
-.portfolio-detail-container {
+.deactive {
+    transition: 1s;
+    left: 100%;
+}
+
+/* .portfolio-detail-container {
     transition: 850ms;
 } */
 
 .default-position {
-    position: absolute;
-    right: 0;
+    position: fixed;
+    /* transform: translateX(100%); */
+    /* left: 100%; */
+    transition: 1s;
     top: 0;
+    overflow-y: scroll;
+    z-index: 1000;
+    height: 100%;
 }
 
 

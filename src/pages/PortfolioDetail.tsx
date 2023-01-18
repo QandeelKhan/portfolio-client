@@ -22,7 +22,7 @@ const PortfolioDetail = (props: any) => {
     const handleClick = () => {
         dispatch(setCardClicked(false));
         dispatch(setCrossClicked(true));
-        setMyClassName("portfolio-detail-container");
+        setMyClassName("deactive");
         console.log(myClassName, cardClicked, crossClicked);
     };
 
