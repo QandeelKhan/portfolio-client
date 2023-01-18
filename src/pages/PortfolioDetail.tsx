@@ -26,25 +26,8 @@ const PortfolioDetail = (props: any) => {
         console.log(myClassName, cardClicked, crossClicked);
     };
 
-    useEffect(() => {
-        document.addEventListener(
-            "touchstart",
-            function (e) {
-                e.preventDefault();
-            },
-            false
-        );
-        document.addEventListener(
-            "touchmove",
-            function (e) {
-                e.preventDefault();
-            },
-            false
-        );
-    }, []);
-
     return (
-        <div className={myClassName}>
+        <div className={`default-position ${myClassName}`}>
             <div className="header-fix">
                 <i
                     onClick={handleClick}

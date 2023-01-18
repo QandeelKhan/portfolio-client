@@ -1,21 +1,33 @@
-.active {
-    right: 0;
-    transition: 350ms;
+/* .active {
+    transition: 350ms;    
 }
 
 .portfolio-detail-container {
-    right: -100%;
     transition: 850ms;
+} */
+
+.default-position {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+
+.main-container {
+    /*  */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
 }
 
 .header-fix {
-    position: absolute;
+    position: relative;
     top: 0;
     background-color: #17181b;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
     width: 100%;
     height: 70px;
 }
@@ -23,13 +35,6 @@
 .header-fix .fa-circle-xmark {
     color: white;
     font-size: 30px;
-}
-
-.main-container {
-    /*  */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
 }
 
 .left-content {

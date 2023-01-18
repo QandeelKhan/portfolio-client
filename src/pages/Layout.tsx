@@ -7,10 +7,9 @@ import PortfolioDetail from "./PortfolioDetail";
 export default function Layout() {
     return (
         <>
-            {/* <PortfolioDetail /> */}
-
             <SideNav />
             <Outlet />
+            <PortfolioDetail />
         </>
     );
 }
