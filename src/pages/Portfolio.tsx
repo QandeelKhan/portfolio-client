@@ -1,6 +1,6 @@
 import React from "react";
 import PortfolioBriefcase from "../components/icons/PortfolioBriefcase";
-import PortfolioProject from "../components/PortfolioProject";
+import PortfolioProject from "./PortfolioProject";
 import "./Portfolio.css";
 
 const Portfolio = () => {
