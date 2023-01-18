@@ -1,3 +1,13 @@
+.active {
+    right: 0;
+    transition: 350ms;
+}
+
+.portfolio-detail-container {
+    right: -100%;
+    transition: 850ms;
+}
+
 .header-fix {
     position: absolute;
     top: 0;

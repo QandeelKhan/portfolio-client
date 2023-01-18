@@ -22,8 +22,7 @@ const PortfolioDetail = (props: any) => {
     const handleClick = () => {
         dispatch(setCardClicked(false));
         dispatch(setCrossClicked(true));
-        setMyClassName("transform-out");
-        dispatch(setAnimate("100%"));
+        setMyClassName("portfolio-detail-container");
         console.log(myClassName, cardClicked, crossClicked);
     };
 
@@ -45,7 +44,7 @@ const PortfolioDetail = (props: any) => {
     }, []);
 
     return (
-        <div>
+        <div className={myClassName}>
             <div className="header-fix">
                 <i
                     onClick={handleClick}
