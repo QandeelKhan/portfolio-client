@@ -1,39 +1,30 @@
 .active {
-    transition: 1s;
+    transition: 0.5s;
     left: 0%;
 }
 
 .deactive {
-    transition: 1s;
+    transition: 0.5s;
     left: 100%;
 }
 
-/* .portfolio-detail-container {
-    transition: 850ms;
-} */
-
 .default-position {
     position: fixed;
-    /* transform: translateX(100%); */
-    /* left: 100%; */
-    transition: 1s;
+    transition: 0.5s;
     top: 0;
     overflow-y: scroll;
     z-index: 1000;
     height: 100%;
 }
 
-
-
 .main-container {
-    /*  */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
 }
 
 .header-fix {
-    position: relative;
+    position: fixed;
     top: 0;
     background-color: #17181b;
     display: flex;
