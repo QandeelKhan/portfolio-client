@@ -7,6 +7,9 @@
     transition: 0.5s;
     left: 100%;
 }
+.default-position::-webkit-scrollbar {
+    display: none;
+}
 
 .default-position {
     position: fixed;
