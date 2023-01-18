@@ -1,10 +1,4 @@
 .transform-out {
-    display: none;
-    z-index: 0;
-}
-
-
-.transform-in1 {
     position: fixed;
     top: 0;
     left: 0;
@@ -15,11 +9,38 @@
     justify-content: center;
     align-items: center;
     overflow-y: scroll;
+    overflow-x: hidden;
     scrollbar-width: none;
     position: absolute;
-    transition: all 2s;
-    transform: translateX(0%);
-    z-index: 11;
+    z-index: 15;
+}
+
+.hidden {
+    display: none;
+    z-index: -5;
+}
+
+
+.transform-in {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hide;
+    overflow-y: auto;
+    overflow-x: auto;
+    scrollbar-width: none;
+    position: absolute;
+    z-index: 15;
+    overscroll-behavior: contain;
+    /* transition: all ease-in-out 1s;
+    transform: translateX(0%); */
 }
 
 .transform-in>.main-container {

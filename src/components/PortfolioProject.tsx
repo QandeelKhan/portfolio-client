@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import Masonry from "react-masonry-css";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { setCardClicked } from "../redux/eventsSlice";
+import PortfolioDetail from "../pages/PortfolioDetail";
+import {
+    setAnimate,
+    setCardClicked,
+    setMyClassName,
+} from "../redux/eventsSlice";
 import { RootState } from "../redux/store";
 
 export const clickContext = React.createContext("");
@@ -14,7 +19,17 @@ const PortfolioProject: React.FC = (props: any) => {
         700: 1,
     };
 
+    const { cardClicked, myClassName } = useSelector(
+        (state: RootState) => state.events
+    );
+
     const dispatch = useDispatch();
+
+    const clickState = () => {
+        dispatch(setCardClicked(true));
+        dispatch(setMyClassName("transform-in"));
+        dispatch(setAnimate("0%"));
+    };
 
     return (
         <div className="projects-area">
@@ -34,10 +49,7 @@ const PortfolioProject: React.FC = (props: any) => {
                     </li>
                 </ul>
             </div>
-            {/* <PortfolioDetail
-                trigger={pagePupup}
-                setTrigger={setPagePupup}
-            ></PortfolioDetail> */}
+            <PortfolioDetail />
             <Masonry
                 className="masonry-grid"
                 columnClassName="masonry-grid_column"
@@ -46,10 +58,7 @@ const PortfolioProject: React.FC = (props: any) => {
                 <div className="grid-item">
                     <a className="card-wrapper" href="#">
                         {/* old place */}
-                        <div
-                            onClick={() => dispatch(setCardClicked(true))}
-                            className="overlay"
-                        >
+                        <div onClick={clickState} className="overlay">
                             <div className="onhover-text">
                                 <span className="text-1">Book Design</span>
                                 <span className="text-2">Graphic</span>

@@ -1,7 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const eventsState = {
-    setClicked: false,
+    cardClicked: false,
+    crossClicked: false,
+    myClassName: "hidden",
+    animate: "",
 };
 
 export const eventsSlice = createSlice({
@@ -9,11 +12,21 @@ export const eventsSlice = createSlice({
     initialState: eventsState,
     reducers: {
         setCardClicked: (state, action) => {
-            state.setClicked = action.payload;
+            state.cardClicked = action.payload;
+        },
+        setCrossClicked: (state, action) => {
+            state.myClassName = action.payload;
+        },
+        setMyClassName: (state, action) => {
+            state.myClassName = action.payload;
+        },
+        setAnimate: (state, action) => {
+            state.animate = action.payload;
         },
     },
 });
 
-export const { setCardClicked } = eventsSlice.actions;
+export const { setCardClicked, setCrossClicked, setMyClassName, setAnimate } =
+    eventsSlice.actions;
 
 export default eventsSlice.reducer;
