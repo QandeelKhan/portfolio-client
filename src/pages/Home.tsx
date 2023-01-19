@@ -8,8 +8,10 @@ function Home() {
                 <span className="banner-qandeel">QANDEEL</span>
                 <span className="banner-khan">KHAN</span>
                 <div className="animation-text">
-                    <span className="banner-iam">i am designer</span>
-                    {/* <span className="banner-iam"></span> */}
+                    <div className="fixed-text">I am</div>
+                    <div className="dynamic-text">
+                        <span>Web Designer</span>
+                    </div>
                 </div>
             </div>
         </section>
