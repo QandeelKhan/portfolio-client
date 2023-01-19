@@ -21,9 +21,7 @@ const PortfolioPage: React.FC = (props: any) => {
     };
 
     const dispatch = useDispatch();
-    const { cardClicked, crossClicked, myClassName, myScrollbar } = useSelector(
-        (state: RootState) => state.events
-    );
+    const { myClassName } = useSelector((state: RootState) => state.events);
 
     const clickState = () => {
         dispatch(setCardClicked(true));
