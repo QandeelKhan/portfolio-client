@@ -1,25 +1,19 @@
 import React from "react";
 import PortfolioBriefcase from "../components/icons/PortfolioBriefcase";
-import PortfolioProject from "./PortfolioProject";
-import "./Portfolio.css";
-import PortfolioDetail from "./PortfolioDetail";
+import PortfolioPage from "./PortfolioPage";
+import "./portfolio.css";
+import ResumeHeader from "../components/ResumeHeader";
 
 const Portfolio: React.FC = () => {
     return (
-        <>
-            <PortfolioDetail />
-            <section id="resume-section">
-                <div className="about-container">
-                    <div className="main-about-area">
-                        <div className="about-head-logo-area">
-                            <h1 className="aboutme-heading">Portfolio.</h1>
-                            <PortfolioBriefcase />
-                        </div>
-                        <PortfolioProject />
-                    </div>
-                </div>
-            </section>
-        </>
+        <section id="resume-section">
+            <ResumeHeader
+                iconComponent={<PortfolioBriefcase />}
+                pageName="Portfolio."
+            >
+                <PortfolioPage />
+            </ResumeHeader>
+        </section>
     );
 };
 

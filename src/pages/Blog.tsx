@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import AboutUserIcon from "../components/icons/AboutUser";
 import ResumeHeader from "../components/ResumeHeader";
@@ -9,8 +8,8 @@ const Blog = () => {
         <>
             <ResumeHeader iconComponent={<AboutUserIcon />} pageName="Blog.">
                 <div className="blog-grid">
-                    <Link className="blog-grid-item" to="/blog-detail">
-                        <a href="#" className="blog-item-wrapper">
+                    <Link to="/blog-detail" className="blog-grid-item">
+                        <div className="blog-item-wrapper">
                             <div className="blog-image-container">
                                 <img
                                     className="blog-image"
@@ -31,10 +30,10 @@ const Blog = () => {
                                     May 10, 2021May 10, 2021
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </Link>
-                    <div className="blog-grid-item">
-                        <a href="#" className="blog-item-wrapper">
+                    <Link to="/blog-detail" className="blog-grid-item">
+                        <div className="blog-item-wrapper">
                             <div className="blog-image-container">
                                 <img
                                     className="blog-image"
@@ -55,10 +54,10 @@ const Blog = () => {
                                     May 10, 2021May 10, 2021
                                 </div>
                             </div>
-                        </a>
-                    </div>
-                    <div className="blog-grid-item">
-                        <a href="#" className="blog-item-wrapper">
+                        </div>
+                    </Link>
+                    <Link to="/blog-detail" className="blog-grid-item">
+                        <div className="blog-item-wrapper">
                             <div className="blog-image-container">
                                 <img
                                     className="blog-image"
@@ -79,10 +78,10 @@ const Blog = () => {
                                     May 10, 2021May 10, 2021
                                 </div>
                             </div>
-                        </a>
-                    </div>
-                    <div className="blog-grid-item">
-                        <a href="#" className="blog-item-wrapper">
+                        </div>
+                    </Link>
+                    <Link to="/blog-detail" className="blog-grid-item">
+                        <div className="blog-item-wrapper">
                             <div className="blog-image-container">
                                 <img
                                     className="blog-image"
@@ -103,10 +102,10 @@ const Blog = () => {
                                     May 10, 2021May 10, 2021
                                 </div>
                             </div>
-                        </a>
-                    </div>
-                    <div className="blog-grid-item">
-                        <a href="#" className="blog-item-wrapper">
+                        </div>
+                    </Link>
+                    <Link to="/blog-detail" className="blog-grid-item">
+                        <div className="blog-item-wrapper">
                             <div className="blog-image-container">
                                 <img
                                     className="blog-image"
@@ -127,10 +126,10 @@ const Blog = () => {
                                     May 10, 2021May 10, 2021
                                 </div>
                             </div>
-                        </a>
-                    </div>
-                    <div className="blog-grid-item">
-                        <a href="#" className="blog-item-wrapper">
+                        </div>
+                    </Link>
+                    <Link to="/blog-detail" className="blog-grid-item">
+                        <div className="blog-item-wrapper">
                             <div className="blog-image-container">
                                 <img
                                     className="blog-image"
@@ -151,8 +150,8 @@ const Blog = () => {
                                     May 10, 2021May 10, 2021
                                 </div>
                             </div>
-                        </a>
-                    </div>
+                        </div>
+                    </Link>
                 </div>
             </ResumeHeader>
         </>
