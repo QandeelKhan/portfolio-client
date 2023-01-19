@@ -1,5 +1,4 @@
 import "./App.css";
-import SideNav from "./components/SideNav";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -16,7 +15,7 @@ function App() {
             <Router>
                 <Routes>
                     <Route path="/" element={<Layout />}>
-                        <Route path="/home" element={<Home />} />
+                        <Route index element={<Home />} />
                         <Route path="/about" element={<About />} />
                         <Route path="/resume" element={<Resume />} />
                         <Route path="/portfolio" element={<Portfolio />} />

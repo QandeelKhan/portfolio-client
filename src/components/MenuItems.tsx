@@ -6,46 +6,46 @@ import {
     BookIcon,
     EnvelopeIcon,
 } from "./icons/iconsIndex";
-// const navigate = useNavigate();
+
 export const MenuItems = [
     {
         title: "HOME",
-        cName: "achor",
+        cName: "anchor",
         path: "/",
         icon: <HomeIcon />,
-        navigateTo: "/home",
+        navigateTo: "/",
     },
     {
         title: "ABOUT ME",
-        cName: "achor",
+        cName: "anchor",
         path: "/",
         icon: <UserIcon />,
         navigateTo: "/about",
     },
     {
         title: "RESUME",
-        cName: "achor",
+        cName: "anchor",
         path: "/",
         icon: <BriefcaseIcon />,
         navigateTo: "/resume",
     },
     {
         title: "PORTFOLIO",
-        cName: "achor",
+        cName: "anchor",
         path: "/",
         icon: <LicenseIcon />,
         navigateTo: "/portfolio",
     },
     {
         title: "BLOG",
-        cName: "achor",
+        cName: "anchor",
         path: "/",
         icon: <BookIcon />,
         navigateTo: "/blog",
     },
     {
         title: "CONTACT",
-        cName: "achor",
+        cName: "anchor",
         path: "/",
         icon: <EnvelopeIcon />,
         navigateTo: "/contact",

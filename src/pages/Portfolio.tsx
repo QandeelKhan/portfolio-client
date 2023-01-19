@@ -4,7 +4,7 @@ import PortfolioProject from "./PortfolioProject";
 import "./Portfolio.css";
 import PortfolioDetail from "./PortfolioDetail";
 
-const Portfolio = () => {
+const Portfolio: React.FC = () => {
     return (
         <>
             <PortfolioDetail />

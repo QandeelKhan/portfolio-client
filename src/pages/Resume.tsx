@@ -4,7 +4,7 @@ import LicenseResume from "../components/icons/LicenseResume";
 import ResumeInfoBlock from "../components/ResumeInfoBlock";
 import ResumeSkills from "../components/SkillsSection";
 
-const Resume = () => {
+const Resume: React.FC = () => {
     return (
         <section id="resume-section">
             <div className="about-container">

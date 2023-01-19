@@ -1,5 +1,3 @@
-import React from "react";
-
 const ResumeHeader = (props: any) => {
     return (
         <section id="about-section">

@@ -1,4 +1,3 @@
-import React, { ReactNode } from "react";
 import "./button.css";
 import { useNavigate } from "react-router-dom";
 

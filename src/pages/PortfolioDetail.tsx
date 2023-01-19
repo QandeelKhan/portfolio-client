@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "./portfolio-detail.css";
 import {
-    setAnimate,
     setCardClicked,
     setCrossClicked,
     setMyClassName,
@@ -11,7 +10,7 @@ import { RootState } from "../redux/store";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 
-const PortfolioDetail = (props: any) => {
+const PortfolioDetail: React.FC = (props: any) => {
     const { cardClicked, crossClicked, myClassName, myScrollbar } = useSelector(
         (state: RootState) => state.events
     );
