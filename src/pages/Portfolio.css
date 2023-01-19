@@ -24,16 +24,6 @@
     margin-bottom: 50px;
     /* padding: 0; */
 }
-/* .projects-area::-webkit-scrollbar {
-    display: none;
-} */
-::-webkit-scrollbar {
-    background-color: transparent;
-    width: 4px;
-}
-::-webkit-scrollbar-thumb {
-    background-color: #131313;
-}
 
 .menu-div {
     display: flex;
@@ -78,7 +68,7 @@
     padding-left: 10px;
 } */
 
-.masonry-grid_column > div {
+.masonry-grid_column>div {
     /* margin-bottom: 5%; */
     /* margin-left: 10%; */
     margin: 10px 15px;

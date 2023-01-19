@@ -5,6 +5,7 @@ const eventsState = {
     crossClicked: false,
     myClassName: "deactive",
     animate: "",
+    myScrollbar: "",
 };
 
 export const eventsSlice = createSlice({
@@ -20,13 +21,21 @@ export const eventsSlice = createSlice({
         setMyClassName: (state, action) => {
             state.myClassName = action.payload;
         },
+        setMyScrollbar: (state, action) => {
+            state.myScrollbar = action.payload;
+        },
         setAnimate: (state, action) => {
             state.animate = action.payload;
         },
     },
 });
 
-export const { setCardClicked, setCrossClicked, setMyClassName, setAnimate } =
-    eventsSlice.actions;
+export const {
+    setCardClicked,
+    setCrossClicked,
+    setMyClassName,
+    setAnimate,
+    setMyScrollbar,
+} = eventsSlice.actions;
 
 export default eventsSlice.reducer;

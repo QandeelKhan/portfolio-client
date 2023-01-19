@@ -19,10 +19,9 @@ import { useEffect } from "react";
 
 function App() {
     return (
-        <Router>
-            <Routes>
-                {/* put route here that don't require nav */}
-                <Route path="/" element={<Layout />}>
+        <>
+            <Router>
+                <Routes>
                     <Route path="/home" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/resume" element={<Resume />} />
@@ -30,9 +29,9 @@ function App() {
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/blog-detail" element={<BlogDetail />} />
                     <Route path="/contact" element={<Contact />} />
-                </Route>
-            </Routes>
-        </Router>
+                </Routes>
+            </Router>
+        </>
     );
 }
 

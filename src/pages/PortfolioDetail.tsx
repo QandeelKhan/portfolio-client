@@ -1,19 +1,18 @@
 import React, { useEffect } from "react";
-import { RemoveScrollBar } from "react-remove-scroll-bar";
 import "./portfolio-detail.css";
 import {
     setAnimate,
     setCardClicked,
     setCrossClicked,
     setMyClassName,
+    setMyScrollbar,
 } from "../redux/eventsSlice";
 import { RootState } from "../redux/store";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { motion } from "framer-motion";
 
 const PortfolioDetail = (props: any) => {
-    const { cardClicked, crossClicked, myClassName, animate } = useSelector(
+    const { cardClicked, crossClicked, myClassName, myScrollbar } = useSelector(
         (state: RootState) => state.events
     );
 
@@ -23,8 +22,25 @@ const PortfolioDetail = (props: any) => {
         dispatch(setCardClicked(false));
         dispatch(setCrossClicked(true));
         dispatch(setMyClassName("deactive"));
+
         console.log(myClassName, cardClicked, crossClicked);
     };
+
+    const handleScroll = () => {
+        if (cardClicked) {
+            dispatch(setMyScrollbar("hidden"));
+            document.body.style.overflow = `${myScrollbar}`;
+        }
+        if (!cardClicked) {
+            dispatch(setMyScrollbar(""));
+        }
+        console.log(myScrollbar);
+        document.body.style.overflow = `${myScrollbar}`;
+    };
+
+    useEffect(() => {
+        handleScroll();
+    });
 
     return (
         <div className={`default-position ${myClassName}`}>
