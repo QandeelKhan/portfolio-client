@@ -43,6 +43,7 @@
 .header-fix .fa-circle-xmark {
     color: white;
     font-size: 30px;
+    cursor: pointer;
 }
 
 .left-content {

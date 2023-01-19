@@ -453,7 +453,7 @@ input {
     padding: 0px 10px;
     color: #dedede;
     font-size: 1em;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
 }
 
 label {
@@ -466,15 +466,15 @@ label {
     font-size: 1.4rem;
     font-weight: 500;
     cursor: text;
-    margin-top: .5em;
+    margin-top: 0.5em;
     margin-left: 1.2em;
     color: lightgrey;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
 }
 
 /*added the "valid selector", so, when there's a text in field,the label keep on top even on swapping to another window */
-input:focus+label,
-input:valid+label {
+input:focus + label,
+input:valid + label {
     color: white;
     font-size: 1rem;
     font-weight: 500;
@@ -507,13 +507,13 @@ textarea {
     min-height: 150px;
     padding: 10px 10px;
     color: #dedede;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     resize: none;
     overflow: auto;
 }
 
-textarea:focus+.text-area-label,
-textarea:valid+.text-area-label {
+textarea:focus + .text-area-label,
+textarea:valid + .text-area-label {
     color: white;
     font-size: 1rem;
     font-weight: 500;

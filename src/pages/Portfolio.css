@@ -68,7 +68,7 @@
     padding-left: 10px;
 } */
 
-.masonry-grid_column>div {
+.masonry-grid_column > div {
     /* margin-bottom: 5%; */
     /* margin-left: 10%; */
     margin: 10px 15px;
@@ -104,6 +104,7 @@
 .grid-item {
     position: relative;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .onhover-text {
