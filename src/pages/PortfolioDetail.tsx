@@ -1,48 +1,9 @@
 import React, { useEffect } from "react";
 import "./portfolio-detail.css";
-import {
-    setCardClicked,
-    setCrossClicked,
-    setMyClassName,
-    setMyScrollbar,
-} from "../redux/eventsSlice";
-import { RootState } from "../redux/store";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const PortfolioDetail: React.FC = (props: any) => {
-    const { cardClicked, crossClicked, myClassName, myScrollbar } = useSelector(
-        (state: RootState) => state.events
-    );
-
-    const dispatch = useDispatch();
-
-    const handleClick = () => {
-        dispatch(setCardClicked(false));
-        dispatch(setCrossClicked(true));
-        dispatch(setMyClassName("deactive"));
-
-        console.log(myClassName, cardClicked, crossClicked);
-    };
-
-    const handleScroll = () => {
-        if (cardClicked) {
-            dispatch(setMyScrollbar("hidden"));
-            document.body.style.overflow = `${myScrollbar}`;
-        }
-        if (!cardClicked) {
-            dispatch(setMyScrollbar(""));
-        }
-        console.log(myScrollbar);
-        document.body.style.overflow = `${myScrollbar}`;
-    };
-
-    useEffect(() => {
-        handleScroll();
-    });
-
     return (
         <motion.div
             initial={{ translateX: "100%" }}

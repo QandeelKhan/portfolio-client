@@ -23,10 +23,6 @@ const PortfolioPage: React.FC = (props: any) => {
         700: 1,
     };
 
-    // redux area
-    const dispatch = useDispatch();
-    const { myClassName } = useSelector((state: RootState) => state.events);
-
     const navigate = useNavigate();
     const handleNavigate = () => {
         navigate("/portfolio-detail");
