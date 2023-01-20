@@ -3,6 +3,7 @@ import AboutUserIcon from "../components/icons/AboutUser";
 import ResumeHeader from "../components/ResumeHeader";
 import { motion } from "framer-motion";
 import "./blog.css";
+import BookIcon from "../components/icons/BookIcon";
 
 const Blog = () => {
     return (

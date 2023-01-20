@@ -4,6 +4,8 @@ import LicenseResume from "../components/icons/LicenseResume";
 import ResumeInfoBlock from "../components/ResumeInfoBlock";
 import ResumeSkills from "../components/SkillsSection";
 import { motion } from "framer-motion";
+import AboutUserIcon from "../components/icons/AboutUser";
+import ResumeHeader from "../components/ResumeHeader";
 
 const Resume: React.FC = () => {
     return (
@@ -13,29 +15,15 @@ const Resume: React.FC = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
         >
-            <section id="resume-section">
-                <div className="about-container">
-                    <div className="main-about-area">
-                        <div className="about-head-logo-area">
-                            <h1 className="aboutme-heading">Resume.</h1>
-                            <LicenseResume />
-                        </div>
-                        <ResumeInfoBlock
-                            mainHeadingLeft="EXPERIENCE"
-                            mainHeadingRight="EDUCATION"
-                        />
-                        <ResumeInfoBlock
-                            mainHeadingLeft=""
-                            mainHeadingRight=""
-                        />
-                        <ResumeInfoBlock
-                            mainHeadingLeft=""
-                            mainHeadingRight=""
-                        />
-                        <ResumeSkills />
-                    </div>
-                </div>
-            </section>
+            <ResumeHeader iconComponent={<AboutUserIcon />} pageName="Resume.">
+                <ResumeInfoBlock
+                    mainHeadingLeft="EXPERIENCE"
+                    mainHeadingRight="EDUCATION"
+                />
+                <ResumeInfoBlock mainHeadingLeft="" mainHeadingRight="" />
+                <ResumeInfoBlock mainHeadingLeft="" mainHeadingRight="" />
+                <ResumeSkills />
+            </ResumeHeader>
         </motion.div>
     );
 };
