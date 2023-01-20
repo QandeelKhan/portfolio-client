@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import {
     setCardClicked,
@@ -11,6 +11,7 @@ import "../pages/portfolio.css";
 import GridItem from "../components/GridItem";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
+import { gridItems, tabs } from "../components/GridItems";
 
 const PortfolioPage: React.FC = (props: any) => {
     const breakpointColumnsObj = {
@@ -20,6 +21,7 @@ const PortfolioPage: React.FC = (props: any) => {
         700: 1,
     };
 
+    // redux area
     const dispatch = useDispatch();
     const { myClassName } = useSelector((state: RootState) => state.events);
 
@@ -30,22 +32,34 @@ const PortfolioPage: React.FC = (props: any) => {
         console.log(myClassName);
     };
 
+    // tabs
+    const [selectedTab, setSelectedTab] = useState("ALL");
+
+    const handleTabClick = (tab: string) => {
+        setSelectedTab(tab);
+    };
+
+    const filteredItems = gridItems.filter((item) => {
+        if (selectedTab === "ALL") {
+            return true;
+        } else {
+            return item.category === selectedTab;
+        }
+    });
+
     return (
         <div className="projects-area">
             <div className="menu-div">
                 <ul>
-                    <li>
-                        <a href="/">ALL</a>
-                    </li>
-                    <li>
-                        <a href="/">GRAPHIC</a>
-                    </li>
-                    <li>
-                        <a href="/">DESIGN</a>
-                    </li>
-                    <li>
-                        <a href="/">BRAND</a>
-                    </li>
+                    {tabs.map((tab, index) => (
+                        <li
+                            key={index}
+                            onClick={() => handleTabClick(tab)}
+                            className={selectedTab === tab ? "active" : ""}
+                        >
+                            <div>{tab}</div>
+                        </li>
+                    ))}
                 </ul>
             </div>
             <Masonry
@@ -53,93 +67,17 @@ const PortfolioPage: React.FC = (props: any) => {
                 columnClassName="masonry-grid_column"
                 breakpointCols={breakpointColumnsObj}
             >
-                <GridItem
-                    onClick={clickState}
-                    imgSrc={"images/portfolio/portfolio-1.jpg"}
-                    title={"Book Design"}
-                    category={"Graphic"}
-                    icon={<i className="fa-solid fa-file"></i>}
-                />
-
-                <GridItem
-                    onClick={clickState}
-                    imgSrc={"images/portfolio/portfolio-10.jpg"}
-                    title={"Book Design"}
-                    category={"Graphic"}
-                    icon={<i className="fa-solid fa-image"></i>}
-                />
-
-                <GridItem
-                    onClick={clickState}
-                    imgSrc={"images/portfolio/portfolio-9.jpg"}
-                    title={"Book Design"}
-                    category={"Graphic"}
-                    icon={<i className="fa-solid fa-video"></i>}
-                />
-
-                <GridItem
-                    onClick={clickState}
-                    imgSrc={"images/portfolio/portfolio-8.jpg"}
-                    title={"Book Design"}
-                    category={"Graphic"}
-                    icon={<i className="fa-solid fa-image"></i>}
-                />
-
-                <GridItem
-                    onClick={clickState}
-                    imgSrc={"images/portfolio/portfolio-11.jpg"}
-                    title={"Book Design"}
-                    category={"Graphic"}
-                    icon={<i className="fa-solid fa-file"></i>}
-                />
-
-                <GridItem
-                    onClick={clickState}
-                    imgSrc={"images/portfolio/portfolio-6.jpg"}
-                    title={"Book Design"}
-                    category={"Graphic"}
-                    icon={<i className="fa-solid fa-file"></i>}
-                />
-
-                <GridItem
-                    onClick={clickState}
-                    imgSrc={"images/portfolio/portfolio-5.jpg"}
-                    title={"Book Design"}
-                    category={"Graphic"}
-                    icon={<i className="fa-solid fa-file"></i>}
-                />
-
-                <GridItem
-                    onClick={clickState}
-                    imgSrc={"images/portfolio/portfolio-5.jpg"}
-                    title={"Book Design"}
-                    category={"Graphic"}
-                    icon={<i className="fa-solid fa-file"></i>}
-                />
-
-                <GridItem
-                    onClick={clickState}
-                    imgSrc={"images/portfolio/portfolio-7.jpg"}
-                    title={"Book Design"}
-                    category={"Graphic"}
-                    icon={<i className="fa-solid fa-file"></i>}
-                />
-
-                <GridItem
-                    onClick={clickState}
-                    imgSrc={"images/portfolio/portfolio-3.jpg"}
-                    title={"Book Design"}
-                    category={"Graphic"}
-                    icon={<i className="fa-solid fa-file"></i>}
-                />
-
-                <GridItem
-                    onClick={clickState}
-                    imgSrc={"images/portfolio/portfolio-4.jpg"}
-                    title={"Book Design"}
-                    category={"Graphic"}
-                    icon={<i className="fa-solid fa-file"></i>}
-                />
+                {filteredItems.map((item, index) => (
+                    <GridItem
+                        key={index}
+                        onClick={clickState}
+                        imgSrc={item.imgSrc}
+                        title={item.title}
+                        category={item.category}
+                        icon={<i className={item.icon}></i>}
+                        alt={item.title}
+                    />
+                ))}
             </Masonry>
         </div>
     );
