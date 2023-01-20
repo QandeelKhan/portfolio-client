@@ -191,17 +191,128 @@ const BlogDetail = () => {
 
                                 <div className="comments-section">
                                     <div className="5-comments">
-                                        <h1>5 Comments</h1>
+                                        <h2>5 Comments</h2>
                                     </div>
                                     <div className="comment-div">
                                         <div className="author-image">
-                                            <img src="" alt="" />
+                                            <img
+                                                src="../images/other/profile-img.jpg"
+                                                alt="profile-img"
+                                            />
                                         </div>
                                         <div className="comment-area">
                                             <div className="author-name">
                                                 <h3>John-Doe</h3>
                                                 <div className="reply">
-                                                    <span>Reply</span>
+                                                    <h5>Reply</h5>
+                                                    <i className="fa-solid fa-reply"></i>
+                                                </div>
+                                            </div>
+                                            <div className="comment-date">
+                                                <h6>May 12, 2021 at 7:39 am</h6>
+                                            </div>
+                                            <div className="comment-para">
+                                                A component that allows for easy
+                                                creation of menu items, quickly
+                                                creating paragraphs of “Lorem
+                                                Ipsum” and pictures with custom
+                                                sizes.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="comment-div comment-reply">
+                                        <div className="author-image">
+                                            <img
+                                                src="../images/other/profile-img.jpg"
+                                                alt="profile-img"
+                                            />
+                                        </div>
+                                        <div className="comment-area">
+                                            <div className="author-name">
+                                                <h3>John-Doe</h3>
+                                                <div className="reply">
+                                                    <h5>Reply</h5>
+                                                    <i className="fa-solid fa-reply"></i>
+                                                </div>
+                                            </div>
+                                            <div className="comment-date">
+                                                <h6>May 12, 2021 at 7:39 am</h6>
+                                            </div>
+                                            <div className="comment-para">
+                                                A component that allows for easy
+                                                creation of menu items, quickly
+                                                creating paragraphs of “Lorem
+                                                Ipsum” and pictures with custom
+                                                sizes.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="comment-div comment-next">
+                                        <div className="author-image">
+                                            <img
+                                                src="../images/other/profile-img.jpg"
+                                                alt="profile-img"
+                                            />
+                                        </div>
+                                        <div className="comment-area">
+                                            <div className="author-name">
+                                                <h3>John-Doe</h3>
+                                                <div className="reply">
+                                                    <h5>Reply</h5>
+                                                    <i className="fa-solid fa-reply"></i>
+                                                </div>
+                                            </div>
+                                            <div className="comment-date">
+                                                <h6>May 12, 2021 at 7:39 am</h6>
+                                            </div>
+                                            <div className="comment-para">
+                                                A component that allows for easy
+                                                creation of menu items, quickly
+                                                creating paragraphs of “Lorem
+                                                Ipsum” and pictures with custom
+                                                sizes.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="comment-div comment-next">
+                                        <div className="author-image">
+                                            <img
+                                                src="../images/other/profile-img.jpg"
+                                                alt="profile-img"
+                                            />
+                                        </div>
+                                        <div className="comment-area">
+                                            <div className="author-name">
+                                                <h3>John-Doe</h3>
+                                                <div className="reply">
+                                                    <h5>Reply</h5>
+                                                    <i className="fa-solid fa-reply"></i>
+                                                </div>
+                                            </div>
+                                            <div className="comment-date">
+                                                <h6>May 12, 2021 at 7:39 am</h6>
+                                            </div>
+                                            <div className="comment-para">
+                                                A component that allows for easy
+                                                creation of menu items, quickly
+                                                creating paragraphs of “Lorem
+                                                Ipsum” and pictures with custom
+                                                sizes.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="comment-div comment-next">
+                                        <div className="author-image">
+                                            <img
+                                                src="../images/other/profile-img.jpg"
+                                                alt="profile-img"
+                                            />
+                                        </div>
+                                        <div className="comment-area">
+                                            <div className="author-name">
+                                                <h3>John-Doe</h3>
+                                                <div className="reply">
+                                                    <h5>Reply</h5>
                                                     <i className="fa-solid fa-reply"></i>
                                                 </div>
                                             </div>
@@ -218,6 +329,7 @@ const BlogDetail = () => {
                                         </div>
                                     </div>
                                 </div>
+                                {/* comment section ends here */}
                             </div>
                         </div>
                     </div>
