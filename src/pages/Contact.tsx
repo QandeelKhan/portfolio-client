@@ -3,7 +3,7 @@ import ContactEnvelopeIcon from "../components/icons/ContactEnvelopIcon";
 import Location from "../components/Location";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
-import ResumeHeader from "../components/ResumeHeader";
+import PageTemplate from "../components/PageTemplate";
 
 const Contact = () => {
     function sendEmail(e: FormEvent<HTMLFormElement> & { target: any }) {
@@ -30,7 +30,7 @@ const Contact = () => {
             transition={{ duration: 1 }}
         >
             <form id="contact-form" onSubmit={sendEmail}>
-                <ResumeHeader
+                <PageTemplate
                     iconComponent={<ContactEnvelopeIcon />}
                     pageName="Contact Me."
                 >
@@ -74,7 +74,7 @@ const Contact = () => {
                     </div>
                     {/* need refactor with props */}
                     <Location />
-                </ResumeHeader>
+                </PageTemplate>
             </form>
         </motion.div>
     );

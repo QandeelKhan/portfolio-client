@@ -1,14 +1,14 @@
 import React from "react";
 import AboutUserIcon from "../components/icons/AboutUser";
-import ResumeHeader from "../components/ResumeHeader";
+import PageTemplate from "../components/PageTemplate";
 
 const UnderConstruction = () => {
     return (
         <>
-            <ResumeHeader
+            <PageTemplate
                 iconComponent={<AboutUserIcon />}
                 pageName="Blog."
-            ></ResumeHeader>
+            ></PageTemplate>
         </>
     );
 };

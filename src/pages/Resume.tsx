@@ -5,7 +5,7 @@ import ResumeInfoBlock from "../components/ResumeInfoBlock";
 import ResumeSkills from "../components/SkillsSection";
 import { motion } from "framer-motion";
 import AboutUserIcon from "../components/icons/AboutUser";
-import ResumeHeader from "../components/ResumeHeader";
+import PageTemplate from "../components/PageTemplate";
 
 const Resume: React.FC = () => {
     return (
@@ -15,7 +15,7 @@ const Resume: React.FC = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
         >
-            <ResumeHeader iconComponent={<AboutUserIcon />} pageName="Resume.">
+            <PageTemplate iconComponent={<AboutUserIcon />} pageName="Resume.">
                 <ResumeInfoBlock
                     mainHeadingLeft="EXPERIENCE"
                     mainHeadingRight="EDUCATION"
@@ -23,7 +23,7 @@ const Resume: React.FC = () => {
                 <ResumeInfoBlock mainHeadingLeft="" mainHeadingRight="" />
                 <ResumeInfoBlock mainHeadingLeft="" mainHeadingRight="" />
                 <ResumeSkills />
-            </ResumeHeader>
+            </PageTemplate>
         </motion.div>
     );
 };

@@ -2,7 +2,7 @@ import React from "react";
 import PortfolioBriefcase from "../components/icons/PortfolioBriefcase";
 import PortfolioPage from "./PortfolioPage";
 import "./portfolio.css";
-import ResumeHeader from "../components/ResumeHeader";
+import PageTemplate from "../components/PageTemplate";
 import { motion } from "framer-motion";
 
 const Portfolio: React.FC = () => {
@@ -14,12 +14,12 @@ const Portfolio: React.FC = () => {
             transition={{ duration: 1 }}
         >
             <section id="resume-section">
-                <ResumeHeader
+                <PageTemplate
                     iconComponent={<PortfolioBriefcase />}
                     pageName="Portfolio."
                 >
                     <PortfolioPage />
-                </ResumeHeader>
+                </PageTemplate>
             </section>
         </motion.div>
     );

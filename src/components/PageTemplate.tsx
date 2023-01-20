@@ -1,4 +1,5 @@
-const ResumeHeader = (props: any) => {
+import "./resume-header.css";
+const PageTemplate = (props: any) => {
     return (
         <div className="about-container">
             <div className="main-about-area">
@@ -12,4 +13,4 @@ const ResumeHeader = (props: any) => {
     );
 };
 
-export default ResumeHeader;
+export default PageTemplate;

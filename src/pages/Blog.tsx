@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import AboutUserIcon from "../components/icons/AboutUser";
-import ResumeHeader from "../components/ResumeHeader";
+import PageTemplate from "../components/PageTemplate";
 import { motion } from "framer-motion";
 import "./blog.css";
 import BookIcon from "../components/icons/BookIcon";
@@ -13,7 +13,7 @@ const Blog = () => {
             exit={{ opacity: "100%" }}
             transition={{ duration: 1 }}
         >
-            <ResumeHeader iconComponent={<AboutUserIcon />} pageName="Blog.">
+            <PageTemplate iconComponent={<AboutUserIcon />} pageName="Blog.">
                 <div className="blog-grid">
                     <Link to="/blog-detail" className="blog-grid-item">
                         <div className="blog-item-wrapper">
@@ -160,7 +160,7 @@ const Blog = () => {
                         </div>
                     </Link>
                 </div>
-            </ResumeHeader>
+            </PageTemplate>
         </motion.div>
     );
 };

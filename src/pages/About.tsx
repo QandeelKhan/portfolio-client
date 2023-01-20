@@ -5,7 +5,7 @@ import ServicesArea from "../components/ServicesArea";
 import TestimonialsSection from "../components/TestimonialsSection";
 import { motion } from "framer-motion";
 import "./about.css";
-import ResumeHeader from "../components/ResumeHeader";
+import PageTemplate from "../components/PageTemplate";
 
 const About: React.FC = (props: any) => {
     return (
@@ -15,7 +15,7 @@ const About: React.FC = (props: any) => {
             exit={{ opacity: "100%" }}
             transition={{ duration: 1 }}
         >
-            <ResumeHeader iconComponent={<AboutUserIcon />} pageName="Blog.">
+            <PageTemplate iconComponent={<AboutUserIcon />} pageName="Blog.">
                 <div className="about-all-info">
                     <div className="about-left-info">
                         <h3 className="ui-ux-designer">
@@ -127,7 +127,7 @@ const About: React.FC = (props: any) => {
                 <ClientsSlide />
                 {/* Testimonials area */}
                 <TestimonialsSection />
-            </ResumeHeader>
+            </PageTemplate>
         </motion.div>
     );
 };
