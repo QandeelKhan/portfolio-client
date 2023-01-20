@@ -328,6 +328,30 @@ const BlogDetail = () => {
                                             </div>
                                         </div>
                                     </div>
+                                    {/* comment area starts here */}
+                                    <div className="blog-detail-comment-div">
+                                        <h3>Write a Comment</h3>
+                                        <div className="comment-area">
+                                            <div className="field-holder ">
+                                                <input
+                                                    type="text"
+                                                    name="user_name"
+                                                    className="form-input"
+                                                    required
+                                                />
+                                                <label>Name</label>
+                                            </div>
+                                            <div className="field-holder">
+                                                <input
+                                                    type="email"
+                                                    name="user_email"
+                                                    className="form-input"
+                                                    required
+                                                />
+                                                <label>Email</label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 {/* comment section ends here */}
                             </div>
