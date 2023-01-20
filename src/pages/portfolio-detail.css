@@ -1,15 +1,4 @@
-.active {
-    transition: 0.5s;
-    left: 0%;
-}
-
-.deactive {
-    transition: 0.5s;
-    left: 100%;
-}
-
 .default-position {
-    position: fixed;
     transition: 0.5s;
     top: 0;
     overflow-y: scroll;

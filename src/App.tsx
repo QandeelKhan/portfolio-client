@@ -9,6 +9,7 @@ import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
 import Layout from "./pages/Layout";
 import { AnimatePresence } from "framer-motion";
+import PortfolioDetail from "./pages/PortfolioDetail";
 
 function App() {
     return (
@@ -23,6 +24,10 @@ function App() {
                         <Route path="/blog" element={<Blog />} />
                         <Route path="/blog-detail" element={<BlogDetail />} />
                         <Route path="/contact" element={<Contact />} />
+                        <Route
+                            path="/portfolio-detail"
+                            element={<PortfolioDetail />}
+                        />
                     </Route>
                 </Routes>
             </Router>

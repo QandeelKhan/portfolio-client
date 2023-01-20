@@ -13,6 +13,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import { gridItems, tabs } from "../components/GridItems";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const PortfolioPage: React.FC = (props: any) => {
     const breakpointColumnsObj = {
@@ -26,11 +27,9 @@ const PortfolioPage: React.FC = (props: any) => {
     const dispatch = useDispatch();
     const { myClassName } = useSelector((state: RootState) => state.events);
 
-    const clickState = () => {
-        dispatch(setCardClicked(true));
-        dispatch(setCrossClicked(false));
-        dispatch(setMyClassName("active"));
-        console.log(myClassName);
+    const navigate = useNavigate();
+    const handleNavigate = () => {
+        navigate("/portfolio-detail");
     };
 
     // tabs
@@ -77,7 +76,7 @@ const PortfolioPage: React.FC = (props: any) => {
                     {filteredItems.map((item, index) => (
                         <GridItem
                             key={index}
-                            onClick={clickState}
+                            navigateTo={handleNavigate}
                             imgSrc={item.imgSrc}
                             title={item.title}
                             category={item.category}
@@ -92,3 +91,5 @@ const PortfolioPage: React.FC = (props: any) => {
 };
 
 export default PortfolioPage;
+
+// this is a web page "https://watson.cosmos-themes.com/dark/#home" in this on the right corner

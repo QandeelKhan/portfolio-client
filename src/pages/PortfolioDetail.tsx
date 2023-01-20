@@ -10,6 +10,7 @@ import { RootState } from "../redux/store";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const PortfolioDetail: React.FC = (props: any) => {
     const { cardClicked, crossClicked, myClassName, myScrollbar } = useSelector(
@@ -49,12 +50,12 @@ const PortfolioDetail: React.FC = (props: any) => {
             exit={{ opacity: "100%" }}
             transition={{ duration: 1 }}
         >
-            <div className={`default-position ${myClassName}`}>
+            <div className="default-position">
                 <div className="header-fix">
-                    <i
-                        onClick={handleClick}
+                    <Link
+                        to="/portfolio"
                         className="fa-solid fa-circle-xmark"
-                    ></i>
+                    ></Link>
                 </div>
                 <div className="main-container">
                     {props.children}
