@@ -8,10 +8,11 @@ import Portfolio from "./pages/Portfolio";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
 import Layout from "./pages/Layout";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
     return (
-        <>
+        <AnimatePresence>
             <Router>
                 <Routes>
                     <Route path="/" element={<Layout />}>
@@ -25,7 +26,7 @@ function App() {
                     </Route>
                 </Routes>
             </Router>
-        </>
+        </AnimatePresence>
     );
 }
 
