@@ -21,7 +21,8 @@ const ResumeInfoBlock = (props: headingProps) => {
                         <span className="resume-text">
                             I am a Python and JavaScript developer with having
                             bachelor's in Computer Science (B.S). from GC
-                            University
+                            University,
+                            {/*  */}
                             <br />
                             <br />
                         </span>
