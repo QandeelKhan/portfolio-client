@@ -1,8 +1,9 @@
 .default-position {
     overflow-y: scroll;
     scrollbar-width: none;
-    height: 100vh;
-    z-index: 1500;
+    height: 100%;
+    z-index: 15000;
+    position: relative;
 }
 
 .main-container {

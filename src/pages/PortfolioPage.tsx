@@ -1,16 +1,8 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import {
-    setCardClicked,
-    setCrossClicked,
-    setMyClassName,
-} from "../redux/eventsSlice";
 import Masonry from "react-masonry-css";
 import "./portfolio-detail.css";
 import "../pages/portfolio.css";
 import GridItem from "../components/GridItem";
-import { useSelector } from "react-redux";
-import { RootState } from "../redux/store";
 import { gridItems, tabs } from "../components/GridItems";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -45,43 +37,42 @@ const PortfolioPage: React.FC = (props: any) => {
 
     return (
         <motion.div
+            className="projects-area"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
         >
-            <div className="projects-area">
-                <div className="menu-div">
-                    <ul>
-                        {tabs.map((tab, index) => (
-                            <li
-                                key={index}
-                                onClick={() => handleTabClick(tab)}
-                                className={selectedTab === tab ? "active" : ""}
-                            >
-                                <div>{tab}</div>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-                <Masonry
-                    className="masonry-grid"
-                    columnClassName="masonry-grid_column"
-                    breakpointCols={breakpointColumnsObj}
-                >
-                    {filteredItems.map((item, index) => (
-                        <GridItem
+            <div className="menu-div">
+                <ul>
+                    {tabs.map((tab, index) => (
+                        <li
                             key={index}
-                            navigateTo={handleNavigate}
-                            imgSrc={item.imgSrc}
-                            title={item.title}
-                            category={item.category}
-                            icon={<i className={item.icon}></i>}
-                            alt={item.title}
-                        />
+                            onClick={() => handleTabClick(tab)}
+                            className={selectedTab === tab ? "active" : ""}
+                        >
+                            <div>{tab}</div>
+                        </li>
                     ))}
-                </Masonry>
+                </ul>
             </div>
+            <Masonry
+                className="masonry-grid"
+                columnClassName="masonry-grid_column"
+                breakpointCols={breakpointColumnsObj}
+            >
+                {filteredItems.map((item, index) => (
+                    <GridItem
+                        key={index}
+                        navigateTo={handleNavigate}
+                        imgSrc={item.imgSrc}
+                        title={item.title}
+                        category={item.category}
+                        icon={<i className={item.icon}></i>}
+                        alt={item.title}
+                    />
+                ))}
+            </Masonry>
         </motion.div>
     );
 };
