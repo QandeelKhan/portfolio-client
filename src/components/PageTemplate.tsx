@@ -1,4 +1,4 @@
-import "./resume-header.css";
+import "./page-template.css";
 const PageTemplate = (props: any) => {
     return (
         <div className="about-container">
