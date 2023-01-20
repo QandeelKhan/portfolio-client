@@ -187,6 +187,37 @@ const BlogDetail = () => {
                                         </a>
                                     </div>
                                 </nav>
+                                {/* comments section */}
+
+                                <div className="comments-section">
+                                    <div className="5-comments">
+                                        <h1>5 Comments</h1>
+                                    </div>
+                                    <div className="comment-div">
+                                        <div className="author-image">
+                                            <img src="" alt="" />
+                                        </div>
+                                        <div className="comment-area">
+                                            <div className="author-name">
+                                                <h3>John-Doe</h3>
+                                                <div className="reply">
+                                                    <span>Reply</span>
+                                                    <i className="fa-solid fa-reply"></i>
+                                                </div>
+                                            </div>
+                                            <div className="comment-date">
+                                                <h6>May 12, 2021 at 7:39 am</h6>
+                                            </div>
+                                            <div className="comment-para">
+                                                A component that allows for easy
+                                                creation of menu items, quickly
+                                                creating paragraphs of “Lorem
+                                                Ipsum” and pictures with custom
+                                                sizes.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

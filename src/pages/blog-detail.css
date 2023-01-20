@@ -45,12 +45,13 @@
 
 .post-content {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin-right: -15px;
     margin-left: -15px;
+    border: 1px solid red;
 }
 
 .post-headings {
@@ -58,7 +59,7 @@
     padding: 40px 15% 10px 15%;
     padding-bottom: 50px;
     text-align: center;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     background-color: #2c2d2f;
 }
 
@@ -83,7 +84,7 @@
 .post-title {
     font-size: 2.5em;
     margin-bottom: 6px;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     word-wrap: break-word;
     font-family: "Playfair Display", serif;
     font-weight: 700;
@@ -119,7 +120,7 @@
 .paragraph-heading {
     font-size: 1.5rem;
     margin-bottom: 6px;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     font-family: "Playfair Display", serif;
     font-weight: 700;
     color: #fff;
@@ -205,18 +206,25 @@
     display: inline;
     margin-top: 30px;
     margin-left: 10px;
-    transition: all .3s ease 0s;
+    transition: all 0.3s ease 0s;
 }
 
 .nav-links:hover .prev-icon {
-    transition: all .3s ease 0s;
+    transition: all 0.3s ease 0s;
     transform: translateX(-10px);
 }
-
 
 .nav-links a {
     position: relative;
     text-transform: uppercase;
     color: white;
     font-size: 16px;
+}
+/* comment section starts here */
+.comments-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 50px;
 }
