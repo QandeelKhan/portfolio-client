@@ -1,0 +1,641 @@
+/* ---Global Styles--- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.65;
+}
+
+:root {
+    --primaryColor: #00a3e1;
+    --secondaryColor: #17181b;
+    --backgroundColor: #2c2d2f;
+    --borderText: #7a7a7a;
+    --hoverColor: #fff;
+    --blackColor: black;
+}
+
+/* ---Side Nav--- */
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.sidebar-main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 10;
+}
+
+/* imag area css */
+
+.image-area {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-area img {
+    width: 100%;
+    height: 270px;
+    object-fit: contain;
+    z-index: -1;
+}
+
+.person-name {
+    width: 200px;
+    height: 45px;
+    background-color: var(--primaryColor);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+}
+
+.person-name span {
+    font-size: 22px;
+    color: var(--hoverColor);
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    text-shadow: 1px 9px 12px #000;
+}
+
+/* menu bar css starts here  */
+
+.menubar-area {
+    display: flex;
+    flex-direction: column;
+    /* padding-left: 10px; */
+}
+
+.menubar-area ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer css starts here */
+
+.footer-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--secondaryColor);
+    height: 100vh;
+}
+
+.footer-icons {
+    font-size: 18px;
+    margin-top: 17px;
+    color: rgb(156, 156, 156);
+}
+
+.footer-area .footer-text {
+    font-size: 12px;
+    margin-top: 7px;
+    color: rgb(146, 144, 144);
+    text-align: center;
+    line-height: 15px;
+    margin-bottom: 1rem;
+}
+
+.icons-social {
+    padding: 0px 10px 10px 0px;
+    transition: 0.3s;
+}
+
+.icons-social:hover {
+    transition: 0.3s;
+    color: var(--hoverColor);
+    cursor: pointer;
+}
+
+/* ---Section About--- */
+
+/* ---Section About--- */
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    margin-left: 200px;
+    border: 1px solid red;
+}
+
+.main-about-area {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* object-fit: contain; */
+    margin-left: 65px;
+    margin-right: 65px;
+    border: 1px solid red;
+    font-family: "Playfair Display", serif;
+}
+
+<<<<<<< HEAD
+.banner-text {
+    position: absolute;
+    color: #00a3e1;
+    font-size: 4.1rem;
+    margin-left: 150px;
+    margin-bottom: 100px;
+    /* font-weight: 700px; */
+    font-family: "Playfair Display", serif;
+}
+
+.banner-qandeel {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0px 10px;
+}
+
+.banner-khan {
+    color: #00a3e1;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0px 10px;
+}
+.fixed-text {
+    font-size: 1.8rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    font-weight: lighter;
+}
+.dynamic-text {
+    font-size: 2rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    font-weight: bold;
+    position: relative;
+}
+.dynamic-text span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    border-left: 2px solid white;
+    right: 0;
+    opacity: 1;
+    background-color: white;
+    animation: typetext 3s steps(12) infinite backwards;
+}
+@keyframes typetext {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+.animation-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+=======
+>>>>>>> 2e5085f4e1b618de077dcec02a2659668ecb91d8
+/* ---------ABOUT PAGE STARTS HERE----------- */
+
+.about-head-logo-area {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px var(--borderText) dashed;
+    margin-top: 35px;
+}
+
+.aboutme-heading {
+    font-size: 36px;
+    letter-spacing: 1.5px;
+    color: var(--primaryColor);
+}
+
+.aboutuser-icon {
+    height: 50px;
+    width: 50px;
+    border: 1px solid red;
+}
+
+.about-user-icon {
+    height: 40px;
+    width: 40px;
+    fill: #00a3e1;
+    /* background-color: #00a3e1; */
+}
+
+.about-all-info {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.about-left-info {
+    width: 60%;
+    height: auto;
+}
+
+.ui-ux-designer {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 22px;
+    margin-top: 35px;
+}
+
+.about-right-info {
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-top: 35px;
+}
+
+.personel-info-heading {
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 20px;
+    margin-right: 47px;
+}
+
+.personal-info-list {
+    color: white;
+    line-height: 1em;
+    margin-bottom: 15px;
+}
+
+.personal-info-title {
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    font-weight: 700;
+    /* letter-spacing: .5px; */
+    position: relative;
+    display: inline-block;
+    margin-right: 15px;
+    padding-bottom: 1px;
+    border-bottom: 3px solid #00a3e1;
+    color: #fff;
+}
+
+.personal-info-value {
+    font-size: 16px;
+    /* font-weight: 700; */
+    letter-spacing: 0.5px;
+    position: relative;
+    display: inline-block;
+    margin-right: 15px;
+    padding-bottom: 1px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.uiux-dummy-text {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.personal-info-title ::after {
+    content: " :";
+    top: 0;
+    position: absolute;
+    right: -10px;
+}
+
+.about-right-info ul li {
+    padding: 3px 0px;
+}
+
+.download-resume-btn {
+    color: var(--primaryColor);
+    border: 2px solid #0082b6;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px 0px;
+    margin-right: 70px;
+    padding: 6px 18px;
+    font-size: 14px;
+    position: relative;
+    transition: ease-out 0.5s;
+    z-index: 1;
+}
+
+.download-resume-btn:hover {
+    color: white;
+}
+
+.download-resume-btn::after {
+    content: "";
+    left: 90%;
+    right: 90%;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: #0082b6;
+    position: absolute;
+    transition: 0.5s all ease;
+}
+
+.download-resume-btn:hover::after {
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transition: 0.5s all ease;
+    z-index: -1;
+}
+
+.signature-area img {
+    width: 100%;
+    height: 100px;
+    transform: translateX(-180px);
+    filter: brightness(0) invert(1);
+}
+
+.signature-area {
+    margin-top: 10px;
+    z-index: 1;
+}
+
+/* Contact Section */
+
+.contact-area-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    margin-left: 200px;
+}
+
+.contact-area {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* object-fit: contain; */
+    margin-left: 65px;
+    margin-right: 65px;
+    border: 1px solid red;
+    font-family: "Playfair Display", serif;
+}
+
+/* Contact Section */
+
+.contact-area-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    margin-left: 200px;
+}
+
+.contact-area {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid red;
+    font-family: "Playfair Display", serif;
+}
+
+.lets-talk-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0px 160px;
+    margin-top: 50px;
+}
+
+.messsage-area {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0px 15px;
+}
+
+/* Form Name and Email Fields Start */
+
+.field-holder {
+    position: relative;
+    margin-right: 30px;
+    width: 40%;
+}
+
+input {
+    background: transparent;
+    border: 2px solid #999;
+    outline: none !important;
+    width: 100%;
+    height: auto;
+    margin: 10px 15px;
+    margin-bottom: 50px;
+    line-height: 40px;
+    padding: 0px 10px;
+    color: #dedede;
+    font-size: 1em;
+    transition: all 0.5s ease;
+}
+
+label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: text;
+    margin-top: 0.5em;
+    margin-left: 1.2em;
+    color: lightgrey;
+    transition: all 0.2s ease;
+}
+
+/*added the "valid selector", so, when there's a text in field,the label keep on top even on swapping to another window */
+input:focus + label,
+input:valid + label {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    top: -25px;
+    left: -5px;
+    pointer-events: none;
+}
+
+input:focus,
+input:valid {
+    border: 2px solid white;
+}
+
+/* Form Name and Email Fields End */
+
+.name-email-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+textarea {
+    background: transparent;
+    border: 2px solid #999;
+    outline: none;
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+    padding: 10px 10px;
+    color: #dedede;
+    transition: all 0.5s ease;
+    resize: none;
+    overflow: auto;
+}
+
+textarea:focus + .text-area-label,
+textarea:valid + .text-area-label {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    top: -32px;
+    left: -5px;
+    pointer-events: none;
+}
+
+textarea:focus,
+textarea:valid {
+    border: 2px solid white;
+}
+
+::placeholder {
+    color: #dedede;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* button css starts here */
+
+.send-messsage-btn {
+    background-color: transparent;
+    color: var(--primaryColor);
+    border: 2px solid #0082b6;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 35px 0px;
+    /* margin-right: 70px; */
+    padding: 6px 18px;
+    font-size: 14px;
+    position: relative;
+    transition: ease-out 0.5s;
+    z-index: 1;
+}
+
+.send-messsage-btn:hover {
+    color: black;
+}
+
+.send-messsage-btn::after {
+    content: "";
+    left: 90%;
+    right: 90%;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: #0082b6;
+    position: absolute;
+    transition: 0.5s all ease;
+}
+
+.send-messsage-btn:hover::after {
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transition: 0.5s all ease;
+    z-index: -1;
+}
+
+/* contact area starts here */
+
+.location-icons {
+    font-size: 32px;
+    color: #00a3e1;
+    padding-bottom: 12px;
+}
+
+.location-area span {
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.side-nav-social-links {
+    text-decoration: none;
+    color: grey;
+    cursor: pointer;
+}
+
+.side-nav-social-links:hover {
+    color: white;
+}
+
+.upwork-icon {
+    height: 21px;
+    width: 21px;
+    fill: grey;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.upwork-icon:hover {
+    height: 29px;
+    width: 29px;
+    font-weight: bold;
+    fill: green;
+    transition: 0.5s;
+    transform: rotate(360deg);
+    /* font-weight: bold; */
+}
