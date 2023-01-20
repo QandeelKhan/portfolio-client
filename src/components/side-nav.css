@@ -131,29 +131,6 @@ li {
 
 /* ---Section About--- */
 
-.home-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main-image-area {
-    width: 100%;
-    height: 100vh;
-    background: rgb(0, 0, 0, 0.5) url("/public/images/other/home-bg.jpg");
-    background-blend-mode: darken;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    object-fit: contain;
-    margin-left: 200px;
-}
-
 /* ---Section About--- */
 
 .about-container {
@@ -178,72 +155,6 @@ li {
     font-family: "Playfair Display", serif;
 }
 
-.banner-text {
-    position: absolute;
-    color: #00a3e1;
-    font-size: 4.1rem;
-    margin-left: 150px;
-    margin-bottom: 100px;
-    /* font-weight: 700px; */
-    font-family: "Playfair Display", serif;
-}
-
-.banner-qandeel {
-    color: white;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin: 0px 10px;
-}
-
-.banner-khan {
-    color: #00a3e1;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin: 0px 10px;
-}
-.fixed-text {
-    font-size: 1.8rem;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    display: inline-block;
-    font-weight: lighter;
-}
-.dynamic-text {
-    font-size: 2rem;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    display: inline-block;
-    font-weight: bold;
-    position: relative;
-}
-.dynamic-text span::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    height: 100%;
-    border-left: 2px solid white;
-    right: 0;
-    opacity: 1;
-    background-color: white;
-    animation: typetext 3s steps(12) infinite backwards;
-}
-@keyframes typetext {
-    0% {
-        left: 0;
-    }
-    50% {
-        left: 100%;
-    }
-    100% {
-        left: 0;
-    }
-}
-.animation-text {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 /* ---------ABOUT PAGE STARTS HERE----------- */
 
 .about-head-logo-area {
@@ -517,8 +428,8 @@ label {
 }
 
 /*added the "valid selector", so, when there's a text in field,the label keep on top even on swapping to another window */
-input:focus + label,
-input:valid + label {
+input:focus+label,
+input:valid+label {
     color: white;
     font-size: 1rem;
     font-weight: 500;
@@ -556,8 +467,8 @@ textarea {
     overflow: auto;
 }
 
-textarea:focus + .text-area-label,
-textarea:valid + .text-area-label {
+textarea:focus+.text-area-label,
+textarea:valid+.text-area-label {
     color: white;
     font-size: 1rem;
     font-weight: 500;
