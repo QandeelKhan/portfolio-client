@@ -3,6 +3,9 @@ import React from "react";
 const BlogDetailSidebar = () => {
     return (
         <div className="main-side-container">
+            <div className="arrow-div">
+                <i className="fa-solid fa-arrow-left"></i>
+            </div>
             <div className="side-content">
                 <div className="search-div">
                     <input type="text" placeholder="Search..." />
@@ -44,9 +47,6 @@ const BlogDetailSidebar = () => {
                         <span>Latest UI Trends To Inspired From</span>
                     </a>
                 </div>
-            </div>
-            <div className="arrow-div">
-                <i className="fa-solid fa-arrow-left"></i>
             </div>
         </div>
     );
