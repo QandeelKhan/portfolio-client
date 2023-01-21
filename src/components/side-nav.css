@@ -25,7 +25,7 @@ body {
     position: fixed;
     display: flex;
     align-items: center;
-    height: 50px;
+    height: 40px;
     width: 100%;
     z-index: 10;
 
@@ -60,7 +60,7 @@ body {
 
 .toggle-icon {
     width: 45px;
-    font-size: 35px;
+    font-size: 20px;
     color: white;
     background-color: var(--secondaryColor);
 }
