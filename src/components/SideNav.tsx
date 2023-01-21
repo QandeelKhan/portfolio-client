@@ -32,7 +32,7 @@ const SideNav: React.FC = (props: any) => {
                 <div className="toggle-mode">
                     {
                         <div
-                            className={`${
+                            className={`toggler-container ${
                                 navVisible
                                     ? "toggler-clicked"
                                     : "toggler-unclicked"
@@ -45,9 +45,9 @@ const SideNav: React.FC = (props: any) => {
                                 }`}
                             >
                                 {navVisible ? (
-                                    <i className="fas fa-bars toggle-icon"></i>
-                                ) : (
                                     <i className="fa-solid fa-xmark toggle-icon"></i>
+                                ) : (
+                                    <i className="fas fa-bars toggle-icon"></i>
                                 )}
                             </button>
                         </div>

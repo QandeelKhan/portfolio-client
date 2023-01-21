@@ -7,7 +7,7 @@ const PageTemplate = (props: any) => {
                     <h1 className="aboutme-heading">{props.pageName}</h1>
                     {props.iconComponent}
                 </div>
-                <div>{props.children}</div>
+                {props.children}
             </div>
         </div>
     );

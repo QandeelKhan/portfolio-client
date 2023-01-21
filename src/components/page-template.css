@@ -38,3 +38,9 @@
     letter-spacing: 1.5px;
     color: var(--primaryColor);
 }
+
+@media (max-width:768px) {
+    .about-container {
+        margin-left: 0px;
+    }
+}
