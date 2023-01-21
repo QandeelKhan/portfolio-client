@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import BlogDetailSidebar from "../components/BlogDetailSidebar";
 import "./blog-detail.css";
 
 const BlogDetail = () => {
@@ -337,6 +338,8 @@ const BlogDetail = () => {
                     </div>
                 </div>
             </div>
+            {/* blog detail sidebar */}
+            <BlogDetailSidebar />
         </div>
     );
 };
