@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import BlogDetailSidebar from "../components/BlogDetailSidebar";
+import Comments from "../components/Comments";
 import CommentsForm from "../components/CommentsForm";
 import "./blog-detail.css";
 
@@ -16,6 +17,40 @@ const BlogDetail = () => {
         console.log(data);
         // You can handle the form data here
     };
+
+    const [comments, setComments] = useState([
+        {
+            authorName: "John-Doe",
+            commentDate: "May 12, 2021 at 7:39 am",
+            commentText:
+                "A component that allows for easy creation of menu items, quickly creating paragraphs of “Lorem Ipsum” and pictures with custom sizes",
+            imageSource: "../images/other/profile-img.jpg",
+        },
+        {
+            authorName: "Jane-Doe",
+            commentDate: "May 12, 2021 at 8:39 am",
+            commentText:
+                "A component that allows for easy creation of menu items, quickly creating paragraphs of “Lorem Ipsum” and pictures with custom sizes",
+            imageSource: "../images/other/profile-img.jpg",
+        },
+    ]);
+
+    const [replies, setReplies] = useState([
+        {
+            authorName: "John-Doe",
+            replyDate: "May 12, 2021 at 9:39 am",
+            replyText:
+                "A component that allows for easy creation of menu items, quickly creating paragraphs of “Lorem Ipsum” and pictures with custom sizes",
+            imageSource: "../images/other/profile-img.jpg",
+        },
+        {
+            authorName: "Jane-Doe",
+            replyDate: "May 12, 2021 at 10:39 am",
+            replyText:
+                "A component that allows for easy creation of menu items, quickly creating paragraphs of “Lorem Ipsum” and pictures with custom sizes",
+            imageSource: "../images/other/profile-img.jpg",
+        },
+    ]);
 
     return (
         <div className="post-page-main">
@@ -208,61 +243,8 @@ const BlogDetail = () => {
                                     <div className="5-comments">
                                         <h2>5 Comments</h2>
                                     </div>
-                                    <div className="comment-div">
-                                        <div className="author-image">
-                                            <img
-                                                src="../images/other/profile-img.jpg"
-                                                alt="profile-img"
-                                            />
-                                        </div>
-                                        <div className="comment-area">
-                                            <div className="author-name">
-                                                <h3>John-Doe</h3>
-                                                <div className="reply">
-                                                    <h5>Reply</h5>
-                                                    <i className="fa-solid fa-reply"></i>
-                                                </div>
-                                            </div>
-                                            <div className="comment-date">
-                                                <h6>May 12, 2021 at 7:39 am</h6>
-                                            </div>
-                                            <div className="comment-para">
-                                                A component that allows for easy
-                                                creation of menu items, quickly
-                                                creating paragraphs of “Lorem
-                                                Ipsum” and pictures with custom
-                                                sizes.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="comment-div comment-reply">
-                                        <div className="author-image">
-                                            <img
-                                                src="../images/other/profile-img.jpg"
-                                                alt="profile-img"
-                                            />
-                                        </div>
-                                        <div className="comment-area">
-                                            <div className="author-name">
-                                                <h3>John-Doe</h3>
-                                                <div className="reply">
-                                                    <h5>Reply</h5>
-                                                    <i className="fa-solid fa-reply"></i>
-                                                </div>
-                                            </div>
-                                            <div className="comment-date">
-                                                <h6>May 12, 2021 at 7:39 am</h6>
-                                            </div>
-                                            <div className="comment-para">
-                                                A component that allows for easy
-                                                creation of menu items, quickly
-                                                creating paragraphs of “Lorem
-                                                Ipsum” and pictures with custom
-                                                sizes.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="comment-div comment-next">
+                                    {/* comments */}
+                                    {/* <div className="comment-div comment-next">
                                         <div className="author-image">
                                             <img
                                                 src="../images/other/profile-img.jpg"
@@ -342,7 +324,11 @@ const BlogDetail = () => {
                                                 sizes..
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
+                                    <Comments
+                                        comments={comments}
+                                        replies={replies}
+                                    />
                                     <CommentsForm
                                         onSubmit={handleSubmit}
                                         initialName=""
