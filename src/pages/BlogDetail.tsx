@@ -1,9 +1,21 @@
 import React, { useState } from "react";
 import BlogDetailSidebar from "../components/BlogDetailSidebar";
+import CommentsForm from "../components/CommentsForm";
 import "./blog-detail.css";
 
 const BlogDetail = () => {
-    // const [isReplyOpen, setIsReplyOpen] = useState(false);
+    interface FormData {
+        name: string;
+        email: string;
+        comment: string;
+        checkbox: boolean;
+    }
+
+    const [isReplyOpen, setIsReplyOpen] = useState(false);
+    const handleSubmit = (data: FormData) => {
+        console.log(data);
+        // You can handle the form data here
+    };
 
     return (
         <div className="post-page-main">
@@ -331,7 +343,12 @@ const BlogDetail = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    {/* comment section */}
+                                    <CommentsForm
+                                        onSubmit={handleSubmit}
+                                        initialName=""
+                                        initialEmail=""
+                                        initialComment=""
+                                    />
                                 </div>
                             </div>
                         </div>
