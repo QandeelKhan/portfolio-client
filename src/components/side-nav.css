@@ -29,7 +29,7 @@ li {
     list-style: none;
 }
 
-.sidebar-main {
+.nav {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -38,6 +38,12 @@ li {
     left: 0;
     position: fixed;
     z-index: 10;
+    transition: all 0.3s ease-out;
+    background-color: black;
+}
+
+.nav-hidden {
+    transform: translateX(-200px);
 }
 
 /* imag area css */
@@ -330,27 +336,9 @@ li {
     font-family: "Playfair Display", serif;
 }
 
-.lets-talk-area {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    padding: 0px 160px;
-    margin-top: 50px;
-}
 
-.messsage-area {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    padding: 0px 15px;
-}
+
+
 
 /* Form Name and Email Fields Start */
 
@@ -360,62 +348,14 @@ li {
     width: 40%;
 }
 
-input {
-    background: transparent;
-    border: 2px solid #999;
-    outline: none !important;
-    width: 100%;
-    height: auto;
-    margin: 10px 15px;
-    margin-bottom: 50px;
-    line-height: 40px;
-    padding: 0px 10px;
-    color: #dedede;
-    font-size: 1em;
-    transition: all 0.5s ease;
-}
 
-label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: white;
-    display: flex;
-    align-items: center;
-    font-size: 1.4rem;
-    font-weight: 500;
-    cursor: text;
-    margin-top: 0.5em;
-    margin-left: 1.2em;
-    color: lightgrey;
-    transition: all 0.2s ease;
-}
 
 /*added the "valid selector", so, when there's a text in field,the label keep on top even on swapping to another window */
-input:focus+label,
-input:valid+label {
-    color: white;
-    font-size: 1rem;
-    font-weight: 500;
-    top: -25px;
-    left: -5px;
-    pointer-events: none;
-}
 
-input:focus,
-input:valid {
-    border: 2px solid white;
-}
 
 /* Form Name and Email Fields End */
 
-.name-email-area {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: auto;
-}
+
 
 textarea {
     background: transparent;
@@ -454,45 +394,7 @@ textarea:valid {
 
 /* button css starts here */
 
-.send-messsage-btn {
-    background-color: transparent;
-    color: var(--primaryColor);
-    border: 2px solid #0082b6;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 35px 0px;
-    /* margin-right: 70px; */
-    padding: 6px 18px;
-    font-size: 14px;
-    position: relative;
-    transition: ease-out 0.5s;
-    z-index: 1;
-}
 
-.send-messsage-btn:hover {
-    color: black;
-}
-
-.send-messsage-btn::after {
-    content: "";
-    left: 90%;
-    right: 90%;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background-color: #0082b6;
-    position: absolute;
-    transition: 0.5s all ease;
-}
-
-.send-messsage-btn:hover::after {
-    left: 0;
-    right: 0;
-    opacity: 1;
-    transition: 0.5s all ease;
-    z-index: -1;
-}
 
 /* contact area starts here */
 

@@ -4,6 +4,7 @@ import Location from "../components/Location";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 import PageTemplate from "../components/PageTemplate";
+import "./contact.css";
 
 const Contact = () => {
     function sendEmail(e: FormEvent<HTMLFormElement> & { target: any }) {
@@ -34,7 +35,7 @@ const Contact = () => {
                     iconComponent={<ContactEnvelopeIcon />}
                     pageName="Contact Me."
                 >
-                    <div className="lets-talk-area">
+                    <div className="lets-talk-area ">
                         <div className="subheading">
                             <span>LET'S TALK</span>
                         </div>
@@ -52,7 +53,6 @@ const Contact = () => {
                                 <input
                                     type="email"
                                     name="user_email"
-                                    className="form-input"
                                     required
                                 />
                                 <label>Email</label>

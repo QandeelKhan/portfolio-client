@@ -1,13 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./side-nav.css";
 import { MenuItems } from "./MenuItems";
 import { Button } from "./Button";
 import UpworkIcon from "./icons/UpworkIcon";
 
 const SideNav: React.FC = (props: any) => {
+    const [navVisible, setNavVisible] = useState(true);
+
+    const handleResize = () => {
+        if (window.innerWidth < 768) {
+            setNavVisible(false);
+        } else {
+            setNavVisible(true);
+        }
+    };
+
+    const handleToggleNav = () => {
+        setNavVisible(!navVisible);
+    };
+
+    useEffect(() => {
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
     return (
         <>
-            <div className="sidebar-main">
+            <div className={`nav ${!navVisible ? "nav-hidden" : ""}`}>
+                <div className="toggle-mode">
+                    <button
+                        onClick={handleToggleNav}
+                        className={navVisible ? "show-toggler" : "hide-toggler"}
+                    >
+                        Toggle Nav
+                    </button>
+                </div>
                 <div className="image-area">
                     <img src="images/other/profile-img.jpg" alt="profile-img" />
                     <div className="person-name">

@@ -345,7 +345,6 @@ const BlogDetail = () => {
                                                 <input
                                                     type="email"
                                                     name="user_email"
-                                                    className="form-input"
                                                     required
                                                 />
                                                 <label>Email</label>
