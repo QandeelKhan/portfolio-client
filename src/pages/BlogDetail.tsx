@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./blog-detail.css";
 
 const BlogDetail = () => {
@@ -330,112 +330,11 @@ const BlogDetail = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    {/* comment area starts here */}
-                                    <div className="blog-detail-comment-div">
-                                        <h3>Write a Comment</h3>
-                                        <div className="comment-write">
-                                            <div className="name-and-email">
-                                                <div className="input-group ">
-                                                    <input
-                                                        type="text"
-                                                        name="user_name"
-                                                        className="form-input"
-                                                        required
-                                                    />
-                                                    <label>Name</label>
-                                                </div>
-                                                <div className="input-group">
-                                                    <input
-                                                        type="email"
-                                                        name="user_email"
-                                                        className="form-input"
-                                                        required
-                                                    />
-                                                    <label>Email</label>
-                                                </div>
-                                            </div>
-                                            <div className="input-group input-message">
-                                                <textarea
-                                                    required
-                                                    name="message"
-                                                />
-                                                <label>Your Comment</label>
-                                            </div>
-                                        </div>
-                                        <div className="checkbox">
-                                            <input
-                                                type="checkbox"
-                                                // name="user_email"
-                                                className="checkbox"
-                                                // required
-                                            />
-                                            <label>
-                                                Save my name, email, and website
-                                                in this browser for the next
-                                                time I comment.
-                                            </label>
-                                        </div>
-                                        <button
-                                            type="submit"
-                                            className="send-messsage-btn"
-                                            value="Send Message"
-                                        >
-                                            POST COMMENT
-                                        </button>
-                                    </div>
+                                    {/* comment section starts here */}
                                 </div>
-                                {/* comment section ends here */}
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            {/* // right sidebar starts here */}
-            <div className="main-side-container">
-                <div className="side-content">
-                    <div className="search-div">
-                        <input type="text" placeholder="Search..." />
-                        <i className="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                    <h3>Recent Posts</h3>
-                    <div className="post-points">
-                        <a href="/">
-                            <span>Best Way To Design</span>
-                        </a>
-                        <a href="/">
-                            <span>Things I Need To Get Started</span>
-                        </a>
-                        <a href="/">
-                            <span>My Current Workspace</span>
-                        </a>
-                        <a href="/">
-                            <span>Best Place To Travel This Summer</span>
-                        </a>
-                        <a href="/">
-                            <span>Latest UI Trends To Inspired From</span>
-                        </a>
-                    </div>
-                    <h3>Recent Comments</h3>
-                    <div className="post-points">
-                        <a href="/">
-                            <span>Best Way To Design</span>
-                        </a>
-                        <a href="/">
-                            <span>Things I Need To Get Started</span>
-                        </a>
-                        <a href="/">
-                            <span>My Current Workspace</span>
-                        </a>
-                        <a href="/">
-                            <span>Best Place To Travel This Summer</span>
-                        </a>
-                        <a href="/">
-                            <span>Latest UI Trends To Inspired From</span>
-                        </a>
-                    </div>
-                </div>
-                <div className="arrow-div">
-                    <i className="fa-solid fa-arrow-left"></i>
                 </div>
             </div>
         </div>
