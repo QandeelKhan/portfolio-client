@@ -3,23 +3,31 @@ import "./side-nav.css";
 import { MenuItems } from "./MenuItems";
 import { Button } from "./Button";
 import UpworkIcon from "./icons/UpworkIcon";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
+import { setNavVisible } from "../redux/eventsSlice";
 
 const SideNav: React.FC = (props: any) => {
-    const [navVisible, setNavVisible] = useState(true);
     const [toggleMode, setToggleMode] = useState(false);
+
+    const dispatch = useDispatch();
+    const navVisible = useSelector(
+        (state: RootState) => state.events.navVisible
+    );
 
     const handleResize = () => {
         if (window.innerWidth < 768) {
-            setNavVisible(false);
+            dispatch(setNavVisible(false));
             setToggleMode(true);
         } else {
-            setNavVisible(true);
+            dispatch(setNavVisible(true));
             setToggleMode(false);
         }
     };
 
     const handleToggleNav = () => {
-        setNavVisible(!navVisible);
+        dispatch(setNavVisible(!navVisible));
     };
 
     useEffect(() => {

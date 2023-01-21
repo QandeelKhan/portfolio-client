@@ -1,41 +1,50 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const eventsState = {
-    cardClicked: false,
-    crossClicked: false,
-    myClassName: "deactive",
-    animate: "",
-    myScrollbar: "",
+interface EventState {
+    navVisible: boolean;
+}
+
+const eventsState: EventState = {
+    // cardClicked: false,
+    // crossClicked: false,
+    // myClassName: "deactive",
+    // animate: "",
+    // myScrollbar: "",
+    navVisible: true,
 };
 
 export const eventsSlice = createSlice({
     name: "events",
     initialState: eventsState,
     reducers: {
-        setCardClicked: (state, action) => {
-            state.cardClicked = action.payload;
+        setNavVisible: (state, action: { payload: boolean }) => {
+            state.navVisible = action.payload;
         },
-        setCrossClicked: (state, action) => {
-            state.myClassName = action.payload;
-        },
-        setMyClassName: (state, action) => {
-            state.myClassName = action.payload;
-        },
-        setMyScrollbar: (state, action) => {
-            state.myScrollbar = action.payload;
-        },
-        setAnimate: (state, action) => {
-            state.animate = action.payload;
-        },
+        // setCardClicked: (state, action) => {
+        //     state.cardClicked = action.payload;
+        // },
+        // setCrossClicked: (state, action) => {
+        //     state.myClassName = action.payload;
+        // },
+        // setMyClassName: (state, action) => {
+        //     state.myClassName = action.payload;
+        // },
+        // setMyScrollbar: (state, action) => {
+        //     state.myScrollbar = action.payload;
+        // },
+        // setAnimate: (state, action) => {
+        //     state.animate = action.payload;
+        // },
     },
 });
 
 export const {
-    setCardClicked,
-    setCrossClicked,
-    setMyClassName,
-    setAnimate,
-    setMyScrollbar,
+    // setCardClicked,
+    // setCrossClicked,
+    // setMyClassName,
+    // setAnimate,
+    // setMyScrollbar,
+    setNavVisible,
 } = eventsSlice.actions;
 
 export default eventsSlice.reducer;
