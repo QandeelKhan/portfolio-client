@@ -323,7 +323,7 @@ const BlogDetail = () => {
                                             </div>
                                             <div className="comment-para">
                                                 A component that allows for easy
-                                                creation of menu items, quickly
+                                                creation of menu item, quickly
                                                 creating paragraphs of “Lorem
                                                 Ipsum” and pictures with custom
                                                 sizes.
