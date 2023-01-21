@@ -21,6 +21,56 @@ body {
 
 /* ---Side Nav--- */
 
+.toggle-mode {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    z-index: 10;
+
+    background-color: #17181b;
+}
+
+.toggler {
+    display: flex;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.toggler-clicked {
+    /* transition: all ease-in 0.1s; */
+    transform: translate(200px);
+    transition: 0.3s;
+}
+
+.toggler-unclicked {
+    transform: translateX(0px);
+    transition: 0.3s;
+    /* transition: all ease-in 0.1s; */
+}
+
+.toggle-icon {
+    width: 45px;
+    font-size: 35px;
+    color: white;
+    background-color: black;
+}
+
+.mobile-header {
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    line-height: 50px;
+    white-space: nowrap;
+    text-align: center;
+    margin-bottom: 0;
+    padding-left: 30%;
+    padding-right: 50px;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+}
+
 a {
     text-decoration: none;
 }
@@ -38,7 +88,7 @@ li {
     left: 0;
     position: fixed;
     z-index: 10;
-    transition: all 0.3s ease-out;
+    transition: 0.3s;
     background-color: black;
 }
 
@@ -391,9 +441,6 @@ textarea:valid {
     font-weight: bold;
     font-size: 15px;
 }
-
-/* button css starts here */
-
 
 
 /* contact area starts here */

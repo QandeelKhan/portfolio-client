@@ -6,12 +6,15 @@ import UpworkIcon from "./icons/UpworkIcon";
 
 const SideNav: React.FC = (props: any) => {
     const [navVisible, setNavVisible] = useState(true);
+    const [toggleMode, setToggleMode] = useState(false);
 
     const handleResize = () => {
         if (window.innerWidth < 768) {
             setNavVisible(false);
+            setToggleMode(true);
         } else {
             setNavVisible(true);
+            setToggleMode(false);
         }
     };
 
@@ -25,15 +28,36 @@ const SideNav: React.FC = (props: any) => {
     }, []);
     return (
         <>
-            <div className={`nav ${!navVisible ? "nav-hidden" : ""}`}>
+            {toggleMode || !navVisible ? (
                 <div className="toggle-mode">
-                    <button
-                        onClick={handleToggleNav}
-                        className={navVisible ? "show-toggler" : "hide-toggler"}
-                    >
-                        Toggle Nav
-                    </button>
+                    {
+                        <div
+                            className={`${
+                                navVisible
+                                    ? "toggler-clicked"
+                                    : "toggler-unclicked"
+                            }`}
+                        >
+                            <button
+                                onClick={handleToggleNav}
+                                className={`toggler ${
+                                    navVisible ? "show-toggler" : "hide-toggler"
+                                }`}
+                            >
+                                {navVisible ? (
+                                    <i className="fas fa-bars toggle-icon"></i>
+                                ) : (
+                                    <i className="fa-solid fa-xmark toggle-icon"></i>
+                                )}
+                            </button>
+                        </div>
+                    }
+                    <div className="mobile-header">Qandeel Khan</div>
                 </div>
+            ) : (
+                ""
+            )}
+            <div className={`nav ${!navVisible ? "nav-hidden" : ""}`}>
                 <div className="image-area">
                     <img src="images/other/profile-img.jpg" alt="profile-img" />
                     <div className="person-name">
