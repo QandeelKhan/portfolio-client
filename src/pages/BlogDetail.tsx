@@ -430,7 +430,7 @@ const BlogDetail = () => {
                             <span>Best Place To Travel This Summer</span>
                         </a>
                         <a href="/">
-                            <span>Latest UI Trendes To Inspired From</span>
+                            <span>Latest UI Trends To Inspired From</span>
                         </a>
                     </div>
                 </div>
