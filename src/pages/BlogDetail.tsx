@@ -2,7 +2,7 @@ import React from "react";
 import "./blog-detail.css";
 
 const BlogDetail = () => {
-    const [isReplyOpen, setIsReplyOpen] = useState(false);
+    // const [isReplyOpen, setIsReplyOpen] = useState(false);
 
     return (
         <div className="post-page-main">
