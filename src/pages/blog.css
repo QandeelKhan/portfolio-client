@@ -1,6 +1,8 @@
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    margin-top: 50px;
 }
 
 @media screen and (max-width: 1280px) {
@@ -74,7 +76,7 @@
 .blog-item-title {
     margin-bottom: 6px;
     font-size: 1rem;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     word-wrap: break-word;
     font-family: "Playfair Display", serif;
     font-weight: 700;
