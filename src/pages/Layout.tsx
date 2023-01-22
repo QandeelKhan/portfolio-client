@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Outlet } from "react-router-dom";
+import MyComponent from "../components/MyComponent";
 import SideNav from "../components/SideNav";
 import PortfolioDetail from "./PortfolioDetail";
 
@@ -11,7 +12,7 @@ const Layout: React.FC = () => {
     return (
         <>
             <SideNav />
-
+            <MyComponent />
             <div className="pages">
                 <Outlet />
             </div>

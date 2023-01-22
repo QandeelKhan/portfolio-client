@@ -20,7 +20,7 @@ function Home() {
                     <span className="banner-qandeel">QANDEEL</span>
                     <span className="banner-khan">KHAN</span>
                     <ChangingText text={text} />
-                    <MyComponent />
+                    {/* <MyComponent /> */}
                 </div>
             </section>
         </motion.div>

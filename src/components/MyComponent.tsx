@@ -39,32 +39,29 @@ const MyComponent: React.FC<Props> = () => {
     };
 
     return (
-        <div className={`page-container ${selectedTheme}`}>
-            <div
-                className={`gear-icon ${isGearOpen ? "gear-open" : ""}`}
-                onClick={handleGearClick}
-            >
+        <div
+            className={`gear-container ${selectedTheme} ${
+                isGearOpen ? "gear-container-open" : ""
+            }`}
+        >
+            <div className={`gear-icon`} onClick={handleGearClick}>
                 <i className="fas fa-cog fa-spin" />
             </div>
-            {isGearOpen && (
-                <div className="gear-menu">
-                    <h6>Page Animation</h6>
-                    <select
-                        className="gear-select"
-                        onChange={handleThemeChange}
-                    >
-                        {themes.map((theme) => (
-                            <option
-                                key={theme.className}
-                                value={theme.className}
-                                selected={selectedTheme === theme.className}
-                            >
-                                {theme.name}
-                            </option>
-                        ))}
-                    </select>
-                </div>
-            )}
+
+            <div className={`gear-menu ${isGearOpen ? "" : "gear-menu-open"}`}>
+                <h6>Page Animation</h6>
+                <select className="gear-select" onChange={handleThemeChange}>
+                    {themes.map((theme) => (
+                        <option
+                            key={theme.className}
+                            value={theme.className}
+                            selected={selectedTheme === theme.className}
+                        >
+                            {theme.name}
+                        </option>
+                    ))}
+                </select>
+            </div>
         </div>
     );
 };
