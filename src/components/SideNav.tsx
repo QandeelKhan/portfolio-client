@@ -17,7 +17,7 @@ const SideNav: React.FC = (props: any) => {
     );
 
     const handleResize = () => {
-        if (window.innerWidth < 768) {
+        if (window.innerWidth < 769) {
             dispatch(setNavVisible(false));
             setToggleMode(true);
         } else {

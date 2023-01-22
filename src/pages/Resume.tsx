@@ -6,6 +6,7 @@ import ResumeSkills from "../components/SkillsSection";
 import { motion } from "framer-motion";
 import AboutUserIcon from "../components/icons/AboutUser";
 import PageTemplate from "../components/PageTemplate";
+import { education, experience } from "../components/resumeData";
 
 const Resume: React.FC = () => {
     return (
@@ -17,15 +18,13 @@ const Resume: React.FC = () => {
         >
             <PageTemplate iconComponent={<AboutUserIcon />} pageName="Resume.">
                 {/* <ResumeInfoBlock
-                    mainHeadingLeft="EXPERIENCE"
-                    mainHeadingRight="EDUCATION"
-                />
-                <ResumeInfoBlock mainHeadingLeft="" mainHeadingRight="" />
-                <ResumeInfoBlock mainHeadingLeft="" mainHeadingRight="" /> */}
+                    experience={experience}
+                    education={education}
+                /> */}
+
                 <ResumeSkills />
             </PageTemplate>
         </motion.div>
     );
 };
-
 export default Resume;
