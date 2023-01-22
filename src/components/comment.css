@@ -1,0 +1,75 @@
+/* comment section starts here */
+.comments-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.comment-div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.comment-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0px 0px 0px 20px;
+    /* margin-left: 20px; */
+}
+
+.author-image img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.author-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.reply {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a4a4a5;
+    gap: 5px;
+}
+
+.comment-date {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    color: #a4a4a5;
+}
+
+.comment-para {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.comment-reply {
+    padding-left: 40px;
+    border-bottom: 1px solid rgb(75, 74, 74);
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+
+.comment-next {
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgb(75, 74, 74);
+    padding-top: 15px;
+}
