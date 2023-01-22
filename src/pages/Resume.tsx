@@ -16,12 +16,12 @@ const Resume: React.FC = () => {
             transition={{ duration: 1 }}
         >
             <PageTemplate iconComponent={<AboutUserIcon />} pageName="Resume.">
-                <ResumeInfoBlock
+                {/* <ResumeInfoBlock
                     mainHeadingLeft="EXPERIENCE"
                     mainHeadingRight="EDUCATION"
                 />
                 <ResumeInfoBlock mainHeadingLeft="" mainHeadingRight="" />
-                <ResumeInfoBlock mainHeadingLeft="" mainHeadingRight="" />
+                <ResumeInfoBlock mainHeadingLeft="" mainHeadingRight="" /> */}
                 <ResumeSkills />
             </PageTemplate>
         </motion.div>

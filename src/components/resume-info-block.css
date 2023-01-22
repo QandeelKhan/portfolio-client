@@ -16,12 +16,26 @@
     margin-bottom: 50px;
 }
 
-.resume-info {
+.resume-left-info {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: auto;
+    width: 50%;
+}
+
+.resume-right-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 50%;
+}
+
+.resume-left-content {
+    /* display: flex; */
 }
 
 .resume-heading {
@@ -30,6 +44,7 @@
     font-weight: 700;
     font-size: 22px;
     min-height: 40px;
+    text-align: center;
 }
 
 .resume-left-text-container {
@@ -46,7 +61,7 @@
 }
 
 .pole-txt-to {
-    position: absolute;
+    /* position: absolute; */
     align-self: flex-start;
     top: 33px;
     margin-left: 1em;
@@ -57,7 +72,7 @@
 }
 
 .pole-txt-right-to {
-    position: absolute;
+    /* position: absolute; */
     align-self: flex-start;
     margin-left: 1em;
     font-size: 12px;
@@ -153,9 +168,16 @@
     text-align: center;
     vertical-align: middle;
 }
+
 @media (max-width: 768px) {
+
     .resume-info,
     .main-resume-container {
         flex-wrap: wrap;
     }
+
+    /* .resume-info {
+        width: 100%;
+    } */
+
 }
