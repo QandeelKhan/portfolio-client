@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../components/comment-form.css";
 
 interface commentProps {
     onSubmit: (data: {

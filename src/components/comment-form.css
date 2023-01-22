@@ -1,0 +1,96 @@
+/* comment area starts */
+.blog-detail-comment-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.comment-write {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    gap: 30px;
+    color: white;
+}
+
+.input-group {
+    width: 100%;
+    position: relative;
+}
+
+.name-and-email {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* flex-wrap: wrap; */
+}
+
+.input-group .form-input {
+    padding: 10px;
+}
+
+.input-group input {
+    width: 100%;
+    background: transparent;
+    border: 2px solid #999999;
+    color: white;
+    outline: none;
+}
+
+.input-group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 7px 10px;
+    cursor: text;
+    transition: 0.2s;
+    background: transparent;
+    /* border: 2px solid white; */
+    /* outline: white; */
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: -30px;
+    left: -10px;
+    font-size: 14px;
+}
+
+.input-message textarea:focus ~ label,
+.input-message textarea:valid ~ label {
+    top: -30px;
+    left: -10px;
+    font-size: 14px;
+}
+
+.input-group textarea {
+    transition: 0.2s;
+}
+
+.checkbox label {
+    margin-left: 5px;
+    /* width: 100%; */
+}
+
+/* .checkbox input[type="checkbox"] {
+    height: 20px;
+    width: 20x;
+} */
+@media (max-width: 768px) {
+    .name-and-email {
+        flex-wrap: wrap;
+    }
+}
+form {
+    width: 100%;
+}
