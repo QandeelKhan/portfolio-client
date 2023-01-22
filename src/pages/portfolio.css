@@ -119,13 +119,13 @@
     transform: translateX(5px);
     transition: 0.5s;
 }
-
+/* 
 .onhover-icon-1 {
     margin-top: 60%;
 }
 
 .onhover-icon-2 {
-    margin-top: 70%;
+    margin-top: 90%;
 }
 
 .onhover-icon-3 {
@@ -162,7 +162,7 @@
 
 .onhover-icon-11 {
     margin-top: 45%;
-}
+} */
 
 .text-1 {
     font-size: 20px;
