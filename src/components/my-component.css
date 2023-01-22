@@ -1,0 +1,45 @@
+.page-container {
+    /* display: flex; */
+    position: fixed;
+    top: 70px;
+    right: 0px;
+    z-index: 10000;
+}
+
+.gear-icon {
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.gear-open {
+    /* to move this left toward its child */
+    transform: translateX(-20px);
+}
+
+.gear-menu {
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+    width: 150px;
+    align-items: flex-start;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.gear-select {
+    display: flex;
+    width: 100px;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.theme-1 {
+    /* theme specific styles */
+}
+
+.theme-2 {
+    /* theme specific styles */
+}

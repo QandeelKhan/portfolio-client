@@ -2,6 +2,7 @@ import React from "react";
 import ChangingText from "../components/ChangingText";
 import { motion } from "framer-motion";
 import "./home.css";
+import MyComponent from "../components/MyComponent";
 
 function Home() {
     const text = ["Photographer", "Web Designer", "Software Developer"];
@@ -19,6 +20,7 @@ function Home() {
                     <span className="banner-qandeel">QANDEEL</span>
                     <span className="banner-khan">KHAN</span>
                     <ChangingText text={text} />
+                    <MyComponent />
                 </div>
             </section>
         </motion.div>
