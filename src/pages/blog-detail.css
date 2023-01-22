@@ -220,6 +220,7 @@
     color: white;
     font-size: 16px;
 }
+
 /* comment section starts here */
 .comments-section {
     display: flex;
@@ -229,12 +230,14 @@
     margin-top: 50px;
     width: 100%;
 }
+
 .comment-div {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     margin-top: 20px;
 }
+
 .comment-area {
     display: flex;
     flex-direction: column;
@@ -244,12 +247,14 @@
     padding: 0px 0px 0px 20px;
     /* margin-left: 20px; */
 }
+
 .author-image img {
     width: 80px;
     height: 80px;
     object-fit: cover;
     border-radius: 50%;
 }
+
 .author-name {
     display: flex;
     justify-content: space-between;
@@ -257,6 +262,7 @@
     width: 100%;
     height: auto;
 }
+
 .reply {
     display: flex;
     justify-content: center;
@@ -264,6 +270,7 @@
     color: #a4a4a5;
     gap: 5px;
 }
+
 .comment-date {
     display: flex;
     justify-content: start;
@@ -271,16 +278,19 @@
     width: 100%;
     color: #a4a4a5;
 }
+
 .comment-para {
     width: 100%;
     margin-top: 5px;
 }
+
 .comment-reply {
     padding-left: 40px;
     border-bottom: 1px solid rgb(75, 74, 74);
     padding-bottom: 30px;
     padding-top: 15px;
 }
+
 .comment-next {
     padding-bottom: 30px;
     border-bottom: 1px solid rgb(75, 74, 74);
@@ -296,6 +306,7 @@
     width: 100%;
     margin-top: 40px;
 }
+
 .comment-write {
     width: 100%;
     flex-direction: column;
@@ -307,10 +318,12 @@
     gap: 30px;
     color: white;
 }
+
 .input-group {
     width: 100%;
     position: relative;
 }
+
 .name-and-email {
     width: 100%;
     display: flex;
@@ -319,9 +332,11 @@
     gap: 20px;
     /* flex-wrap: wrap; */
 }
+
 .input-group .form-input {
     padding: 10px;
 }
+
 .input-group input {
     width: 100%;
     background: transparent;
@@ -329,6 +344,7 @@
     color: white;
     outline: none;
 }
+
 .input-group label {
     position: absolute;
     top: 0;
@@ -342,18 +358,20 @@
     /* outline: white; */
 }
 
-.input-group input:focus ~ label,
-.input-group input:valid ~ label {
+.input-group input:focus~label,
+.input-group input:valid~label {
     top: -30px;
     left: -10px;
     font-size: 14px;
 }
-.input-message textarea:focus ~ label,
-.input-message textarea:valid ~ label {
+
+.input-message textarea:focus~label,
+.input-message textarea:valid~label {
     top: -30px;
     left: -10px;
     font-size: 14px;
 }
+
 .input-group textarea {
     transition: 0.2s;
 }
@@ -362,6 +380,7 @@
     margin-left: 5px;
     /* width: 100%; */
 }
+
 /* .checkbox input[type="checkbox"] {
     height: 20px;
     width: 20x;
@@ -370,82 +389,4 @@
     .name-and-email {
         flex-wrap: wrap;
     }
-}
-/* right side content starts here */
-.main-side-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 350px;
-    height: 100%;
-    background-color: #17181b;
-    color: white;
-    top: 0;
-    right: 0;
-    position: fixed;
-    /* padding: px 0px; */
-    overflow-y: scroll;
-}
-.side-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: flex-start;
-    width: 70%;
-    /* overflow-y: scroll; */
-    margin: 50px 0px;
-}
-.search-div {
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    margin-top: 60px;
-    font-size: 12px;
-    color: white;
-    border-bottom: 1px solid rgb(70, 69, 69);
-}
-.search-div input {
-    width: 100%;
-    border: none;
-    outline: none;
-    background: transparent;
-    color: white;
-    font-weight: lighter;
-    /* line-height: 20px; */
-}
-.search-div input::placeholder {
-    font-weight: lighter;
-}
-.side-content h3 {
-    border-bottom: 1px solid rgb(70, 69, 69);
-    line-height: 50px;
-}
-.post-points a {
-    color: white;
-    text-decoration: none;
-}
-.post-points {
-    gap: 10px;
-    padding: 20px 0px;
-    display: flex;
-    flex-direction: column;
-}
-.arrow-div {
-    background-color: #00a3e1;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    top: 40%;
-    left: -35px;
-    position: absolute;
-    /* display: flex;
-    justify-content: start;
-    align-items: center; */
-}
-.arrow-div i {
-    font-size: 25px;
 }
