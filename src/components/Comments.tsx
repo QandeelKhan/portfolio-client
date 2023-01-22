@@ -35,6 +35,10 @@ const Comment: React.FC<{
             <div className="comment-area">
                 <div className="author-name">
                     <h3>{comment.authorName}</h3>
+                    <div className="reply">
+                        <h5>Reply</h5>
+                        <i className="fa-solid fa-reply"></i>
+                    </div>
                 </div>
                 <div className="comment-date">
                     <h6>{comment.commentDate}</h6>

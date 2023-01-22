@@ -215,6 +215,7 @@ li {
 .about-all-info {
     display: flex;
     justify-content: start;
+    align-items: center;
     width: 100%;
     height: auto;
     margin-bottom: 50px;
@@ -348,7 +349,13 @@ li {
     margin-top: 10px;
     z-index: 1;
 }
-
+@media (max-width: 768px) {
+    .about-all-info,
+    .about-left-info,
+    .about-right-info {
+        flex-wrap: wrap;
+    }
+}
 /* Contact Section */
 
 .contact-area-container {
