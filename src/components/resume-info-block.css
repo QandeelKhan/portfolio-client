@@ -153,9 +153,3 @@
     text-align: center;
     vertical-align: middle;
 }
-@media (max-width: 768px) {
-    .resume-info,
-    .main-resume-container {
-        flex-wrap: wrap;
-    }
-}

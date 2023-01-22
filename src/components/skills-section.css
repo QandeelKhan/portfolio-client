@@ -209,4 +209,7 @@
     .skills-area {
         flex-wrap: wrap;
     }
+    .right-coding-area {
+        margin-top: 50px;
+    }
 }
