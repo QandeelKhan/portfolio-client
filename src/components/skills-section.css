@@ -186,8 +186,6 @@
     border-bottom: 20px solid #00a3e1;
 }
 
-
-
 .per-82 {
     margin-right: 14%;
 }
@@ -206,4 +204,9 @@
 
 .per-92 {
     margin-right: 4%;
+}
+@media (max-width: 768px) {
+    .skills-area {
+        flex-wrap: wrap;
+    }
 }

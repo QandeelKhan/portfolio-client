@@ -196,11 +196,7 @@ li {
 
 /* ---Section About--- */
 
-
-
 /* ---------ABOUT PAGE STARTS HERE----------- */
-
-
 
 .aboutuser-icon {
     height: 50px;
@@ -394,63 +390,6 @@ li {
     border: 1px solid red;
     font-family: "Playfair Display", serif;
 }
-
-
-
-
-
-/* Form Name and Email Fields Start */
-
-.field-holder {
-    position: relative;
-    margin-right: 30px;
-    width: 40%;
-}
-
-
-
-/*added the "valid selector", so, when there's a text in field,the label keep on top even on swapping to another window */
-
-
-/* Form Name and Email Fields End */
-
-
-
-textarea {
-    background: transparent;
-    border: 2px solid #999;
-    outline: none;
-    width: 100%;
-    height: auto;
-    min-height: 150px;
-    padding: 10px 10px;
-    color: #dedede;
-    transition: all 0.5s ease;
-    resize: none;
-    overflow: auto;
-}
-
-textarea:focus+.text-area-label,
-textarea:valid+.text-area-label {
-    color: white;
-    font-size: 1rem;
-    font-weight: 500;
-    top: -32px;
-    left: -5px;
-    pointer-events: none;
-}
-
-textarea:focus,
-textarea:valid {
-    border: 2px solid white;
-}
-
-::placeholder {
-    color: #dedede;
-    font-weight: bold;
-    font-size: 15px;
-}
-
 
 /* contact area starts here */
 

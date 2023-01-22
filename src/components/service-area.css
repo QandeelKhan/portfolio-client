@@ -9,6 +9,7 @@
     display: flex;
     justify-content: stretch;
     align-items: center;
+    /* flex-wrap: wrap; */
 }
 
 .skills {
@@ -30,4 +31,9 @@
     color: #d4d4d4;
     text-align: center;
     padding: 10px 0px;
+}
+@media (max-width: 768px) {
+    .services {
+        flex-wrap: wrap;
+    }
 }
