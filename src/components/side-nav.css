@@ -73,10 +73,15 @@ body {
     white-space: nowrap;
     text-align: center;
     margin-bottom: 0;
-    padding-left: 30%;
+    padding-left: 25%;
     padding-right: 50px;
     font-family: "Playfair Display", serif;
     font-weight: 700;
+}
+@media (max-width: 425px) {
+    .mobile-header {
+        padding-left: 20%;
+    }
 }
 
 a {
