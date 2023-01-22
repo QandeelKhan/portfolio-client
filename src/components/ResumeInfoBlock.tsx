@@ -19,9 +19,15 @@ const ResumeInfoBlock = (props: headingProps) => {
                         </h3>
                         <h4 className="rsm-txt-subheading">INFOSYS IIT</h4>
                         <span className="resume-text">
-                            I am a Python and JavaScript developer with having
-                            bachelor's in Computer Science (B.S). from GC
-                            University,
+                            I am a highly passionate lead backend engineer with
+                            expertise in Python, Django, and Flask. My
+                            experience in building scalable and efficient
+                            backends for web and mobile applications has been
+                            honed since 2017. My skills include mastery of
+                            database design, RESTful API development, and
+                            performance optimization. With a deep love for
+                            coding in Python, I am dedicated to creating
+                            top-quality solutions for my clients.
                             {/*  */}
                             <br />
                             <br />
