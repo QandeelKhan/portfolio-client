@@ -1,14 +1,16 @@
 [
     {
+        "id": "1",
         "authorName": "John-Doe",
         "commentDate": "May 12, 2021 at 7:39 am",
         "commentText": "A component that allows for easy creation of menu items, quickly creating paragraphs of “Lorem Ipsum” and pictures with custom sizes",
         "imageSource": "../images/other/profile-img.jpg"
     },
     {
+        "id": "2",
         "authorName": "Jane-Doe",
         "commentDate": "May 12, 2021 at 8:39 am",
         "commentText": "A component that allows for easy creation of menu items, quickly creating paragraphs of “Lorem Ipsum” and pictures with custom sizes",
-        "imageSource": "../images/other/profile-img2.jpg"
+        "imageSource": "../images/other/profile-img.jpg"
     }
 ]

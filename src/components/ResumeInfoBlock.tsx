@@ -1,72 +1,81 @@
 import React from "react";
 import "./resume-info-block.css";
+import LeftPole from "./LeftPole";
 
 interface headingProps {
-    mainHeadingLeft: string | "";
-    mainHeadingRight: string | "";
+    experience: {
+        position: string;
+        company: string;
+        startDate: string;
+        endDate: string;
+        description: string;
+    }[];
+    education: {
+        degree: string;
+        school: string;
+        startDate: string;
+        endDate: string;
+    }[];
 }
 
 const ResumeInfoBlock = (props: headingProps) => {
     return (
         <div className="main-resume-container">
-            {/* left flex column for experience info */}
             <div className="resume-left-info">
-                <div className="resume-left-content">
-                    <h3 className="resume-heading">{props.mainHeadingLeft}</h3>
+                <h3 className="resume-heading">EXPERIENCE</h3>
+                {props.experience.map((exp, idx) => (
                     <div className="resume-left-text-container">
-                        <span className="pole-txt-to">from 2022</span>
-                        <div className="resume-text-holder">
-                            <h3 className="rsm-txt-heading">
-                                Lead Backend Engineer
-                            </h3>
-                            <h4 className="rsm-txt-subheading">
-                                INFOSYS IIT Software
-                            </h4>
-                            <span className="resume-text">
-                                I am a highly passionate lead backend engineer
-                                with expertise in Python, Django, and Flask. My
-                                experience in building scalable and efficient
-                                backends for web and mobile applications has
-                                been honed since 2017. My skills include mastery
-                                of database design, RESTful API development, and
-                                performance optimization. With a deep love for
-                                coding in Python, I am dedicated to creating
-                                top-quality solutions for my clients.
-                                {/*  */}
-                                <br />
-                                <br />
-                            </span>
-                        </div>
-                        <span className="pole-txt-from">to 2022</span>
+                        <>
+                            <LeftPole from={exp.startDate} to={exp.endDate} />
+                            <div className="resume-left-text-container-second-child">
+                                <div key={idx}>
+                                    <div className="resume-text-holder">
+                                        <h3 className="rsm-txt-heading">
+                                            {exp.position}
+                                        </h3>
+                                        <h4 className="rsm-txt-subheading">
+                                            {exp.company}
+                                        </h4>
+                                        <span className="resume-text">
+                                            {exp.description}
+                                            <br />
+                                            <br />
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </>
                     </div>
-                </div>
+                ))}
             </div>
-            {/* left flex column for education info */}
             <div className="resume-right-info">
-                <div className="resume-right-content">
-                    <h3 className="resume-heading">{props.mainHeadingRight}</h3>
+                <h3 className="resume-heading">EDUCATION</h3>
+                {props.education.map((edu, idx) => (
                     <div className="resume-right-text-container">
-                        <span className="pole-txt-right-to">from 2020</span>
-                        <div className="resume-text-holder">
-                            <h3 className="rsm-txt-heading">
-                                Software Engineer
-                            </h3>
-                            <h4 className="rsm-txt-subheading">INFOSYS IIT</h4>
-                            <span className="resume-text">
-                                I am a Python and JavaScript developer with
-                                having bachelor's in Computer Science (B.S).
-                                from GC University
-                                <br />
-                                <br />
-                            </span>
-                        </div>
-                        <span className="pole-txt-from">to 2022</span>
+                        <>
+                            <LeftPole from={edu.startDate} to={edu.endDate} />
+                            <div key={idx}>
+                                <span className="pole-txt-right-to">
+                                    {/* from {edu.startDate} */}
+                                </span>
+                                <div className="resume-text-holder">
+                                    <h3 className="rsm-txt-heading">
+                                        {edu.degree}
+                                    </h3>
+                                    <h4 className="rsm-txt-subheading">
+                                        {edu.school}
+                                    </h4>
+                                </div>
+                                <span className="pole-txt-from">
+                                    {/* to {edu.endDate} */}
+                                </span>
+                            </div>
+                        </>
                     </div>
-                </div>
+                ))}
             </div>
         </div>
     );
 };
 
 export default ResumeInfoBlock;
-// regenerate a comprehensive solution

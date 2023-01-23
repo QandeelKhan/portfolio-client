@@ -17,11 +17,10 @@ const Resume: React.FC = () => {
             transition={{ duration: 1 }}
         >
             <PageTemplate iconComponent={<AboutUserIcon />} pageName="Resume.">
-                {/* <ResumeInfoBlock
+                <ResumeInfoBlock
                     experience={experience}
                     education={education}
-                /> */}
-
+                />
                 <ResumeSkills />
             </PageTemplate>
         </motion.div>

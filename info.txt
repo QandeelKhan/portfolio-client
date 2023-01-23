@@ -1,2 +1,13 @@
 svgr example: npx @svgr/cli -- src/components/icons/UserIcon.svg
 execute python3 script: python3 ./<filename>.py
+
+
+
+
+about project
+we added the object ("browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+})  
+to the package.json, to fix typescript v5 while importing fs(file system module) else downgrade to v4 until not fixed in v5

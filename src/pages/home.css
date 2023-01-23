@@ -21,6 +21,12 @@
     margin-left: 200px;
 }
 
+@media (max-width: 768px) {
+    .main-image-area {
+        margin-left: 0px;
+    }
+}
+
 .banner-text {
     position: absolute;
     color: #00a3e1;

@@ -10,9 +10,7 @@
 .main-resume-container {
     position: relative;
     display: flex;
-    justify-content: center;
-    /* width: 100%; */
-    height: auto;
+    flex-wrap: wrap;
     margin-bottom: 50px;
 }
 
@@ -20,22 +18,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: auto;
-    width: 50%;
+    max-width: 50%;
 }
+
 
 .resume-right-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: auto;
-    width: 50%;
-}
-
-.resume-left-content {
-    /* display: flex; */
+    max-width: 50%;
 }
 
 .resume-heading {
@@ -45,50 +36,17 @@
     font-size: 22px;
     min-height: 40px;
     text-align: center;
+    border-bottom: 2px solid #00a3e1;
 }
 
 .resume-left-text-container {
-    border-left: 2px solid var(--primaryColor);
     display: flex;
-    justify-content: flex-start;
+    margin-bottom: 20px;
 }
 
 .resume-right-text-container {
-    border-left: 2px solid var(--primaryColor);
-    position: relative;
     display: flex;
-    justify-content: flex-start;
-}
-
-.pole-txt-to {
-    /* position: absolute; */
-    align-self: flex-start;
-    top: 33px;
-    margin-left: 1em;
-    font-size: 12px;
-    color: white;
-    font-weight: bold;
-    font-family: sans-serif;
-}
-
-.pole-txt-right-to {
-    /* position: absolute; */
-    align-self: flex-start;
-    margin-left: 1em;
-    font-size: 12px;
-    color: white;
-    font-weight: bold;
-    font-family: sans-serif;
-}
-
-.pole-txt-from {
-    align-self: flex-end;
-    position: absolute;
-    margin-left: 1em;
-    font-size: 12px;
-    color: white;
-    font-weight: bold;
-    font-family: sans-serif;
+    margin-bottom: 20px;
 }
 
 .resume-text-holder {
@@ -109,75 +67,8 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.resume-left-text-container::before {
-    position: absolute;
-    align-self: flex-start;
-    content: "";
-    color: blue;
-    background: var(--backgroundColor);
-    border: 2px solid var(--primaryColor);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    left: -5px;
-    line-height: 12px;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.resume-left-text-container::after {
-    position: absolute;
-    align-self: flex-end;
-    content: "";
-    background: var(--backgroundColor);
-    border: 2px solid var(--primaryColor);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    left: -5px;
-    line-height: 12px;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.resume-right-text-container::before {
-    position: absolute;
-    align-self: flex-start;
-    content: "";
-    background: var(--backgroundColor);
-    border: 2px solid var(--primaryColor);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    left: -6px;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.resume-right-text-container::after {
-    position: absolute;
-    align-self: flex-end;
-    content: "";
-    background: var(--backgroundColor);
-    border: 2px solid var(--primaryColor);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    left: -6px;
-    line-height: 12px;
-    text-align: center;
-    vertical-align: middle;
-}
-
 @media (max-width: 768px) {
-
-    .resume-info,
     .main-resume-container {
         flex-wrap: wrap;
     }
-
-    /* .resume-info {
-        width: 100%;
-    } */
-
 }

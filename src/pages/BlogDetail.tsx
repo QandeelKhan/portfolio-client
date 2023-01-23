@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import BlogDetailSidebar from "../components/BlogDetailSidebar";
-import { commentsData, repliesData } from "../components/comments";
+import repliesData from "../components/replies.json";
+import commentsData from "../components/comments.json";
 import CommentsForm from "../components/CommentsForm";
 import "./blog-detail.css";
 
@@ -10,17 +11,27 @@ import PrevBtn from "../components/PrevBtn";
 
 const BlogDetail = () => {
     interface FormData {
+        id: string;
         name: string;
         email: string;
         comment: string;
         checkbox: boolean;
     }
 
-    const [isReplyOpen, setIsReplyOpen] = useState(false);
     const handleSubmit = (data: FormData) => {
-        console.log(data);
-        // handle the form data here
+        // Create a new comment object with the data received
+        // from the form
+        const newComment = {
+            id: Date.now().toString(),
+            name: data.name,
+            email: data.email,
+            comment: data.comment,
+            checkbox: data.checkbox,
+        };
     };
+
+    const [isReplyOpen, setIsReplyOpen] = useState(false);
+
     const comments: CommentProps[] = commentsData;
     const replies: ReplyProps[] = repliesData;
     return (
@@ -140,7 +151,6 @@ const BlogDetail = () => {
                                     </div>
                                     <PostTags />
                                     <PrevBtn />
-                                    {/* comments section */}
                                     <div className="comments-section">
                                         <div className="5-comments">
                                             <h2>5 Comments</h2>
@@ -156,6 +166,7 @@ const BlogDetail = () => {
                                             initialName=""
                                             initialEmail=""
                                             initialComment=""
+                                            initialId=""
                                         />
                                     </div>
                                 </div>
@@ -163,7 +174,6 @@ const BlogDetail = () => {
                         </div>
                     </div>
                 </div>
-                {/* blog detail sidebar */}
                 <BlogDetailSidebar />
             </div>
         </>
