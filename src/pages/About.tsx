@@ -6,15 +6,13 @@ import TestimonialsSection from "../components/TestimonialsSection";
 import { motion } from "framer-motion";
 import "./about.css";
 import PageTemplate from "../components/PageTemplate";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
+import ThemeWrapper from "../components/ThemeWrapper";
 
 const About: React.FC = (props: any) => {
     return (
-        <motion.div
-            initial={{ translateX: "100%" }}
-            animate={{ opacity: 1, translateX: "0%" }}
-            exit={{ opacity: "100%" }}
-            transition={{ duration: 1 }}
-        >
+        <ThemeWrapper theme="theme2">
             <PageTemplate iconComponent={<AboutUserIcon />} pageName="Blog.">
                 <div className="about-all-info">
                     <div className="about-left-info">
@@ -128,7 +126,7 @@ const About: React.FC = (props: any) => {
                 {/* Testimonials area */}
                 <TestimonialsSection />
             </PageTemplate>
-        </motion.div>
+        </ThemeWrapper>
     );
 };
 

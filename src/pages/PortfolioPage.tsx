@@ -36,13 +36,7 @@ const PortfolioPage: React.FC = (props: any) => {
     });
 
     return (
-        <motion.div
-            className="projects-area"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-        >
+        <div className="projects-area">
             <div className="menu-div">
                 <ul>
                     {tabs.map((tab, index) => (
@@ -73,7 +67,7 @@ const PortfolioPage: React.FC = (props: any) => {
                     />
                 ))}
             </Masonry>
-        </motion.div>
+        </div>
     );
 };
 

@@ -5,13 +5,7 @@ import { Link } from "react-router-dom";
 
 const PortfolioDetail: React.FC = (props: any) => {
     return (
-        <motion.div
-            className="default-position"
-            initial={{ translateX: "100%" }}
-            animate={{ opacity: 1, translateX: "0%" }}
-            exit={{ opacity: "100%" }}
-            transition={{ duration: 1 }}
-        >
+        <div className="default-position">
             <div className="header-fix">
                 <Link
                     to="/portfolio"
@@ -82,7 +76,7 @@ const PortfolioDetail: React.FC = (props: any) => {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 };
 

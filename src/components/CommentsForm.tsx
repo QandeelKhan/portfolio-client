@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../components/comment-form.css";
-import fs from "fs";
+// import fs from "fs";
 // fs:fs (file system) module in Node.js. This module provides an API for interacting with the file system, including reading and writing files.
 interface commentProps {
     onSubmit: (data: {
@@ -35,9 +35,9 @@ const CommentsForm: React.FC<commentProps> = ({
     // };
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const commentData = { name, email, comment, checkbox, id };
-        fs.appendFileSync("comments.json", JSON.stringify(commentData) + "\n");
-        onSubmit(commentData);
+        // const commentData = { name, email, comment, checkbox, id };
+        // fs.appendFileSync("comments.json", JSON.stringify(commentData) + "\n");
+        // onSubmit(commentData);
     };
 
     return (
