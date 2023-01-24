@@ -11,11 +11,12 @@ body {
     background-color: #7a7a7a;
 }
 
-.pageInitial {
+/* .pageInitial {
     transform: translateX(100%);
     /* display: none; */
-}
 
-.pageAnimate {
+
+/* .pageAnimate {
     transform: translateX(0%);
 }
+ */

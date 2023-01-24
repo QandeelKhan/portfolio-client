@@ -1,31 +1,27 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSelector } from "react-redux";
-import { useEffect } from "react";
-import { selectStyles, selectTheme } from "../redux/themeSlice";
+import { selectTheme, setVariant, variants } from "../redux/themeSlice";
 
 interface Props {
     children: React.ReactNode;
 }
 
 const ThemeWrapper: React.FC<Props> = ({ children }) => {
-    const selectedTheme = useSelector(selectTheme);
-    const styles = useSelector(selectStyles);
-
-    const variants: Variants = {
-        initial: styles.pageInitial,
-        animate: styles.pageAnimate,
-        exit: styles.pageExit,
-    };
+    const selectedTheme = useSelector(selectTheme) as
+        | "theme1"
+        | "theme2"
+        | "theme3";
+    const variant = variants[selectedTheme];
 
     return (
         <AnimatePresence>
             <motion.div
-                initial={variants.initial}
-                animate={variants.animate}
-                exit={variants.exit}
+                initial="pageInitial"
+                animate="pageAnimate"
+                exit="pageExit"
                 transition={{ duration: 1 }}
-                variants={variants}
+                variants={variant}
             >
                 {children}
             </motion.div>

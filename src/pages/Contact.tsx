@@ -8,7 +8,6 @@ import { useSelector } from "react-redux";
 import "./contact.css";
 import { RootState } from "../redux/store";
 import ThemeWrapper from "../components/ThemeWrapper";
-import { selectTheme } from "../redux/themeSlice";
 
 const Contact = () => {
     function sendEmail(e: FormEvent<HTMLFormElement> & { target: any }) {
@@ -27,11 +26,10 @@ const Contact = () => {
             .catch((err) => console.log(err));
         e.target.reset();
     }
-    const theme = useSelector(selectTheme);
 
     return (
         <>
-            <ThemeWrapper theme="theme1">
+            <ThemeWrapper>
                 <form id="contact-form" onSubmit={sendEmail}>
                     <PageTemplate
                         iconComponent={<ContactEnvelopeIcon />}

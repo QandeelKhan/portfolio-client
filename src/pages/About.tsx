@@ -12,7 +12,7 @@ import ThemeWrapper from "../components/ThemeWrapper";
 
 const About: React.FC = (props: any) => {
     return (
-        <ThemeWrapper theme="theme2">
+        <ThemeWrapper>
             <PageTemplate iconComponent={<AboutUserIcon />} pageName="Blog.">
                 <div className="about-all-info">
                     <div className="about-left-info">

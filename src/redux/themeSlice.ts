@@ -4,22 +4,22 @@ interface ThemeState {
     theme: string;
 }
 
-interface PageStyles {
+interface Variant {
     pageInitial: { translateX: string };
     pageAnimate: { translateX: string };
     pageExit: { translateX: string };
 }
 
-const variant: { [key: string]: PageStyles } = {
+export const variants = {
     theme1: {
-        pageInitial: { translateX: "-100%" },
+        pageInitial: { translateX: "100%" },
         pageAnimate: { translateX: "0%" },
-        pageExit: { translateX: "100%" },
+        pageExit: { translateX: "-100%" },
     },
     theme2: {
-        pageInitial: { translateX: "0%" },
+        pageInitial: { translateX: "100%" },
         pageAnimate: { translateX: "0%" },
-        pageExit: { translateX: "0%" },
+        pageExit: { translateX: "-100%" },
     },
     theme3: {
         pageInitial: { translateX: "100%" },
@@ -29,19 +29,19 @@ const variant: { [key: string]: PageStyles } = {
 };
 
 const themeSlice = createSlice({
-    name: "theme",
-    initialState: { theme: "theme1" },
+    name: "theme1",
+    initialState: "theme1" as "theme1" | "theme2" | "theme3",
     reducers: {
-        setTheme: (state, action: PayloadAction<string>) => {
-            state.theme = action.payload;
+        setVariant: (
+            state,
+            action: PayloadAction<"theme1" | "theme2" | "theme3">
+        ) => {
+            state = action.payload;
         },
     },
 });
 
-export const { setTheme } = themeSlice.actions;
-
-export const selectTheme = (state: ThemeState) => state.theme;
-
-export const selectStyles = (state: ThemeState) => variant[state.theme];
-
+export const { setVariant } = themeSlice.actions;
+export const selectTheme = (state: ThemeState) =>
+    state.theme as "theme1" | "theme2" | "theme3";
 export default themeSlice.reducer;
