@@ -52,7 +52,7 @@ const ThemesGear: React.FC<Props> = () => {
             case "Theme1":
             case "Theme2":
             case "Theme3":
-                dispatch(setVariant(themeName));
+                // dispatch(setVariant(themeName));
                 break;
             default:
                 console.error("Invalid theme name:", themeName);
