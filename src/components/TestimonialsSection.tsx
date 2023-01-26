@@ -28,12 +28,11 @@ const TestimonialsSection: React.FC = (props) => {
                                         </div>
                                         <div className="comment-review">
                                             <span>
-                                                Ipsum ab necessitatibus numquam
-                                                vitae quis. Nobis nostrum
-                                                deserunt suscipit eos fugit.
-                                                Consectetur dolorum temporibus
-                                                facilis impedit exercitationem
-                                                dignissimos.
+                                                Qandeel's knowledge of full
+                                                stack Python technologies helped
+                                                our ecommerce project soar. Her
+                                                dedication and attention to
+                                                detail truly made a difference.
                                             </span>
                                         </div>
                                     </div>
@@ -44,16 +43,17 @@ const TestimonialsSection: React.FC = (props) => {
                                                     maxHeight: "70px",
                                                     maxWidth: "90px",
                                                 }}
-                                                src="images/testimonial/testi-img1.jpg"
+                                                src="images/testimonial/muhammad's dp.jpg"
                                                 alt="person-img"
                                             />
                                         </div>
                                         <div className="name-and-skill">
                                             <span className="reviewer-name">
-                                                Emma Jones
+                                                Muhammad Bin Abdulrehman
                                             </span>
                                             <span className="reviewer-skills">
-                                                Creative Director
+                                                CEO of Marketer(A leading
+                                                ecommerce company of Pakistan)
                                             </span>
                                         </div>
                                     </div>
@@ -88,10 +88,11 @@ const TestimonialsSection: React.FC = (props) => {
                                         />
                                         <div className="name-and-skill">
                                             <span className="reviewer-name">
-                                                Jack Smith
+                                                Usama Shafeeq
                                             </span>
                                             <span className="reviewer-skills">
                                                 Marketing Director
+                                                http://pcconline.co.za/
                                             </span>
                                         </div>
                                     </div>
