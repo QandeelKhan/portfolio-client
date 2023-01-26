@@ -10,6 +10,7 @@
     justify-content: center;
     align-items: center;
     /* flex-wrap: wrap; */
+    gap: 30px;
 }
 
 .skills {
@@ -22,15 +23,16 @@
 
 .skills-heading {
     color: white;
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: lighter;
     padding: 10px 0px;
+    text-align: center;
 }
 
 .skills-description {
     color: #d4d4d4;
     text-align: center;
-    padding: 10px 0px;
+    /* padding: 10px 0px; */
 }
 @media (max-width: 768px) {
     .services {

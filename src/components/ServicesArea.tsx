@@ -1,4 +1,5 @@
 import React from "react";
+import PhoneIcon from "./icons/PhoneIcon";
 import PhotographyIcon from "./icons/PhotographyIcon";
 import ResponsivedesignIcon from "./icons/ResponsivedesignIcon";
 import WebdesignIcon from "./icons/WebdesignIcon";
@@ -40,7 +41,7 @@ const ServicesArea: React.FC = (props) => {
                     </span>
                 </div>
                 <div className="skills">
-                    <PhotographyIcon />
+                    <PhoneIcon />
                     <span className="skills-heading">
                         Mobile App Development
                     </span>
