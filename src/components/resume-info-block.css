@@ -8,9 +8,15 @@
 }
 
 .main-resume-container {
-    position: relative;
+    /* position: relative; */
     display: flex;
     width: 100%;
+<<<<<<< HEAD
+    /* flex-wrap: wrap; */
+    justify-content: start;
+    align-items: stretch;
+=======
+>>>>>>> b78b7f7beb909b62dd718a4a59d4cda9219677d2
     margin-bottom: 50px;
     margin-top: 50px;
 }
@@ -21,8 +27,8 @@
     align-items: center;
     justify-content: center;
     max-width: 50%;
+    /* width: 100%; */
 }
-
 
 .resume-right-info {
     display: flex;
@@ -30,7 +36,12 @@
     align-items: center;
     justify-content: space-between;
     max-width: 50%;
+<<<<<<< HEAD
+    padding-bottom: 30px;
+    /* width: 100%; */
+=======
     padding-bottom: 40px;
+>>>>>>> b78b7f7beb909b62dd718a4a59d4cda9219677d2
 }
 
 .resume-heading {
@@ -75,6 +86,13 @@
     .main-resume-container {
         flex-wrap: wrap;
     }
+<<<<<<< HEAD
+    .resume-left-info,
+    .resume-right-info {
+        max-width: 100%;
+    }
+}
+=======
 
     .resume-left-info {
         max-width: 100%;
@@ -84,3 +102,4 @@
         max-width: 100%;
     }
 }
+>>>>>>> b78b7f7beb909b62dd718a4a59d4cda9219677d2
