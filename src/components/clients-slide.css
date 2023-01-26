@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.slide-container {}
+/* .slide-container {} */
 
 .subheading span {
     border-bottom: 2px solid var(--primaryColor);
