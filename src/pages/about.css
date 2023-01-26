@@ -9,6 +9,7 @@
     font-weight: 700;
     color: white;
 }
+
 /* ---Section About--- */
 
 /* ---------ABOUT PAGE STARTS HERE----------- */
@@ -16,7 +17,6 @@
 .aboutuser-icon {
     height: 50px;
     width: 50px;
-    border: 1px solid red;
 }
 
 .about-user-icon {
@@ -163,15 +163,18 @@
     margin-top: 10px;
     z-index: 1;
 }
+
 @media (max-width: 768px) {
     .about-all-info {
         flex-wrap: wrap;
         flex-direction: column;
     }
+
     .about-right-info,
     .about-left-info {
         width: 90%;
     }
+
     .about-right-info {
         align-items: flex-start;
     }

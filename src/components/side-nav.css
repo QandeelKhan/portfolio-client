@@ -78,6 +78,7 @@ body {
     font-family: "Playfair Display", serif;
     font-weight: 700;
 }
+
 @media (max-width: 425px) {
     .mobile-header {
         padding-left: 20%;
@@ -219,7 +220,6 @@ li {
     /* object-fit: contain; */
     margin-left: 65px;
     margin-right: 65px;
-    border: 1px solid red;
     font-family: "Playfair Display", serif;
 }
 
@@ -239,7 +239,6 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid red;
     font-family: "Playfair Display", serif;
 }
 

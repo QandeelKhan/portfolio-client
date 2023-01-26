@@ -3,9 +3,7 @@ import PortfolioBriefcase from "../components/icons/PortfolioBriefcase";
 import PortfolioPage from "./PortfolioPage";
 import "./portfolio.css";
 import PageTemplate from "../components/PageTemplate";
-import { motion } from "framer-motion";
-import { useSelector } from "react-redux";
-import { RootState } from "../redux/store";
+import ThemeWrapper from "../components/ThemeWrapper";
 
 const Portfolio: React.FC = () => {
     return (

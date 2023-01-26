@@ -1,12 +1,8 @@
-import React from "react";
 import ChangingText from "../components/ChangingText";
-import { motion } from "framer-motion";
 import "./home.css";
-import ThemesGear from "../components/ThemesGear";
-import { useSelector } from "react-redux";
-import { RootState } from "../redux/store";
+import ThemeWrapper from "../components/ThemeWrapper";
 
-function Home() {
+const Home = () => {
     const text = ["Photographer", "Web Designer", "Software Developer"];
 
     return (
@@ -20,6 +16,6 @@ function Home() {
             </div>
         </section>
     );
-}
+};
 
 export default Home;

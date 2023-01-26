@@ -1,31 +1,40 @@
-import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { myThemeState } from "../redux/themeSlice";
 import { useSelector } from "react-redux";
-import { selectTheme, setVariant, variants } from "../redux/themeSlice";
+import { RootState } from "../redux/store";
+import { useEffect } from "react";
 
-interface Props {
-    children: React.ReactNode;
-}
+const ThemeWrapper: React.FC<{ children: React.ReactElement }> = ({
+    children,
+}) => {
+    const selectedTheme = useSelector(
+        (state: RootState) => state.themes.selectedTheme.theme
+    );
 
-const ThemeWrapper: React.FC<Props> = ({ children }) => {
-    const selectedTheme = useSelector(selectTheme) as
-        | "theme1"
-        | "theme2"
-        | "theme3";
-    const variant = variants[selectedTheme];
+    useEffect(() => {
+        // children
+    }, [selectedTheme]);
 
     return (
-        <AnimatePresence>
-            <motion.div
-                initial="pageInitial"
-                animate="pageAnimate"
-                exit="pageExit"
-                transition={{ duration: 1 }}
-                variants={variant}
-            >
-                {children}
-            </motion.div>
-        </AnimatePresence>
+        <>
+            {console.log(selectedTheme, "this is selected theme")}
+            <AnimatePresence>
+                <motion.div
+                    initial="pageInitial"
+                    animate="pageAnimate"
+                    exit="pageExit"
+                    transition={{ duration: 1 }}
+                    // variants={selectedTheme}
+                    variants={
+                        !selectedTheme
+                            ? myThemeState.themes[0].theme
+                            : selectedTheme
+                    }
+                >
+                    {children}
+                </motion.div>
+            </AnimatePresence>
+        </>
     );
 };
 

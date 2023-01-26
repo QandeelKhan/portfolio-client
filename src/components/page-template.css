@@ -6,7 +6,6 @@
     align-items: center;
     background-color: var(--backgroundColor);
     margin-left: 200px;
-    border: 1px solid red;
     height: 100%;
 }
 
@@ -19,7 +18,6 @@
     /* object-fit: contain; */
     margin-left: 65px;
     margin-right: 65px;
-    border: 1px solid red;
     font-family: "Playfair Display", serif;
 }
 

@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Masonry from "react-masonry-css";
 import "./portfolio-detail.css";
 import "../pages/portfolio.css";
 import GridItem from "../components/GridItem";
 import { gridItems, tabs } from "../components/GridItems";
-import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 const PortfolioPage: React.FC = (props: any) => {
@@ -25,6 +24,9 @@ const PortfolioPage: React.FC = (props: any) => {
 
     const handleTabClick = (tab: string) => {
         setSelectedTab(tab);
+        setTimeout(() => {
+            setSelectedTab(tab);
+        }, 1000);
     };
 
     const filteredItems = gridItems.filter((item) => {
@@ -35,6 +37,10 @@ const PortfolioPage: React.FC = (props: any) => {
         }
     });
 
+    // useEffect(() => {
+    //     handleTabClick();
+    // }, []);
+
     return (
         <div className="projects-area">
             <div className="menu-div">
@@ -43,7 +49,9 @@ const PortfolioPage: React.FC = (props: any) => {
                         <li
                             key={index}
                             onClick={() => handleTabClick(tab)}
-                            className={selectedTab === tab ? "active" : ""}
+                            className={`tabs ${
+                                selectedTab === tab ? "active" : ""
+                            }`}
                         >
                             <div>{tab}</div>
                         </li>
@@ -72,5 +80,3 @@ const PortfolioPage: React.FC = (props: any) => {
 };
 
 export default PortfolioPage;
-
-// this is a web page "https://watson.cosmos-themes.com/dark/#home" in this on the right corner
