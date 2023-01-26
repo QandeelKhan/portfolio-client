@@ -17,11 +17,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border: 1px solid red; */
     width: 100%;
     height: auto;
     margin-top: 50px;
     margin-bottom: 50px;
+
+
     /* padding: 0; */
 }
 
@@ -38,7 +39,6 @@
     justify-content: center;
     align-items: center;
     border: 1px dashed rgb(151, 150, 150);
-    /* padding: 10px 0px; */
     border-radius: 50px;
     flex-wrap: wrap;
 }
@@ -49,11 +49,23 @@
     border-radius: 50px;
 }
 
-.menu-div ul li {
+.tabs {
     padding: 7px 10px;
     border-radius: 50px;
-    background-color: rgb(2, 168, 197);
+    background-color: transparent;
+    cursor: pointer;
+    transition: .3s;
 }
+
+.active {
+    padding: 7px 10px;
+    border-radius: 50px;
+    background-color: #00a3e1;
+}
+
+/* .active {
+    background-color: #00a3e1;
+} */
 
 /* css starts here */
 
@@ -62,13 +74,15 @@
     /* gutter size offset */
     width: auto;
     margin-top: 20px;
+
+
 }
 
 /* .masonry-grid_column {
     padding-left: 10px;
 } */
 
-.masonry-grid_column > div {
+.masonry-grid_column>div {
     /* margin-bottom: 5%; */
     /* margin-left: 10%; */
     margin: 10px 15px;
@@ -78,6 +92,7 @@
     width: 100%;
     height: auto;
     border-radius: 10px;
+
 }
 
 /* Hover starts here */
@@ -105,6 +120,7 @@
     position: relative;
     transition: 0.5s;
     cursor: pointer;
+    transition: all 2s;
 }
 
 .onhover-text {
@@ -119,6 +135,7 @@
     transform: translateX(5px);
     transition: 0.5s;
 }
+
 /* 
 .onhover-icon-1 {
     margin-top: 60%;

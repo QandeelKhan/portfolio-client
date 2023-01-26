@@ -16,7 +16,7 @@
     top: 0;
     left: 0;
     overflow: auto;
-    z-index: 1;
+    z-index: 10000;
     /* padding-bottom: 50px; */
 }
 
@@ -51,7 +51,6 @@
     justify-content: center;
     margin-right: -15px;
     margin-left: -15px;
-    border: 1px solid red;
 }
 
 .post-headings {
@@ -220,6 +219,7 @@
     color: white;
     font-size: 16px;
 }
+
 @media (max-width: 768px) {
     .post-page-main {
         left: 0px;

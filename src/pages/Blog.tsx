@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
 import AboutUserIcon from "../components/icons/AboutUser";
 import PageTemplate from "../components/PageTemplate";
-import { motion } from "framer-motion";
 import "./blog.css";
-import BookIcon from "../components/icons/BookIcon";
-import { useSelector } from "react-redux";
-import { RootState } from "../redux/store";
+import ThemeWrapper from "../components/ThemeWrapper";
 
 const Blog = () => {
     return (

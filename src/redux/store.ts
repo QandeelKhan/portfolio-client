@@ -1,15 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import eventsReducer from "./eventsSlice";
-import themeSlice from "./themeSlice";
-
-interface ThemeState {
-    theme: "theme1" | "theme2" | "theme3";
-}
+import themesReducer from "./themeSlice";
 
 export const store = configureStore({
     reducer: {
         events: eventsReducer,
-        theme: themeSlice,
+        themes: themesReducer,
     },
 });
 
