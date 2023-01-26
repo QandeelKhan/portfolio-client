@@ -77,7 +77,7 @@ const About: React.FC = (props: any) => {
                                 <span>Address </span>
                             </span>{" "}
                             <span className="personal-info-value">
-                                <span> 123 Lorem Ipsum </span>
+                                <span> Sargodha,Pakistan </span>
                             </span>
                         </li>
                         <li>
@@ -85,7 +85,7 @@ const About: React.FC = (props: any) => {
                                 <span>Email </span>
                             </span>{" "}
                             <span className="personal-info-value">
-                                <span>example@example.com</span>
+                                <span>com.qandeelhaider@gmail.com</span>
                             </span>
                         </li>
                         <li>
