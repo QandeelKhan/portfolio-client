@@ -10,14 +10,16 @@
 .main-resume-container {
     position: relative;
     display: flex;
-    flex-wrap: wrap;
+    width: 100%;
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .resume-left-info {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     max-width: 50%;
 }
 
@@ -26,7 +28,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     max-width: 50%;
+    padding-bottom: 40px;
 }
 
 .resume-heading {
@@ -70,5 +74,13 @@
 @media (max-width: 768px) {
     .main-resume-container {
         flex-wrap: wrap;
+    }
+
+    .resume-left-info {
+        max-width: 100%;
+    }
+
+    .resume-right-info {
+        max-width: 100%;
     }
 }
