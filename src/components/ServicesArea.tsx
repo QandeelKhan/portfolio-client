@@ -16,32 +16,38 @@ const ServicesArea: React.FC = (props) => {
                     <WebdevelopmentIcon />
                     <span className="skills-heading"> Web Development</span>
                     <span className="skills-description">
-                        Amet aspernatur delectus maxime ducimus similique
-                        Ratione asperiores corporis provident aut libero
+                        Expert in Python and Django with a passion for building
+                        enterprise-level web applications that drive business
+                        growth.
                     </span>
                 </div>
                 <div className="skills">
                     <WebdesignIcon />
                     <span className="skills-heading"> Web Design</span>
                     <span className="skills-description">
-                        Amet aspernatur delectus maxime ducimus similique
-                        Ratione asperiores corporis provident aut libero
+                        A skilled web designer, I utilize tools like Figma and
+                        Adobe XD to create visually compelling and user-friendly
+                        interfaces that drive engagement and business success.
                     </span>
                 </div>
                 <div className="skills">
                     <ResponsivedesignIcon />
                     <span className="skills-heading"> Responsive Design</span>
                     <span className="skills-description">
-                        Amet aspernatur delectus maxime ducimus similique
-                        Ratione asperiores corporis provident aut libero
+                        I design responsive websites that adapt to any screen
+                        size with my expertise in the latest responsive design
+                        techniques.
                     </span>
                 </div>
                 <div className="skills">
                     <PhotographyIcon />
-                    <span className="skills-heading"> Photography</span>
+                    <span className="skills-heading">
+                        Mobile App Development
+                    </span>
                     <span className="skills-description">
-                        Amet aspernatur delectus maxime ducimus similique
-                        Ratione asperiores corporis provident aut libero
+                        With proficiency in React Native and Python, I develop
+                        high-performing and user-friendly cross-platform mobile
+                        applications.
                     </span>
                 </div>
             </div>
