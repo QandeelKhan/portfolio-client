@@ -24,9 +24,10 @@ const ClientsSlide: React.FC = (props) => {
                             <a href="#">
                                 {" "}
                                 <img
+                                    style={{ color: "whitesmoke" }}
                                     decoding="async"
-                                    src="https://watson.cosmos-themes.com/dark/wp-content/uploads/2021/05/client2.png"
-                                    alt="Client 2"
+                                    src="/images/marketers-logo.png"
+                                    alt="Client-2"
                                 />{" "}
                             </a>
                         </div>
