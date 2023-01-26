@@ -13,7 +13,7 @@ export const Button = ({
     };
     return (
         <div className="nav-btn">
-            <div className="nav-btn-container " onClick={handleNavigate}>
+            <div className="nav-btn-containers" onClick={handleNavigate}>
                 {NavBtnIcon}
                 <a href={NavBtnHref} className="nav-btn-link ">
                     {NavBtnTitle}
