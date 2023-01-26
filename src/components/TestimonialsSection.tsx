@@ -30,9 +30,13 @@ const TestimonialsSection: React.FC = (props) => {
                                             <span>
                                                 Qandeel's knowledge of full
                                                 stack Python technologies helped
-                                                our ecommerce project soar. Her
+                                                our e-commerce project soar. His
                                                 dedication and attention to
                                                 detail truly made a difference.
+                                                {/* "facebook.com/marketerzlab"
+                                                "instagram.com/marketerzlab"
+                                                "helps the businesses grow with
+                                                the help of social media" */}
                                             </span>
                                         </div>
                                     </div>
@@ -52,8 +56,8 @@ const TestimonialsSection: React.FC = (props) => {
                                                 Muhammad Bin Abdulrehman
                                             </span>
                                             <span className="reviewer-skills">
-                                                CEO of Marketer(A leading
-                                                ecommerce company of Pakistan)
+                                                CEO of Marketerz Lab(A leading
+                                                SMMA company of Pakistan)
                                             </span>
                                         </div>
                                     </div>
@@ -68,12 +72,11 @@ const TestimonialsSection: React.FC = (props) => {
                                         </div>
                                         <div className="comment-review">
                                             <span>
-                                                Ipsum ab necessitatibus numquam
-                                                vitae quis. Nobis nostrum
-                                                deserunt suscipit eos fugit.
-                                                Consectetur dolorum temporibus
-                                                facilis impedit exercitationem
-                                                dignissimos.
+                                                Qandeel Khan's work on
+                                                pcconline.co.za has been a major
+                                                success for our online sales,
+                                                thanks to the user-friendly
+                                                design.
                                             </span>
                                         </div>
                                     </div>
@@ -83,7 +86,7 @@ const TestimonialsSection: React.FC = (props) => {
                                                 maxHeight: "70px",
                                                 maxWidth: "70px",
                                             }}
-                                            src="images/testimonial/testi-img2.jpg"
+                                            src="images/testimonial/usama's dp.jpeg"
                                             alt="person-img"
                                         />
                                         <div className="name-and-skill">
@@ -91,7 +94,8 @@ const TestimonialsSection: React.FC = (props) => {
                                                 Usama Shafeeq
                                             </span>
                                             <span className="reviewer-skills">
-                                                Marketing Director
+                                                Marketing Director on
+                                                http://pcconline.co.za
                                                 http://pcconline.co.za/
                                             </span>
                                         </div>
@@ -165,10 +169,15 @@ const TestimonialsSection: React.FC = (props) => {
                                         />
                                         <div className="name-and-skill">
                                             <span className="reviewer-name">
-                                                Jack Smith
+                                                Sadi
                                             </span>
                                             <span className="reviewer-skills">
-                                                Marketing Director
+                                                e-commerce entrepreneur
+                                                (Successful seller on ebay,
+                                                amazon and etsy, and crypto
+                                                expert.) facebook.com/
+                                                {/* https://www.facebook.com/profile.php?id=100011154134681&sk=photos */}
+                                                {/* https://www.twitter.com/saadmah83015242 */}
                                             </span>
                                         </div>
                                     </div>
