@@ -8,25 +8,33 @@
 }
 
 .main-resume-container {
-    position: relative;
+    /* position: relative; */
     display: flex;
-    flex-wrap: wrap;
+    width: 100%;
+    /* flex-wrap: wrap; */
+    justify-content: start;
+    align-items: stretch;
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .resume-left-info {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     max-width: 50%;
+    /* width: 100%; */
 }
-
 
 .resume-right-info {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     max-width: 50%;
+    padding-bottom: 30px;
+    /* width: 100%; */
 }
 
 .resume-heading {
@@ -70,5 +78,9 @@
 @media (max-width: 768px) {
     .main-resume-container {
         flex-wrap: wrap;
+    }
+    .resume-left-info,
+    .resume-right-info {
+        max-width: 100%;
     }
 }
