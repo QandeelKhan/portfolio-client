@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import BlogDetailSidebar from "../components/BlogDetailSidebar";
 import repliesData from "../components/replies.json";
 import commentsData from "../components/comments.json";
 import CommentsForm from "../components/CommentsForm";
@@ -10,6 +9,8 @@ import Comments, { CommentProps, ReplyProps } from "../components/Comments";
 import PrevBtn from "../components/PrevBtn";
 import { useDispatch } from "react-redux";
 import { setBlogCardClicked } from "../redux/eventsSlice";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
 
 const BlogDetail = () => {
     interface FormData {
@@ -21,8 +22,6 @@ const BlogDetail = () => {
     }
 
     const handleSubmit = (data: FormData) => {
-        // Create a new comment object with the data received
-        // from the form
         const newComment = {
             id: Date.now().toString(),
             name: data.name,
@@ -46,6 +45,14 @@ const BlogDetail = () => {
         };
     }, []);
 
+    const selectedPost = useSelector(
+        (state: RootState) => state.data.selectedPost
+    );
+
+    if (!selectedPost) {
+        return <div>No post selected</div>;
+    }
+
     // component render logic
     return (
         <>
@@ -55,7 +62,7 @@ const BlogDetail = () => {
                     <div className="post-image">
                         <img
                             className="detail-image"
-                            src="images/blog/blog-1.jpg"
+                            src={selectedPost.image}
                             alt="blog-img"
                         />
                     </div>
@@ -65,102 +72,61 @@ const BlogDetail = () => {
                                 <div className="post-headings">
                                     <div className="categories">
                                         <a className="category-name" href="#">
-                                            Web Design
+                                            {selectedPost.category}
                                         </a>
                                     </div>
                                     <h1 className="post-title">
-                                        Best Way To Design
+                                        {selectedPost.title}
                                     </h1>
                                     <span className="post-date">
-                                        May 10, 2021
+                                        {selectedPost.date}
                                     </span>
                                 </div>
                                 <div className="text-content">
                                     {/* post full content */}
                                     <div className="post-full-content">
                                         <p className="post-paragraph">
-                                            <strong>Lorem Ipsum</strong>&nbsp;is
-                                            simply dummy text of the printing is
-                                            simply dummy text of the printing
-                                            and typesetting industry. Lorem
-                                            Ipsum has been the industry's
-                                            standard dummy text ever since the
-                                            1500s, when an unknown printer took
-                                            a galley of type and scrambled it to
-                                            make a type specimen book. It has
-                                            survived not only five centuries,
-                                            but also the leap into electronic
-                                            typesetting, remaining essentially
-                                            unchanged. It was popularised in the
-                                            1960s with the release of Letraset
-                                            sheets containing Lorem Ipsum
-                                            passages, and more recently with
-                                            desktop publishing software like
-                                            Aldus PageMaker including versions
-                                            of Lorem Ipsum.
+                                            <strong>
+                                                {selectedPost.title}
+                                            </strong>
+                                            &nbsp;
+                                            {selectedPost.initialParagraph}
                                         </p>
                                         <h4 className="paragraph-heading">
-                                            First, solve the problem. Then write
-                                            the code.
+                                            {selectedPost.paragraphHeading}
                                         </h4>
                                         <p></p>
                                         <blockquote className="block-quote">
                                             <p>
                                                 <strong>
-                                                    In some ways, programming is
+                                                    {selectedPost.quote}
                                                 </strong>
                                             </p>
                                             <cite className="quote-writer">
-                                                <em>Andrew Hunt</em>
+                                                <em>
+                                                    {selectedPost.quoteWriter}
+                                                </em>
                                             </cite>
                                         </blockquote>
-                                        <p>
-                                            The standard chunk of Lorem Ipsum
-                                            make a type specimen book. It has
-                                            survived not only five centuries,
-                                            but also the leap into electronic
-                                            typesetting, remaining essentially
-                                            unchanged. It was popularised in the
-                                            1960s with the release of Letraset
-                                            sheets containing Lorem Ipsum
-                                            passages, and more recently with
-                                            desktop publishing software like
-                                            Aldus PageMaker including versions
-                                            of Lorem Ipsum.
-                                        </p>
+                                        <p>{selectedPost.secondParagraph}</p>
                                         <div className="content-images-wrapper">
-                                            <figure className="content-image-container">
-                                                <img
-                                                    src="https://watson.cosmos-themes.com/dark/wp-content/uploads/2021/05/blog-img1.jpg"
-                                                    alt=""
-                                                    className="content-image"
-                                                />
-                                            </figure>
-                                            <figure className="content-image-container">
-                                                <img
-                                                    loading="lazy"
-                                                    src="https://watson.cosmos-themes.com/dark/wp-content/uploads/2021/05/blog-img2.jpg"
-                                                    alt=""
-                                                    className="content-image"
-                                                />
-                                            </figure>
-                                            <figure className="content-image-container">
-                                                <img
-                                                    loading="lazy"
-                                                    src="https://watson.cosmos-themes.com/dark/wp-content/uploads/2021/05/blog-img3.jpg"
-                                                    alt=""
-                                                    className="content-image"
-                                                />
-                                            </figure>
+                                            {selectedPost.images.map(
+                                                (image, index) => (
+                                                    <figure
+                                                        key={index}
+                                                        className="content-image-container"
+                                                    >
+                                                        <img
+                                                            src={image}
+                                                            alt=""
+                                                            className="content-image"
+                                                        />
+                                                    </figure>
+                                                )
+                                            )}
                                         </div>
                                         <p>
-                                            Contrary to popular belief, Lorem
-                                            1960s with the release of Letraset
-                                            sheets containing Lorem Ipsum
-                                            passages, and more recently with
-                                            desktop publishing software like
-                                            Aldus PageMaker including versions
-                                            of Lorem Ipsum.
+                                            {selectedPost.paragraphAfterImage}
                                         </p>
                                     </div>
                                     <PostTags />

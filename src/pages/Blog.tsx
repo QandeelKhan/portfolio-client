@@ -4,8 +4,16 @@ import PageTemplate from "../components/PageTemplate";
 import "./blog.css";
 import "./blog-detail.css";
 import { blogItems } from "../components/blogData";
+import { useDispatch } from "react-redux";
+import { setSelectedPost } from "../redux/dataSlice";
 
 const Blog = () => {
+    const dispatch = useDispatch();
+
+    // const handlePostClick = (post: any) => {
+    //     dispatch(setSelectedPost(post));
+    // };
+
     return (
         <PageTemplate iconComponent={<AboutUserIcon />} pageName="Blog.">
             <div className="blog-grid">
@@ -14,7 +22,16 @@ const Blog = () => {
                         to="/blog-detail"
                         className="blog-grid-item"
                         key={index}
+                        onClick={() => dispatch(setSelectedPost(blogItem))}
                     >
+                        {/* {posts.map((post) => (
+                            <div
+                                key={post.title}
+                                onClick={() => handlePostClick(post)}
+                            >
+                                {post.title}
+                            </div>
+                        ))} */}
                         <div className="blog-item-wrapper">
                             <div className="blog-image-container">
                                 <img
