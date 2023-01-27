@@ -94,9 +94,7 @@ const TestimonialsSection: React.FC = (props) => {
                                                 Usama Shafeeq
                                             </span>
                                             <span className="reviewer-skills">
-                                                Marketing Director on
-                                                http://pcconline.co.za
-                                                http://pcconline.co.za/
+                                                Marketing Director on pcconline
                                             </span>
                                         </div>
                                     </div>
@@ -149,22 +147,21 @@ const TestimonialsSection: React.FC = (props) => {
                                         </div>
                                         <div className="comment-review">
                                             <span>
-                                                Ipsum ab necessitatibus numquam
-                                                vitae quis. Nobis nostrum
-                                                deserunt suscipit eos fugit.
-                                                Consectetur dolorum temporibus
-                                                facilis impedit exercitationem
-                                                dignissimos.
+                                                Thanks to Qandeel, my online
+                                                store's revenue has seen a
+                                                significant increase. Their
+                                                professional development
+                                                services are second to none.
                                             </span>
                                         </div>
                                     </div>
                                     <div className="person-info">
                                         <img
                                             style={{
-                                                maxHeight: "70px",
-                                                maxWidth: "70px",
+                                                maxHeight: "60px",
+                                                // maxWidth: "60px",
                                             }}
-                                            src="images/testimonial/testi-img2.jpg"
+                                            src="images/testimonial/sadi's dp.jpeg"
                                             alt="person-img"
                                         />
                                         <div className="name-and-skill">
@@ -173,9 +170,9 @@ const TestimonialsSection: React.FC = (props) => {
                                             </span>
                                             <span className="reviewer-skills">
                                                 e-commerce entrepreneur
-                                                (Successful seller on ebay,
+                                                {/* (Successful seller on ebay,
                                                 amazon and etsy, and crypto
-                                                expert.) facebook.com/
+                                                expert.) facebook.com/ */}
                                                 {/* https://www.facebook.com/profile.php?id=100011154134681&sk=photos */}
                                                 {/* https://www.twitter.com/saadmah83015242 */}
                                             </span>

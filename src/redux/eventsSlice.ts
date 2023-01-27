@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 interface EventState {
     navVisible: boolean;
+    blogCardClicked: boolean;
 }
 
 const eventsState: EventState = {
@@ -9,7 +10,7 @@ const eventsState: EventState = {
     // crossClicked: false,
     // myClassName: "deactive",
     // animate: "",
-    // myScrollbar: "",
+    blogCardClicked: false,
     navVisible: true,
 };
 
@@ -19,6 +20,9 @@ export const eventsSlice = createSlice({
     reducers: {
         setNavVisible: (state, action: { payload: boolean }) => {
             state.navVisible = action.payload;
+        },
+        setBlogCardClicked: (state, action: { payload: boolean }) => {
+            state.blogCardClicked = action.payload;
         },
         // setCardClicked: (state, action) => {
         //     state.cardClicked = action.payload;
@@ -43,7 +47,7 @@ export const {
     // setCrossClicked,
     // setMyClassName,
     // setAnimate,
-    // setMyScrollbar,
+    setBlogCardClicked,
     setNavVisible,
 } = eventsSlice.actions;
 

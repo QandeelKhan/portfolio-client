@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BlogDetailSidebar from "../components/BlogDetailSidebar";
 import repliesData from "../components/replies.json";
 import commentsData from "../components/comments.json";
@@ -8,6 +8,8 @@ import "./blog-detail.css";
 import PostTags from "../components/PostTags";
 import Comments, { CommentProps, ReplyProps } from "../components/Comments";
 import PrevBtn from "../components/PrevBtn";
+import { useDispatch } from "react-redux";
+import { setBlogCardClicked } from "../redux/eventsSlice";
 
 const BlogDetail = () => {
     interface FormData {
@@ -34,9 +36,21 @@ const BlogDetail = () => {
 
     const comments: CommentProps[] = commentsData;
     const replies: ReplyProps[] = repliesData;
+
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(setBlogCardClicked(true));
+        // cleanup function, componentDidUnmount
+        return () => {
+            dispatch(setBlogCardClicked(false));
+        };
+    }, []);
+
+    // component render logic
     return (
         <>
             <div className="post-page-main">
+                {/* <BlogDetailSidebar /> */}
                 <div className="post-page-wrapper">
                     <div className="post-image">
                         <img
@@ -174,7 +188,6 @@ const BlogDetail = () => {
                         </div>
                     </div>
                 </div>
-                <BlogDetailSidebar />
             </div>
         </>
     );

@@ -4,6 +4,8 @@ import ThemesGear from "../components/ThemesGear";
 import SideNav from "../components/SideNav";
 import ThemeWrapper from "../components/ThemeWrapper";
 import LandingPage from "./LandingPage";
+import { AnimatePresence } from "framer-motion";
+import BlogDetailSidebar from "../components/BlogDetailSidebar";
 
 const Layout: React.FC = () => {
     const [showContent, setShowContent] = useState(false);
@@ -26,8 +28,9 @@ const Layout: React.FC = () => {
                 <>
                     <SideNav />
                     <ThemesGear />
+                    <BlogDetailSidebar />
                     <ThemeWrapper key={key}>
-                        <Outlet />
+                        <Outlet key={key} />
                     </ThemeWrapper>
                 </>
             )}

@@ -24,7 +24,12 @@ const ClientsSlide: React.FC = (props) => {
                             <a href="#">
                                 {" "}
                                 <img
-                                    style={{ color: "whitesmoke" }}
+                                    style={{
+                                        color: "whitesmoke",
+                                        // backgroundColor: "white",
+                                        height: "150px",
+                                        width: "150px",
+                                    }}
                                     decoding="async"
                                     src="/images/marketers-logo.png"
                                     alt="Client-2"

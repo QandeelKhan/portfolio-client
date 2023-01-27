@@ -1,6 +1,5 @@
 import React from "react";
 import PhoneIcon from "./icons/PhoneIcon";
-import PhotographyIcon from "./icons/PhotographyIcon";
 import ResponsivedesignIcon from "./icons/ResponsivedesignIcon";
 import WebdesignIcon from "./icons/WebdesignIcon";
 import WebdevelopmentIcon from "./icons/WebdevelopmentIcon";
