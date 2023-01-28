@@ -13,6 +13,7 @@
     justify-content: center;
     align-items: flex-start;
     margin-top: 20px;
+    border-bottom: 1px solid rgb(75, 74, 74);
 }
 
 .comment-area {
@@ -74,13 +75,13 @@
 }
 
 .comment-reply {
-    border-bottom: 1px solid rgb(75, 74, 74);
-    padding-bottom: 30px;
+    /* border-bottom: 1px solid rgb(75, 74, 74); */
+    padding-bottom: 20px;
     padding-left: 40px;
 }
 
 .comment-next {
     padding-bottom: 30px;
-    border-bottom: 1px solid rgb(75, 74, 74);
+    /* border-bottom: 1px solid rgb(75, 74, 74); */
     padding-top: 15px;
 }

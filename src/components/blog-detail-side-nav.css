@@ -12,6 +12,9 @@
     top: 0;
     z-index: 16;
 }
+.main-side-container::-webkit-scrollbar {
+    display: none;
+}
 
 .sidebar-visible {
     transform: translateX(0%);
@@ -129,7 +132,6 @@
 }
 
 @media (max-width: 400px) {
-
     /* .main-side-container {
         width: 265px;
     }

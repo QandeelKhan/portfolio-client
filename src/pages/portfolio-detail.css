@@ -1,7 +1,7 @@
 .default-position {
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     scrollbar-width: none;
-    height: 100%;
+    height: 100vh;
     z-index: 15000;
     position: relative;
 }
@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
-    height: 100%;
+    height: 100vh;
     /* overflow-y: scroll; */
     scrollbar-width: none;
     z-index: 1500;

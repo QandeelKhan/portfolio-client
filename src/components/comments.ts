@@ -40,7 +40,7 @@ export const repliesData = [
     {
         id: "6",
         parentCommentId: "1",
-        authorName: "John-Doe",
+        authorName: "Muhammad",
         replyDate: "May 12, 2021 at 9:39 am",
         replyText:
             "Thanks for the kind words! I always try to keep the user experience top of mind when I'm designing and building websites. I believe that it's what ultimately sets a good website apart from a great one.",
@@ -49,7 +49,7 @@ export const repliesData = [
     {
         id: "7",
         parentCommentId: "1",
-        authorName: "Jane-Doe",
+        authorName: "Usama",
         replyDate: "May 12, 2021 at 10:39 am",
         replyText:
             "I couldn't agree more. I think that's the beauty of full-stack development, it allows you to have a holistic approach to website design. You can focus on the user experience and performance at the same time. And by keeping the website design simple and easy to navigate, it makes it easy for the users to find what they are looking for.",
@@ -58,7 +58,7 @@ export const repliesData = [
     {
         id: "7",
         parentCommentId: "2",
-        authorName: "Jane-Doe",
+        authorName: "Saad",
         replyDate: "May 12, 2021 at 10:39 am",
         replyText:
             "Thanks for reading and your kind words! I'm glad you found it informative. When it comes to responsive design, my approach is to first design for mobile devices and then progressively enhance the design for larger screens. This way, the site will look great on any device and will provide a seamless experience for the users. I also use CSS media queries to adjust the layout and typography according to the screen size. Additionally, I test the website on different devices during the development process to ensure that it looks and works well on all of them.",
