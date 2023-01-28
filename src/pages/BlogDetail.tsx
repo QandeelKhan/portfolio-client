@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import repliesData from "../components/replies.json";
-import commentsData from "../components/comments.json";
+import { commentsData, repliesData } from "../components/comments";
+// import commentsData from "../components/comments.json";
 import CommentsForm from "../components/CommentsForm";
 import "./blog-detail.css";
 
@@ -132,7 +132,10 @@ const BlogDetail = () => {
                                     <PrevBtn />
                                     <div className="comments-section">
                                         <div className="5-comments">
-                                            <h2>5 Comments</h2>
+                                            <h2>
+                                                {commentsData.length.toString()}{" "}
+                                                Comments
+                                            </h2>
                                         </div>
 
                                         <Comments
