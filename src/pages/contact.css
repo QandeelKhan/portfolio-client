@@ -1,5 +1,5 @@
 .lets-talk-area {
-    width: 80%;
+    width: 70%;
     margin-top: 50px;
 }
 
@@ -206,5 +206,9 @@ textarea:valid {
 @media (max-width: 768px) {
     .name-email-area {
         flex-wrap: wrap;
+    }
+    .lets-talk-area {
+        width: 90%;
+        /* margin-top: 50px; */
     }
 }
