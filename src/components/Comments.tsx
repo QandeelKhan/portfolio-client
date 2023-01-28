@@ -28,45 +28,45 @@ const Comment: React.FC<{
 }> = ({ comment, replies }) => {
     const filteredReplies = filterReplies(replies, comment.id);
     return (
-        <div key={comment.id} className="comment-div">
-            <div className="author-image">
-                <img src={comment.imageSource} alt="profile-img" />
-            </div>
-            <div className="comment-area">
-                <div className="author-name">
-                    <h3>{comment.authorName}</h3>
-                    <div className="reply">
-                        <h5>Reply</h5>
-                        <i className="fa-solid fa-reply"></i>
-                    </div>
+        <div className="comments-wrapper">
+            <div key={comment.id} className="comment-div">
+                <div className="author-image">
+                    <img src={comment.imageSource} alt="profile-img" />
                 </div>
-                <div className="comment-date">
-                    <h6>{comment.commentDate}</h6>
-                </div>
-                <div className="comment-para">{comment.commentText}</div>
-                {filteredReplies.map((reply, index) => (
-                    <div key={reply.id} className="comment-div comment-reply">
-                        <div className="author-image">
-                            <img src={reply.imageSource} alt="profile-img" />
-                        </div>
-                        <div className="comment-area">
-                            <div className="author-name">
-                                <h3>{reply.authorName}</h3>
-                                <div className="reply">
-                                    <h5>Reply</h5>
-                                    <i className="fa-solid fa-reply"></i>
-                                </div>
-                            </div>
-                            <div className="comment-date">
-                                <h6>{reply.replyDate}</h6>
-                            </div>
-                            <div className="comment-para">
-                                {reply.replyText}
-                            </div>
+                <div className="comment-area">
+                    <div className="author-name">
+                        <h3>{comment.authorName}</h3>
+                        <div className="reply">
+                            <h5>Reply</h5>
+                            <i className="fa-solid fa-reply"></i>
                         </div>
                     </div>
-                ))}
+                    <div className="comment-date">
+                        <h6>{comment.commentDate}</h6>
+                    </div>
+                    <div className="comment-para">{comment.commentText}</div>
+                </div>
             </div>
+            {filteredReplies.map((reply, index) => (
+                <div key={reply.id} className="replies-div comment-reply">
+                    <div className="author-image">
+                        <img src={reply.imageSource} alt="profile-img" />
+                    </div>
+                    <div className="comment-area">
+                        <div className="author-name">
+                            <h3>{reply.authorName}</h3>
+                            <div className="reply">
+                                <h5>Reply</h5>
+                                <i className="fa-solid fa-reply"></i>
+                            </div>
+                        </div>
+                        <div className="comment-date">
+                            <h6>{reply.replyDate}</h6>
+                        </div>
+                        <div className="comment-para">{reply.replyText}</div>
+                    </div>
+                </div>
+            ))}
         </div>
     );
 };

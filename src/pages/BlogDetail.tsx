@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { commentsData, repliesData } from "../components/comments";
-// import commentsData from "../components/comments.json";
 import CommentsForm from "../components/CommentsForm";
 import "./blog-detail.css";
 

@@ -61,11 +61,22 @@
     margin-top: 5px;
 }
 
+.comments-wrapper {
+    /* display: flex;
+    align-items: center; */
+}
+
+.replies-div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
 .comment-reply {
-    padding-left: 40px;
     border-bottom: 1px solid rgb(75, 74, 74);
     padding-bottom: 30px;
-    padding-top: 15px;
+    padding-left: 40px;
 }
 
 .comment-next {
