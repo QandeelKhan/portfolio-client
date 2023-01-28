@@ -43,9 +43,9 @@ const ResumeSkills: React.FC = (props) => {
                         <div className="design-skills">
                             <div className="ist">
                                 <div className="coral-draw">
-                                    <span>HTML5</span>
+                                    <span>PYTHON3</span>
                                     <span className="percentage per-83">
-                                        83%
+                                        85%
                                     </span>
                                 </div>
                                 <div className="graph-div">
@@ -54,7 +54,7 @@ const ResumeSkills: React.FC = (props) => {
                             </div>
                             <div className="ist">
                                 <div className="coral-draw">
-                                    <span>CSS3</span>
+                                    <span>HTML5</span>
                                     <span className="percentage per-75">
                                         75%
                                     </span>

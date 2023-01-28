@@ -24,14 +24,6 @@ const Blog = () => {
                         key={index}
                         onClick={() => dispatch(setSelectedPost(blogItem))}
                     >
-                        {/* {posts.map((post) => (
-                            <div
-                                key={post.title}
-                                onClick={() => handlePostClick(post)}
-                            >
-                                {post.title}
-                            </div>
-                        ))} */}
                         <div className="blog-item-wrapper">
                             <div className="blog-image-container">
                                 <img

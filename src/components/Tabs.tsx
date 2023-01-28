@@ -15,7 +15,7 @@ const Tab: React.FC<TabProps> = ({
         <ul>
             <li
                 onClick={() => handleTabClick("ALL")}
-                className={selectedTab === "ALL" ? "active" : ""}
+                className={`tabs ${selectedTab === "ALL" ? "active" : ""}`}
             >
                 <div>ALL</div>
             </li>

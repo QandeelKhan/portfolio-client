@@ -15,6 +15,7 @@ interface headingProps {
         school: string;
         startDate: string;
         endDate: string;
+        description: string;
     }[];
 }
 
@@ -65,6 +66,11 @@ const ResumeInfoBlock = (props: headingProps) => {
                                     <h4 className="rsm-txt-subheading">
                                         {edu.school}
                                     </h4>
+                                    <span className="resume-text">
+                                        {edu.description}
+                                        <br />
+                                        <br />
+                                    </span>
                                 </div>
                                 <span className="pole-txt-from">
                                     {/* to {edu.endDate} */}

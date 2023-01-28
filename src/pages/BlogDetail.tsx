@@ -57,7 +57,6 @@ const BlogDetail = () => {
     return (
         <>
             <div className="post-page-main">
-                {/* <BlogDetailSidebar /> */}
                 <div className="post-page-wrapper">
                     <div className="post-image">
                         <img

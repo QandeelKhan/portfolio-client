@@ -43,10 +43,12 @@
     flex-wrap: wrap;
 }
 
-.menu-div ul li a {
+.menu-div ul li {
+    text-align: center;
     color: black;
     padding: 10px 10px;
     border-radius: 50px;
+    min-width: 90px;
 }
 
 .tabs {
