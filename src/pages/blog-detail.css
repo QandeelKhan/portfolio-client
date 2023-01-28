@@ -1,8 +1,6 @@
 .post-page-main {
-    /* position: fixed; */
     top: 0;
-    left: 200px;
-    right: 0;
+    margin-left: 100px;
     width: 100%;
     height: 100%;
     perspective: 1200px;
@@ -16,13 +14,10 @@
     top: 0;
     left: 0;
     overflow: auto;
-    z-index: 10000;
-    /* padding-bottom: 50px; */
+    z-index: 15;
 }
 
-.post-image {
-    /* width: 100%; */
-}
+.post-image {}
 
 .detail-image {
     width: 100%;
@@ -222,6 +217,6 @@
 
 @media (max-width: 768px) {
     .post-page-main {
-        left: 0px;
+        margin-left: 0px;
     }
 }
