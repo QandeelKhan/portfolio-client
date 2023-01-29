@@ -51,6 +51,11 @@
     min-width: 90px;
 }
 
+.active {
+    color: black;
+    background-color: black;
+}
+
 .tabs {
     padding: 7px 10px;
     border-radius: 50px;

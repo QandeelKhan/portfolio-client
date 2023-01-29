@@ -47,7 +47,7 @@ const TestimonialsSection: React.FC = (props) => {
                                                     maxHeight: "70px",
                                                     maxWidth: "90px",
                                                 }}
-                                                src="images/testimonial/muhammad's dp.jpg"
+                                                src="images/testimonial/muhammad-dp.jpg"
                                                 alt="person-img"
                                             />
                                         </div>
@@ -86,7 +86,7 @@ const TestimonialsSection: React.FC = (props) => {
                                                 maxHeight: "70px",
                                                 maxWidth: "70px",
                                             }}
-                                            src="images/testimonial/usama's dp.jpeg"
+                                            src="images/testimonial/usama-dp.jpeg"
                                             alt="person-img"
                                         />
                                         <div className="name-and-skill">
@@ -161,7 +161,7 @@ const TestimonialsSection: React.FC = (props) => {
                                                 maxHeight: "60px",
                                                 // maxWidth: "60px",
                                             }}
-                                            src="images/testimonial/sadi's dp.jpeg"
+                                            src="images/testimonial/sadi-dp.jpeg"
                                             alt="person-img"
                                         />
                                         <div className="name-and-skill">

@@ -13,6 +13,8 @@ interface BlogPost {
     secondParagraph: string;
     images: string[];
     paragraphAfterImage: string;
+    commentsData: [];
+    repliesData: [];
 }
 
 interface DataState {

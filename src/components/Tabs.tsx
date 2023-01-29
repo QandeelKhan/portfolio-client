@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { gridItems, tabs } from "./GridItems";
 
 interface TabProps {
     categories: string[];
@@ -6,29 +7,43 @@ interface TabProps {
     handleTabClick: (tab: string) => void;
 }
 
-const Tab: React.FC<TabProps> = ({
-    categories,
-    selectedTab,
-    handleTabClick,
-}) => {
+const Tab: React.FC = () => {
+    const [selectedTab, setSelectedTab] = useState("ALL");
+
+    const handleTabClick = (tab: string) => {
+        setSelectedTab(tab);
+        setTimeout(() => {
+            setSelectedTab(tab);
+        }, 1000);
+    };
+
+    const filteredItems = gridItems.filter((item) => {
+        if (selectedTab === "ALL") {
+            return true;
+        } else {
+            return item.category === selectedTab;
+        }
+    });
+
     return (
-        <ul>
-            <li
-                onClick={() => handleTabClick("ALL")}
-                className={`tabs ${selectedTab === "ALL" ? "active" : ""}`}
-            >
-                <div>ALL</div>
-            </li>
-            {categories.map((category, index) => (
-                <li
-                    key={index}
-                    onClick={() => handleTabClick(category)}
-                    className={selectedTab === category ? "active" : ""}
-                >
-                    <div>{category}</div>
-                </li>
-            ))}
-        </ul>
+        <div className="menu-div">
+            <ul>
+                {tabs.map((tab, index) => (
+                    <li
+                        key={index}
+                        onClick={() => handleTabClick(tab)}
+                        className={`tabs ${
+                            selectedTab === tab ? "active" : ""
+                        }`}
+                        style={{
+                            color: selectedTab === tab ? "black" : "white",
+                        }}
+                    >
+                        <div>{tab}</div>
+                    </li>
+                ))}
+            </ul>
+        </div>
     );
 };
 

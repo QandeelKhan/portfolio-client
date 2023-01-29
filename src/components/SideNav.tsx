@@ -91,6 +91,14 @@ const SideNav: React.FC = (props: any) => {
                 <div className="footer-area">
                     <div className="footer-icons">
                         <a
+                            href="https://www.instagram.com/qandeelhaiderkhan/"
+                            className="side-nav-social-links"
+                            rel="noreferrer"
+                            target="_blank"
+                        >
+                            <i className="fa-brands fa-square-instagram icons-social"></i>
+                        </a>
+                        <a
                             href="https://www.facebook.com/qandeelhaiderkhan"
                             className="side-nav-social-links"
                             rel="noreferrer"

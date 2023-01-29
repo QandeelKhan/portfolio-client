@@ -28,6 +28,53 @@ export const blogItems = [
         In conclusion, designing a website is a process that involves considering the user experience, 
         accessibility, and performance. By conducting user research, creating responsive design, 
         and optimizing the site's code and performance, you can create a website that is both visually appealing and easy to use.`,
+        commentsData: [
+            {
+                id: "1",
+                authorName: "John-Doe",
+                commentDate: "May 12, 2021 at 7:39 am",
+                commentText:
+                    "Great post! It's clear that you've put a lot of thought into the different aspects of full-stack development and how they relate to website design. I especially appreciate the attention you've paid to the user experience and how to make sure that it's seamless and intuitive for the end user. Keep up the good work!",
+                imageSource: "../images/other/profile-img.jpg",
+            },
+            {
+                id: "2",
+                authorName: "Jane-Doe",
+                commentDate: "May 12, 2021 at 8:39 am",
+                commentText:
+                    "Great post! I found it very informative and helpful. It's clear that you have a lot of experience in full-stack development and website design. I would like to know how you approach responsive design while building a website.",
+                imageSource: "../images/other/profile-img.jpg",
+            },
+        ],
+        repliesData: [
+            {
+                id: "6",
+                parentCommentId: "1",
+                authorName: "Muhammad",
+                replyDate: "May 12, 2021 at 9:39 am",
+                replyText:
+                    "Thanks for the kind words! I always try to keep the user experience top of mind when I'm designing and building websites. I believe that it's what ultimately sets a good website apart from a great one.",
+                imageSource: "../images/testimonial/muhammad-dp.jpg",
+            },
+            {
+                id: "7",
+                parentCommentId: "1",
+                authorName: "Usama",
+                replyDate: "May 12, 2021 at 10:39 am",
+                replyText:
+                    "I couldn't agree more. I think that's the beauty of full-stack development, it allows you to have a holistic approach to website design. You can focus on the user experience and performance at the same time. And by keeping the website design simple and easy to navigate, it makes it easy for the users to find what they are looking for.",
+                imageSource: "../images/testimonial/usama-dp.jpeg",
+            },
+            {
+                id: "7",
+                parentCommentId: "2",
+                authorName: "Saad",
+                replyDate: "May 12, 2021 at 10:39 am",
+                replyText:
+                    "Thanks for reading and your kind words! I'm glad you found it informative. When it comes to responsive design, my approach is to first design for mobile devices and then progressively enhance the design for larger screens. This way, the site will look great on any device and will provide a seamless experience for the users. I also use CSS media queries to adjust the layout and typography according to the screen size. Additionally, I test the website on different devices during the development process to ensure that it looks and works well on all of them.",
+                imageSource: "../images/testimonial/sadi-dp.jpeg",
+            },
+        ],
     },
     {
         title: "Things I need to get started",
@@ -57,6 +104,8 @@ export const blogItems = [
         paragraphAfterImage: `As you delve deeper into full stack development, it's important to remember 
         that practice makes perfect. Building projects and experimenting with different technologies will 
         help you gain a better understanding and solidify your skills.`,
+        commentsData: [{}],
+        repliesData: [{}],
     },
     {
         title: "From Games to Code: My Journey as a Full Stack Developer",
@@ -91,6 +140,8 @@ export const blogItems = [
         paragraphAfterImage: `In conclusion, my story is a testament to the fact that passion and perseverance can take you far, 
         even in the face of obstacles. 
         I hope that my journey will inspire others to follow their dreams and never give up on what they truly love.`,
+        commentsData: [{}],
+        repliesData: [{}],
     },
     {
         title: "Best Way to Design",
@@ -197,5 +248,7 @@ export const blogItems = [
         desktop publishing software like
         Aldus PageMaker including versions
         of Lorem Ipsum.`,
+        commentsData: [{}],
+        repliesData: [{}],
     },
 ];

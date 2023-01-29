@@ -24,14 +24,8 @@ const ClientsSlide: React.FC = (props) => {
                             <a href="#">
                                 {" "}
                                 <img
-                                    style={{
-                                        color: "whitesmoke",
-                                        // backgroundColor: "white",
-                                        height: "150px",
-                                        width: "150px",
-                                    }}
                                     decoding="async"
-                                    src="/images/marketers-logo.png"
+                                    src="/images/logo/marketers-logo.png"
                                     alt="Client-2"
                                 />{" "}
                             </a>
@@ -43,8 +37,13 @@ const ClientsSlide: React.FC = (props) => {
                             <a href="#">
                                 {" "}
                                 <img
+                                    style={{
+                                        color: "whitesmoke",
+                                        height: "150px",
+                                        width: "150px",
+                                    }}
                                     decoding="async"
-                                    src="https://watson.cosmos-themes.com/dark/wp-content/uploads/2021/05/client3.png"
+                                    src="/images/logo/jojo.png"
                                     alt="Client 3"
                                 />{" "}
                             </a>

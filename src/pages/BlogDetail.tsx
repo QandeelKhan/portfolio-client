@@ -32,9 +32,6 @@ const BlogDetail = () => {
 
     const [isReplyOpen, setIsReplyOpen] = useState(false);
 
-    const comments: CommentProps[] = commentsData;
-    const replies: ReplyProps[] = repliesData;
-
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(setBlogCardClicked(true));
@@ -51,6 +48,12 @@ const BlogDetail = () => {
     if (!selectedPost) {
         return <div>No post selected</div>;
     }
+    const comments: CommentProps[] = selectedPost.commentsData;
+    const replies: ReplyProps[] = selectedPost.repliesData;
+
+    const filteredComments = comments.filter(
+        (comment) => Object.keys(comment).length !== 0
+    );
 
     // component render logic
     return (
@@ -132,16 +135,20 @@ const BlogDetail = () => {
                                     <div className="comments-section">
                                         <div className="5-comments">
                                             <h2>
-                                                {commentsData.length.toString()}{" "}
+                                                {comments.length === 1
+                                                    ? ""
+                                                    : comments.length.toString()}{" "}
                                                 Comments
                                             </h2>
                                         </div>
-
-                                        <Comments
-                                            comments={comments}
-                                            replies={replies}
-                                        />
-
+                                        {comments.length === 1 ? (
+                                            <h4>No comments yet</h4>
+                                        ) : (
+                                            <Comments
+                                                comments={comments}
+                                                replies={replies}
+                                            />
+                                        )}
                                         <CommentsForm
                                             onSubmit={handleSubmit}
                                             initialName=""
