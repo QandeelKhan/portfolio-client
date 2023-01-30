@@ -4,6 +4,7 @@ interface EventState {
     navVisible: boolean;
     blogCardClicked: boolean;
     gearOpen: boolean;
+    sideBarVisible: boolean;
 }
 
 const eventsState: EventState = {
@@ -11,6 +12,7 @@ const eventsState: EventState = {
     // crossClicked: false,
     // myClassName: "deactive",
     // animate: "",
+    sideBarVisible: false,
     blogCardClicked: false,
     navVisible: true,
     gearOpen: false,
@@ -28,6 +30,9 @@ export const eventsSlice = createSlice({
         },
         setBlogCardClicked: (state, action: { payload: boolean }) => {
             state.blogCardClicked = action.payload;
+        },
+        setSideBarVisible: (state, action: { payload: boolean }) => {
+            state.sideBarVisible = action.payload;
         },
         // setCardClicked: (state, action) => {
         //     state.cardClicked = action.payload;
@@ -54,6 +59,7 @@ export const {
     // setAnimate,
     setGearOpen,
     setBlogCardClicked,
+    setSideBarVisible,
     setNavVisible,
 } = eventsSlice.actions;
 

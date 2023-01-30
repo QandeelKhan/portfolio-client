@@ -2,24 +2,29 @@ import React, { useEffect, useState } from "react";
 import "./blog-detail-side-nav.css";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
+import { useDispatch } from "react-redux";
+import { setSideBarVisible } from "../redux/eventsSlice";
 
 const BlogDetailSidebar = () => {
-    const [sidebarVisible, setSidebarVisible] = useState(false);
+    // const [sidebarVisible, setSidebarVisible] = useState(false);
     const [open, setOpen] = useState(false);
+    const { blogCardClicked, sideBarVisible } = useSelector(
+        (state: RootState) => state.events
+    );
+
+    const dispatch = useDispatch();
 
     const handleClick = () => {
         setOpen(!open);
-        setSidebarVisible(!sidebarVisible);
+        dispatch(setSideBarVisible(!sideBarVisible));
     };
-
-    const { blogCardClicked } = useSelector((state: RootState) => state.events);
 
     return (
         <>
             {blogCardClicked ? (
                 <div
                     className={`wrapper ${
-                        sidebarVisible ? "sidebar-visible" : "sidebar-hidden"
+                        sideBarVisible ? "sidebar-visible" : "sidebar-hidden"
                     }`}
                 >
                     <div
@@ -28,7 +33,7 @@ const BlogDetailSidebar = () => {
                     >
                         <i
                             className={`fa-solid ${
-                                !sidebarVisible
+                                !sideBarVisible
                                     ? "fa-arrow-left"
                                     : "fa-arrow-right"
                             }`}

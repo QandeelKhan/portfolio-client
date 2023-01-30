@@ -4,10 +4,13 @@ import ThemesGear from "../components/ThemesGear";
 import SideNav from "../components/SideNav";
 import ThemeWrapper from "../components/ThemeWrapper";
 import LandingPage from "./LandingPage";
-import { AnimatePresence } from "framer-motion";
 import BlogDetailSidebar from "../components/BlogDetailSidebar";
 import { useDispatch } from "react-redux";
-import { setGearOpen, setNavVisible } from "../redux/eventsSlice";
+import {
+    setGearOpen,
+    setNavVisible,
+    setSideBarVisible,
+} from "../redux/eventsSlice";
 
 const Layout: React.FC = () => {
     const [showContent, setShowContent] = useState(false);
@@ -18,6 +21,7 @@ const Layout: React.FC = () => {
     const handleOutlet = () => {
         dispatch(setNavVisible(false));
         dispatch(setGearOpen(false));
+        dispatch(setSideBarVisible(false));
     };
 
     useEffect(() => {
