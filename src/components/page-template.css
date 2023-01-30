@@ -37,8 +37,14 @@
     color: var(--primaryColor);
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
     .about-container {
         margin-left: 0px;
+    }
+}
+@media (max-width: 425px) {
+    .main-about-area {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
