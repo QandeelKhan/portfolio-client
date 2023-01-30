@@ -43,7 +43,7 @@ const ResumeSkills: React.FC = (props) => {
                         <div className="design-skills">
                             <div className="ist">
                                 <div className="coral-draw">
-                                    <span>PYTHON3</span>
+                                    <span>HTML5</span>
                                     <span className="percentage per-83">
                                         85%
                                     </span>
@@ -54,7 +54,7 @@ const ResumeSkills: React.FC = (props) => {
                             </div>
                             <div className="ist">
                                 <div className="coral-draw">
-                                    <span>HTML5</span>
+                                    <span>CSS3</span>
                                     <span className="percentage per-75">
                                         75%
                                     </span>
@@ -65,13 +65,24 @@ const ResumeSkills: React.FC = (props) => {
                             </div>
                             <div className="ist">
                                 <div className="coral-draw">
-                                    <span>JAVASCRIPT</span>
+                                    <span>PYTHON3</span>
                                     <span className="percentage per-92">
                                         92%
                                     </span>
                                 </div>
                                 <div className="graph-div">
                                     <div className="fill fill-92"></div>
+                                </div>
+                            </div>
+                            <div className="ist">
+                                <div className="coral-draw">
+                                    <span>JAVASCRIPT</span>
+                                    <span className="percentage per-90">
+                                        90%
+                                    </span>
+                                </div>
+                                <div className="graph-div">
+                                    <div className="fill fill-90"></div>
                                 </div>
                             </div>
                         </div>

@@ -11,7 +11,7 @@ const ClientsSlide: React.FC = (props) => {
                 <span>CLIENTS</span>
             </h3>
             {/* owl */}
-            <div style={{ maxWidth: "1050px" }}>
+            <div className="slider-client" style={{ maxWidth: "1050px" }}>
                 <Slider
                     dots={false}
                     slidesToShow={5}
