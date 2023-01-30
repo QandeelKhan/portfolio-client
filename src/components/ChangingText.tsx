@@ -17,7 +17,7 @@ const ChangingText: React.FC<Props> = ({ text }) => {
     }, [currentIndex, text]);
 
     return (
-        <div className="animated-text">
+        <div className="animation-text">
             <div className="fixed-text">I am</div>
             <div className="dynamic-text">
                 <span className="animated-text">{currentText}</span>
