@@ -26,6 +26,37 @@
         margin-left: 0px;
     }
 }
+@media (max-width: 768px) {
+    .banner-qandeel {
+        font-size: 3rem;
+        font-weight: 700px;
+    }
+    .banner-khan {
+        font-size: 3rem;
+        font-weight: 700px;
+    }
+    .banner-text {
+        transform: translateX(-80px);
+    }
+}
+@media (max-width: 425px) {
+    .banner-qandeel {
+        font-size: 2.3rem;
+        margin: 0px;
+        font-weight: 700px;
+    }
+    .banner-khan {
+        font-size: 2.3rem;
+        font-weight: 700px;
+        margin: 0px;
+    }
+    .fixed-text {
+        font-size: 10px;
+    }
+    .dynamic-text {
+        font-size: 10px;
+    }
+}
 
 .banner-text {
     position: absolute;
@@ -33,7 +64,7 @@
     font-size: 4.1rem;
     margin-left: 150px;
     margin-bottom: 100px;
-    /* font-weight: 700px; */
+    font-weight: 700px;
     font-family: "Playfair Display", serif;
 }
 
@@ -41,14 +72,14 @@
     color: white;
     font-weight: bold;
     letter-spacing: 2px;
-    margin: 0px 10px;
+    margin: 0px 5px;
 }
 
 .banner-khan {
     color: #00a3e1;
     font-weight: bold;
     letter-spacing: 2px;
-    margin: 0px 10px;
+    margin: 0px 5px;
 }
 
 .fixed-text {
@@ -77,7 +108,7 @@
     right: -2px;
     opacity: 1;
     background-color: transparent;
-    animation: typetext 3s steps(12) infinite backwards;
+    animation: typetext 1s steps(12) infinite backwards;
 }
 
 @keyframes typetext {
