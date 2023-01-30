@@ -6,16 +6,20 @@
     align-items: center;
 }
 
-/* .slide-container {} */
+.slide-container {
+    width: 50%;
+}
 
 .subheading span {
     border-bottom: 2px solid var(--primaryColor);
-    padding: 0 9px;
+    padding: 0px 9px;
 }
 
 .client-logo img {
-    /* max-width: 140px; */
     max-height: 120px;
     margin: auto;
     opacity: 0.7;
 }
+/* .slider-client {
+    width: 50%;
+} */

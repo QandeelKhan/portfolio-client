@@ -130,6 +130,11 @@
     position: relative;
     height: 10px;
 }
+.fill-90 {
+    width: 90%;
+    position: relative;
+    height: 10px;
+}
 
 .fill-82:after {
     content: "";
@@ -185,6 +190,16 @@
     border-right: 10px solid transparent;
     border-bottom: 20px solid #00a3e1;
 }
+.fill-90:after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    opacity: 1;
+    right: -7px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #00a3e1;
+}
 
 .per-82 {
     margin-right: 14%;
@@ -204,6 +219,9 @@
 
 .per-92 {
     margin-right: 4%;
+}
+.per-90 {
+    margin-right: 6%;
 }
 @media (max-width: 768px) {
     .skills-area {
