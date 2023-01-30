@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, Route, useLocation } from "react-router-dom";
 import ThemesGear from "../components/ThemesGear";
 import SideNav from "../components/SideNav";
 import ThemeWrapper from "../components/ThemeWrapper";
@@ -11,6 +11,7 @@ import {
     setNavVisible,
     setSideBarVisible,
 } from "../redux/eventsSlice";
+import CustomRoute from "./CustomeRoute";
 
 const Layout: React.FC = () => {
     const [showContent, setShowContent] = useState(false);
