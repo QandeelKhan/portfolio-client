@@ -17,7 +17,8 @@
     z-index: 15;
 }
 
-.post-image {}
+.post-image {
+}
 
 .detail-image {
     width: 100%;
@@ -44,8 +45,8 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-right: -15px;
-    margin-left: -15px;
+    /* margin-right: -15px;
+    margin-left: -15px; */
 }
 
 .post-headings {
@@ -218,5 +219,16 @@
 @media (max-width: 768px) {
     .post-page-main {
         margin-left: 0px;
+    }
+}
+@media (max-width: 768px) {
+    .post-content {
+        width: 100%;
+    }
+    .text-content {
+        padding: 0px;
+    }
+    .post-container {
+        width: 100%;
     }
 }
