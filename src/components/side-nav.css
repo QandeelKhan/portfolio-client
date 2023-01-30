@@ -28,8 +28,14 @@ body {
     height: 40px;
     width: 100%;
     z-index: 10;
-
     background-color: #17181b;
+    transform: translateY(-40px);
+}
+
+@media (max-width: 768px) {
+    .toggle-mode {
+        transform: translateY(0px);
+    }
 }
 
 .toggler-container {
@@ -84,11 +90,13 @@ body {
         padding-left: 20%;
     }
 }
+
 @media (max-width: 375px) {
     .mobile-header {
         padding-left: 15%;
     }
 }
+
 @media (max-width: 320px) {
     .mobile-header {
         padding-left: 10%;
@@ -130,8 +138,26 @@ li {
     overflow-x: hidden;
 }
 
-.nav-hidden {
+/* .nav-hidden {
     transform: translateX(-200px);
+} */
+
+@media (max-width: 768px) {
+    .nav {
+        transform: translateX(-200px);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-hidden {
+        transform: translateX(-200px);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-visible {
+        transform: translateX(0px);
+    }
 }
 
 /* imag area css */

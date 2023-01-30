@@ -17,9 +17,9 @@ const SideNav: React.FC = (props: any) => {
     );
 
     const handleResize = () => {
-        if (window.innerWidth < 769) {
+        if (navVisible) {
             dispatch(setNavVisible(false));
-            setToggleMode(true);
+            setToggleMode(false);
         } else {
             dispatch(setNavVisible(true));
             setToggleMode(false);
@@ -31,41 +31,37 @@ const SideNav: React.FC = (props: any) => {
     };
 
     useEffect(() => {
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
+        handleResize();
     }, []);
     return (
         <>
-            {toggleMode || !navVisible ? (
-                <div className="toggle-mode">
-                    {
-                        <div
-                            className={`toggler-container ${
-                                navVisible
-                                    ? "toggler-clicked"
-                                    : "toggler-unclicked"
+            <div className="toggle-mode">
+                {
+                    <div
+                        className={`toggler-container ${
+                            navVisible ? "toggler-clicked" : "toggler-unclicked"
+                        }`}
+                    >
+                        <button
+                            onClick={handleToggleNav}
+                            className={`toggler ${
+                                navVisible ? "show-toggler" : "hide-toggler"
                             }`}
                         >
-                            <button
-                                onClick={handleToggleNav}
-                                className={`toggler ${
-                                    navVisible ? "show-toggler" : "hide-toggler"
-                                }`}
-                            >
-                                {navVisible ? (
-                                    <i className="fa-solid fa-xmark toggle-icon"></i>
-                                ) : (
-                                    <i className="fas fa-bars toggle-icon"></i>
-                                )}
-                            </button>
-                        </div>
-                    }
-                    <div className="mobile-header">Qandeel Khan</div>
-                </div>
-            ) : (
-                ""
-            )}
-            <div className={`nav ${!navVisible ? "nav-hidden" : ""}`}>
+                            {navVisible ? (
+                                <i className="fa-solid fa-xmark toggle-icon"></i>
+                            ) : (
+                                <i className="fas fa-bars toggle-icon"></i>
+                            )}
+                        </button>
+                    </div>
+                }
+                <div className="mobile-header">Qandeel Khan</div>
+            </div>
+
+            <div
+                className={`nav ${!navVisible ? "nav-hidden" : "nav-visible"}`}
+            >
                 <div className="image-area">
                     <img src="images/other/profile-img.jpg" alt="profile-img" />
                     <div className="person-name">
@@ -144,3 +140,5 @@ const SideNav: React.FC = (props: any) => {
 };
 
 export default SideNav;
+
+// in this component why my navbar is visible by default until i resize it just little bit it can not detect that to hide the navbar automatically by default below 769px, why i need to resize the screen a little bit then it detects that the screen is less then 769 px
