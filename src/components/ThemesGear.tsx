@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
+import { setGearOpen } from "../redux/eventsSlice";
 import { RootState } from "../redux/store";
 import { setSelectedTheme } from "../redux/themeSlice";
 import "./my-component.css";
@@ -9,14 +10,15 @@ interface Props {}
 
 const ThemesGear: React.FC<Props> = () => {
     const themeName = useSelector((state: RootState) => state.themes.themeName);
+    const { gearOpen } = useSelector((state: RootState) => state.events);
     const themes = useSelector((state: RootState) => state.themes.themes);
     const selectedTheme = useSelector(
         (state: RootState) => state.themes.selectedTheme
     );
-    const [isGearOpen, setIsGearOpen] = useState(false);
+    // const [gearOpen, setGearOpen] = useState(false);
     const dispatch = useDispatch();
     const handleGearClick = () => {
-        setIsGearOpen(!isGearOpen);
+        dispatch(setGearOpen(!gearOpen));
     };
 
     const handleThemeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -34,7 +36,7 @@ const ThemesGear: React.FC<Props> = () => {
             {console.log(themeName, "theme name is")}
             <div
                 className={`gear-container ${themeName} ${
-                    isGearOpen ? "gear-container-open" : ""
+                    gearOpen ? "gear-container-open" : ""
                 }`}
             >
                 <div className={`gear-icon`} onClick={handleGearClick}>
@@ -42,9 +44,7 @@ const ThemesGear: React.FC<Props> = () => {
                 </div>
 
                 <div
-                    className={`gear-menu ${
-                        isGearOpen ? "" : "gear-menu-open"
-                    }`}
+                    className={`gear-menu ${gearOpen ? "" : "gear-menu-open"}`}
                 >
                     <h6>Page Animation</h6>
                     <select

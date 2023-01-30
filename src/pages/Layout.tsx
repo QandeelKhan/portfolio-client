@@ -6,11 +6,19 @@ import ThemeWrapper from "../components/ThemeWrapper";
 import LandingPage from "./LandingPage";
 import { AnimatePresence } from "framer-motion";
 import BlogDetailSidebar from "../components/BlogDetailSidebar";
+import { useDispatch } from "react-redux";
+import { setGearOpen, setNavVisible } from "../redux/eventsSlice";
 
 const Layout: React.FC = () => {
     const [showContent, setShowContent] = useState(false);
     const location: any = useLocation();
     const [key, setKey] = useState(0);
+
+    const dispatch = useDispatch();
+    const handleOutlet = () => {
+        dispatch(setNavVisible(false));
+        dispatch(setGearOpen(false));
+    };
 
     useEffect(() => {
         setTimeout(() => {
@@ -30,7 +38,9 @@ const Layout: React.FC = () => {
                     <ThemesGear />
                     <BlogDetailSidebar />
                     <ThemeWrapper key={key}>
-                        <Outlet key={key} />
+                        <div onClick={handleOutlet}>
+                            <Outlet key={key} />
+                        </div>
                     </ThemeWrapper>
                 </>
             )}

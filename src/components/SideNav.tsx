@@ -9,8 +9,6 @@ import { RootState } from "../redux/store";
 import { setNavVisible } from "../redux/eventsSlice";
 
 const SideNav: React.FC = (props: any) => {
-    const [toggleMode, setToggleMode] = useState(false);
-
     const dispatch = useDispatch();
     const navVisible = useSelector(
         (state: RootState) => state.events.navVisible
@@ -19,10 +17,8 @@ const SideNav: React.FC = (props: any) => {
     const handleResize = () => {
         if (navVisible) {
             dispatch(setNavVisible(false));
-            setToggleMode(false);
         } else {
             dispatch(setNavVisible(true));
-            setToggleMode(false);
         }
     };
 
@@ -141,4 +137,4 @@ const SideNav: React.FC = (props: any) => {
 
 export default SideNav;
 
-// in this component why my navbar is visible by default until i resize it just little bit it can not detect that to hide the navbar automatically by default below 769px, why i need to resize the screen a little bit then it detects that the screen is less then 769 px
+// this component can hide and visible only by clicking on ham burger or cancel button but i want to make this component set navVisible to hide by clicking anywhere on the screen other then then this side nav

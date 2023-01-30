@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 interface EventState {
     navVisible: boolean;
     blogCardClicked: boolean;
+    gearOpen: boolean;
 }
 
 const eventsState: EventState = {
@@ -12,6 +13,7 @@ const eventsState: EventState = {
     // animate: "",
     blogCardClicked: false,
     navVisible: true,
+    gearOpen: false,
 };
 
 export const eventsSlice = createSlice({
@@ -20,6 +22,9 @@ export const eventsSlice = createSlice({
     reducers: {
         setNavVisible: (state, action: { payload: boolean }) => {
             state.navVisible = action.payload;
+        },
+        setGearOpen: (state, action: { payload: boolean }) => {
+            state.gearOpen = action.payload;
         },
         setBlogCardClicked: (state, action: { payload: boolean }) => {
             state.blogCardClicked = action.payload;
@@ -47,6 +52,7 @@ export const {
     // setCrossClicked,
     // setMyClassName,
     // setAnimate,
+    setGearOpen,
     setBlogCardClicked,
     setNavVisible,
 } = eventsSlice.actions;
