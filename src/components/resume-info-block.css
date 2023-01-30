@@ -60,7 +60,7 @@
 
 /*  */
 .resume-text-holder {
-    margin: 30px 35px;
+    margin: 30px 10px;
 }
 
 .rsm-txt-heading {
@@ -86,7 +86,6 @@
     .resume-right-info {
         max-width: 100%;
     }
-
 
     .resume-left-info {
         max-width: 100%;
