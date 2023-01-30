@@ -19,6 +19,7 @@
     margin-left: 65px;
     margin-right: 65px;
     font-family: "Playfair Display", serif;
+    overflow-x: hidden;
 }
 
 .about-head-logo-area {
@@ -42,6 +43,7 @@
         margin-left: 0px;
     }
 }
+
 @media (max-width: 425px) {
     .main-about-area {
         margin-left: 10px;

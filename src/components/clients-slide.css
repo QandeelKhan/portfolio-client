@@ -4,6 +4,7 @@
     margin-top: 50px;
     margin-bottom: 20px;
     align-items: center;
+    overflow: hidden;
 }
 
 .slide-container {
@@ -20,6 +21,7 @@
     margin: auto;
     opacity: 0.7;
 }
+
 /* .slider-client {
     width: 50%;
 } */
