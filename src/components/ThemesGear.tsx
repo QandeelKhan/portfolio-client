@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { setGearOpen } from "../redux/eventsSlice";
 import { RootState } from "../redux/store";
 import { setSelectedTheme } from "../redux/themeSlice";
-import "./my-component.css";
+import "./css/themes-gear.css";
 
 interface Props {}
 

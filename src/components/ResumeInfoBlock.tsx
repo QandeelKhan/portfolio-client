@@ -1,5 +1,5 @@
 import React from "react";
-import "./resume-info-block.css";
+import "./css/resume-info-block.css";
 import LeftPole from "./LeftPole";
 
 interface headingProps {

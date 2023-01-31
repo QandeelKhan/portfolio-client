@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
-import "./portfolio-detail.css";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import "./css/portfolio-detail.css";
 
 const PortfolioDetail: React.FC = (props: any) => {
     return (

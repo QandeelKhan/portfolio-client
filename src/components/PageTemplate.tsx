@@ -1,4 +1,4 @@
-import "./page-template.css";
+import "./css/page-template.css";
 const PageTemplate = (props: any) => {
     return (
         <div className="about-container">

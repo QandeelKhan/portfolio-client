@@ -11,3 +11,8 @@ we added the object ("browser": {
     "os": false
 })  
 to the package.json, to fix typescript v5 while importing fs(file system module) else downgrade to v4 until not fixed in v5
+
+# ---react-helmet---
+# increase seo, by dynamically changing the meta and title tag according to the page
+# Install the library: npm install react-helmet
+# Import the Helmet component in the React component where you want to manage the HTML head information:

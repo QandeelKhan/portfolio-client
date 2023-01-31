@@ -1,5 +1,5 @@
 import React from "react";
-import "./location-area.css";
+import "./css/location.css";
 
 const Location: React.FC = (props) => {
     return (

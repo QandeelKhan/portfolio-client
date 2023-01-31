@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Masonry from "react-masonry-css";
-import "./portfolio-detail.css";
-import "../pages/portfolio.css";
+import "./css/portfolio-detail.css";
+import "./css/portfolio.css";
 import GridItem from "../components/GridItem";
-import { gridItems, tabs } from "../components/GridItems";
+import { gridItems, tabs } from "../components/data/GridItems";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const PortfolioPage: React.FC = (props: any) => {
     const breakpointColumnsObj = {
@@ -37,48 +38,63 @@ const PortfolioPage: React.FC = (props: any) => {
         }
     });
 
-    // useEffect(() => {
-    //     handleTabClick();
-    // }, []);
-
     return (
-        <div className="projects-area">
-            <div className="menu-div">
-                <ul>
-                    {tabs.map((tab, index) => (
-                        <li
+        <>
+            <Helmet>
+                <title>
+                    Qandeel Khan | Python Django and React Full Stack Developer
+                    | Portfolio
+                </title>
+                <meta
+                    name="description"
+                    content="Check out the portfolio of Qandeel Khan, a full stack developer specializing in Python Django and React. View his projects and get in touch for your next project."
+                />
+                <meta
+                    name="keywords"
+                    content="Qandeel Khan, Python Django, React, Full Stack Developer, Portfolio, Projects, Web Development"
+                />
+                <meta name="robots" content="index, follow" />
+            </Helmet>
+
+            <div className="projects-area">
+                <div className="menu-div">
+                    <ul>
+                        {tabs.map((tab, index) => (
+                            <li
+                                key={index}
+                                onClick={() => handleTabClick(tab)}
+                                className={`tabs ${
+                                    selectedTab === tab ? "active" : ""
+                                }`}
+                                style={{
+                                    color:
+                                        selectedTab === tab ? "black" : "white",
+                                }}
+                            >
+                                <div>{tab}</div>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <Masonry
+                    className="masonry-grid"
+                    columnClassName="masonry-grid_column"
+                    breakpointCols={breakpointColumnsObj}
+                >
+                    {filteredItems.map((item, index) => (
+                        <GridItem
                             key={index}
-                            onClick={() => handleTabClick(tab)}
-                            className={`tabs ${
-                                selectedTab === tab ? "active" : ""
-                            }`}
-                            style={{
-                                color: selectedTab === tab ? "black" : "white",
-                            }}
-                        >
-                            <div>{tab}</div>
-                        </li>
+                            navigateTo={handleNavigate}
+                            imgSrc={item.imgSrc}
+                            title={item.title}
+                            category={item.category}
+                            icon={<i className={item.icon}></i>}
+                            alt={item.title}
+                        />
                     ))}
-                </ul>
+                </Masonry>
             </div>
-            <Masonry
-                className="masonry-grid"
-                columnClassName="masonry-grid_column"
-                breakpointCols={breakpointColumnsObj}
-            >
-                {filteredItems.map((item, index) => (
-                    <GridItem
-                        key={index}
-                        navigateTo={handleNavigate}
-                        imgSrc={item.imgSrc}
-                        title={item.title}
-                        category={item.category}
-                        icon={<i className={item.icon}></i>}
-                        alt={item.title}
-                    />
-                ))}
-            </Masonry>
-        </div>
+        </>
     );
 };
 

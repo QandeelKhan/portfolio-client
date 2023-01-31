@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { gridItems, tabs } from "./GridItems";
+import { gridItems, tabs } from "./data/GridItems";
 
 interface TabProps {
     categories: string[];

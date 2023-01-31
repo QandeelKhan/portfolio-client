@@ -1,26 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
+import "./css/changing-text.css";
 
-interface Props {
-    text: string[];
-}
-
-const ChangingText: React.FC<Props> = ({ text }) => {
-    const [currentText, setCurrentText] = useState(text[0]);
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((currentIndex + 1) % text.length);
-            setCurrentText(text[currentIndex]);
-        }, 3000);
-        return () => clearInterval(interval);
-    }, [currentIndex, text]);
+const ChangingText: React.FC = () => {
+    const [text] = useTypewriter({
+        words: [
+            "Author",
+            "Full-Stack Engineer",
+            "Python Expert",
+            "Javascript Developer",
+        ],
+        loop: 0, // or false to run animation infinitely
+        typeSpeed: 40,
+        deleteSpeed: 30,
+    });
 
     return (
         <div className="animation-text">
-            <div className="fixed-text">I am</div>
+            <div className="fixed-text">I am&nbsp;</div>
             <div className="dynamic-text">
-                <span className="animated-text">{currentText}</span>
+                <span className="animated-text">{text}</span>
+                <span>
+                    <Cursor cursorStyle="|" />
+                </span>
             </div>
         </div>
     );

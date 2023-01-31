@@ -3,7 +3,7 @@ import PhoneIcon from "./icons/PhoneIcon";
 import ResponsivedesignIcon from "./icons/ResponsivedesignIcon";
 import WebdesignIcon from "./icons/WebdesignIcon";
 import WebdevelopmentIcon from "./icons/WebdevelopmentIcon";
-import "./service-area.css";
+import "./css/service-area.css";
 
 const ServicesArea: React.FC = (props) => {
     return (

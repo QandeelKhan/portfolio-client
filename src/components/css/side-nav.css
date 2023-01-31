@@ -47,7 +47,6 @@ body {
     display: flex;
     height: 100%;
     transition: 0.3s;
-    /* text-decoration: none; */
     border: none;
     border-right: 1px solid #3b3c43;
 }
@@ -69,20 +68,33 @@ body {
     font-size: 20px;
     color: white;
     background-color: var(--secondaryColor);
+    cursor: pointer;
 }
 
 .mobile-header {
-    color: #fff;
+    width: 100%;
+    justify-self: center;
     font-size: 24px;
     text-transform: uppercase;
-    line-height: 50px;
+    line-height: 40px;
     white-space: nowrap;
     text-align: center;
-    margin-bottom: 0;
-    padding-left: 30%;
-    padding-right: 50px;
     font-family: "Playfair Display", serif;
     font-weight: 700;
+}
+
+.mobile-header-text {
+    transition: 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.mobile-header-text:hover {
+    border: 1px solid #00a3e1;
+    transition: 0.5s;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 @media (max-width: 425px) {

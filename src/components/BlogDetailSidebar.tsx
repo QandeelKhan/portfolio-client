@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./blog-detail-side-nav.css";
+import "./css/blog-detail-side-bar.css";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import { useDispatch } from "react-redux";

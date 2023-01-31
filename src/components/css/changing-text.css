@@ -1,0 +1,35 @@
+.animation-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fixed-text {
+    font-size: 1.8rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    font-weight: lighter;
+}
+
+.dynamic-text {
+    font-size: 1.8rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    font-weight: bold;
+    position: relative;
+    border-bottom: 2px solid #00a3e1;
+    font-weight: 700;
+}
+
+@media (max-width: 425px) {
+    .animated-text {
+        font-size: 1.5rem;
+    }
+
+    .animation-text .fixed-text {
+        font-size: 1.2rem;
+    }
+}

@@ -5,7 +5,7 @@ import {
     LicenseIcon,
     BookIcon,
     EnvelopeIcon,
-} from "./icons/iconsIndex";
+} from "./data/iconsIndex";
 
 export const MenuItems = [
     {

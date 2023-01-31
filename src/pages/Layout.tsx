@@ -11,7 +11,6 @@ import {
     setNavVisible,
     setSideBarVisible,
 } from "../redux/eventsSlice";
-import CustomRoute from "./CustomeRoute";
 
 const Layout: React.FC = () => {
     const [showContent, setShowContent] = useState(false);

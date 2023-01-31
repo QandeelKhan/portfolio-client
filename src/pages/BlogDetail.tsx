@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { commentsData, repliesData } from "../components/comments";
 import CommentsForm from "../components/CommentsForm";
-import "./blog-detail.css";
+import "./css/blog-detail.css";
 
 import PostTags from "../components/PostTags";
 import Comments, { CommentProps, ReplyProps } from "../components/Comments";
@@ -10,6 +9,7 @@ import { useDispatch } from "react-redux";
 import { setBlogCardClicked } from "../redux/eventsSlice";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
+import { Helmet } from "react-helmet";
 
 const BlogDetail = () => {
     interface FormData {
@@ -58,6 +58,18 @@ const BlogDetail = () => {
     // component render logic
     return (
         <>
+            <Helmet>
+                <title>{selectedPost.title} - Qandeel Khan's Blog</title>
+                <meta
+                    name="description"
+                    content={selectedPost.initialParagraph}
+                />
+                {/* <meta name="keywords" content={selectedPost.kewords} /> */}
+                <meta
+                    name="keywords"
+                    content="Python, Django and React, django and react Full-stack developer, qandeel khan, qandeel haider khan"
+                />
+            </Helmet>
             <div className="post-page-main">
                 <div className="post-page-wrapper">
                     <div className="post-image">

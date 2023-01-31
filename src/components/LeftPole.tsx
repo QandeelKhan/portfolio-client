@@ -1,5 +1,5 @@
 import React from "react";
-import "./left-pole.css";
+import "./css/left-pole.css";
 interface Props {
     from: string;
     to: string;

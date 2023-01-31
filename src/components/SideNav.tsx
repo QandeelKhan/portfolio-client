@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import "./side-nav.css";
+import React, { useEffect } from "react";
+import "./css/side-nav.css";
 import { MenuItems } from "./MenuItems";
 import { Button } from "./Button";
 import UpworkIcon from "./icons/UpworkIcon";
@@ -32,27 +32,30 @@ const SideNav: React.FC = (props: any) => {
     return (
         <>
             <div className="toggle-mode">
-                {
-                    <div
-                        className={`toggler-container ${
-                            navVisible ? "toggler-clicked" : "toggler-unclicked"
+                <div
+                    className={`toggler-container ${
+                        navVisible ? "toggler-clicked" : "toggler-unclicked"
+                    }`}
+                >
+                    <button
+                        onClick={handleToggleNav}
+                        className={`toggler ${
+                            navVisible ? "show-toggler" : "hide-toggler"
                         }`}
                     >
-                        <button
-                            onClick={handleToggleNav}
-                            className={`toggler ${
-                                navVisible ? "show-toggler" : "hide-toggler"
-                            }`}
-                        >
-                            {navVisible ? (
-                                <i className="fa-solid fa-xmark toggle-icon"></i>
-                            ) : (
-                                <i className="fas fa-bars toggle-icon"></i>
-                            )}
-                        </button>
-                    </div>
-                }
-                <div className="mobile-header">Qandeel Khan</div>
+                        {navVisible ? (
+                            <i className="fa-solid fa-xmark toggle-icon"></i>
+                        ) : (
+                            <i className="fas fa-bars toggle-icon"></i>
+                        )}
+                    </button>
+                </div>
+
+                <div className="mobile-header">
+                    <a href="/" className="mobile-header-text">
+                        Qandeel Khan
+                    </a>
+                </div>
             </div>
 
             <div

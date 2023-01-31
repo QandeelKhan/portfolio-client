@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { CSSTransition } from "react-transition-group";
-import "./landing-page.css";
+import "./css/landing-page.css";
 
 function LandingPage() {
     const [show, setShow] = useState(true);

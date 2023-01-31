@@ -5,7 +5,7 @@ import Blog from "./Blog";
 import Resume from "./Resume";
 import About from "./About";
 import Home from "./Home";
-import "./home.css";
+import "./css/home.css";
 import SideNav from "../components/SideNav";
 
 interface Props {

@@ -1,5 +1,5 @@
 import React from "react";
-import "../components/comment.css";
+import "../components/css/comments.css";
 
 export interface CommentProps {
     id: string;

@@ -1,9 +1,8 @@
 import React from "react";
 import PortfolioBriefcase from "../components/icons/PortfolioBriefcase";
 import PortfolioPage from "./PortfolioPage";
-import "./portfolio.css";
 import PageTemplate from "../components/PageTemplate";
-import ThemeWrapper from "../components/ThemeWrapper";
+import "./css/portfolio.css";
 
 const Portfolio: React.FC = () => {
     return (

@@ -1,5 +1,5 @@
 import React from "react";
-import "./skills-section.css";
+import "./css/skills-section.css";
 
 const ResumeSkills: React.FC = (props) => {
     return (

@@ -3,8 +3,8 @@ import ContactEnvelopeIcon from "../components/icons/ContactEnvelopIcon";
 import Location from "../components/Location";
 import emailjs from "emailjs-com";
 import PageTemplate from "../components/PageTemplate";
-import "./contact.css";
-import ThemeWrapper from "../components/ThemeWrapper";
+import "./css/contact.css";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
     function sendEmail(e: FormEvent<HTMLFormElement> & { target: any }) {
@@ -26,6 +26,25 @@ const Contact = () => {
 
     return (
         <>
+            <Helmet>
+                <title>
+                    Contact Qandeel Khan - Full Stack Developer in Sargodha
+                </title>
+                <meta
+                    name="description"
+                    content="Get in touch with Qandeel Khan, a Full Stack Developer based in Sargodha. Contact him via phone, email, or submit a form for assistance."
+                />
+                <meta
+                    name="keywords"
+                    content="Qandeel Khan, Full Stack Developer, Contact, Sargodha, Phone, Email, Submit, Form, Assistance, Location, Map"
+                />
+                <meta name="author" content="Qandeel Khan" />
+                <meta name="robots" content="index,follow" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0"
+                />
+            </Helmet>
             <form id="contact-form" onSubmit={sendEmail}>
                 <PageTemplate
                     iconComponent={<ContactEnvelopeIcon />}
