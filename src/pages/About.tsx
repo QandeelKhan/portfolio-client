@@ -30,7 +30,6 @@ const About: React.FC = (props: any) => {
                     content="width=device-width, initial-scale=1.0"
                 />
             </Helmet>
-
             <PageTemplate iconComponent={<AboutUserIcon />} pageName="Blog.">
                 <div className="about-all-info">
                     <div className="about-left-info">

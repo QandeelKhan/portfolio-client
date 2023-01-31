@@ -1,6 +1,6 @@
 import React from "react";
 
-const PrevBtn = () => {
+const PrevBtn: React.FC = () => {
     return (
         <nav className="post-navigation" aria-label=" ">
             <div className="nav-links">
