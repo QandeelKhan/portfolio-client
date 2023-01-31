@@ -99,31 +99,7 @@ body {
 
 @media (max-width: 425px) {
     .mobile-header {
-        padding-left: 20%;
-    }
-}
-
-@media (max-width: 375px) {
-    .mobile-header {
-        padding-left: 15%;
-    }
-}
-
-@media (max-width: 320px) {
-    .mobile-header {
-        padding-left: 10%;
-    }
-}
-
-@media (max-width: 375px) {
-    .mobile-header {
-        padding-left: 15%;
-    }
-}
-
-@media (max-width: 320px) {
-    .mobile-header {
-        padding-left: 10%;
+        padding-left: 0;
     }
 }
 
