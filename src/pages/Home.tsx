@@ -7,17 +7,18 @@ const Home = () => {
         <>
             <Helmet>
                 <title>
-                    Qandeel Khan - Full Stack Developer | Python, Django, React
+                    Qandeel Haider Khan - Full Stack Developer | Python, Django,
+                    React, javascript
                 </title>
                 <meta
                     name="description"
-                    content="Welcome to the portfolio of Qandeel Khan, a Full Stack Developer specializing in Python, Django, and React. Browse his projects, skills, and experience."
+                    content="Welcome to the portfolio of Qandeel Khan, a Full Stack Developer specializing in Python, Django and React. Browse my projects, skills, and experience."
                 />
                 <meta
                     name="keywords"
-                    content="Qandeel Khan, Full Stack Developer, Python, Django, React, Portfolio, Projects, Skills, Experience"
+                    content="Qandeel Haider Khan, Full Stack Developer, Python, Django, React, Portfolio, Projects, Skills, Experience, django and react developer, codewithmosh, django and react developer upwork, django and react developer fiver, front-end developer, django backend developer upwork, upwork python django,upwork react, upwork web development"
                 />
-                <meta name="author" content="Qandeel Khan" />
+                <meta name="author" content="Qandeel Haider Khan" />
                 <meta name="robots" content="index,follow" />
                 <meta
                     name="viewport"

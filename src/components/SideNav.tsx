@@ -62,7 +62,10 @@ const SideNav: React.FC = (props: any) => {
                 className={`nav ${!navVisible ? "nav-hidden" : "nav-visible"}`}
             >
                 <div className="image-area">
-                    <img src="images/other/profile-img.jpg" alt="profile-img" />
+                    <img
+                        src="images/other/profile-img.jpg"
+                        alt="qandeel baloch profile"
+                    />
                     <div className="person-name">
                         <span>QANDEEL KHAN</span>
                     </div>

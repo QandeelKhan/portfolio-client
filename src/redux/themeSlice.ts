@@ -76,9 +76,9 @@ export const myThemeState = {
         {
             name: "theme3",
             theme: {
-                pageInitial: { translateX: "100%" },
-                pageAnimate: { translateX: "0%" },
-                pageExit: { translateX: "-100%" },
+                pageInitial: { translateY: "-100%" },
+                pageAnimate: { translateY: "0%" },
+                pageExit: { translateY: "-100%" },
             },
         },
         {

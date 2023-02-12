@@ -31,7 +31,10 @@ const Comment: React.FC<{
         <div className="comments-wrapper">
             <div key={comment.id} className="comment-div">
                 <div className="author-image">
-                    <img src={comment.imageSource} alt="profile-img" />
+                    <img
+                        src={comment.imageSource}
+                        alt="qandeel's profile img"
+                    />
                 </div>
                 <div className="comment-area">
                     <div className="author-name">
@@ -50,7 +53,10 @@ const Comment: React.FC<{
             {filteredReplies.map((reply, index) => (
                 <div key={reply.id} className="replies-div comment-reply">
                     <div className="author-image">
-                        <img src={reply.imageSource} alt="profile-img" />
+                        <img
+                            src={reply.imageSource}
+                            alt="qandeel haider khan comment"
+                        />
                     </div>
                     <div className="comment-area">
                         <div className="author-name">

@@ -8,7 +8,6 @@ import Portfolio from "./pages/Portfolio";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
 import Layout from "./pages/Layout";
-import { AnimatePresence } from "framer-motion";
 import PortfolioDetail from "./pages/PortfolioDetail";
 
 function App() {

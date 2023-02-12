@@ -61,7 +61,7 @@ const About: React.FC = (props: any) => {
                         <div className="signature-area">
                             <img
                                 src="images/other/signature.png"
-                                alt="signature"
+                                alt="qandeel baloch signature"
                             />
                         </div>
                     </div>
