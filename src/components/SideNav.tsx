@@ -92,6 +92,15 @@ const SideNav: React.FC = (props: any) => {
                         className="send-messsage-btn login-sign"
                         value="Send Message"
                     >
+                        CLIENT PORTAL
+                    </button>
+                </a>
+                <a href="/" className="login-anchor">
+                    <button
+                        type="submit"
+                        className="send-messsage-btn login-sign"
+                        value="Send Message"
+                    >
                         Login / Sign Up
                     </button>
                 </a>
