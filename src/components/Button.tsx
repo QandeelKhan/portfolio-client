@@ -1,7 +1,7 @@
 import "./css/button.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { setNavVisible } from "../redux/eventsSlice";
+import { setNavVisible } from "../redux/reducers/eventsSlice";
 
 export const Button = ({
     NavBtnIcon,

@@ -10,7 +10,7 @@ import {
     setGearOpen,
     setNavVisible,
     setSideBarVisible,
-} from "../redux/eventsSlice";
+} from "../redux/reducers/eventsSlice";
 
 const Layout: React.FC = () => {
     const [showContent, setShowContent] = useState(false);

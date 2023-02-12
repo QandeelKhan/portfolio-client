@@ -6,7 +6,7 @@ import UpworkIcon from "./icons/UpworkIcon";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
-import { setNavVisible } from "../redux/eventsSlice";
+import { setNavVisible } from "../redux/reducers/eventsSlice";
 
 const SideNav: React.FC = (props: any) => {
     const dispatch = useDispatch();

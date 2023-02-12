@@ -3,7 +3,7 @@ import "./css/blog-detail-side-bar.css";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import { useDispatch } from "react-redux";
-import { setSideBarVisible } from "../redux/eventsSlice";
+import { setSideBarVisible } from "../redux/reducers/eventsSlice";
 
 const BlogDetailSidebar = () => {
     // const [sidebarVisible, setSidebarVisible] = useState(false);

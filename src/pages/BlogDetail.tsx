@@ -6,10 +6,10 @@ import PostTags from "../components/PostTags";
 import Comments, { CommentProps, ReplyProps } from "../components/Comments";
 import PrevBtn from "../components/PrevBtn";
 import { useDispatch } from "react-redux";
-import { setBlogCardClicked } from "../redux/eventsSlice";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import { Helmet } from "react-helmet";
+import { setBlogCardClicked } from "../redux/reducers/eventsSlice";
 
 const BlogDetail = () => {
     interface FormData {
