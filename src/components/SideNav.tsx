@@ -83,6 +83,15 @@ const SideNav: React.FC = (props: any) => {
                         })}
                     </ul>
                 </div>
+                <a href="/" className="login-anchor">
+                    <button
+                        type="submit"
+                        className="send-messsage-btn login-sign"
+                        value="Send Message"
+                    >
+                        Login / Sign Up
+                    </button>
+                </a>
                 <div className="footer-area">
                     <div className="footer-icons">
                         <a

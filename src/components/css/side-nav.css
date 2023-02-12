@@ -209,7 +209,7 @@ li {
     align-items: center;
     background-color: var(--secondaryColor);
     height: 100vh;
-    padding: 0px 15px;
+    padding: 30px 15px 10px 15px;
 }
 
 .footer-icons {
@@ -318,4 +318,20 @@ li {
     transition: 0.5s;
     transform: rotate(360deg);
     /* font-weight: bold; */
+}
+.login-sign {
+    background-color: #17181b;
+    margin: 0px 0px;
+    border-top: 1px dotted #868686;
+    border-bottom: 1px dotted #868686;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    height: 30px;
+}
+.login-anchor {
+    width: 100%;
+}
+.nav::-webkit-scrollbar {
+    display: none;
 }
