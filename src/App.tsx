@@ -9,6 +9,8 @@ import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
 import Layout from "./pages/Layout";
 import PortfolioDetail from "./pages/PortfolioDetail";
+import Registration from "./pages/auth/Registration";
+import Login from "./pages/auth/Login";
 
 function App() {
     return (
@@ -26,6 +28,9 @@ function App() {
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/blog-detail" element={<BlogDetail />} />
                     <Route path="/contact" element={<Contact />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/registration" element={<Registration />} />
+                    <Route path="/login" element={<Login />} />
                 </Route>
             </Routes>
         </Router>

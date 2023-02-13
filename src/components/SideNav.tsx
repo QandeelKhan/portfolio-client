@@ -95,7 +95,7 @@ const SideNav: React.FC = (props: any) => {
                         CLIENT PORTAL
                     </button>
                 </a>
-                <a href="/" className="login-anchor">
+                <a href="/login" className="login-anchor">
                     <button
                         type="submit"
                         className="send-messsage-btn login-sign"
