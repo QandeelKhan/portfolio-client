@@ -13,7 +13,7 @@ import { getToken, removeToken, storeToken } from "./localStorageService";
 
 // fetchBaseQuery: is fetch wrapper, automatically handle request headers and response parsing similar to axios.
 const baseQuery = fetchBaseQuery({
-    baseUrl: "http://127.0.0.1:8000/api/user/",
+    baseUrl: "http://127.0.0.1:8000/api/",
     prepareHeaders: (headers, { getState }) => {
         const { access_token } = getToken();
         if (access_token) {
@@ -122,6 +122,28 @@ export const userAuthApi = userAuthApiExtended.injectEndpoints({
                 };
             },
         }),
+        getBlogPosts: builder.query({
+            query: (id) => {
+                return {
+                    url: "blog/blogposts/",
+                    method: "GET",
+                    headers: {
+                        "Content-type": "application/json",
+                    },
+                };
+            },
+        }),
+        // getBlogPosts: builder.query({
+        //     query: (id) => {
+        //         return {
+        //             url: `blog/blogposts/`,
+        //             method: "GET",
+        //             headers: {
+        //                 "Content-type": "application/json",
+        //             },
+        //         };
+        //     },
+        // }),
     }),
 });
 
@@ -145,6 +167,7 @@ export const {
     useSendPasswordResetEmailMutation,
     useResetPasswordMutation,
     useLogoutUserMutation,
+    useGetBlogPostsQuery,
 } = userAuthApi;
 
 // const refreshResult = await baseQuery(

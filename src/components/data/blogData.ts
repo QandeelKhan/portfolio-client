@@ -20,7 +20,6 @@ export const blogItems = [
         images: [
             "https://watson.cosmos-themes.com/dark/wp-content/uploads/2021/05/blog-img1.jpg",
             "https://watson.cosmos-themes.com/dark/wp-content/uploads/2021/05/blog-img2.jpg",
-            "https://watson.cosmos-themes.com/dark/wp-content/uploads/2021/05/blog-img3.jpg",
         ],
         paragraphAfterImage: `Another important aspect to consider is the site's accessibility. 
         This means making sure that it can be used by people with disabilities, such as those who use screen readers or have low vision. 
@@ -76,6 +75,7 @@ export const blogItems = [
             },
         ],
     },
+
     {
         title: "Things I need to get started",
         image: "images/blog/blog-2.jpg",
@@ -143,6 +143,7 @@ export const blogItems = [
         commentsData: [{}],
         repliesData: [{}],
     },
+
     {
         title: "Best Way to Design",
         image: "images/blog/blog-1.jpg",

@@ -1,19 +1,25 @@
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import AboutUserIcon from "../components/icons/AboutUser";
 import PageTemplate from "../components/PageTemplate";
 import "./css/blog.css";
 import "./css/blog-detail.css";
-import { blogItems } from "../components/data/blogData";
 import { useDispatch } from "react-redux";
 import { setSelectedPost } from "../redux/dataSlice";
 import { Helmet } from "react-helmet";
 
 const Blog = () => {
+    const [posts, setPosts] = useState([]);
+    const [error, setError] = useState(null);
     const dispatch = useDispatch();
 
-    // const handlePostClick = (post: any) => {
-    //     dispatch(setSelectedPost(post));
-    // };
+    useEffect(() => {
+        fetch("https://our-resume-backend-azr8u.ondigitalocean.app/api/blog")
+            .then((response) => response.json())
+            .then((data) => setPosts(data))
+            .catch((error) => setError(error));
+    }, []);
+    console.log(posts);
 
     return (
         <>
@@ -31,32 +37,32 @@ const Blog = () => {
 
             <PageTemplate iconComponent={<AboutUserIcon />} pageName="Blog.">
                 <div className="blog-grid">
-                    {blogItems.map((blogItem, index) => (
+                    {posts.map((post: any) => (
                         <Link
                             to="/blog-detail"
                             className="blog-grid-item"
-                            key={index}
-                            onClick={() => dispatch(setSelectedPost(blogItem))}
+                            key={post.id}
+                            onClick={() => dispatch(setSelectedPost(post))}
                         >
                             <div className="blog-item-wrapper">
                                 <div className="blog-image-container">
                                     <img
                                         className="blog-image"
-                                        src={blogItem.image}
+                                        src={post.cover_image}
                                         alt="blog-img"
                                     />
                                 </div>
                                 <div className="blog-content">
                                     <div className="categories">
                                         <span className="category-name">
-                                            {blogItem.category}
+                                            {post.category}
                                         </span>
                                     </div>
                                     <h3 className="blog-item-title">
-                                        {blogItem.title}
+                                        {post.title}
                                     </h3>
                                     <div className="blog-date">
-                                        {blogItem.date}
+                                        {post.created_at}
                                     </div>
                                 </div>
                             </div>
