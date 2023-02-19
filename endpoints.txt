@@ -1,4 +1,4 @@
-base url: https://our-resume-backend-azr8u.ondigitalocean.app/api/blog/
+base url: https://our-resume-backend-azr8u.ondigitalocean.app
 endpoints: 
 /api/blog/ : for all the blog posts
 /api/user/ : for all the user / authentication related endpoints
