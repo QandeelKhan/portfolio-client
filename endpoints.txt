@@ -1,0 +1,7 @@
+base url: https://our-resume-backend-azr8u.ondigitalocean.app/api/blog/
+endpoints: 
+/api/blog/ : for all the blog posts
+/api/user/ : for all the user / authentication related endpoints
+/api/user/login/ : for login
+/api/user/register/ : for user registration
+/api/user/profile/ : to get the information about the logged in user i.e first_name, last_name, email, id etc
