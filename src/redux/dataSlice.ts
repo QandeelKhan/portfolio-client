@@ -2,17 +2,17 @@ import { createSlice } from "@reduxjs/toolkit";
 
 interface BlogPost {
     title: string;
-    image: string;
+    cover_image: string;
     category: string;
-    date: string;
+    created_at: string;
     author: string;
-    initialParagraph: string;
-    paragraphHeading: string;
+    initial_paragraph: string;
+    paragraph_heading: string;
     quote: string;
-    quoteWriter: string;
-    secondParagraph: string;
-    images: string[];
-    paragraphAfterImage: string;
+    quote_writer: string;
+    second_paragraph: string;
+    post_images: string[] | string | any;
+    paragraph_after_image: string;
     commentsData: [];
     repliesData: [];
 }

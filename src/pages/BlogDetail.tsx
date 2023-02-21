@@ -48,12 +48,12 @@ const BlogDetail = () => {
     if (!selectedPost) {
         return <div>No post selected</div>;
     }
-    const comments: CommentProps[] = selectedPost.commentsData;
-    const replies: ReplyProps[] = selectedPost.repliesData;
+    // const comments: CommentProps[] = selectedPost.commentsData;
+    // const replies: ReplyProps[] = selectedPost.repliesData;
 
-    const filteredComments = comments.filter(
-        (comment) => Object.keys(comment).length !== 0
-    );
+    // const filteredComments = comments.filter(
+    //     (comment) => Object.keys(comment).length !== 0
+    // );
 
     // component render logic
     return (
@@ -62,7 +62,7 @@ const BlogDetail = () => {
                 <title>{selectedPost.title} - Qandeel Khan's Blog</title>
                 <meta
                     name="description"
-                    content={selectedPost.initialParagraph}
+                    // content={selectedPost.initialParagraph}
                 />
                 {/* <meta name="keywords" content={selectedPost.kewords} /> */}
                 <meta
@@ -75,7 +75,7 @@ const BlogDetail = () => {
                     <div className="post-image">
                         <img
                             className="detail-image"
-                            src={selectedPost.image}
+                            src={selectedPost.cover_image}
                             alt="blog-img"
                         />
                     </div>
@@ -85,14 +85,14 @@ const BlogDetail = () => {
                                 <div className="post-headings">
                                     <div className="categories">
                                         <a className="category-name" href="#">
-                                            {selectedPost.category}
+                                            {/* {selectedPost.category} */}
                                         </a>
                                     </div>
                                     <h1 className="post-title">
                                         {selectedPost.title}
                                     </h1>
                                     <span className="post-date">
-                                        {selectedPost.date}
+                                        {selectedPost.created_at}
                                     </span>
                                 </div>
                                 <div className="text-content">
@@ -103,10 +103,10 @@ const BlogDetail = () => {
                                                 {selectedPost.title}
                                             </strong>
                                             &nbsp;
-                                            {selectedPost.initialParagraph}
+                                            {selectedPost.initial_paragraph}
                                         </p>
                                         <h4 className="paragraph-heading">
-                                            {selectedPost.paragraphHeading}
+                                            {selectedPost.paragraph_heading}
                                         </h4>
                                         <p></p>
                                         <blockquote className="block-quote">
@@ -117,20 +117,23 @@ const BlogDetail = () => {
                                             </p>
                                             <cite className="quote-writer">
                                                 <em>
-                                                    {selectedPost.quoteWriter}
+                                                    {selectedPost.quote_writer}
                                                 </em>
                                             </cite>
                                         </blockquote>
-                                        <p>{selectedPost.secondParagraph}</p>
+                                        <p>{selectedPost.second_paragraph}</p>
                                         <div className="content-images-wrapper">
-                                            {selectedPost.images.map(
-                                                (image, index) => (
+                                            {selectedPost.post_images.images.map(
+                                                (
+                                                    postImages: any,
+                                                    index: any
+                                                ) => (
                                                     <figure
                                                         key={index}
                                                         className="content-image-container"
                                                     >
                                                         <img
-                                                            src={image}
+                                                            src={postImages}
                                                             alt=""
                                                             className="content-image"
                                                         />
@@ -139,12 +142,12 @@ const BlogDetail = () => {
                                             )}
                                         </div>
                                         <p>
-                                            {selectedPost.paragraphAfterImage}
+                                            {selectedPost.paragraph_after_image}
                                         </p>
                                     </div>
                                     <PostTags />
                                     <PrevBtn />
-                                    <div className="comments-section">
+                                    {/* <div className="comments-section">
                                         <div className="5-comments">
                                             <h2>
                                                 {comments.length === 1
@@ -168,7 +171,7 @@ const BlogDetail = () => {
                                             initialComment=""
                                             initialId=""
                                         />
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
