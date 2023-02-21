@@ -123,7 +123,7 @@ const BlogDetail = () => {
                                         </blockquote>
                                         <p>{selectedPost.second_paragraph}</p>
                                         <div className="content-images-wrapper">
-                                            {selectedPost.post_images.images.map(
+                                            {selectedPost.post_images.map(
                                                 (
                                                     postImages: any,
                                                     index: any
@@ -133,7 +133,9 @@ const BlogDetail = () => {
                                                         className="content-image-container"
                                                     >
                                                         <img
-                                                            src={postImages}
+                                                            src={
+                                                                postImages.images
+                                                            }
                                                             alt=""
                                                             className="content-image"
                                                         />
