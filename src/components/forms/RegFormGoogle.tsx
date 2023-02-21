@@ -1,7 +1,7 @@
 import React, { BaseSyntheticEvent, useState } from "react";
 // import { useHistory } from "react-router-dom";
-import { GoogleLoginButton } from "react-social-login-buttons";
-import { LoginSocialGoogle } from "reactjs-social-login";
+// import { GoogleLoginButton } from "react-social-login-buttons";
+// import { LoginSocialGoogle } from "reactjs-social-login";
 import RemainingGoogleForm from "./RemainingGoogleForm";
 import { useRegisterUserMutation } from "../../redux/services/userAuthApi";
 import { useSelector } from "react-redux";
@@ -108,7 +108,7 @@ const RegFormGoogle = () => {
                 />
             ) : (
                 <div className="">
-                    <LoginSocialGoogle
+                    {/* <LoginSocialGoogle
                         client_id={
                             "1058064034426-n73ogv8ugd2086nqp2k451jmcoqgtgkd.apps.googleusercontent.com"
                         }
@@ -119,9 +119,9 @@ const RegFormGoogle = () => {
                         onReject={(err) => {
                             console.log(err);
                         }}
-                    >
-                        <GoogleLoginButton />
-                    </LoginSocialGoogle>
+                    > */}
+                    {/* <GoogleLoginButton /> */}
+                    {/* </LoginSocialGoogle> */}
                 </div>
             )}
         </>

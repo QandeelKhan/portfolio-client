@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useRegisterUserMutation } from "../../redux/services/userAuthApi";
 import { storeToken } from "../../redux/services/localStorageService";
 import RegFormGoogle from "./RegFormGoogle";
+import "./reg-form.css";
 
 // const serverErrorInterface = {
 //     name: String,
@@ -57,13 +58,14 @@ const RegistrationForm = () => {
         <>
             <form id="registration-form" onSubmit={handleSubmit}>
                 <div>
+                    <label htmlFor="name">First Name</label>
+
                     <input
                         type="text"
                         name="first_name"
                         id="first_name"
                         required
                     />
-                    <label htmlFor="name">First Name</label>
                     {serverError.first_name && (
                         <div
                             style={{
@@ -77,13 +79,14 @@ const RegistrationForm = () => {
                     )}
                 </div>
                 <div>
+                    <label htmlFor="name">Last Name</label>
+
                     <input
                         type="text"
                         name="last_name"
                         id="last_name"
                         required
                     />
-                    <label htmlFor="name">Last Name</label>
                     {serverError.last_name && (
                         <div
                             style={{
@@ -97,8 +100,9 @@ const RegistrationForm = () => {
                     )}
                 </div>
                 <div>
-                    <input type="email" name="email" id="email" required />
                     <label htmlFor="email">Email Address</label>
+
+                    <input type="email" name="email" id="email" required />
                     {serverError.email && (
                         <div
                             style={{
@@ -112,13 +116,14 @@ const RegistrationForm = () => {
                     )}
                 </div>
                 <div>
+                    <label htmlFor="password">Password</label>
+
                     <input
                         type="password"
                         name="password"
                         id="password"
                         required
                     />
-                    <label htmlFor="password">Password</label>
                     {serverError.password && (
                         <div
                             style={{
@@ -132,13 +137,14 @@ const RegistrationForm = () => {
                     )}
                 </div>
                 <div>
+                    <label htmlFor="password2">Confirm Password</label>
+
                     <input
                         type="password"
                         name="password2"
                         id="password2"
                         required
                     />
-                    <label htmlFor="password2">Confirm Password</label>
                     {serverError.password2 && (
                         <div
                             style={{

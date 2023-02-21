@@ -5,6 +5,7 @@ import { getToken, storeToken } from "../../redux/services/localStorageService";
 import { useDispatch } from "react-redux";
 import { setUserToken } from "../../redux/features/authSlice";
 import RegFormGoogle from "./RegFormGoogle";
+import "./login-form.css";
 
 const LoginForm = () => {
     const [serverError, setServerError] = useState<any>({});
@@ -49,7 +50,7 @@ const LoginForm = () => {
     return (
         <>
             <form id="login-form" onSubmit={handleSubmit}>
-                <div>
+                <div className="login email">
                     <label htmlFor="email">Email Address</label>
                     <input type="email" id="email" name="email" required />
                 </div>
@@ -60,7 +61,7 @@ const LoginForm = () => {
                 ) : (
                     ""
                 )}
-                <div>
+                <div className="login password">
                     <label htmlFor="password">Password</label>
                     <input
                         type="password"
@@ -76,10 +77,13 @@ const LoginForm = () => {
                 ) : (
                     ""
                 )}
-                <button type="submit">Login</button>
+                <button className="login-button" type="submit">
+                    Login
+                </button>
             </form>
             <a style={{ color: "white" }} href="/registration">
-                Don't have an account?
+                Not a member?{" "}
+                <span style={{ color: "#00a3e1" }}>Create an account?</span>
             </a>
             <RegFormGoogle />
         </>
