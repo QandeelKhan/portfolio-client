@@ -3,16 +3,18 @@ import "../components/css/comments.css";
 
 export interface CommentProps {
     id: string;
-    authorName: string;
-    commentDate: string;
-    commentText: string;
+    author_name: string;
+    created_date: string;
+    comment_text: string;
     imageSource: string;
+    updated_at: string;
+    post: string;
 }
 
 export interface ReplyProps {
     id: string;
     parentCommentId: string;
-    authorName: string;
+    author: string;
     replyDate: string;
     replyText: string;
     imageSource: string;
@@ -38,16 +40,16 @@ const Comment: React.FC<{
                 </div>
                 <div className="comment-area">
                     <div className="author-name">
-                        <h3>{comment.authorName}</h3>
+                        <h3>{comment.author_name}</h3>
                         <div className="reply">
                             <h5>Reply</h5>
                             <i className="fa-solid fa-reply"></i>
                         </div>
                     </div>
                     <div className="comment-date">
-                        <h6>{comment.commentDate}</h6>
+                        <h6>{comment.created_date}</h6>
                     </div>
-                    <div className="comment-para">{comment.commentText}</div>
+                    <div className="comment-para">{comment.comment_text}</div>
                 </div>
             </div>
             {filteredReplies.map((reply, index) => (
@@ -60,7 +62,7 @@ const Comment: React.FC<{
                     </div>
                     <div className="comment-area">
                         <div className="author-name">
-                            <h3>{reply.authorName}</h3>
+                            <h3>{reply.author}</h3>
                             <div className="reply">
                                 <h5>Reply</h5>
                                 <i className="fa-solid fa-reply"></i>

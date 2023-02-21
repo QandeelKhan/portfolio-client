@@ -48,12 +48,12 @@ const BlogDetail = () => {
     if (!selectedPost) {
         return <div>No post selected</div>;
     }
-    // const comments: CommentProps[] = selectedPost.commentsData;
-    // const replies: ReplyProps[] = selectedPost.repliesData;
+    const comments: CommentProps[] = selectedPost.comments;
+    const replies: ReplyProps[] = selectedPost.repliesData;
 
-    // const filteredComments = comments.filter(
-    //     (comment) => Object.keys(comment).length !== 0
-    // );
+    const filteredComments = comments.filter(
+        (comment) => Object.keys(comment).length !== 0
+    );
 
     // component render logic
     return (
@@ -149,7 +149,7 @@ const BlogDetail = () => {
                                     </div>
                                     <PostTags />
                                     <PrevBtn />
-                                    {/* <div className="comments-section">
+                                    <div className="comments-section">
                                         <div className="5-comments">
                                             <h2>
                                                 {comments.length === 1
@@ -162,7 +162,7 @@ const BlogDetail = () => {
                                             <h4>No comments yet</h4>
                                         ) : (
                                             <Comments
-                                                comments={comments}
+                                                comments={filteredComments}
                                                 replies={replies}
                                             />
                                         )}
@@ -173,7 +173,7 @@ const BlogDetail = () => {
                                             initialComment=""
                                             initialId=""
                                         />
-                                    </div> */}
+                                    </div>
                                 </div>
                             </div>
                         </div>
