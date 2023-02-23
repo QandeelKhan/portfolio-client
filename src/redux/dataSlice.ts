@@ -13,7 +13,7 @@ interface BlogPost {
     second_paragraph: string;
     post_images: string[] | string | any;
     paragraph_after_image: string;
-    comments: [];
+    comments: [] | any;
     repliesData: [];
 }
 

@@ -14,7 +14,8 @@ const Blog = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        fetch("https://our-resume-backend-azr8u.ondigitalocean.app/api/blog")
+        // fetch("https://our-resume-backend-azr8u.ondigitalocean.app/api/blog")
+        fetch("http://127.0.0.1:8000/api/blog")
             .then((response) => response.json())
             .then((data) => setPosts(data))
             .catch((error) => setError(error));
@@ -55,7 +56,7 @@ const Blog = () => {
                                 <div className="blog-content">
                                     <div className="categories">
                                         <span className="category-name">
-                                            {post.category}
+                                            {/* {post.category} */}
                                         </span>
                                     </div>
                                     <h3 className="blog-item-title">
