@@ -56,7 +56,7 @@ const Blog = () => {
                                 <div className="blog-content">
                                     <div className="categories">
                                         <span className="category-name">
-                                            {/* {post.category} */}
+                                            {post.category.category_name}
                                         </span>
                                     </div>
                                     <h3 className="blog-item-title">

@@ -150,84 +150,40 @@ const BlogDetail = () => {
                                     </div>
                                     <PostTags />
                                     <PrevBtn />
+                                    {/* ---COMMENTS & REPLIES START */}
                                     <div className="comments-section">
-                                        {/* <div className="5-comments">
+                                        <div className="5-comments">
                                             <h2>
-                                                {comments.length === 1
+                                                {selectedPost.comments
+                                                    .comment_count === 1
                                                     ? ""
-                                                    : comments.length.toString()}{" "}
+                                                    : selectedPost.comment_count}{" "}
                                                 Comments
                                             </h2>
                                         </div>
-                                        {comments.length === 1 ? (
+                                        {selectedPost.comments.comment_count ===
+                                        0 ? (
                                             <h4>No comments yet</h4>
                                         ) : (
-                                            <Comments
-                                                comments={filteredComments}
-                                                replies={replies}
-                                            />
-                                        )} */}
-                                        {/* ---COMMENTS & REPLIES START */}
-                                        {selectedPost.comments.map(
-                                            (comment: any) => (
-                                                <div className="comments-wrapper">
-                                                    <div
-                                                        key={comment.id}
-                                                        className="comment-div"
-                                                    >
-                                                        <div className="author-image">
-                                                            <img
-                                                                src="images/other/profile-img.jpg"
-                                                                alt="qandeel's profile img"
-                                                            />
-                                                        </div>
-                                                        <div className="comment-area">
-                                                            <div className="author-name">
-                                                                <h3>
-                                                                    {
-                                                                        comment
-                                                                            .author
-                                                                            .first_name
-                                                                    }
-                                                                </h3>
-                                                                <div className="reply">
-                                                                    <h5>
-                                                                        Reply
-                                                                    </h5>
-                                                                    <i className="fa-solid fa-reply"></i>
-                                                                </div>
-                                                            </div>
-                                                            <div className="comment-date">
-                                                                <h6>
-                                                                    {
-                                                                        comment.created_at
-                                                                    }
-                                                                </h6>
-                                                            </div>
-                                                            <div className="comment-para">
-                                                                {
-                                                                    comment.comment_text
-                                                                }
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    {comment.replies.map(
-                                                        (reply: any) => (
+                                            <>
+                                                {selectedPost.comments.map(
+                                                    (comment: any) => (
+                                                        <div className="comments-wrapper">
                                                             <div
-                                                                key={reply.id}
-                                                                className="replies-div comment-reply"
+                                                                key={comment.id}
+                                                                className="comment-div"
                                                             >
                                                                 <div className="author-image">
                                                                     <img
                                                                         src="images/other/profile-img.jpg"
-                                                                        alt="qandeel haider khan comment"
+                                                                        alt="qandeel's profile img"
                                                                     />
                                                                 </div>
                                                                 <div className="comment-area">
                                                                     <div className="author-name">
                                                                         <h3>
                                                                             {
-                                                                                reply
+                                                                                comment
                                                                                     .author
                                                                                     .first_name
                                                                             }
@@ -242,23 +198,71 @@ const BlogDetail = () => {
                                                                     <div className="comment-date">
                                                                         <h6>
                                                                             {
-                                                                                reply
-                                                                                    .author
-                                                                                    .date_created
+                                                                                comment.created_at
                                                                             }
                                                                         </h6>
                                                                     </div>
                                                                     <div className="comment-para">
                                                                         {
-                                                                            reply.reply_text
+                                                                            comment.comment_text
                                                                         }
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        )
-                                                    )}
-                                                </div>
-                                            )
+                                                            {comment.replies.map(
+                                                                (
+                                                                    reply: any
+                                                                ) => (
+                                                                    <div
+                                                                        key={
+                                                                            reply.id
+                                                                        }
+                                                                        className="replies-div comment-reply"
+                                                                    >
+                                                                        <div className="author-image">
+                                                                            <img
+                                                                                src="images/other/profile-img.jpg"
+                                                                                alt="qandeel haider khan comment"
+                                                                            />
+                                                                        </div>
+                                                                        <div className="comment-area">
+                                                                            <div className="author-name">
+                                                                                <h3>
+                                                                                    {
+                                                                                        reply
+                                                                                            .author
+                                                                                            .first_name
+                                                                                    }
+                                                                                </h3>
+                                                                                <div className="reply">
+                                                                                    <h5>
+                                                                                        Reply
+                                                                                    </h5>
+                                                                                    <i className="fa-solid fa-reply"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div className="comment-date">
+                                                                                <h6>
+                                                                                    {
+                                                                                        reply
+                                                                                            .author
+                                                                                            .date_created
+                                                                                    }
+                                                                                </h6>
+                                                                            </div>
+                                                                            <div className="comment-para">
+                                                                                {
+                                                                                    reply.reply_text
+                                                                                }
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                )
+                                                            )}
+                                                        </div>
+                                                    )
+                                                )}
+                                            </>
                                         )}
 
                                         {/* ---COMMENTS & REPLIES END */}
