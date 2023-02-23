@@ -183,9 +183,7 @@ const BlogDetail = () => {
                                                                     <div className="author-name">
                                                                         <h3>
                                                                             {
-                                                                                comment
-                                                                                    .author
-                                                                                    .first_name
+                                                                                comment.author_full_name
                                                                             }
                                                                         </h3>
                                                                         <div className="reply">
@@ -229,9 +227,7 @@ const BlogDetail = () => {
                                                                             <div className="author-name">
                                                                                 <h3>
                                                                                     {
-                                                                                        reply
-                                                                                            .author
-                                                                                            .first_name
+                                                                                        reply.author_full_name
                                                                                     }
                                                                                 </h3>
                                                                                 <div className="reply">
