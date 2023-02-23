@@ -1,7 +1,12 @@
 import "./App.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+    BrowserRouter as Router,
+    Navigate,
+    Route,
+    Routes,
+} from "react-router-dom";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
@@ -11,8 +16,13 @@ import Layout from "./pages/Layout";
 import PortfolioDetail from "./pages/PortfolioDetail";
 import Registration from "./pages/auth/Registration";
 import Login from "./pages/auth/Login";
+import { RootState } from "./redux/store";
+import { useSelector } from "react-redux";
+import ClientPortal from "./pages/auth/ClientPortal";
 
 function App() {
+    const { access_token } = useSelector((state: RootState) => state.auth);
+
     return (
         <Router>
             <Routes>
@@ -30,7 +40,31 @@ function App() {
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/registration" element={<Registration />} />
-                    <Route path="/login" element={<Login />} />
+
+                    <Route
+                        path="/client-portal"
+                        element={
+                            access_token ? (
+                                <ClientPortal />
+                            ) : (
+                                <Navigate to="/login" />
+                            )
+                        }
+                    />
+
+                    <Route
+                        path="/login"
+                        element={
+                            !access_token ? <Login /> : <Navigate to="/" />
+                        }
+                    />
+
+                    <Route
+                        path="*"
+                        element={<h1>Error 404 Page not found !!</h1>}
+                    />
+
+                    {/* <Route path="/login" element={<Login />} /> */}
                 </Route>
             </Routes>
         </Router>

@@ -7,8 +7,12 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import { setNavVisible } from "../redux/reducers/eventsSlice";
+import { unSetUserToken } from "../redux/features/authSlice";
+import { removeToken } from "../redux/services/localStorageService";
+import { Link, useNavigate } from "react-router-dom";
 
 const SideNav: React.FC = (props: any) => {
+    const { access_token } = useSelector((state: RootState) => state.auth);
     const dispatch = useDispatch();
     const navVisible = useSelector(
         (state: RootState) => state.events.navVisible
@@ -29,6 +33,15 @@ const SideNav: React.FC = (props: any) => {
     useEffect(() => {
         handleResize();
     }, []);
+
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        // dispatch(unSetUserInfo({ name: "", email: "" }));
+        dispatch(unSetUserToken({ access_token: null }));
+        removeToken();
+        navigate("/login");
+    };
     return (
         <>
             <div className="toggle-mode">
@@ -86,7 +99,7 @@ const SideNav: React.FC = (props: any) => {
                         })}
                     </ul>
                 </div>
-                <a href="/" className="login-anchor">
+                <Link to="/client-portal" className="login-anchor">
                     <button
                         type="submit"
                         className="send-messsage-btn login-sign"
@@ -94,16 +107,30 @@ const SideNav: React.FC = (props: any) => {
                     >
                         CLIENT PORTAL
                     </button>
-                </a>
-                <a href="/login" className="login-anchor">
-                    <button
-                        type="submit"
-                        className="send-messsage-btn login-sign"
-                        value="Send Message"
-                    >
-                        Login / Sign Up
-                    </button>
-                </a>
+                </Link>
+
+                {!access_token ? (
+                    <a href="/login" className="login-anchor">
+                        <button
+                            type="submit"
+                            className="send-messsage-btn login-sign"
+                            value="Send Message"
+                        >
+                            Login / Sign Up
+                        </button>
+                    </a>
+                ) : (
+                    <a href="#" onClick={handleLogout} className="login-anchor">
+                        <button
+                            type="submit"
+                            className="send-messsage-btn login-sign"
+                            value="Send Message"
+                        >
+                            Logout
+                        </button>
+                    </a>
+                )}
+
                 <div className="footer-area">
                     <div className="footer-icons">
                         <a
