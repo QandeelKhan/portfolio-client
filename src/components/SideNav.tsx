@@ -11,6 +11,9 @@ import { unSetUserToken } from "../redux/features/authSlice";
 import { removeToken } from "../redux/services/localStorageService";
 import { Link, useNavigate } from "react-router-dom";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const SideNav: React.FC = (props: any) => {
     const { access_token } = useSelector((state: RootState) => state.auth);
     const dispatch = useDispatch();
@@ -41,6 +44,15 @@ const SideNav: React.FC = (props: any) => {
         dispatch(unSetUserToken({ access_token: null }));
         removeToken();
         navigate("/login");
+    };
+
+    const notify = () =>
+        toast("oops! Please login first to open Clients Portal..");
+    const handleClick = () => {
+        if (!access_token) {
+            notify();
+            navigate("/login");
+        } else navigate("/login");
     };
     return (
         <>
@@ -99,15 +111,17 @@ const SideNav: React.FC = (props: any) => {
                         })}
                     </ul>
                 </div>
-                <Link to="/client-portal" className="login-anchor">
-                    <button
-                        type="submit"
-                        className="send-messsage-btn login-sign"
-                        value="Send Message"
-                    >
-                        CLIENT PORTAL
-                    </button>
-                </Link>
+                {/* <Link onClick={handleC} to="/client-portal" className="login-anchor"> */}
+                <button
+                    onClick={handleClick}
+                    type="submit"
+                    className="send-messsage-btn login-sign"
+                    value="Send Message"
+                >
+                    CLIENT PORTAL
+                </button>
+                <ToastContainer />
+                {/* </Link> */}
 
                 {!access_token ? (
                     <a href="/login" className="login-anchor">
