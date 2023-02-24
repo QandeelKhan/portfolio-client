@@ -49,10 +49,12 @@ const SideNav: React.FC = (props: any) => {
     const notify = () =>
         toast("oops! Please login first to open Clients Portal..");
     const handleClick = () => {
-        if (!access_token) {
+        if (access_token) {
+            navigate("/client-portal");
+        } else {
+            navigate("/client-portal");
             notify();
-            navigate("/login");
-        } else navigate("/login");
+        }
     };
     return (
         <>
