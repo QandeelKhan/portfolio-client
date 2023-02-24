@@ -1,43 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import "../components/css/comments-form.css";
-// import fs from "fs";
-// fs:fs (file system) module in Node.js. This module provides an API for interacting with the file system, including reading and writing files.
+import { RootState } from "../redux/store";
+import { useMutation } from "react-query";
+import { usePostingCommentsMutation } from "../redux/services/userAuthApi";
+
 interface commentProps {
-    onSubmit: (data: {
-        name: string;
-        email: string;
-        comment: string;
-        checkbox: boolean;
-        id: string;
-    }) => void;
-    initialName: string;
-    initialEmail: string;
-    initialComment: string;
-    initialId: string;
+    postId: string;
+    commentText: string;
 }
 
-const CommentsForm: React.FC<commentProps> = ({
-    onSubmit,
-    initialName,
-    initialEmail,
-    initialComment,
-    initialId,
-}) => {
-    const [name, setName] = useState(initialName);
-    const [email, setEmail] = useState(initialEmail);
-    const [comment, setComment] = useState(initialComment);
-    const [checkbox, setCheckbox] = useState(false);
-    const [id, setId] = useState(initialId);
-    // handleSubmit for server based data
-    // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    //     e.preventDefault();
-    //     onSubmit({ name, email, comment, checkbox, id });
-    // };
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+const CommentsForm: React.FC<commentProps> = ({ postId, commentText }) => {
+    const [comment, setComment] = useState(commentText);
+    const { mutate, isLoading, error } = usePostingCommentsMutation() as any;
+    const dispatch = useDispatch();
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // const commentData = { name, email, comment, checkbox, id };
-        // fs.appendFileSync("comments.json", JSON.stringify(commentData) + "\n");
-        // onSubmit(commentData);
+        try {
+            await mutate({
+                comment: comment,
+                postId: postId,
+            });
+            setComment("");
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     return (
@@ -45,51 +34,15 @@ const CommentsForm: React.FC<commentProps> = ({
             <div className="blog-detail-comment-div">
                 <h3>Write a Comment</h3>
                 <div className="comment-write">
-                    <div className="name-and-email">
-                        <div className="input-group ">
-                            <input
-                                type="text"
-                                name="user_name"
-                                className="form-input"
-                                required
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
-                            />
-                            <label>Name</label>
-                        </div>
-                        <div className="input-group">
-                            <input
-                                type="email"
-                                name="user_email"
-                                className="form-input"
-                                required
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                            />
-                            <label>Email</label>
-                        </div>
-                    </div>
                     <div className="input-group input-message">
                         <textarea
                             required
                             name="message"
                             value={comment}
-                            onChange={(e) => setComment(e.target.value)}
+                            onChange={(event) => setComment(event.target.value)}
                         />
                         <label>Your Comment</label>
                     </div>
-                </div>
-                <div className="checkbox">
-                    <input
-                        type="checkbox"
-                        className="checkbox"
-                        checked={checkbox}
-                        onChange={() => setCheckbox(!checkbox)}
-                    />
-                    <label>
-                        Save my name, email, and website in this browser for the
-                        next time I comment.
-                    </label>
                 </div>
                 <button
                     type="submit"

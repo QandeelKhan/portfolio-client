@@ -264,11 +264,8 @@ const BlogDetail = () => {
 
                                         {/* ---COMMENTS & REPLIES END */}
                                         <CommentsForm
-                                            onSubmit={handleSubmit}
-                                            initialName=""
-                                            initialEmail=""
-                                            initialComment=""
-                                            initialId=""
+                                            commentText=""
+                                            postId={selectedPost.id}
                                         />
                                     </div>
                                 </div>

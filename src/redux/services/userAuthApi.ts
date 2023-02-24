@@ -10,6 +10,7 @@ import { RootState } from "../store";
 // import { setUserToken, unSetUserToken } from "../features/authSlice";
 import { userAuthApiExtended } from "./userAuthApiExtended";
 import { getToken, removeToken, storeToken } from "./localStorageService";
+import { setSelectedPost } from "../dataSlice";
 
 // fetchBaseQuery: is fetch wrapper, automatically handle request headers and response parsing similar to axios.
 const baseQuery = fetchBaseQuery({
@@ -133,6 +134,20 @@ export const userAuthApi = userAuthApiExtended.injectEndpoints({
                 };
             },
         }),
+        postingComments: builder.mutation({
+            query: ({ access_token, postId, commentText }) => {
+                return {
+                    url: `blog/${postId}/comments`,
+                    method: "POST",
+                    headers: {
+                        "Content-type": "application/json",
+                        authorization: `Bearer ${access_token}`,
+                    },
+                    body: { text: commentText },
+                };
+            },
+        }),
+
         // getBlogPosts: builder.query({
         //     query: (id) => {
         //         return {
@@ -160,6 +175,7 @@ export const userAuthApi = userAuthApiExtended.injectEndpoints({
 
 // Exporting auto-generated hooks for usage in functional components, which are
 export const {
+    usePostingCommentsMutation,
     useRegisterUserMutation,
     useLoginUserMutation,
     useGetLoggedUserQuery,
