@@ -1,24 +1,29 @@
 import React, { useEffect } from "react";
 import "./css/side-nav.css";
-import { MenuItems } from "./MenuItems";
+import { ResumeModeMenuItems } from "./MenuItems";
 import { Button } from "./Button";
-import UpworkIcon from "./icons/UpworkIcon";
+import UpworkIcon from "./icons/ResumeModeIcons/UpworkIcon";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
-import { setNavVisible } from "../redux/reducers/eventsSlice";
+import {
+    setClientPortalClicked,
+    setNavVisible,
+} from "../redux/reducers/eventsSlice";
 import { unSetUserToken } from "../redux/features/authSlice";
 import { removeToken } from "../redux/services/localStorageService";
 import { Link, useNavigate } from "react-router-dom";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ResumeModeIcons from "./ResumeModeIcons";
+import ClientsPortalModeIcons from "./ClientsPortalModeIcons";
 
 const SideNav: React.FC = (props: any) => {
     const { access_token } = useSelector((state: RootState) => state.auth);
     const dispatch = useDispatch();
-    const navVisible = useSelector(
-        (state: RootState) => state.events.navVisible
+    const { navVisible, clientPortalClicked } = useSelector(
+        (state: RootState) => state.events
     );
 
     const handleResize = () => {
@@ -51,8 +56,9 @@ const SideNav: React.FC = (props: any) => {
     const handleClick = () => {
         if (access_token) {
             navigate("/client-portal");
+            dispatch(setClientPortalClicked(true));
         } else {
-            navigate("/client-portal");
+            navigate("/login");
             notify();
         }
     };
@@ -99,18 +105,11 @@ const SideNav: React.FC = (props: any) => {
                 </div>
                 <div className="menubar-area">
                     <ul>
-                        {MenuItems.map((item, index) => {
-                            return (
-                                <li>
-                                    <Button
-                                        NavBtnIcon={item.icon}
-                                        className={item.cName}
-                                        NavBtnTitle={item.title}
-                                        navigateTo={item.navigateTo}
-                                    ></Button>
-                                </li>
-                            );
-                        })}
+                        {!clientPortalClicked ? (
+                            <ResumeModeIcons />
+                        ) : (
+                            <ClientsPortalModeIcons />
+                        )}
                     </ul>
                 </div>
                 {/* <Link onClick={handleC} to="/client-portal" className="login-anchor"> */}

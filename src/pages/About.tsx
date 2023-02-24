@@ -1,6 +1,6 @@
 import React from "react";
 import ClientsSlide from "../components/ClientsSlide";
-import AboutUserIcon from "../components/icons/AboutUser";
+import AboutUserIcon from "../components/icons/ResumeModeIcons/AboutUser";
 import ServicesArea from "../components/ServicesArea";
 import TestimonialsSection from "../components/TestimonialsSection";
 import "./css/about.css";

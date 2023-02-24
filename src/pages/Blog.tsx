@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import AboutUserIcon from "../components/icons/AboutUser";
+import AboutUserIcon from "../components/icons/ResumeModeIcons/AboutUser";
 import PageTemplate from "../components/PageTemplate";
 import "./css/blog.css";
 import "./css/blog-detail.css";

@@ -1,5 +1,5 @@
 import React from "react";
-import PortfolioBriefcase from "../components/icons/PortfolioBriefcase";
+import PortfolioBriefcase from "../components/icons/ResumeModeIcons/PortfolioBriefcase";
 import PortfolioPage from "./PortfolioPage";
 import PageTemplate from "../components/PageTemplate";
 import "./css/portfolio.css";

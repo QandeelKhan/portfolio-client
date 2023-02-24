@@ -5,6 +5,7 @@ interface EventState {
     blogCardClicked: boolean;
     gearOpen: boolean;
     sideBarVisible: boolean;
+    clientPortalClicked: boolean;
 }
 
 const eventsState: EventState = {
@@ -16,6 +17,7 @@ const eventsState: EventState = {
     blogCardClicked: false,
     navVisible: true,
     gearOpen: false,
+    clientPortalClicked: false,
 };
 
 export const eventsSlice = createSlice({
@@ -32,6 +34,9 @@ export const eventsSlice = createSlice({
             state.blogCardClicked = action.payload;
         },
         setSideBarVisible: (state, action: { payload: boolean }) => {
+            state.sideBarVisible = action.payload;
+        },
+        setClientPortalClicked: (state, action: { payload: boolean }) => {
             state.sideBarVisible = action.payload;
         },
         // setCardClicked: (state, action) => {
@@ -61,6 +66,7 @@ export const {
     setBlogCardClicked,
     setSideBarVisible,
     setNavVisible,
+    setClientPortalClicked,
 } = eventsSlice.actions;
 
 export default eventsSlice.reducer;
