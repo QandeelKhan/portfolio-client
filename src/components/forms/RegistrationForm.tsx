@@ -4,7 +4,6 @@ import { useRegisterUserMutation } from "../../redux/services/userAuthApi";
 import { storeToken } from "../../redux/services/localStorageService";
 import RegFormGoogle from "./RegFormGoogle";
 import "./reg-form.css";
-import "./login-form.css";
 
 // const serverErrorInterface = {
 //     name: String,
@@ -57,7 +56,7 @@ const RegistrationForm = () => {
     };
     return (
         <>
-            <form id="login-form" onSubmit={handleSubmit}>
+            <form id="reg-form" onSubmit={handleSubmit}>
                 <div className="login email">
                     <label htmlFor="name">First Name</label>
                     <input
@@ -125,7 +124,7 @@ const RegistrationForm = () => {
                     </div>
                 )}
                 <div className="login password">
-                    <label htmlFor="password2">Password Confirm</label>
+                    <label htmlFor="password2">Confirm Password</label>
                     <input
                         type="password"
                         id="password2"

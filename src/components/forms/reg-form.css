@@ -1,11 +1,27 @@
-.registration-form {
+#reg-form {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     padding: 10px 0px;
+    margin-top: 30px;
     gap: 40px;
+}
+#reg-form .login {
+    width: 50%;
+}
+#reg-form .login input {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid rgb(155, 154, 154);
+    color: white;
+    padding: 0px 10px;
+    font-size: 15px;
+}
+#reg-form .login label {
+    color: white;
+    font-size: 18px;
 }
 .terms-text span {
     color: white;
