@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./css/side-nav.css";
-import { MenuItems } from "./MenuItems";
+import { ResumeModeMenuItems } from "./MenuItems";
 import { Button } from "./Button";
 import UpworkIcon from "./icons/UpworkIcon";
 import { useDispatch } from "react-redux";
@@ -17,6 +17,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ResumeModeIcons from "./ResumeModeIcons";
+import ClientsPortalModeIcons from "./ClientsPortalModeIcons";
 
 const SideNav: React.FC = (props: any) => {
     const { access_token } = useSelector((state: RootState) => state.auth);
@@ -103,7 +104,13 @@ const SideNav: React.FC = (props: any) => {
                     </div>
                 </div>
                 <div className="menubar-area">
-                    <ul>{!clientPortalClicked ? <ResumeModeIcons /> : ""}</ul>
+                    <ul>
+                        {!clientPortalClicked ? (
+                            <ResumeModeIcons />
+                        ) : (
+                            <ClientsPortalModeIcons />
+                        )}
+                    </ul>
                 </div>
                 {/* <Link onClick={handleC} to="/client-portal" className="login-anchor"> */}
                 <button

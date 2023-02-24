@@ -1,11 +1,11 @@
 import React from "react";
 import { Button } from "./Button";
-import { MenuItems } from "./MenuItems";
+import { ClientsPortalModeMenuItems } from "./MenuItems";
 
-const ResumeModeIcons = () => {
+const ClientsPortalModeIcons = () => {
     return (
         <>
-            {MenuItems.map((item, index) => {
+            {ClientsPortalModeMenuItems.map((item: any, index: any) => {
                 return (
                     <li>
                         <Button
@@ -21,4 +21,4 @@ const ResumeModeIcons = () => {
     );
 };
 
-export default ResumeModeIcons;
+export default ClientsPortalModeIcons;

@@ -1,11 +1,11 @@
 import React from "react";
 import { Button } from "./Button";
-import { MenuItems } from "./MenuItems";
+import { ResumeModeMenuItems } from "./MenuItems";
 
 const ResumeModeIcons = () => {
     return (
         <>
-            {MenuItems.map((item, index) => {
+            {ResumeModeMenuItems.map((item, index) => {
                 return (
                     <li>
                         <Button
