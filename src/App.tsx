@@ -19,8 +19,6 @@ import Login from "./pages/auth/Login";
 import { RootState } from "./redux/store";
 import { useSelector } from "react-redux";
 import ClientPortal from "./pages/auth/ClientPortal";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 function App() {
     const { access_token } = useSelector((state: RootState) => state.auth);

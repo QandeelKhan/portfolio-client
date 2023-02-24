@@ -57,6 +57,7 @@ const BlogDetail = () => {
     // );
 
     // component render logic
+
     return (
         <>
             <Helmet>

@@ -3,7 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useRegisterUserMutation } from "../../redux/services/userAuthApi";
 import { storeToken } from "../../redux/services/localStorageService";
 import RegFormGoogle from "./RegFormGoogle";
-import "./reg-form.css";
+// import "./reg-form.css";
+import "./login-form.css";
 
 // const serverErrorInterface = {
 //     name: String,
@@ -51,113 +52,94 @@ const RegistrationForm = () => {
             console.log(typeof res.data);
             console.log(res.data);
             storeToken(res.data.token);
-            navigate("/dashboard");
+            navigate("/");
         }
     };
     return (
         <>
-            <form id="registration-form" onSubmit={handleSubmit}>
-                <div>
+            <form id="login-form" onSubmit={handleSubmit}>
+                <div className="login email">
                     <label htmlFor="name">First Name</label>
-
                     <input
                         type="text"
-                        name="first_name"
                         id="first_name"
+                        name="first_name"
                         required
                     />
-                    {serverError.first_name && (
-                        <div
-                            style={{
-                                color: "red",
-                                fontSize: "12px",
-                                paddingLeft: "10px",
-                            }}
-                        >
-                            {serverError.name[0]}
-                        </div>
-                    )}
                 </div>
-                <div>
-                    <label htmlFor="name">Last Name</label>
+                {serverError.first_name && (
+                    <div
+                        style={{
+                            color: "red",
+                            fontSize: "12px",
+                            paddingLeft: "10px",
+                        }}
+                    >
+                        {serverError.name[0]}
+                    </div>
+                )}
 
+                <div className="login email">
+                    <label htmlFor="name">Last Name</label>
                     <input
                         type="text"
-                        name="last_name"
                         id="last_name"
+                        name="last_name"
                         required
                     />
-                    {serverError.last_name && (
-                        <div
-                            style={{
-                                color: "red",
-                                fontSize: "12px",
-                                paddingLeft: "10px",
-                            }}
-                        >
-                            {serverError.name[0]}
-                        </div>
-                    )}
                 </div>
-                <div>
-                    <label htmlFor="email">Email Address</label>
+                {serverError.last_name && (
+                    <div
+                        style={{
+                            color: "red",
+                            fontSize: "12px",
+                            paddingLeft: "10px",
+                        }}
+                    >
+                        {serverError.name[0]}
+                    </div>
+                )}
 
-                    <input type="email" name="email" id="email" required />
-                    {serverError.email && (
-                        <div
-                            style={{
-                                color: "red",
-                                fontSize: "12px",
-                                paddingLeft: "10px",
-                            }}
-                        >
-                            {serverError.email[0]}
-                        </div>
-                    )}
+                <div className="login email">
+                    <label htmlFor="name">Email</label>
+                    <input type="email" id="email" name="email" required />
                 </div>
-                <div>
+
+                {serverError.email && (
+                    <div style={{ color: "red", paddingLeft: 10 }}>
+                        {serverError.email[0]}
+                    </div>
+                )}
+                <div className="login password">
                     <label htmlFor="password">Password</label>
-
                     <input
                         type="password"
-                        name="password"
                         id="password"
+                        name="password"
                         required
                     />
-                    {serverError.password && (
-                        <div
-                            style={{
-                                color: "red",
-                                fontSize: "12px",
-                                paddingLeft: "10px",
-                            }}
-                        >
-                            {serverError.password[0]}
-                        </div>
-                    )}
                 </div>
-                <div>
-                    <label htmlFor="password2">Confirm Password</label>
-
+                {serverError.password && (
+                    <div style={{ color: "red", paddingLeft: 10 }}>
+                        {serverError.password[0]}
+                    </div>
+                )}
+                <div className="login password">
+                    <label htmlFor="password2">Password Confirm</label>
                     <input
                         type="password"
-                        name="password2"
                         id="password2"
+                        name="password2"
                         required
                     />
-                    {serverError.password2 && (
-                        <div
-                            style={{
-                                color: "red",
-                                fontSize: "12px",
-                                paddingLeft: "10px",
-                            }}
-                        >
-                            {serverError.password2[0]}
-                        </div>
-                    )}
                 </div>
-                <div>
+                {serverError.password2 && (
+                    <div style={{ color: "red", paddingLeft: 10 }}>
+                        {serverError.password2[0]}
+                    </div>
+                )}
+
+                <div className=" tc">
                     <input type="checkbox" id="tc" name="tc" required />
                     <label htmlFor="tc">
                         I accept the terms and conditions
@@ -174,7 +156,9 @@ const RegistrationForm = () => {
                         </div>
                     )}
                 </div>
-                <button type="submit">Submit</button>
+                <button className="login-button" type="submit">
+                    Login
+                </button>
             </form>
             <a style={{ color: "white" }} href="/login">
                 Already have an account?
@@ -185,3 +169,70 @@ const RegistrationForm = () => {
 };
 
 export default RegistrationForm;
+
+// </div>
+// <div>
+//     {/*  */}
+//     <div className="login password">
+//         <label htmlFor="password">Password</label>
+//         <input
+//             type="password"
+//             id="password"
+//             name="password"
+//             required
+//         />
+//     </div>
+//     {/*  */}
+//     {serverError.password && (
+//         <div
+//             style={{
+//                 color: "red",
+//                 fontSize: "12px",
+//                 paddingLeft: "10px",
+//             }}
+//         >
+//             {serverError.password[0]}
+//         </div>
+//     )}
+// </div>
+// <div>
+//     <label htmlFor="password2">Confirm Password</label>
+
+//     <input
+//         type="password"
+//         name="password2"
+//         id="password2"
+//         required
+//     />
+//     {serverError.password2 && (
+//         <div
+//             style={{
+//                 color: "red",
+//                 fontSize: "12px",
+//                 paddingLeft: "10px",
+//             }}
+//         >
+//             {serverError.password2[0]}
+//         </div>
+//     )}
+// </div>
+// <div>
+//     <input type="checkbox" id="tc" name="tc" required />
+//     <label htmlFor="tc">
+//         I accept the terms and conditions
+//     </label>
+//     {serverError.tc && (
+//         <div
+//             style={{
+//                 color: "red",
+//                 fontSize: "12px",
+//                 paddingLeft: "10px",
+//             }}
+//         >
+//             {serverError.tc[0]}
+//         </div>
+//     )}
+// </div>
+// <button className="login-button" type="submit">
+//     Submit
+// </button>
