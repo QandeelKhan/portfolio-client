@@ -1,5 +1,5 @@
 import React from "react";
-import AboutUserIcon from "../components/icons/AboutUser";
+import AboutUserIcon from "../components/icons/ResumeModeIcons/AboutUser";
 import PageTemplate from "../components/PageTemplate";
 import { Helmet } from "react-helmet";
 

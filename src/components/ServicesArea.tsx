@@ -1,9 +1,11 @@
 import React from "react";
-import PhoneIcon from "./icons/PhoneIcon";
-import ResponsivedesignIcon from "./icons/ResponsivedesignIcon";
-import WebdesignIcon from "./icons/WebdesignIcon";
-import WebdevelopmentIcon from "./icons/WebdevelopmentIcon";
+import PhoneIcon from "./icons/ResumeModeIcons/PhoneIcon";
+import ResponsivedesignIcon from "./icons/ResumeModeIcons/ResponsivedesignIcon";
+import WebdesignIcon from "./icons/ResumeModeIcons/WebdesignIcon";
+import WebdevelopmentIcon from "./icons/ResumeModeIcons/WebdevelopmentIcon";
 import "./css/service-area.css";
+import ResumeModeIcons from "./ResumeModeIcons";
+import { ResumeModeMenuItems } from "./MenuItems";
 
 const ServicesArea: React.FC = (props) => {
     return (

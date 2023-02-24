@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./css/side-nav.css";
 import { ResumeModeMenuItems } from "./MenuItems";
 import { Button } from "./Button";
-import UpworkIcon from "./icons/UpworkIcon";
+import UpworkIcon from "./icons/ResumeModeIcons/UpworkIcon";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";

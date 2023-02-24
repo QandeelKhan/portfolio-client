@@ -1,10 +1,10 @@
 import React, { FormEvent } from "react";
-import ContactEnvelopeIcon from "../components/icons/ContactEnvelopIcon";
 import Location from "../components/Location";
 import emailjs from "emailjs-com";
 import PageTemplate from "../components/PageTemplate";
 import "./css/contact.css";
 import { Helmet } from "react-helmet";
+import ContactEnvelopeIcon from "../components/icons/ResumeModeIcons/ContactEnvelopIcon";
 
 const Contact = () => {
     function sendEmail(e: FormEvent<HTMLFormElement> & { target: any }) {
