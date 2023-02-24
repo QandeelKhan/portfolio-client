@@ -53,6 +53,7 @@
     color: lightgrey;
     transition: all 0.2s ease;
 }
+
 .messsage-area label {
     position: absolute;
     top: 0;
@@ -69,8 +70,8 @@
     transition: all 0.2s ease;
 }
 
-.name-email-area input:focus + label,
-.name-email-area input:valid + label {
+.name-email-area input:focus+label,
+.name-email-area input:valid+label {
     color: white;
     font-size: 1rem;
     font-weight: 500;
@@ -78,8 +79,9 @@
     left: -5px;
     pointer-events: none;
 }
-.messsage-area input:focus + label,
-.messsage-area input:valid + label {
+
+.messsage-area input:focus+label,
+.messsage-area input:valid+label {
     color: white;
     font-size: 1rem;
     font-weight: 500;
@@ -92,6 +94,7 @@
 .name-email-area input:valid {
     border: 2px solid white;
 }
+
 .messsage-area input:focus,
 .messsage-area input:valid {
     border: 2px solid white;
@@ -108,13 +111,11 @@
     padding: 0px 15px;
 }
 
-.message {
-}
+.message {}
 
-.text-area-label {
-}
+.text-area-label {}
 
-.send-messsage-btn {
+.send-message-btn {
     background-color: transparent;
     color: var(--primaryColor);
     border: 2px solid #019ad6;
@@ -128,11 +129,11 @@
     z-index: 1;
 }
 
-.send-messsage-btn:hover {
+.send-message-btn:hover {
     color: black;
 }
 
-.send-messsage-btn::after {
+.send-message-btn::after {
     content: "";
     /* left: 0; */
     right: 0;
@@ -146,7 +147,7 @@
     transition: 0.3s all ease;
 }
 
-.send-messsage-btn::before {
+.send-message-btn::before {
     content: "";
     left: 0;
     /* right: 0; */
@@ -160,7 +161,7 @@
     transition: 0.3s all ease;
 }
 
-.send-messsage-btn:hover::after {
+.send-message-btn:hover::after {
     /* left: 0;
     right: 0; */
     opacity: 1;
@@ -169,7 +170,8 @@
     width: 50%;
     height: 100%;
 }
-.send-messsage-btn:hover::before {
+
+.send-message-btn:hover::before {
     /* left: 0;
     right: 0; */
     opacity: 1;
@@ -178,9 +180,11 @@
     width: 50%;
     height: 100%;
 }
+
 .form {
     width: 100%;
 }
+
 /* Form Name and Email Fields Start */
 
 .field-holder {
@@ -207,8 +211,8 @@ textarea {
     overflow: auto;
 }
 
-textarea:focus + .text-area-label,
-textarea:valid + .text-area-label {
+textarea:focus+.text-area-label,
+textarea:valid+.text-area-label {
     color: white;
     font-size: 1rem;
     font-weight: 500;
@@ -232,6 +236,7 @@ textarea:valid {
     .name-email-area {
         flex-wrap: wrap;
     }
+
     .lets-talk-area {
         width: 90%;
         /* margin-top: 50px; */

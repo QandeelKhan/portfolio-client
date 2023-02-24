@@ -46,7 +46,7 @@ const CommentsForm: React.FC<commentProps> = ({ postId, commentText }) => {
                 </div>
                 <button
                     type="submit"
-                    className="send-messsage-btn"
+                    className="send-message-btn"
                     value="Send Message"
                 >
                     POST COMMENT

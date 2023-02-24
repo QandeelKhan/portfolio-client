@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./css/side-nav.css";
-import { ResumeModeMenuItems } from "./MenuItems";
+import { CPModeMenuItems, ResumeModeMenuItems } from "./MenuItems";
 import { Button } from "./Button";
 import UpworkIcon from "./icons/ResumeModeIcons/UpworkIcon";
 import { useDispatch } from "react-redux";
@@ -18,6 +18,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ResumeModeIcons from "./ResumeModeIcons";
 import ClientsPortalModeIcons from "./ClientsPortalModeIcons";
+import PowerSwitchIcon from "./icons/CPModeIcons/PowerSwitchIcon";
 
 const SideNav: React.FC = (props: any) => {
     const { access_token } = useSelector((state: RootState) => state.auth);
@@ -127,7 +128,7 @@ const SideNav: React.FC = (props: any) => {
                 <button
                     onClick={handleClick}
                     type="submit"
-                    className="send-messsage-btn login-sign"
+                    className="send-message-btn login-sign"
                     value="Send Message"
                 >
                     CLIENT PORTAL
@@ -139,24 +140,22 @@ const SideNav: React.FC = (props: any) => {
                     <a href="/login" className="login-anchor">
                         <button
                             type="submit"
-                            className="send-messsage-btn login-sign"
+                            className="send-message-btn login-sign"
                             value="Send Message"
                         >
                             Login / Sign Up
                         </button>
                     </a>
                 ) : (
-                    <a href="#" onClick={handleLogout} className="login-anchor">
-                        <button
-                            type="submit"
-                            className="send-messsage-btn login-sign"
-                            value="Send Message"
-                        >
-                            Logout
-                        </button>
-                    </a>
+                    <div
+                        onClick={handleLogout}
+                        className="login-btn send-message-btn login-sign"
+                    >
+                        <PowerSwitchIcon />
+                        <div className="">Logout</div>
+                    </div>
                 )}
-
+                {/* <CPModeMenuItems /> */}
                 <div className="footer-area">
                     <div className="footer-icons">
                         <a

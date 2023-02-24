@@ -6,6 +6,7 @@ import {
     LicenseIcon,
     BookIcon,
     EnvelopeIcon,
+    UndoIcon,
 } from "./data/iconsIndex";
 
 export const ResumeModeMenuItems = [
@@ -53,12 +54,12 @@ export const ResumeModeMenuItems = [
     },
 ];
 
-export const ClientsPortalModeMenuItems = [
+export const CPModeMenuItems = [
     {
         title: "Back to Resume",
         cName: "anchor",
         path: "/",
-        icon: <HomeIcon />,
+        icon: <UndoIcon />,
         navigateTo: "/",
     },
     {

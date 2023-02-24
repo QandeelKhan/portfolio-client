@@ -1,7 +1,7 @@
 import React from "react";
 import { setClientPortalClicked } from "../redux/reducers/eventsSlice";
 import { Button } from "./Button";
-import { ClientsPortalModeMenuItems } from "./MenuItems";
+import { CPModeMenuItems } from "./MenuItems";
 import { useDispatch } from "react-redux";
 
 const ClientsPortalModeIcons = () => {
@@ -11,7 +11,7 @@ const ClientsPortalModeIcons = () => {
     };
     return (
         <>
-            {ClientsPortalModeMenuItems.map((item: any, index: any) => {
+            {CPModeMenuItems.map((item: any, index: any) => {
                 return (
                     <li>
                         <Button

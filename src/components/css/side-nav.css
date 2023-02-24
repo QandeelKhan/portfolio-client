@@ -321,6 +321,7 @@ li {
     transform: rotate(360deg);
     /* font-weight: bold; */
 }
+
 .login-sign {
     background-color: #17181b;
     margin: 0px 0px;
@@ -332,9 +333,33 @@ li {
     height: 40px;
     /* color: white; */
 }
-.login-anchor {
+
+.login-btn {
+    background-color: #17181b;
+    min-width: 200px;
+    min-height: 50px;
+    height: 100%;
     width: 100%;
+    margin: 0px 0px;
+    border-top: 1px dotted #444444;
+    border-bottom: 1px dotted #444444;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
+
+.power-icon {
+    color: rgb(187, 186, 186);
+    opacity: 0.6;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.login-anchor:hover .power-icon {
+    fill: black;
+    opacity: 1;
+}
+
 .nav::-webkit-scrollbar {
     display: none;
 }

@@ -80,7 +80,7 @@ const Contact = () => {
                             </label>
                             <button
                                 type="submit"
-                                className="send-messsage-btn"
+                                className="send-message-btn"
                                 value="Send Message"
                             >
                                 SEND MESSAGE
