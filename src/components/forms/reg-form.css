@@ -2,8 +2,15 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     padding: 10px 0px;
     gap: 40px;
+    margin-bottom: 20px;
+}
+.terms-text span {
+    color: white;
+}
+.tc input {
+    margin-right: 5px;
 }

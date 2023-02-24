@@ -80,11 +80,12 @@ const LoginForm = () => {
                 <button className="login-button" type="submit">
                     Login
                 </button>
+                <a style={{ color: "white" }} href="/registration">
+                    Not a member?{" "}
+                    <span style={{ color: "#00a3e1" }}>Create an account?</span>
+                </a>
             </form>
-            <a style={{ color: "white" }} href="/registration">
-                Not a member?{" "}
-                <span style={{ color: "#00a3e1" }}>Create an account?</span>
-            </a>
+
             <RegFormGoogle />
         </>
     );

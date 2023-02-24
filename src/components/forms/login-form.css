@@ -2,20 +2,19 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     padding: 10px 0px;
     gap: 40px;
-    /* position: relative; */
-    /* height: 100vh; */
+    height: 100vh;
+    margin-top: 20px;
 }
 #login-form .login {
     width: 50%;
 }
+
 #login-form .login input {
     width: 100%;
-}
-#login-form .login input {
     height: 40px;
     background-color: transparent;
     border: 2px solid rgb(155, 154, 154);
@@ -25,8 +24,6 @@
 }
 #login-form .login label {
     color: white;
-    /* position: absolute; */
-    /* padding: 5px 10px 10px 10px; */
     font-size: 18px;
 }
 

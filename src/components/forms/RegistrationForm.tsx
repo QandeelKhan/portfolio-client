@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useRegisterUserMutation } from "../../redux/services/userAuthApi";
 import { storeToken } from "../../redux/services/localStorageService";
 import RegFormGoogle from "./RegFormGoogle";
-// import "./reg-form.css";
+import "./reg-form.css";
 import "./login-form.css";
 
 // const serverErrorInterface = {
@@ -141,8 +141,8 @@ const RegistrationForm = () => {
 
                 <div className=" tc">
                     <input type="checkbox" id="tc" name="tc" required />
-                    <label htmlFor="tc">
-                        I accept the terms and conditions
+                    <label htmlFor="tc" className="terms-text">
+                        <span>I accept the terms and conditions</span>
                     </label>
                     {serverError.tc && (
                         <div
@@ -157,12 +157,13 @@ const RegistrationForm = () => {
                     )}
                 </div>
                 <button className="login-button" type="submit">
-                    Login
+                    Register
                 </button>
+                <a style={{ color: "white" }} href="/login">
+                    Already have an account?
+                </a>
             </form>
-            <a style={{ color: "white" }} href="/login">
-                Already have an account?
-            </a>
+
             <RegFormGoogle />
         </>
     );
