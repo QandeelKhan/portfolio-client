@@ -1,7 +1,11 @@
 import "./css/button.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { setNavVisible } from "../redux/reducers/eventsSlice";
+import { useEffect } from "react";
+import {
+    setClientPortalClicked,
+    setNavVisible,
+} from "../redux/reducers/eventsSlice";
 
 export const Button = ({
     NavBtnIcon,
@@ -15,6 +19,7 @@ export const Button = ({
     const handleNavigate = () => {
         navigate(`${navigateTo}`);
         dispatch(setNavVisible(false));
+        dispatch(setClientPortalClicked(!true));
     };
 
     return (

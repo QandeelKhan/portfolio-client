@@ -1,8 +1,12 @@
 import React from "react";
+import { setClientPortalClicked } from "../redux/reducers/eventsSlice";
 import { Button } from "./Button";
 import { ResumeModeMenuItems } from "./MenuItems";
 
 const ResumeModeIcons = () => {
+    const handleClick = () => {
+        setClientPortalClicked(false);
+    };
     return (
         <>
             {ResumeModeMenuItems.map((item, index) => {
@@ -13,7 +17,9 @@ const ResumeModeIcons = () => {
                             className={item.cName}
                             NavBtnTitle={item.title}
                             navigateTo={item.navigateTo}
-                        ></Button>
+                        >
+                            <button onClick={handleClick}></button>
+                        </Button>
                     </li>
                 );
             })}

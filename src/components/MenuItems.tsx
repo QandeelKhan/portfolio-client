@@ -1,3 +1,4 @@
+import { useDispatch } from "react-redux";
 import {
     HomeIcon,
     UserIcon,
@@ -54,7 +55,7 @@ export const ResumeModeMenuItems = [
 
 export const ClientsPortalModeMenuItems = [
     {
-        title: "HOME",
+        title: "Back to Resume",
         cName: "anchor",
         path: "/",
         icon: <HomeIcon />,
