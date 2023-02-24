@@ -353,10 +353,25 @@ li {
     opacity: 0.6;
     margin-right: 10px;
     margin-left: 20px;
+    transition: transform 0.5s ease-in-out;
 }
 
-.login-anchor:hover .power-icon {
+.redo-icon {
+    color: rgb(187, 186, 186);
+    opacity: 0.6;
+    margin-right: 10px;
+    margin-left: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.login-btn:hover .redo-icon {
     fill: black;
+    opacity: 1;
+    transform: rotate(180deg);
+}
+
+.login-btn:hover .power-icon {
+    fill: greenyellow;
     opacity: 1;
 }
 

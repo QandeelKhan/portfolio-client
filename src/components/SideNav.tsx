@@ -19,6 +19,7 @@ import "react-toastify/dist/ReactToastify.css";
 import ResumeModeIcons from "./ResumeModeIcons";
 import ClientsPortalModeIcons from "./ClientsPortalModeIcons";
 import PowerSwitchIcon from "./icons/CPModeIcons/PowerSwitchIcon";
+import SvgRedo from "./icons/CPModeIcons/RedoIcon";
 
 const SideNav: React.FC = (props: any) => {
     const { access_token } = useSelector((state: RootState) => state.auth);
@@ -125,26 +126,23 @@ const SideNav: React.FC = (props: any) => {
                     </ul>
                 </div>
                 {/* <Link onClick={handleC} to="/client-portal" className="login-anchor"> */}
-                <button
+                <div
                     onClick={handleClick}
-                    type="submit"
-                    className="send-message-btn login-sign"
-                    value="Send Message"
+                    className="login-btn send-message-btn login-sign"
                 >
-                    CLIENT PORTAL
-                </button>
+                    <SvgRedo />
+                    <div>CLIENT PORTAL</div>
+                </div>
                 <ToastContainer />
                 {/* </Link> */}
 
                 {!access_token ? (
-                    <a href="/login" className="login-anchor">
-                        <button
-                            type="submit"
-                            className="send-message-btn login-sign"
-                            value="Send Message"
-                        >
-                            Login / Sign Up
-                        </button>
+                    <a
+                        href="/login"
+                        className="login-btn send-message-btn login-sign"
+                    >
+                        <PowerSwitchIcon />
+                        <div>Login / Sign Up</div>
                     </a>
                 ) : (
                     <div
@@ -152,7 +150,7 @@ const SideNav: React.FC = (props: any) => {
                         className="login-btn send-message-btn login-sign"
                     >
                         <PowerSwitchIcon />
-                        <div className="">Logout</div>
+                        <div>Logout</div>
                     </div>
                 )}
                 {/* <CPModeMenuItems /> */}
