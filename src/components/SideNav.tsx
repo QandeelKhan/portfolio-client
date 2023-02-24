@@ -62,6 +62,7 @@ const SideNav: React.FC = (props: any) => {
             notify();
         }
     };
+
     return (
         <>
             <div className="toggle-mode">
@@ -105,10 +106,10 @@ const SideNav: React.FC = (props: any) => {
                 </div>
                 <div className="menubar-area">
                     <ul>
-                        {!clientPortalClicked ? (
-                            <ResumeModeIcons />
-                        ) : (
+                        {clientPortalClicked ? (
                             <ClientsPortalModeIcons />
+                        ) : (
+                            <ResumeModeIcons />
                         )}
                     </ul>
                 </div>

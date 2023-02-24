@@ -18,7 +18,7 @@ import Registration from "./pages/auth/Registration";
 import Login from "./pages/auth/Login";
 import { RootState } from "./redux/store";
 import { useSelector } from "react-redux";
-import ClientPortal from "./pages/auth/ClientPortal";
+import ClientsPortal from "./pages/auth/ClientPortal";
 
 function App() {
     const { access_token } = useSelector((state: RootState) => state.auth);
@@ -45,7 +45,7 @@ function App() {
                         path="/client-portal"
                         element={
                             access_token ? (
-                                <ClientPortal />
+                                <ClientsPortal />
                             ) : (
                                 <Navigate to="/login" />
                             )
