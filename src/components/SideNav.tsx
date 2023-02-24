@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./css/side-nav.css";
 import { ResumeModeMenuItems } from "./MenuItems";
 import { Button } from "./Button";
@@ -51,21 +51,31 @@ const SideNav: React.FC = (props: any) => {
         navigate("/login");
     };
 
+    const [buttonClicked, setButtonClicked] = useState(false);
+
     const notify = () =>
         toast("oops! Please login first to open Clients Portal..");
+
     const handleClick = () => {
         if (access_token) {
-            navigate("/client-portal");
+            setButtonClicked(true);
             dispatch(setClientPortalClicked(true));
-        } else {
+            navigate("/client-portal");
+        }
+        if (!access_token) {
             navigate("/login");
             notify();
+            dispatch(setClientPortalClicked(false));
         }
     };
+    // useEffect(() => {
+    //     handleClick();
+    // }, [buttonClicked]);
 
     return (
         <>
             <div className="toggle-mode">
+                <>{console.log(`click status ${clientPortalClicked}`)}</>
                 <div
                     className={`toggler-container ${
                         navVisible ? "toggler-clicked" : "toggler-unclicked"
@@ -203,5 +213,3 @@ const SideNav: React.FC = (props: any) => {
 };
 
 export default SideNav;
-
-// this component can hide and visible only by clicking on ham burger or cancel button but i want to make this component set navVisible to hide by clicking anywhere on the screen other then then this side nav

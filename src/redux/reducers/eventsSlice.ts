@@ -37,7 +37,7 @@ export const eventsSlice = createSlice({
             state.sideBarVisible = action.payload;
         },
         setClientPortalClicked: (state, action: { payload: boolean }) => {
-            state.sideBarVisible = action.payload;
+            state.clientPortalClicked = action.payload;
         },
         // setCardClicked: (state, action) => {
         //     state.cardClicked = action.payload;
