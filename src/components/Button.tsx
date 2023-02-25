@@ -19,7 +19,6 @@ export const Button = ({
     const handleNavigate = () => {
         navigate(`${navigateTo}`);
         dispatch(setNavVisible(false));
-        dispatch(setClientPortalClicked(!true));
     };
 
     return (

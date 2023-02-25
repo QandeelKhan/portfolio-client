@@ -1,4 +1,3 @@
-import { useDispatch } from "react-redux";
 import {
     HomeIcon,
     UserIcon,
@@ -6,7 +5,7 @@ import {
     LicenseIcon,
     BookIcon,
     EnvelopeIcon,
-    UndoIcon,
+    SyncIcon,
 } from "./data/iconsIndex";
 
 export const ResumeModeMenuItems = [
@@ -55,6 +54,20 @@ export const ResumeModeMenuItems = [
 ];
 
 export const CPModeMenuItems = [
+    {
+        title: "PLACE ORDER",
+        cName: "anchor",
+        path: "/",
+        icon: <EnvelopeIcon />,
+        navigateTo: "/place-order",
+    },
+    {
+        title: "TRACK ORDER",
+        cName: "anchor",
+        path: "/",
+        icon: <SyncIcon />,
+        navigateTo: "/track-order",
+    },
     {
         title: "CONTACT",
         cName: "anchor",

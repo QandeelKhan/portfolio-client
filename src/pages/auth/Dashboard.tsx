@@ -19,6 +19,7 @@ import {
     setFirstName,
     setId,
     setLastName,
+    setProfileImage,
 } from "../../redux/features/authSlice";
 
 const Dashboard = () => {
@@ -48,6 +49,7 @@ const Dashboard = () => {
             dispatch(setFirstName(data.first_name));
             dispatch(setLastName(data.last_name));
             dispatch(setEmail(data.email));
+            dispatch(setProfileImage(data.profile_image));
         }
     }, [data, isSuccess, dispatch]);
 

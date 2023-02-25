@@ -17,7 +17,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ResumeModeIcons from "./ResumeModeIcons";
-import ClientsPortalModeIcons from "./ClientsPortalModeIcons";
+import ClientsPortalModeIcons from "./CPModeIcons";
 import PowerSwitchIcon from "./icons/CPModeIcons/PowerSwitchIcon";
 import RedoIcon from "./icons/CPModeIcons/RedoIcon";
 import { UndoIcon } from "./data/iconsIndex";
@@ -46,7 +46,8 @@ const SideNav: React.FC = (props: any) => {
     }, []);
 
     const navigate = useNavigate();
-
+    const { id, firstName, lastName, email, profileImage, loggedIn } =
+        useSelector((state: RootState) => state.auth);
     const handleLogout = () => {
         // dispatch(unSetUserInfo({ name: "", email: "" }));
         dispatch(unSetUserToken({ access_token: null }));
@@ -116,11 +117,21 @@ const SideNav: React.FC = (props: any) => {
             >
                 <div className="image-area">
                     <img
-                        src="images/other/profile-img.jpg"
+                        src={
+                            clientPortalClicked && profileImage
+                                ? `${profileImage}`
+                                : !clientPortalClicked
+                                ? "images/other/profile-img.jpg"
+                                : "images/other/avatar-male.jpg"
+                        }
                         alt="qandeel baloch profile"
                     />
                     <div className="person-name">
-                        <span>QANDEEL KHAN</span>
+                        <span>
+                            {!clientPortalClicked
+                                ? "QANDEEL KHAN"
+                                : `${firstName} ${lastName}`}
+                        </span>
                     </div>
                 </div>
                 <div className="menubar-area">

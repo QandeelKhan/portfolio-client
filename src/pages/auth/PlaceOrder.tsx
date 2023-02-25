@@ -1,14 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { useSelector } from "react-redux";
 import AboutUserIcon from "../../components/icons/ResumeModeIcons/AboutUser";
 import PageTemplate from "../../components/PageTemplate";
-import { RootState } from "../../redux/store";
 
-const ClientsPortal = () => {
-    const { firstName, lastName, email, id, loggedIn } = useSelector(
-        (state: RootState) => state.auth
-    );
+const PlaceOrder = () => {
     return (
         <>
             <Helmet>
@@ -25,13 +20,11 @@ const ClientsPortal = () => {
 
             <PageTemplate
                 iconComponent={<AboutUserIcon />}
-                pageName="Blog."
+                pageName="Place Your Order Please."
             ></PageTemplate>
-            <h1 style={{ textAlign: "center" }}>
-                Welcome to Client Portal {firstName} {lastName}!
-            </h1>
+            <h1 style={{ textAlign: "center" }}>Place Your Order Please.</h1>
         </>
     );
 };
 
-export default ClientsPortal;
+export default PlaceOrder;

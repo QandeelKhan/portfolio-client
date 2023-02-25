@@ -8,3 +8,4 @@ export { default as UserIcon } from "../icons/ResumeModeIcons/UserIcon";
 // CPMode
 export { default as UndoIcon } from "../icons/CPModeIcons/UndoIcon";
 export { default as PowerSwitchIcon } from "../icons/CPModeIcons/PowerSwitchIcon";
+export { default as SyncIcon } from "../icons/CPModeIcons/SyncIcon";

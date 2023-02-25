@@ -1,8 +1,49 @@
 import ChangingText from "../components/ChangingText";
 import { Helmet } from "react-helmet";
 import "./css/home.css";
+import { useDispatch } from "react-redux";
+import { getToken } from "../redux/services/localStorageService";
+import { useGetLoggedUserQuery } from "../redux/services/userAuthApi";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
+import { useEffect } from "react";
+import {
+    setEmail,
+    setFirstName,
+    setId,
+    setLastName,
+    setProfileImage,
+} from "../redux/features/authSlice";
 
 const Home = () => {
+    const dispatch = useDispatch();
+
+    // this hook gives data and some other features, this access_token will goto userAuthApi and we get response
+    // data of server in our "data" property in hook, then we use "data" wherever in ui's.
+    const { access_token, refresh_token } = getToken();
+
+    console.log(`Bearer ${access_token}`);
+
+    const { data, isSuccess } = useGetLoggedUserQuery<any>({
+        access_token: access_token,
+        refresh_token: refresh_token,
+    });
+    console.log("My user data", data);
+
+    const { firstName, lastName, email, id, loggedIn } = useSelector(
+        (state: RootState) => state.auth
+    );
+
+    // storing user profile data in state
+    useEffect(() => {
+        if (data && isSuccess) {
+            dispatch(setId(data.id));
+            dispatch(setFirstName(data.first_name));
+            dispatch(setLastName(data.last_name));
+            dispatch(setEmail(data.email));
+            dispatch(setProfileImage(data.profile_image));
+        }
+    }, [data, isSuccess, dispatch]);
     return (
         <>
             <Helmet>
