@@ -46,8 +46,15 @@ const SideNav: React.FC = (props: any) => {
     }, []);
 
     const navigate = useNavigate();
-    const { id, firstName, lastName, email, profileImage, loggedIn } =
-        useSelector((state: RootState) => state.auth);
+    const {
+        id,
+        firstName,
+        lastName,
+        email,
+        profileImage,
+        loggedIn,
+        staffUser,
+    } = useSelector((state: RootState) => state.auth);
     const handleLogout = () => {
         // dispatch(unSetUserInfo({ name: "", email: "" }));
         dispatch(unSetUserToken({ access_token: null }));
@@ -127,6 +134,7 @@ const SideNav: React.FC = (props: any) => {
                         }
                         alt="qandeel baloch profile"
                     />
+                    {staffUser && <div className="staff-tag">Staff Member</div>}
                     <div className="person-name">
                         <span>
                             {!clientPortalClicked

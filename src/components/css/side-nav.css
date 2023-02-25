@@ -167,6 +167,10 @@ li {
     z-index: -1;
 }
 
+/* .staff-tag {
+    position: absolute;
+} */
+
 .person-name {
     width: 200px;
     height: 45px;
