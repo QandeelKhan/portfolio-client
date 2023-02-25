@@ -53,14 +53,11 @@ const SideNav: React.FC = (props: any) => {
         navigate("/login");
     };
 
-    const [buttonClicked, setButtonClicked] = useState(false);
-
     const notify = () =>
         toast("oops! Please login first to open Clients Portal..");
 
     const handleClick = () => {
         if (access_token) {
-            setButtonClicked(true);
             dispatch(setClientPortalClicked(true));
             navigate("/client-portal");
         }

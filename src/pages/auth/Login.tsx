@@ -28,10 +28,7 @@ const Login = () => {
                     content="width=device-width, initial-scale=1.0"
                 />
             </Helmet>
-            <PageTemplate
-                iconComponent={<AboutUserIcon />}
-                pageName="Registration."
-            >
+            <PageTemplate iconComponent={<AboutUserIcon />} pageName="Login.">
                 <LoginForm />
             </PageTemplate>
         </>

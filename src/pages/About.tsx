@@ -35,7 +35,7 @@ const About: React.FC = (props: any) => {
                     <div className="about-left-info">
                         <h3 className="ui-ux-designer">
                             {/* UI/UX Designer & Developer */}
-                            Fulls-tack Engineer & Author
+                            Full-tack Engineer & Author
                         </h3>
                         <span className="uiux-dummy-text">
                             I am a Python and JavaScript developer with having
