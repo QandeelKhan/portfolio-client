@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import AboutUserIcon from "../../components/icons/ResumeModeIcons/AboutUser";
 import PageTemplate from "../../components/PageTemplate";
+import { ProjectTrackingChart } from "../../components/ProjectTrackingChart";
 
 const TrackOrder = () => {
+    useEffect(() => {});
     return (
         <>
             <Helmet>
@@ -21,8 +23,10 @@ const TrackOrder = () => {
             <PageTemplate
                 iconComponent={<AboutUserIcon />}
                 pageName="Track Your Order."
-            ></PageTemplate>
-            <h1 style={{ textAlign: "center" }}>Track Your Order.</h1>
+            >
+                <ProjectTrackingChart />
+            </PageTemplate>
+            {/* <h1 style={{ textAlign: "center" }}>Track Your Order.</h1> */}
         </>
     );
 };

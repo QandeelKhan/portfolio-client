@@ -31,7 +31,7 @@ const Home = () => {
     });
     console.log("My user data", data);
 
-    const { firstName, lastName, email, id, loggedIn } = useSelector(
+    const { firstName, lastName, email, id, loggedIn, staffUser } = useSelector(
         (state: RootState) => state.auth
     );
 
