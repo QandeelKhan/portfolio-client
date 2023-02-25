@@ -51,6 +51,7 @@ const SideNav: React.FC = (props: any) => {
     const handleLogout = () => {
         // dispatch(unSetUserInfo({ name: "", email: "" }));
         dispatch(unSetUserToken({ access_token: null }));
+        dispatch(setClientPortalClicked(false));
         removeToken();
         navigate("/login");
     };
