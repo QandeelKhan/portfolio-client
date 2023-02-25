@@ -7,7 +7,7 @@ const UndoIcon = (props: any) => (
         // viewBox height, width
         {...props}
         viewBox="0 0 20 20"
-        className="nav-icon"
+        className="undo-icon"
         fill="white"
         // fill="currentColor"
     >

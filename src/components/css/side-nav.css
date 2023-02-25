@@ -338,7 +338,6 @@ li {
     background-color: #17181b;
     min-width: 200px;
     min-height: 50px;
-    height: 100%;
     width: 100%;
     margin: 0px 0px;
     border-top: 1px dotted #444444;
@@ -362,6 +361,20 @@ li {
     margin-right: 10px;
     margin-left: 20px;
     transition: transform 0.3s ease-in-out;
+}
+
+.undo-icon {
+    color: rgb(187, 186, 186);
+    opacity: 0.6;
+    margin-right: 10px;
+    margin-left: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.login-btn:hover .undo-icon {
+    fill: black;
+    opacity: 1;
+    transform: rotate(-180deg);
 }
 
 .login-btn:hover .redo-icon {

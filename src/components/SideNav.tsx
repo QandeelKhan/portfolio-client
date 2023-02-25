@@ -19,7 +19,8 @@ import "react-toastify/dist/ReactToastify.css";
 import ResumeModeIcons from "./ResumeModeIcons";
 import ClientsPortalModeIcons from "./ClientsPortalModeIcons";
 import PowerSwitchIcon from "./icons/CPModeIcons/PowerSwitchIcon";
-import SvgRedo from "./icons/CPModeIcons/RedoIcon";
+import RedoIcon from "./icons/CPModeIcons/RedoIcon";
+import { UndoIcon } from "./data/iconsIndex";
 
 const SideNav: React.FC = (props: any) => {
     const { access_token } = useSelector((state: RootState) => state.auth);
@@ -56,16 +57,25 @@ const SideNav: React.FC = (props: any) => {
     const notify = () =>
         toast("oops! Please login first to open Clients Portal..");
 
-    const handleClick = () => {
+    const ResumePortalNotify = () => toast("YOU ARE BACK TO RESUME PORTAL");
+    const ClientPortalNotify = () => toast("WELCOME TO THE CLIENTS PORTAL!");
+
+    const handleClientPortal = () => {
         if (access_token) {
             dispatch(setClientPortalClicked(true));
             navigate("/client-portal");
+            ClientPortalNotify();
         }
         if (!access_token) {
             navigate("/login");
             notify();
             dispatch(setClientPortalClicked(false));
         }
+    };
+    const handleResumePortal = () => {
+        dispatch(setClientPortalClicked(false));
+        navigate("/");
+        ResumePortalNotify();
     };
     // useEffect(() => {
     //     handleClick();
@@ -122,17 +132,24 @@ const SideNav: React.FC = (props: any) => {
                         )}
                     </ul>
                 </div>
-                {/* <Link onClick={handleC} to="/client-portal" className="login-anchor"> */}
-                <div
-                    onClick={handleClick}
-                    className="login-btn send-message-btn login-sign"
-                >
-                    <SvgRedo />
-                    <div>CLIENT PORTAL</div>
-                </div>
+                {clientPortalClicked ? (
+                    <div
+                        onClick={handleResumePortal}
+                        className="login-btn send-message-btn login-sign"
+                    >
+                        <UndoIcon />
+                        <div>Resume Portal</div>
+                    </div>
+                ) : (
+                    <div
+                        onClick={handleClientPortal}
+                        className="login-btn send-message-btn login-sign"
+                    >
+                        <RedoIcon />
+                        <div>Client Portal</div>
+                    </div>
+                )}
                 <ToastContainer />
-                {/* </Link> */}
-
                 {!access_token ? (
                     <a
                         href="/login"
@@ -142,6 +159,7 @@ const SideNav: React.FC = (props: any) => {
                         <div>Login / Sign Up</div>
                     </a>
                 ) : (
+                    // FIXME: The color of border transformation should be red
                     <div
                         onClick={handleLogout}
                         className="login-btn send-message-btn login-sign"

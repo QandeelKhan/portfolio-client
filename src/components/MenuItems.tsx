@@ -56,13 +56,6 @@ export const ResumeModeMenuItems = [
 
 export const CPModeMenuItems = [
     {
-        title: "Back to Resume",
-        cName: "anchor",
-        path: "/",
-        icon: <UndoIcon />,
-        navigateTo: "/",
-    },
-    {
         title: "CONTACT",
         cName: "anchor",
         path: "/",
