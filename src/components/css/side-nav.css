@@ -395,3 +395,10 @@ li {
 .nav::-webkit-scrollbar {
     display: none;
 }
+.fa-clipboard-user {
+    position: absolute;
+    font-size: 30px;
+    top: 10px;
+    left: 10px;
+    color: #17181b;
+}

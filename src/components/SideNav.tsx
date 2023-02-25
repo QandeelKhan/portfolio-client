@@ -124,6 +124,9 @@ const SideNav: React.FC = (props: any) => {
                 className={`nav ${!navVisible ? "nav-hidden" : "nav-visible"}`}
             >
                 <div className="image-area">
+                    {staffUser && (
+                        <i className="fa-solid fa-clipboard-user"></i>
+                    )}
                     <img
                         src={
                             clientPortalClicked && profileImage
@@ -134,7 +137,7 @@ const SideNav: React.FC = (props: any) => {
                         }
                         alt="qandeel baloch profile"
                     />
-                    {staffUser && <div className="staff-tag">Staff Member</div>}
+                    {staffUser && <div className="staff-tag"></div>}
                     <div className="person-name">
                         <span>
                             {!clientPortalClicked
