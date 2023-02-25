@@ -57,10 +57,8 @@ export const data = {
 
 export function ProjectTrackingChart() {
     return (
-        <div>
-            <div style={{ height: "100%", width: "100%" }}>
-                <Bar options={options} data={data} />
-            </div>
+        <div style={{ height: "100vh", width: "100%" }}>
+            <Bar options={options} data={data} />
         </div>
     );
 }
