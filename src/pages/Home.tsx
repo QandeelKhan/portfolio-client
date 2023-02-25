@@ -13,6 +13,7 @@ import {
     setId,
     setLastName,
     setProfileImage,
+    setStaffStatus,
 } from "../redux/features/authSlice";
 
 const Home = () => {
@@ -42,6 +43,9 @@ const Home = () => {
             dispatch(setLastName(data.last_name));
             dispatch(setEmail(data.email));
             dispatch(setProfileImage(data.profile_image));
+            if (data.is_staff) {
+                dispatch(setStaffStatus(data.is_staff));
+            }
         }
     }, [data, isSuccess, dispatch]);
     return (

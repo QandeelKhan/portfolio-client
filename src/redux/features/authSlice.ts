@@ -6,6 +6,7 @@ const initialState = {
     lastName: "",
     email: "",
     profileImage: "",
+    staffUser: "",
     password: "",
     password2: "",
     termsAndConditions: "",
@@ -35,6 +36,9 @@ const slice = createSlice({
         },
         setProfileImage: (state, action) => {
             state.email = action.payload;
+        },
+        setStaffStatus: (state, action) => {
+            state.staffUser = action.payload;
         },
         setPassword: (state, action) => {
             state.password = action.payload;
@@ -89,6 +93,7 @@ export const {
     setLastName,
     setEmail,
     setProfileImage,
+    setStaffStatus,
     setPassword,
     setPassword2,
     setTermsAndConditions,
