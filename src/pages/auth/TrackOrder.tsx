@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import AboutUserIcon from "../../components/icons/ResumeModeIcons/AboutUser";
 import PageTemplate from "../../components/PageTemplate";
-import { ProjectTrackingChart } from "../../components/ProjectTrackingChart";
+import { BarChart } from "../../components/BarChart";
+import { DoughnutChart } from "../../components/DoughnutChart";
 
 const TrackOrder = () => {
     useEffect(() => {});
@@ -24,7 +25,10 @@ const TrackOrder = () => {
                 iconComponent={<AboutUserIcon />}
                 pageName="Track Your Order."
             >
-                <ProjectTrackingChart />
+                <div className="chart-container">
+                    <BarChart />
+                    <DoughnutChart />
+                </div>
             </PageTemplate>
             {/* <h1 style={{ textAlign: "center" }}>Track Your Order.</h1> */}
         </>
