@@ -35,7 +35,7 @@ const TrackOrder = () => {
                         </div> */}
                 </div>
             </PageTemplate>
-            {/* <h1 style={{ textAlign: "center" }}>Track Your Order.</h1> */}
+            {/* <h1 style={{ textAlign: "center" }}>Track Your Order..</h1> */}
         </>
     );
 };
