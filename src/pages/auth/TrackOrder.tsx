@@ -27,14 +27,12 @@ const TrackOrder = () => {
                 pageName="Track Your Order."
             >
                 <div className="charts-container">
-                    <div className="charts-wrapper">
-                        <div className="bar-chart">
-                            <BarChart />
-                        </div>
-                        <div className="doughnut-chart">
-                            <DoughnutChart />
-                        </div>
+                    <div className="bar-chart">
+                        <BarChart />
                     </div>
+                    {/* <div className="doughnut-chart">
+                            <DoughnutChart />
+                        </div> */}
                 </div>
             </PageTemplate>
             {/* <h1 style={{ textAlign: "center" }}>Track Your Order.</h1> */}
