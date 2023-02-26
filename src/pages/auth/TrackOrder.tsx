@@ -4,6 +4,7 @@ import AboutUserIcon from "../../components/icons/ResumeModeIcons/AboutUser";
 import PageTemplate from "../../components/PageTemplate";
 import { BarChart } from "../../components/BarChart";
 import { DoughnutChart } from "../../components/DoughnutChart";
+import "../../components/css/track-order.css";
 
 const TrackOrder = () => {
     useEffect(() => {});
@@ -25,9 +26,15 @@ const TrackOrder = () => {
                 iconComponent={<AboutUserIcon />}
                 pageName="Track Your Order."
             >
-                <div className="chart-container">
-                    <BarChart />
-                    <DoughnutChart />
+                <div className="charts-container">
+                    <div className="charts-wrapper">
+                        <div className="bar-chart">
+                            <BarChart />
+                        </div>
+                        <div className="doughnut-chart">
+                            <DoughnutChart />
+                        </div>
+                    </div>
                 </div>
             </PageTemplate>
             {/* <h1 style={{ textAlign: "center" }}>Track Your Order.</h1> */}

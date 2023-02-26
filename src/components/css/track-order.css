@@ -1,0 +1,23 @@
+.charts-container {
+    height: 100vh;
+    width: 100vh;
+}
+
+.charts-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bar-chart {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* min-height: 300px; */
+}
+
+.doughnut-chart {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
