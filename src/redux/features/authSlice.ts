@@ -10,6 +10,7 @@ const initialState = {
     password: "",
     password2: "",
     termsAndConditions: "",
+    orderCount: "",
     providerName: "",
     access_token: null,
     refresh_token: null,
@@ -48,6 +49,9 @@ const slice = createSlice({
         },
         setTermsAndConditions: (state, action) => {
             state.termsAndConditions = action.payload;
+        },
+        setOrderCount: (state, action) => {
+            state.orderCount = action.payload;
         },
         setProviderName: (state, action) => {
             state.providerName = action.payload;
@@ -97,6 +101,7 @@ export const {
     setPassword,
     setPassword2,
     setTermsAndConditions,
+    setOrderCount,
     setProviderName,
     setUserToken,
     unSetUserToken,
