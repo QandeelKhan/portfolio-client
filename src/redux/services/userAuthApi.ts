@@ -37,7 +37,7 @@ export const userAuthApi = userAuthApiExtended.injectEndpoints({
             query: (user) => {
                 return {
                     // "url": send request to which url
-                    url: "register/",
+                    url: "user/register/",
                     method: "POST",
                     // sending a "user" obj containing login/register fields data to the backend
                     body: user,
@@ -53,7 +53,20 @@ export const userAuthApi = userAuthApiExtended.injectEndpoints({
                 // console.log(access_token); : if we don't type below code in "return{}" statement then we cannot
                 // be able to do i.e console.log(access_token) here. otherwise we can use it without "return" as well.
                 return {
-                    url: "profile/",
+                    url: "user/profile/",
+                    method: "GET",
+                    headers: {
+                        authorization: `Bearer ${access_token}`,
+                    },
+                };
+            },
+        }),
+        getLoggedUserOrders: builder.query({
+            query: (access_token) => {
+                // console.log(access_token); : if we don't type below code in "return{}" statement then we cannot
+                // be able to do i.e console.log(access_token) here. otherwise we can use it without "return" as well.
+                return {
+                    url: "orders/",
                     method: "GET",
                     headers: {
                         authorization: `Bearer ${access_token}`,
@@ -66,7 +79,7 @@ export const userAuthApi = userAuthApiExtended.injectEndpoints({
             // then we send that to our backend api through api call
             query: (user) => {
                 return {
-                    url: "login/",
+                    url: "user/login/",
                     method: "POST",
                     // sending a "user" obj containing login/register fields data to the backend
                     body: user,
@@ -79,7 +92,7 @@ export const userAuthApi = userAuthApiExtended.injectEndpoints({
         changeUserPassword: builder.mutation({
             query: ({ actualData, access_token }) => {
                 return {
-                    url: "changepassword/",
+                    url: "user/changepassword/",
                     method: "POST",
                     body: actualData,
                     headers: {
@@ -91,7 +104,7 @@ export const userAuthApi = userAuthApiExtended.injectEndpoints({
         sendPasswordResetEmail: builder.mutation({
             query: (user) => {
                 return {
-                    url: "send-reset-password-email/",
+                    url: "user/send-reset-password-email/",
                     method: "POST",
                     body: user,
                     headers: {
@@ -103,7 +116,7 @@ export const userAuthApi = userAuthApiExtended.injectEndpoints({
         resetPassword: builder.mutation({
             query: ({ actualData, id, token }) => {
                 return {
-                    url: `/reset-password/${id}/${token}/`,
+                    url: `user/reset-password/${id}/${token}/`,
                     method: "POST",
                     body: actualData,
                     headers: {
@@ -115,7 +128,7 @@ export const userAuthApi = userAuthApiExtended.injectEndpoints({
         logoutUser: builder.mutation({
             query: (access_token) => {
                 return {
-                    url: `logout/`,
+                    url: `user/logout/`,
                     method: "POST",
                     headers: {
                         "Content-type": "application/json",
@@ -180,6 +193,7 @@ export const {
     useRegisterUserMutation,
     useLoginUserMutation,
     useGetLoggedUserQuery,
+    useGetLoggedUserOrdersQuery,
     useChangeUserPasswordMutation,
     useSendPasswordResetEmailMutation,
     useResetPasswordMutation,

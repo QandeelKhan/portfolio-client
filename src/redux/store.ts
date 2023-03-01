@@ -4,6 +4,7 @@ import themesReducer from "./themeSlice";
 import dataReducer from "./dataSlice";
 import authReducer from "./features/authSlice";
 import { userAuthApi } from "./services/userAuthApi";
+import orderReducer from "./features/orderSlice";
 
 export const store = configureStore({
     reducer: {
@@ -12,6 +13,7 @@ export const store = configureStore({
         themes: themesReducer,
         data: dataReducer,
         auth: authReducer,
+        order: orderReducer,
     },
     // middleware for rtkquery
     middleware: (getDefaultMiddleware) =>
