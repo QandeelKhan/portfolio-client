@@ -64,8 +64,10 @@ const ClientsPortal = () => {
     // storing user profile data in state
     useEffect(() => {
         if (data) {
+            // FIXME: this will not works like below, as the data is an array of objects
             dispatch(setOrderId(data.id));
-            dispatch(setOrderCount(data.order_count));
+            // dispatch(setOrderCount(data.order_count));
+            dispatch(setOrderCount(data.length));
             dispatch(setOrderType(data.order_type));
             dispatch(setOrderCompletionStatus(data.status));
             dispatch(setOrderPaymentStatus(data.payment_status));
