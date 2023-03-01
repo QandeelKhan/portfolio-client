@@ -1,24 +1,98 @@
 .charts-container {
     height: 100vh;
     width: 100%;
-}
-
-/* .charts-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-} */
-
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+}
 .bar-chart {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    /* min-height: 300px; */
+    width: 75%;
+    height: 100vh;
 }
 
-.doughnut-chart {
-    /* display: flex;
+.source-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: center; */
+    gap: 30px;
+    margin-top: 50px;
+}
+.payment-text {
+    color: white;
+    border-bottom: 2px solid #00a3e1;
+    font-size: 18px;
+    font-weight: bold;
+}
+.payment-status {
+    color: white;
+    margin-top: 40px;
+    font-weight: bold;
+}
+.status-text {
+    font-size: 18px;
+    /* color: #00a3e1; */
+    font-weight: bold;
+}
+.source-buttons a {
+    color: #00a3e1;
+    width: 200px;
+    height: 35px;
+    background-color: transparent;
+    border: 2px solid #00a3e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.source-buttons a:hover {
+    background-color: #00a3e1;
+    color: white;
+}
+.modification-area a {
+    color: #00a3e1;
+    width: 200px;
+    height: 35px;
+    background-color: transparent;
+    border: 2px solid #00a3e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.modification-area a:hover {
+    background-color: #00a3e1;
+    color: white;
+}
+.modification-desc label {
+    color: white;
+    font-size: 17px;
+}
+.modification-desc {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.modification-desc .label-text-area {
+    justify-content: start;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+@media (max-width: 800px) {
+    .bar-chart {
+        width: 100%;
+    }
+    .payment-area {
+        margin-top: 0px;
+        margin-left: 35%;
+    }
 }

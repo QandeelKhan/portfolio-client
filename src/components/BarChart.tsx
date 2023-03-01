@@ -21,6 +21,7 @@ ChartJS.register(
 );
 
 export const options = {
+    // aspectRatio: 1.8,
     responsive: true,
     plugins: {
         legend: {
@@ -28,12 +29,12 @@ export const options = {
         },
         title: {
             display: true,
-            text: "Chart.js Bar Chart",
+            text: "Project Progress Chart",
         },
     },
 };
 
-const labels = ["Frontend", "Backend", "Design"];
+const labels = ["Design", "Frontend", "Backend"];
 
 export const data = {
     labels,
@@ -41,7 +42,10 @@ export const data = {
         {
             label: "Dataset 1",
             data: labels.map(() => faker.datatype.number({ min: 0, max: 100 })),
-            backgroundColor: "rgba(255, 99, 132, 0.5)",
+            backgroundColor: ["#44b4e0", "#ff9999", "grey"],
+            borderColor: "white",
+            borderWidth: 2,
+            // minBarLength: 50,
         },
     ],
 };
