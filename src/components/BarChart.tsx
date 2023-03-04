@@ -40,9 +40,25 @@ export const data = {
     labels,
     datasets: [
         {
-            label: "Dataset 1",
+            label: "Design",
             data: labels.map(() => faker.datatype.number({ min: 0, max: 100 })),
-            backgroundColor: ["#44b4e0", "#ff9999", "grey"],
+            backgroundColor: ["#44b4e0"],
+            borderColor: "white",
+            borderWidth: 2,
+            // minBarLength: 50,
+        },
+        {
+            label: "Frontend",
+            data: labels.map(() => faker.datatype.number({ min: 0, max: 100 })),
+            backgroundColor: ["#ff9999"],
+            borderColor: "white",
+            borderWidth: 2,
+            // minBarLength: 50,
+        },
+        {
+            label: "Backend",
+            data: labels.map(() => faker.datatype.number({ min: 0, max: 100 })),
+            backgroundColor: ["grey"],
             borderColor: "white",
             borderWidth: 2,
             // minBarLength: 50,
