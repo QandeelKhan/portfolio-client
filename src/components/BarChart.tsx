@@ -34,7 +34,7 @@ export const options = {
     },
 };
 
-const labels = ["Design", "Frontend", "Backend"];
+const labels = [""];
 
 export const data = {
     labels,
