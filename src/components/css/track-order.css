@@ -7,6 +7,9 @@
     align-items: start;
     flex-wrap: wrap;
 }
+.charts-container-inactive {
+    opacity: 40%;
+}
 .bar-chart {
     width: 75%;
     height: 100vh;

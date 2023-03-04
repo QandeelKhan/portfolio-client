@@ -21,7 +21,6 @@ ChartJS.register(
 );
 
 export const options = {
-    // aspectRatio: 1.8,
     responsive: true,
     plugins: {
         legend: {
@@ -32,36 +31,40 @@ export const options = {
             text: "Project Progress Chart",
         },
     },
+    scales: {
+        y: {
+            max: 100,
+            ticks: {
+                stepSize: 20,
+            },
+        },
+    },
 };
 
 const labels = [""];
-
 export const data = {
     labels,
     datasets: [
         {
             label: "Design",
-            data: labels.map(() => faker.datatype.number({ min: 0, max: 100 })),
+            data: [20],
             backgroundColor: ["#44b4e0"],
             borderColor: "white",
             borderWidth: 2,
-            // minBarLength: 50,
         },
         {
             label: "Frontend",
-            data: labels.map(() => faker.datatype.number({ min: 0, max: 100 })),
+            data: [50],
             backgroundColor: ["#ff9999"],
             borderColor: "white",
             borderWidth: 2,
-            // minBarLength: 50,
         },
         {
             label: "Backend",
-            data: labels.map(() => faker.datatype.number({ min: 0, max: 100 })),
+            data: [80],
             backgroundColor: ["grey"],
             borderColor: "white",
             borderWidth: 2,
-            // minBarLength: 50,
         },
     ],
 };

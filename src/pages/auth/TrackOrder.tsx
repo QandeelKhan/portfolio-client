@@ -5,8 +5,29 @@ import PageTemplate from "../../components/PageTemplate";
 import { BarChart } from "../../components/BarChart";
 import { DoughnutChart } from "../../components/DoughnutChart";
 import "../../components/css/track-order.css";
+import { RootState } from "../../redux/store";
+import { useSelector } from "react-redux";
 
 const TrackOrder = () => {
+    const {
+        orderId,
+        orderCount,
+        orderType,
+        completionStatus,
+        paymentStatus,
+        orderDescription,
+        projectDescription,
+        projectName,
+        totalPrice,
+        orderCreatedAt,
+        orderDueDate,
+        orderUpdatedAt,
+        orderError,
+        activeStatus,
+        aoActiveStatus,
+        aoPaymentStatus,
+        aoOrderCount,
+    } = useSelector((state: RootState) => state.order);
     useEffect(() => {});
     return (
         <>
@@ -26,7 +47,16 @@ const TrackOrder = () => {
                 iconComponent={<AboutUserIcon />}
                 pageName="Track Your Order."
             >
-                <div className="charts-container">
+                {console.log(`${aoActiveStatus} active status`)}
+                <h1>
+                    You have {aoActiveStatus ? `${aoOrderCount}` : "no"} active
+                    order
+                </h1>
+                <div
+                    className={`charts-container ${
+                        !aoActiveStatus ? "charts-container-inactive" : ""
+                    }`}
+                >
                     <div className="bar-chart">
                         <BarChart />
                     </div>
@@ -35,8 +65,13 @@ const TrackOrder = () => {
                             <span className="payment-text">
                                 Payment Status{" "}
                             </span>
-                            :<span className="status-text"> Pending</span>
+                            :
+                            <span className="status-text">
+                                {" "}
+                                {aoPaymentStatus}
+                            </span>
                         </div>
+
                         <div className="source-buttons">
                             <a href="">Frontend Source Code</a>
                             <a href="">Backend Source Code</a>

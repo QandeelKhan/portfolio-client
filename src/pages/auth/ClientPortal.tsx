@@ -7,6 +7,18 @@ import AboutUserIcon from "../../components/icons/ResumeModeIcons/AboutUser";
 import PageTemplate from "../../components/PageTemplate";
 import { setOrderCount } from "../../redux/features/authSlice";
 import {
+    setActiveStatus,
+    setAoOrderCompletionStatus,
+    setAoOrderCount,
+    setAoOrderCreatedAt,
+    setAoOrderDescription,
+    setAoOrderDueDate,
+    setAoOrderPaymentStatus,
+    setAoOrderType,
+    setAoOrderUpdatedAt,
+    setAoProjectDescription,
+    setAoProjectName,
+    setAoTotalPrice,
     setOrderCompletionStatus,
     setOrderCreatedAt,
     setOrderDescription,
@@ -78,6 +90,24 @@ const ClientsPortal = () => {
             dispatch(setOrderCreatedAt(data.created_at));
             dispatch(setOrderDueDate(data.due_date));
             dispatch(setOrderUpdatedAt(data.updated_at));
+            const activeOrders = data.filter(
+                (order: any) => order.active_status === true
+            );
+            if (activeOrders) {
+                dispatch(setOrderId(data.id));
+                // dispatch(setOrderCount(data.order_count));
+                dispatch(setAoOrderCount(data.length));
+                dispatch(setAoOrderType(data.order_type));
+                dispatch(setAoOrderCompletionStatus(data.status));
+                dispatch(setAoOrderPaymentStatus(activeOrders.payment_status));
+                dispatch(setAoOrderDescription(data.description));
+                dispatch(setAoProjectName(data.project_name));
+                dispatch(setAoProjectDescription(data.project_description));
+                dispatch(setAoTotalPrice(data.total_price));
+                dispatch(setAoOrderCreatedAt(data.created_at));
+                dispatch(setAoOrderDueDate(data.due_date));
+                dispatch(setAoOrderUpdatedAt(data.updated_at));
+            }
         }
     }, [data, isSuccess, dispatch]);
 
@@ -114,6 +144,8 @@ const ClientsPortal = () => {
             <h1 style={{ textAlign: "center" }}>
                 you have {orderCount} orders!
             </h1>
+            <br />
+            <h1 style={{ textAlign: "center" }}>& orders!</h1>
         </>
     );
 };
