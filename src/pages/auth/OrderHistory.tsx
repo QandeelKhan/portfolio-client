@@ -73,6 +73,24 @@ const OrderHistory = () => {
                             <h3 className="order-assets">Project Assets: </h3>
                         </div>
                     </div>
+                    <div className="order-container">
+                        <div className="order">
+                            <div className="order-details">
+                                <h3>project Name: Our Demo Project</h3>
+                                <h3>
+                                    project Description: Our Demo description{" "}
+                                    <br />
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Voluptatibus reiciendis
+                                    itaque rerum nisi dolorum in perferendis nam
+                                    illum corporis deleniti at dolores et,
+                                    tenetur eligendi ipsa consequatur dolore
+                                    odio vitae!
+                                </h3>
+                            </div>
+                            <h3 className="order-assets">Project Assets: </h3>
+                        </div>
+                    </div>
                 </div>
             </PageTemplate>
         </>
