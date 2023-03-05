@@ -7,6 +7,7 @@ import { DoughnutChart } from "../../components/DoughnutChart";
 import "../../components/css/track-order.css";
 import { RootState } from "../../redux/store";
 import { useSelector } from "react-redux";
+import { AoBarChart } from "../../components/AoBarChart";
 
 const TrackOrder = () => {
     const {
@@ -27,6 +28,9 @@ const TrackOrder = () => {
         aoActiveStatus,
         aoPaymentStatus,
         aoOrderCount,
+        aoFrontendProgress,
+        aoBackendProgress,
+        aoDesignProgress,
     } = useSelector((state: RootState) => state.order);
     useEffect(() => {});
     return (
@@ -58,7 +62,12 @@ const TrackOrder = () => {
                     }`}
                 >
                     <div className="bar-chart">
-                        <BarChart />
+                        {/* <BarChart /> */}
+                        <AoBarChart
+                            designData={aoDesignProgress}
+                            frontendData={aoFrontendProgress}
+                            backendData={aoBackendProgress}
+                        />
                     </div>
                     <div className="payment-area">
                         <div className="payment-status">

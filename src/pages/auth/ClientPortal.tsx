@@ -8,6 +8,9 @@ import PageTemplate from "../../components/PageTemplate";
 import { setOrderCount } from "../../redux/features/authSlice";
 import {
     setActiveStatus,
+    setAoBackendProgress,
+    setAoDesignProgress,
+    setAoFrontendProgress,
     setAoOrderCompletionStatus,
     setAoOrderCount,
     setAoOrderCreatedAt,
@@ -107,6 +110,9 @@ const ClientsPortal = () => {
                 dispatch(setAoOrderCreatedAt(data.created_at));
                 dispatch(setAoOrderDueDate(data.due_date));
                 dispatch(setAoOrderUpdatedAt(data.updated_at));
+                dispatch(setAoFrontendProgress(data.frontend_percentage));
+                dispatch(setAoBackendProgress(data.backend_percentage));
+                dispatch(setAoDesignProgress(data.design_percentage));
             }
         }
     }, [data, isSuccess, dispatch]);

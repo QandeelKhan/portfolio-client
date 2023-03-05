@@ -44,6 +44,9 @@ const initialState = {
     aoOrderDueDate: "",
     orderUpdatedAt: "",
     aoOrderUpdatedAt: "",
+    aoFrontendProgress: 0,
+    aoBackendProgress: 0,
+    aoDesignProgress: 0,
     orderIsLoading: false,
     orderError: null,
 };
@@ -130,6 +133,15 @@ const slice = createSlice({
         setAoOrderUpdatedAt: (state, action) => {
             state.aoOrderUpdatedAt = action.payload;
         },
+        setAoFrontendProgress: (state, action) => {
+            state.aoFrontendProgress = action.payload;
+        },
+        setAoBackendProgress: (state, action) => {
+            state.aoBackendProgress = action.payload;
+        },
+        setAoDesignProgress: (state, action) => {
+            state.aoDesignProgress = action.payload;
+        },
         setOrderIsLoading: (state, action) => {
             state.orderIsLoading = action.payload;
         },
@@ -166,6 +178,9 @@ export const {
     setAoOrderDueDate,
     setOrderUpdatedAt,
     setAoOrderUpdatedAt,
+    setAoFrontendProgress,
+    setAoBackendProgress,
+    setAoDesignProgress,
     setOrderIsLoading,
     setOrderError,
 } = slice.actions;
