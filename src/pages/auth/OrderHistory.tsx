@@ -56,47 +56,68 @@ const OrderHistory = () => {
                 <h1>You have {orderCount} order</h1>
                 <div className="order-history-container">
                     <div className="order-container">
-                        <div className="order">
-                            <div className="order-details">
-                                <h3>project Name: Our Demo Project</h3>
-                                <h3>
-                                    project Description: Our Demo description{" "}
-                                    <br />
+                        <div className="order-details">
+                            <div className="project-name">
+                                <span>Project Name</span>:{" "}
+                                <span>Our Demo Project</span>
+                            </div>
+                            <div className="project-desc">
+                                <span>Project Description</span>:{" "}
+                                <span>
                                     Lorem ipsum dolor sit amet consectetur
                                     adipisicing elit. Voluptatibus reiciendis
                                     itaque rerum nisi dolorum in perferendis nam
                                     illum corporis deleniti at dolores et,
                                     tenetur eligendi ipsa consequatur dolore
                                     odio vitae!
-                                </h3>
-                                <br />
-                                <h3>Ordered At: 10/10/2022</h3>
-                                <br />
-                                <h3>Completed At: 10/10/2022</h3>
+                                </span>
                             </div>
-                            <h3 className="order-assets">Project Assets: </h3>
+                            <div className="order-date">
+                                <span>Ordered At</span>: <span>10/10/2022</span>
+                            </div>
+                            <div className="complete-date">
+                                <span>Completed At</span>:{" "}
+                                <span>10/10/2022</span>
+                            </div>
+                        </div>
+                        <div className="history-source-code">
+                            <span>Project Assets</span>
+                            <a href="/">Frontend Source Code</a>
+                            <a href="/">Backend Source Code</a>
+                            <a href="/">Design</a>
                         </div>
                     </div>
                     <div className="order-container">
-                        <div className="order">
-                            <div className="order-details">
-                                <h3>project Name: Our Demo Project</h3>
-                                <h3>
-                                    project Description: Our Demo description{" "}
-                                    <br />
+                        <div className="order-details">
+                            <div className="project-name">
+                                <span>Project Name</span>:{" "}
+                                <span>Our Demo Project</span>
+                            </div>
+                            <div className="project-desc">
+                                <span>Project Description</span>:{" "}
+                                <span>
                                     Lorem ipsum dolor sit amet consectetur
                                     adipisicing elit. Voluptatibus reiciendis
                                     itaque rerum nisi dolorum in perferendis nam
                                     illum corporis deleniti at dolores et,
                                     tenetur eligendi ipsa consequatur dolore
                                     odio vitae!
-                                </h3>
-                                <br />
-                                <h3>Ordered At: 10/10/2022</h3>
-                                <br />
-                                <h3>Completed At: 10/10/2022</h3>
+                                </span>
                             </div>
-                            <h3 className="order-assets">Project Assets: </h3>
+
+                            <div className="order-date">
+                                <span>Ordered At</span>: <span>10/10/2022</span>
+                            </div>
+                            <div className="complete-date">
+                                <span>Completed At</span>:{" "}
+                                <span>10/10/2022</span>
+                            </div>
+                        </div>
+                        <div className="history-source-code">
+                            <span>Project Assets</span>
+                            <a href="/">Frontend Source Code</a>
+                            <a href="/">Backend Source Code</a>
+                            <a href="/">Design</a>
                         </div>
                     </div>
                 </div>
