@@ -58,11 +58,15 @@ const OrderHistory = () => {
                     <div className="order-container">
                         <div className="order-details">
                             <div className="project-name">
-                                <span>Project Name</span>:{" "}
+                                <span className="border">Project Name</span>:{" "}
                                 <span>Our Demo Project</span>
                             </div>
                             <div className="project-desc">
-                                <span>Project Description</span>:{" "}
+                                <div className="pro-desc border">
+                                    <span>Project </span>{" "}
+                                    <span>Description</span>
+                                </div>
+                                :
                                 <span>
                                     Lorem ipsum dolor sit amet consectetur
                                     adipisicing elit. Voluptatibus reiciendis
