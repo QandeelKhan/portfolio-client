@@ -56,54 +56,57 @@ const TrackOrder = () => {
                     You have {aoActiveStatus ? `${aoOrderCount}` : "no"} active
                     order
                 </h1>
+
                 <div
-                    className={`charts-container ${
-                        !aoActiveStatus ? "charts-container-inactive" : ""
+                    className={`ao-container ${
+                        !aoActiveStatus ? "ao-container-inactive" : ""
                     }`}
                 >
-                    <div className="bar-chart">
-                        {/* <BarChart /> */}
-                        <AoBarChart
-                            designData={aoDesignProgress}
-                            frontendData={aoFrontendProgress}
-                            backendData={aoBackendProgress}
-                        />
-                    </div>
-                    <div className="payment-area">
-                        <div className="payment-status">
-                            <span className="payment-text">
-                                Payment Status{" "}
-                            </span>
-                            :
-                            <span className="status-text">
-                                {" "}
-                                {aoPaymentStatus}
-                            </span>
+                    <div className="charts-container">
+                        <div className="bar-chart">
+                            {/* <BarChart /> */}
+                            <AoBarChart
+                                designData={aoDesignProgress}
+                                frontendData={aoFrontendProgress}
+                                backendData={aoBackendProgress}
+                            />
                         </div>
-
-                        <div className="source-buttons">
-                            <a href="">Frontend Source Code</a>
-                            <a href="">Backend Source Code</a>
-                            <a href="">Design</a>
+                        <div className="payment-area">
+                            <div className="payment-status">
+                                <span className="payment-text">
+                                    Payment Status{" "}
+                                </span>
+                                :
+                                <span className="status-text">
+                                    {" "}
+                                    {aoPaymentStatus}
+                                </span>
+                            </div>
+                            <div className="source-buttons">
+                                <a href="">Frontend Source Code</a>
+                                <a href="">Backend Source Code</a>
+                                <a href="">Design</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="modification-area">
-                    <a href="/">Need Modification?</a>
-                </div>
-                <div className="modification-desc">
-                    <div className="label-text-area">
-                        <label className="text-area-label">Description</label>
-                        <textarea required name="message" />
+                    <div className="modification-area">
+                        <a href="/">Need Modification?</a>
                     </div>
-
-                    <button
-                        type="submit"
-                        className="send-message-btn"
-                        value="Send Message"
-                    >
-                        SEND MESSAGE
-                    </button>
+                    <div className="modification-desc">
+                        <div className="label-text-area">
+                            <label className="text-area-label">
+                                Description
+                            </label>
+                            <textarea required name="message" />
+                        </div>
+                        <button
+                            type="submit"
+                            className="send-message-btn"
+                            value="Send Message"
+                        >
+                            SEND MESSAGE
+                        </button>
+                    </div>
                 </div>
             </PageTemplate>
             {/* <h1 style={{ textAlign: "center" }}>Track Your Order..</h1> */}

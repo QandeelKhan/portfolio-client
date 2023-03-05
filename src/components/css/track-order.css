@@ -1,15 +1,24 @@
-.charts-container {
+.ao-container {
     height: 100vh;
+    width: 100%;
+    /* overflow-y: hidden; */
+}
+
+.ao-container-inactive {
+    opacity: 40%;
+}
+
+.charts-container {
+    height: 100%;
     width: 100%;
     display: flex;
     /* flex-direction: column; */
     justify-content: space-between;
     align-items: start;
     flex-wrap: wrap;
+    
 }
-.charts-container-inactive {
-    opacity: 40%;
-}
+
 .bar-chart {
     width: 75%;
     height: 100vh;
