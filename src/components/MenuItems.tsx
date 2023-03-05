@@ -7,6 +7,7 @@ import {
     EnvelopeIcon,
     SyncIcon,
 } from "./data/iconsIndex";
+import DiceIcon from "./icons/CPModeIcons/DiceIcon";
 
 export const ResumeModeMenuItems = [
     {
@@ -72,8 +73,8 @@ export const CPModeMenuItems = [
         title: "ORDER HISTORY",
         cName: "anchor",
         path: "/",
-        icon: <SyncIcon />,
-        navigateTo: "/track-order",
+        icon: <DiceIcon />,
+        navigateTo: "/order-history",
     },
     {
         title: "CONTACT",

@@ -6,7 +6,7 @@ const DiceIcon = (props: any) => (
         height={20}
         {...props}
         viewBox="0 0 20 20"
-        className="power-icon"
+        className="nav-icon"
         fill="white"
         // fill="currentColor"
     >

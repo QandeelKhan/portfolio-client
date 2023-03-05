@@ -21,6 +21,7 @@ import { useSelector } from "react-redux";
 import ClientsPortal from "./pages/auth/ClientPortal";
 import PlaceOrder from "./pages/auth/PlaceOrder";
 import TrackOrder from "./pages/auth/TrackOrder";
+import OrderHistory from "./pages/auth/OrderHistory";
 
 function App() {
     const { access_token } = useSelector((state: RootState) => state.auth);
@@ -75,6 +76,16 @@ function App() {
                         element={
                             access_token ? (
                                 <TrackOrder />
+                            ) : (
+                                <Navigate to="/login" />
+                            )
+                        }
+                    />
+                    <Route
+                        path="/order-history"
+                        element={
+                            access_token ? (
+                                <OrderHistory />
                             ) : (
                                 <Navigate to="/login" />
                             )
