@@ -69,6 +69,13 @@ export const CPModeMenuItems = [
         navigateTo: "/track-order",
     },
     {
+        title: "ORDER HISTORY",
+        cName: "anchor",
+        path: "/",
+        icon: <SyncIcon />,
+        navigateTo: "/track-order",
+    },
+    {
         title: "CONTACT",
         cName: "anchor",
         path: "/",
