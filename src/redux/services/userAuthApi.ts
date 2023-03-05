@@ -63,6 +63,20 @@ export const userAuthApi = userAuthApiExtended.injectEndpoints({
                 };
             },
         }),
+        updateUserProfile: builder.mutation({
+            query: (user) => {
+                return {
+                    url: "user/profile/",
+                    method: "PATCH",
+                    // sending a "user" obj containing login/register fields data to the backend
+                    body: user,
+                    // if we want to pass headers as well,i.e application/json so in future we can pass token
+                    headers: {
+                        "content-type": "application/json",
+                    },
+                };
+            },
+        }),
         getLoggedUser: builder.query({
             query: (access_token) => {
                 // console.log(access_token); : if we don't type below code in "return{}" statement then we cannot
@@ -76,19 +90,6 @@ export const userAuthApi = userAuthApiExtended.injectEndpoints({
                 };
             },
         }),
-        updateUserProfile: builder.mutation({
-            query: ({ access_token, body }) => {
-                return {
-                    url: "user/profile/",
-                    method: "PATCH",
-                    headers: {
-                        authorization: `Bearer ${access_token}`,
-                    },
-                    body,
-                };
-            },
-        }),
-
         getLoggedUserOrders: builder.query({
             query: (access_token) => {
                 // console.log(access_token); : if we don't type below code in "return{}" statement then we cannot

@@ -36,7 +36,7 @@ const slice = createSlice({
             state.email = action.payload;
         },
         setProfileImage: (state, action) => {
-            state.email = action.payload;
+            state.profileImage = action.payload;
         },
         setStaffStatus: (state, action) => {
             state.staffUser = action.payload;

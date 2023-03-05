@@ -3,13 +3,18 @@ import { ChangeEvent, useState } from "react";
 import { getToken } from "../../redux/services/localStorageService";
 import "../css/profile-update-form.css";
 import { useDispatch } from "react-redux";
-import { setProfileImage } from "../../redux/features/authSlice";
+import {
+    setFirstName,
+    setLastName,
+    setProfileImage,
+} from "../../redux/features/authSlice";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
 
 const ProfileUpdateForm = () => {
     const [file, setFile] = useState<File | null>(null);
-    const [firstName, setFirstName] = useState<string>("");
-    const [lastName, setLastName] = useState<string>("");
     const [imagePreview, setImagePreview] = useState<string | null>(null);
+    const [body, setBody] = useState<any>("");
 
     const { access_token, refresh_token } = getToken();
     const [updateUserProfile, { isLoading, isSuccess, isError }] =
@@ -25,12 +30,22 @@ const ProfileUpdateForm = () => {
         );
     };
 
+    const {
+        firstName,
+        lastName,
+        email,
+        id,
+        loggedIn,
+        staffUser,
+        profileImage,
+    } = useSelector((state: RootState) => state.auth);
+
     const handleFirstNameChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setFirstName(e.target.value);
+        dispatch(setFirstName(e.target.value));
     };
 
     const handleLastNameChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setLastName(e.target.value);
+        dispatch(setLastName(e.target.value));
     };
 
     const dispatch = useDispatch();
@@ -40,6 +55,7 @@ const ProfileUpdateForm = () => {
         const formData = new FormData();
         if (file) {
             formData.append("profile_image", file);
+            dispatch(setProfileImage(imagePreview));
         }
         if (firstName) {
             formData.append("first_name", firstName);
@@ -56,10 +72,7 @@ const ProfileUpdateForm = () => {
                 {imagePreview ? (
                     <img src={imagePreview} alt="Selected profile" />
                 ) : (
-                    <img
-                        src="default-profile-image.jpg"
-                        alt="Default profile"
-                    />
+                    <img src={`${profileImage}`} alt="Default profile" />
                 )}
                 <input type="file" onChange={handleFileChange} />
             </div>

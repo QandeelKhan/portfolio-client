@@ -92,6 +92,7 @@ const SideNav: React.FC = (props: any) => {
         <>
             <div className="toggle-mode">
                 <>{console.log(`click status ${clientPortalClicked}`)}</>
+                <>{console.log(`profile image is: ${profileImage}`)}</>
                 <div
                     className={`toggler-container ${
                         navVisible ? "toggler-clicked" : "toggler-unclicked"
