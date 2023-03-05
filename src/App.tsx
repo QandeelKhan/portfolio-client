@@ -22,6 +22,7 @@ import ClientsPortal from "./pages/auth/ClientPortal";
 import PlaceOrder from "./pages/auth/PlaceOrder";
 import TrackOrder from "./pages/auth/TrackOrder";
 import OrderHistory from "./pages/auth/OrderHistory";
+import Profile from "./pages/auth/Profile";
 
 function App() {
     const { access_token } = useSelector((state: RootState) => state.auth);
@@ -86,6 +87,17 @@ function App() {
                         element={
                             access_token ? (
                                 <OrderHistory />
+                            ) : (
+                                <Navigate to="/login" />
+                            )
+                        }
+                    />
+
+                    <Route
+                        path="/user-profile"
+                        element={
+                            access_token ? (
+                                <Profile />
                             ) : (
                                 <Navigate to="/login" />
                             )

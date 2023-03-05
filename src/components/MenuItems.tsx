@@ -56,6 +56,13 @@ export const ResumeModeMenuItems = [
 
 export const CPModeMenuItems = [
     {
+        title: "Profile",
+        cName: "anchor",
+        path: "/",
+        icon: <UserIcon />,
+        navigateTo: "/user-profile",
+    },
+    {
         title: "PLACE ORDER",
         cName: "anchor",
         path: "/",

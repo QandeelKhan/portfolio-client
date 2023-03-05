@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./css/side-nav.css";
-import { CPModeMenuItems, ResumeModeMenuItems } from "./MenuItems";
-import { Button } from "./Button";
 import UpworkIcon from "./icons/ResumeModeIcons/UpworkIcon";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
@@ -12,7 +10,7 @@ import {
 } from "../redux/reducers/eventsSlice";
 import { unSetUserToken } from "../redux/features/authSlice";
 import { removeToken } from "../redux/services/localStorageService";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
