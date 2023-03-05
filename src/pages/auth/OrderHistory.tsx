@@ -69,6 +69,10 @@ const OrderHistory = () => {
                                     tenetur eligendi ipsa consequatur dolore
                                     odio vitae!
                                 </h3>
+                                <br />
+                                <h3>Ordered At: 10/10/2022</h3>
+                                <br />
+                                <h3>Completed At: 10/10/2022</h3>
                             </div>
                             <h3 className="order-assets">Project Assets: </h3>
                         </div>
@@ -87,6 +91,10 @@ const OrderHistory = () => {
                                     tenetur eligendi ipsa consequatur dolore
                                     odio vitae!
                                 </h3>
+                                <br />
+                                <h3>Ordered At: 10/10/2022</h3>
+                                <br />
+                                <h3>Completed At: 10/10/2022</h3>
                             </div>
                             <h3 className="order-assets">Project Assets: </h3>
                         </div>
