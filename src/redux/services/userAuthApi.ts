@@ -12,6 +12,21 @@ import { userAuthApiExtended } from "./userAuthApiExtended";
 import { getToken, removeToken, storeToken } from "./localStorageService";
 import { setSelectedPost } from "../dataSlice";
 
+export interface UpdatedUserProfileResponse {
+    id: number;
+    first_name: string;
+    last_name: string;
+    email: string;
+    profile_image: string;
+}
+
+export interface UpdatedUserProfileRequest {
+    first_name?: string;
+    last_name?: string;
+    email?: string;
+    profile_image?: File;
+}
+
 // fetchBaseQuery: is fetch wrapper, automatically handle request headers and response parsing similar to axios.
 const baseQuery = fetchBaseQuery({
     baseUrl: "https://our-resume-backend-azr8u.ondigitalocean.app/api/",
@@ -61,6 +76,19 @@ export const userAuthApi = userAuthApiExtended.injectEndpoints({
                 };
             },
         }),
+        updateUserProfile: builder.mutation({
+            query: ({ access_token, body }) => {
+                return {
+                    url: "user/profile/",
+                    method: "PATCH",
+                    headers: {
+                        authorization: `Bearer ${access_token}`,
+                    },
+                    body,
+                };
+            },
+        }),
+
         getLoggedUserOrders: builder.query({
             query: (access_token) => {
                 // console.log(access_token); : if we don't type below code in "return{}" statement then we cannot
@@ -199,6 +227,7 @@ export const {
     useResetPasswordMutation,
     useLogoutUserMutation,
     useGetBlogPostsQuery,
+    useUpdateUserProfileMutation,
 } = userAuthApi;
 
 // const refreshResult = await baseQuery(
