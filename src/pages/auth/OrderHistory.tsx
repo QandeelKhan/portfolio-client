@@ -4,10 +4,11 @@ import AboutUserIcon from "../../components/icons/ResumeModeIcons/AboutUser";
 import PageTemplate from "../../components/PageTemplate";
 import { BarChart } from "../../components/BarChart";
 import { DoughnutChart } from "../../components/DoughnutChart";
-import "../../components/css/track-order.css";
+import "../../components/css/order-history.css";
 import { RootState } from "../../redux/store";
 import { useSelector } from "react-redux";
 import { AoBarChart } from "../../components/AoBarChart";
+import OrderHistoryIcon from "../../components/icons/CPModeIcons/OrderHistoryIcon";
 
 const OrderHistory = () => {
     const {
@@ -48,68 +49,32 @@ const OrderHistory = () => {
             </Helmet>
 
             <PageTemplate
-                iconComponent={<AboutUserIcon />}
-                pageName="Track Your Order."
+                iconComponent={<OrderHistoryIcon />}
+                pageName="Your Ordered Projects History."
             >
                 {console.log(`${aoActiveStatus} active status`)}
-                <h1>
-                    You have {aoActiveStatus ? `${aoOrderCount}` : "no"} active
-                    order
-                </h1>
-
-                <div
-                    className={`ao-container ${
-                        !aoActiveStatus ? "ao-container-inactive" : ""
-                    }`}
-                >
-                    <div className="charts-container">
-                        <div className="bar-chart">
-                            {/* <BarChart /> */}
-                            <AoBarChart
-                                designData={aoDesignProgress}
-                                frontendData={aoFrontendProgress}
-                                backendData={aoBackendProgress}
-                            />
-                        </div>
-                        <div className="payment-area">
-                            <div className="payment-status">
-                                <span className="payment-text">
-                                    Payment Status{" "}
-                                </span>
-                                :
-                                <span className="status-text">
-                                    {" "}
-                                    {aoPaymentStatus}
-                                </span>
+                <h1>You have {orderCount} order</h1>
+                <div className="order-history-container">
+                    <div className="order-container">
+                        <div className="order">
+                            <div className="order-details">
+                                <h3>project Name: Our Demo Project</h3>
+                                <h3>
+                                    project Description: Our Demo description{" "}
+                                    <br />
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Voluptatibus reiciendis
+                                    itaque rerum nisi dolorum in perferendis nam
+                                    illum corporis deleniti at dolores et,
+                                    tenetur eligendi ipsa consequatur dolore
+                                    odio vitae!
+                                </h3>
                             </div>
-                            <div className="source-buttons">
-                                <a href="">Frontend Source Code</a>
-                                <a href="">Backend Source Code</a>
-                                <a href="">Design</a>
-                            </div>
+                            <h3 className="order-assets">Project Assets: </h3>
                         </div>
-                    </div>
-                    <div className="modification-area">
-                        <a href="/">Need Modification?</a>
-                    </div>
-                    <div className="modification-desc">
-                        <div className="label-text-area">
-                            <label className="text-area-label">
-                                Description
-                            </label>
-                            <textarea required name="message" />
-                        </div>
-                        <button
-                            type="submit"
-                            className="send-message-btn"
-                            value="Send Message"
-                        >
-                            SEND MESSAGE
-                        </button>
                     </div>
                 </div>
             </PageTemplate>
-            {/* <h1 style={{ textAlign: "center" }}>Track Your Order..</h1> */}
         </>
     );
 };

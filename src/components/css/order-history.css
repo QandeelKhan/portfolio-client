@@ -1,0 +1,39 @@
+.order-history-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.order-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    height: 50%;
+    width: 90%;
+}
+.order {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid black;
+    height: 90%;
+    width: 90%;
+}
+
+.order-details {
+    height: 100%;
+    margin: 5px;
+    border: 1px solid black;
+}
+
+.order-assets {
+    width: 60%;
+    height: 100%;
+    margin: 5px;
+    border: 1px solid black;
+}
