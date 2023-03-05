@@ -2,6 +2,8 @@ import { useUpdateUserProfileMutation } from "../../redux/services/userAuthApi";
 import { ChangeEvent, useState } from "react";
 import { getToken } from "../../redux/services/localStorageService";
 import "../css/profile-update-form.css";
+import { useDispatch } from "react-redux";
+import { setProfileImage } from "../../redux/features/authSlice";
 
 const ProfileUpdateForm = () => {
     const [file, setFile] = useState<File | null>(null);
@@ -31,6 +33,8 @@ const ProfileUpdateForm = () => {
         setLastName(e.target.value);
     };
 
+    const dispatch = useDispatch();
+
     const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const formData = new FormData();
@@ -53,7 +57,7 @@ const ProfileUpdateForm = () => {
                     <img src={imagePreview} alt="Selected profile" />
                 ) : (
                     <img
-                        src="default-profile-image.png"
+                        src="default-profile-image.jpg"
                         alt="Default profile"
                     />
                 )}
