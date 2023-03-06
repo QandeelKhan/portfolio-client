@@ -69,11 +69,13 @@ const ProfileUpdateForm = () => {
     return (
         <form onSubmit={handleFormSubmit} className="profile-form">
             <div className="img-profile-box">
-                {imagePreview ? (
-                    <img src={imagePreview} alt="Selected profile" />
-                ) : (
-                    <img src={`${profileImage}`} alt="Default profile" />
-                )}
+                <div className="update-profile-img-container">
+                    {imagePreview ? (
+                        <img src={imagePreview} alt="Selected profile" />
+                    ) : (
+                        <img src={`${profileImage}`} alt="Default profile" />
+                    )}
+                </div>
                 <input type="file" onChange={handleFileChange} />
             </div>
             <div className="fname-profile">
