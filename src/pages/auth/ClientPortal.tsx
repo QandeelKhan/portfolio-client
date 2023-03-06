@@ -34,6 +34,7 @@ import {
     setProjectName,
     setTotalPrice,
 } from "../../redux/features/orderSlice";
+import { setAllOrders } from "../../redux/features/ordersSlice";
 import {
     getToken,
     removeToken,
@@ -93,6 +94,8 @@ const ClientsPortal = () => {
             dispatch(setOrderCreatedAt(data.created_at));
             dispatch(setOrderDueDate(data.due_date));
             dispatch(setOrderUpdatedAt(data.updated_at));
+            dispatch(setAllOrders(data));
+
             const activeOrders = data.filter(
                 (order: any) => order.active_status === true
             );

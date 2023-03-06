@@ -33,6 +33,7 @@ const OrderHistory = () => {
         aoBackendProgress,
         aoDesignProgress,
     } = useSelector((state: RootState) => state.order);
+    const { allOrders } = useSelector((state: RootState) => state.orders);
     useEffect(() => {});
     return (
         <>
@@ -55,6 +56,8 @@ const OrderHistory = () => {
                 {console.log(`${aoActiveStatus} active status`)}
                 <h1 className="order-head">You have {orderCount} order</h1>
                 <div className="order-history-container">
+                    {/* {allOrders.map((order:any) => (
+                    ))} */}
                     <div className="order-container">
                         <div className="order-details">
                             <div className="project-name">

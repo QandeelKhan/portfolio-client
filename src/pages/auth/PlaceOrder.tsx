@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import AboutUserIcon from "../../components/icons/ResumeModeIcons/AboutUser";
 import PageTemplate from "../../components/PageTemplate";
+import "../css/place-order.css";
 
 const PlaceOrder = () => {
     return (
@@ -21,8 +22,13 @@ const PlaceOrder = () => {
             <PageTemplate
                 iconComponent={<AboutUserIcon />}
                 pageName="Place Your Order Please."
-            ></PageTemplate>
-            <h1 style={{ textAlign: "center" }}>Place Your Order Please.</h1>
+            >
+                <div className="place-order-container">
+                    <h1 style={{ textAlign: "center" }}>
+                        Place Your Order Please.
+                    </h1>
+                </div>
+            </PageTemplate>
         </>
     );
 };
