@@ -36,6 +36,7 @@ const baseQuery = fetchBaseQuery({
         if (access_token) {
             headers.set("authorization", `Bearer ${access_token}`);
         }
+        headers.set("content-type", "application/json");
         return headers;
     },
 });
@@ -71,9 +72,9 @@ export const userAuthApi = userAuthApiExtended.injectEndpoints({
                     // sending a "user" obj containing login/register fields data to the backend
                     body: user,
                     // if we want to pass headers as well,i.e application/json so in future we can pass token
-                    headers: {
-                        "content-type": "application/json",
-                    },
+                    // headers: {
+                    //     "content-type": "application/json",
+                    // },
                 };
             },
         }),
