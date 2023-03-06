@@ -76,7 +76,11 @@ const ProfileUpdateForm = () => {
                         <img src={`${profileImage}`} alt="Default profile" />
                     )}
                 </div>
-                <input type="file" onChange={handleFileChange} />
+                <input
+                    type="file"
+                    onChange={handleFileChange}
+                    className="choose-img"
+                />
             </div>
             <div className="fname-profile">
                 <label htmlFor="first-name-input">First Name:</label>

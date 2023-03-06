@@ -1,3 +1,8 @@
 .profile-container {
     height: 100vh;
+    margin-top: 20px;
+}
+.choose-img {
+    color: white;
+    background: transparent;
 }
