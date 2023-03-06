@@ -53,3 +53,7 @@
         margin-top: 60px;
     }
 }
+
+.page-template-children {
+    height: 100vh;
+}

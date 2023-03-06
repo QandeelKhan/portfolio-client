@@ -139,19 +139,17 @@ const ClientsPortal = () => {
                 />
             </Helmet>
 
-            <PageTemplate
-                iconComponent={<AboutUserIcon />}
-                pageName="Blog."
-            ></PageTemplate>
-            <h1 style={{ textAlign: "center" }}>
-                Welcome to Client Portal {firstName} {lastName}!
-            </h1>
-            {console.log(data)}
-            <h1 style={{ textAlign: "center" }}>
-                you have {orderCount} orders!
-            </h1>
-            <br />
-            <h1 style={{ textAlign: "center" }}>& orders!</h1>
+            <PageTemplate iconComponent={<AboutUserIcon />} pageName="Blog.">
+                <h1 style={{ textAlign: "center" }}>
+                    Welcome to Client Portal {firstName} {lastName}!
+                </h1>
+                {console.log(data)}
+                <h1 style={{ textAlign: "center" }}>
+                    you have {orderCount} orders!
+                </h1>
+                <br />
+                <h1 style={{ textAlign: "center" }}>& orders!</h1>
+            </PageTemplate>
         </>
     );
 };
