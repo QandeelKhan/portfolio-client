@@ -53,7 +53,7 @@ const OrderHistory = () => {
                 pageName="Your Ordered Projects History."
             >
                 {console.log(`${aoActiveStatus} active status`)}
-                <h1>You have {orderCount} order</h1>
+                <h1 className="order-head">You have {orderCount} order</h1>
                 <div className="order-history-container">
                     <div className="order-container">
                         <div className="order-details">
@@ -62,11 +62,8 @@ const OrderHistory = () => {
                                 <span>Our Demo Project</span>
                             </div>
                             <div className="project-desc">
-                                <div className="pro-desc border">
-                                    <span>Project </span>{" "}
-                                    <span>Description</span>
-                                </div>
-                                :
+                                <span className="border">Project </span>{" "}
+                                <span className="border">Description</span> :{" "}
                                 <span>
                                     Lorem ipsum dolor sit amet consectetur
                                     adipisicing elit. Voluptatibus reiciendis
@@ -76,16 +73,19 @@ const OrderHistory = () => {
                                     odio vitae!
                                 </span>
                             </div>
-                            <div className="order-date">
-                                <span>Ordered At</span>: <span>10/10/2022</span>
+                            <div className="order-date ">
+                                <span className="border">Ordered At</span> :{" "}
+                                <span>10/10/2022</span>
                             </div>
                             <div className="complete-date">
-                                <span>Completed At</span>:{" "}
+                                <span className="border">Completed At</span> :{" "}
                                 <span>10/10/2022</span>
                             </div>
                         </div>
                         <div className="history-source-code">
-                            <span>Project Assets</span>
+                            <span className="project-assets">
+                                Project Assets :
+                            </span>
                             <a href="/">Frontend Source Code</a>
                             <a href="/">Backend Source Code</a>
                             <a href="/">Design</a>
@@ -94,11 +94,12 @@ const OrderHistory = () => {
                     <div className="order-container">
                         <div className="order-details">
                             <div className="project-name">
-                                <span>Project Name</span>:{" "}
+                                <span className="border">Project Name</span>:{" "}
                                 <span>Our Demo Project</span>
                             </div>
                             <div className="project-desc">
-                                <span>Project Description</span>:{" "}
+                                <span className="border">Project </span>{" "}
+                                <span className="border">Description</span> :{" "}
                                 <span>
                                     Lorem ipsum dolor sit amet consectetur
                                     adipisicing elit. Voluptatibus reiciendis
@@ -108,17 +109,19 @@ const OrderHistory = () => {
                                     odio vitae!
                                 </span>
                             </div>
-
-                            <div className="order-date">
-                                <span>Ordered At</span>: <span>10/10/2022</span>
+                            <div className="order-date ">
+                                <span className="border">Ordered At</span> :{" "}
+                                <span>10/10/2022</span>
                             </div>
                             <div className="complete-date">
-                                <span>Completed At</span>:{" "}
+                                <span className="border">Completed At</span> :{" "}
                                 <span>10/10/2022</span>
                             </div>
                         </div>
                         <div className="history-source-code">
-                            <span>Project Assets</span>
+                            <span className="project-assets">
+                                Project Assets :
+                            </span>
                             <a href="/">Frontend Source Code</a>
                             <a href="/">Backend Source Code</a>
                             <a href="/">Design</a>

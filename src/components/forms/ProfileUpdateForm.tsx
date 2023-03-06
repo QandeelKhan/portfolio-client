@@ -67,8 +67,8 @@ const ProfileUpdateForm = () => {
     };
 
     return (
-        <form onSubmit={handleFormSubmit}>
-            <div>
+        <form onSubmit={handleFormSubmit} className="profile-form">
+            <div className="img-profile-box">
                 {imagePreview ? (
                     <img src={imagePreview} alt="Selected profile" />
                 ) : (
@@ -76,7 +76,7 @@ const ProfileUpdateForm = () => {
                 )}
                 <input type="file" onChange={handleFileChange} />
             </div>
-            <div>
+            <div className="fname-profile">
                 <label htmlFor="first-name-input">First Name:</label>
                 <input
                     type="text"
@@ -85,7 +85,7 @@ const ProfileUpdateForm = () => {
                     onChange={handleFirstNameChange}
                 />
             </div>
-            <div>
+            <div className="lname-profile">
                 <label htmlFor="last-name-input">Last Name:</label>
                 <input
                     type="text"
@@ -94,7 +94,11 @@ const ProfileUpdateForm = () => {
                     onChange={handleLastNameChange}
                 />
             </div>
-            <button type="submit" disabled={isLoading}>
+            <button
+                type="submit"
+                disabled={isLoading}
+                className="update-profile-btn"
+            >
                 {isLoading ? "Updating..." : "Update Profile"}
             </button>
             {isSuccess && <div>Profile updated successfully.</div>}
