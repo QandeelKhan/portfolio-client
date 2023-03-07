@@ -51,20 +51,6 @@ const PlaceOrderForm = () => {
                 </select>
             </label>
 
-            <label>
-                Order Type:
-                <select
-                    name="order_type"
-                    value={order.order_type}
-                    onChange={handleInputChange}
-                >
-                    <option value="">Select Order Type</option>
-                    <option value="e-commerce">E-commerce</option>
-                    <option value="blog">Blog</option>
-                    <option value="custom">Custom</option>
-                </select>
-            </label>
-
             <label className="project-name">
                 Project Name:
                 <input
