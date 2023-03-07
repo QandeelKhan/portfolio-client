@@ -39,13 +39,16 @@ const PlaceOrderForm = () => {
         <form onSubmit={handleSubmit} className="place-order-form">
             <label className="order-type">
                 Order Type:
-                <input
-                    type="text"
+                <select
                     name="order_type"
                     value={order.order_type}
                     onChange={handleInputChange}
-                    required
-                />
+                >
+                    <option value="">Select Order Type</option>
+                    <option value="e-commerce">E-commerce</option>
+                    <option value="blog">Blog</option>
+                    <option value="custom">Custom</option>
+                </select>
             </label>
 
             <label>
