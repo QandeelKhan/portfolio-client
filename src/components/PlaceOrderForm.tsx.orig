@@ -36,8 +36,13 @@ const PlaceOrderForm = () => {
     };
 
     return (
+<<<<<<< HEAD
+        <form onSubmit={handleSubmit}>
+            {/* <label>
+=======
         <form onSubmit={handleSubmit} className="place-order-form">
             <label className="order-type">
+>>>>>>> 167fccf547cb29412da4b631d30546fe467effc1
                 Order Type:
                 <input
                     type="text"
@@ -46,7 +51,7 @@ const PlaceOrderForm = () => {
                     onChange={handleInputChange}
                     required
                 />
-            </label>
+            </label> */}
 
             <label>
                 Order Type:

@@ -1,3 +1,21 @@
 .place-order-container {
     height: 100vh;
+    width: 100%;
+}
+.place-order-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.order-type,
+.project-name,
+.project-description,
+.place-project-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 50%;
 }
