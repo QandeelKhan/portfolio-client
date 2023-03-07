@@ -94,7 +94,11 @@ const PlaceOrderForm = () => {
                 />
             </label>
 
-            <button type="submit" disabled={isLoading}>
+            <button
+                type="submit"
+                disabled={isLoading}
+                className="create-order-btn"
+            >
                 {isLoading ? "Loading..." : "Create Order"}
             </button>
 

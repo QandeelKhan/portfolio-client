@@ -22,3 +22,29 @@
     /* align-items: center; */
     width: 50%;
 }
+.place-order-form label {
+    color: white;
+}
+.place-order-form input {
+    height: 30px;
+    background: transparent;
+    border: 2px solid #999999;
+    color: white;
+    padding: 0px 10px;
+}
+.create-order-btn {
+    width: 150px;
+    height: 30px;
+    background: transparent;
+    border: 2px solid #04a4e4;
+    color: #04a4e4;
+}
+.create-order-btn:hover {
+    background-color: #04a4e4;
+    color: white;
+}
+.order-type select {
+    height: 30px;
+    background: transparent;
+    color: white;
+}
