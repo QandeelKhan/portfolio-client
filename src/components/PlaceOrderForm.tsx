@@ -80,7 +80,7 @@ const PlaceOrderForm = () => {
                 />
             </label>
 
-            <label>
+            <label className="total-price">
                 Total Price:
                 <input
                     type="number"
