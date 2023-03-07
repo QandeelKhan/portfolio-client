@@ -36,8 +36,8 @@ const PlaceOrderForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>
+        <form onSubmit={handleSubmit} className="place-order-form">
+            <label className="order-type">
                 Order Type:
                 <input
                     type="text"
@@ -48,7 +48,7 @@ const PlaceOrderForm = () => {
                 />
             </label>
 
-            <label>
+            <label className="project-name">
                 Project Name:
                 <input
                     type="text"
@@ -59,7 +59,7 @@ const PlaceOrderForm = () => {
                 />
             </label>
 
-            <label>
+            <label className="place-project-desc">
                 Project Description:
                 <textarea
                     name="project_description"
@@ -69,7 +69,7 @@ const PlaceOrderForm = () => {
                 />
             </label>
 
-            <label>
+            <label className="due-date">
                 Due Date:
                 <input
                     type="datetime-local"
