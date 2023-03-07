@@ -37,7 +37,7 @@ const PlaceOrderForm = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <label>
+            {/* <label>
                 Order Type:
                 <input
                     type="text"
@@ -46,6 +46,20 @@ const PlaceOrderForm = () => {
                     onChange={handleInputChange}
                     required
                 />
+            </label> */}
+
+            <label>
+                Order Type:
+                <select
+                    name="order_type"
+                    value={order.order_type}
+                    onChange={handleInputChange}
+                >
+                    <option value="">Select Order Type</option>
+                    <option value="e-commerce">E-commerce</option>
+                    <option value="blog">Blog</option>
+                    <option value="custom">Custom</option>
+                </select>
             </label>
 
             <label>
