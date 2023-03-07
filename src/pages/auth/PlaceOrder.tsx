@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import AboutUserIcon from "../../components/icons/ResumeModeIcons/AboutUser";
 import PageTemplate from "../../components/PageTemplate";
 import "../css/place-order.css";
+import PlaceOrderForm from "../../components/PlaceOrderForm";
 
 const PlaceOrder = () => {
     return (
@@ -27,6 +28,7 @@ const PlaceOrder = () => {
                     <h1 style={{ textAlign: "center" }}>
                         Place Your Order Please.
                     </h1>
+                    <PlaceOrderForm />
                 </div>
             </PageTemplate>
         </>
