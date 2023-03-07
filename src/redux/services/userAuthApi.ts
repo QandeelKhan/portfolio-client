@@ -104,6 +104,15 @@ export const userAuthApi = userAuthApiExtended.injectEndpoints({
                 };
             },
         }),
+        createOrder: builder.mutation({
+            query: (body) => {
+                return {
+                    url: "orders/",
+                    method: "POST",
+                    body: body,
+                };
+            },
+        }),
         loginUser: builder.mutation({
             // the data we want to send from our frontend to backend and we store that data in "user" named var and
             // then we send that to our backend api through api call
@@ -224,6 +233,7 @@ export const {
     useLoginUserMutation,
     useGetLoggedUserQuery,
     useGetLoggedUserOrdersQuery,
+    useCreateOrderMutation,
     useChangeUserPasswordMutation,
     useSendPasswordResetEmailMutation,
     useResetPasswordMutation,

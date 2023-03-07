@@ -9,6 +9,7 @@ import { RootState } from "../../redux/store";
 import { useSelector } from "react-redux";
 import { AoBarChart } from "../../components/AoBarChart";
 import OrderHistoryIcon from "../../components/icons/CPModeIcons/OrderHistoryIcon";
+import { ordersDataTypes } from "../../redux/features/ordersSlice";
 
 const OrderHistory = () => {
     const {
@@ -56,80 +57,41 @@ const OrderHistory = () => {
                 {console.log(`${aoActiveStatus} active status`)}
                 <h1 className="order-head">You have {orderCount} order</h1>
                 <div className="order-history-container">
-                    {/* {allOrders.map((order:any) => (
-                    ))} */}
-                    <div className="order-container">
-                        <div className="order-details">
-                            <div className="project-name">
-                                <span className="border">Project Name</span>:{" "}
-                                <span>Our Demo Project</span>
+                    {allOrders.map((order: ordersDataTypes) => (
+                        <div className="order-container">
+                            <div className="order-details">
+                                <div className="project-name">
+                                    <span className="border">Project Name</span>
+                                    : <span>{order.project_name}</span>
+                                </div>
+                                <div className="project-desc">
+                                    <span className="border">Project </span>{" "}
+                                    <span className="border">Description</span>{" "}
+                                    : <span>{order.project_description}</span>
+                                </div>
+                                <div className="order-date ">
+                                    <span className="border">Ordered At</span> :{" "}
+                                    <span>{order.created_at}</span>
+                                </div>
+                                <div className="complete-date">
+                                    <span className="border">Due Date</span> :{" "}
+                                    <span>{order.due_date}</span>
+                                </div>
+                                <div className="complete-date">
+                                    <span className="border">Last Update</span>{" "}
+                                    : <span>{order.updated_at}</span>
+                                </div>
                             </div>
-                            <div className="project-desc">
-                                <span className="border">Project </span>{" "}
-                                <span className="border">Description</span> :{" "}
-                                <span>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Voluptatibus reiciendis
-                                    itaque rerum nisi dolorum in perferendis nam
-                                    illum corporis deleniti at dolores et,
-                                    tenetur eligendi ipsa consequatur dolore
-                                    odio vitae!
+                            <div className="history-source-code">
+                                <span className="project-assets">
+                                    Project Assets :
                                 </span>
-                            </div>
-                            <div className="order-date ">
-                                <span className="border">Ordered At</span> :{" "}
-                                <span>10/10/2022</span>
-                            </div>
-                            <div className="complete-date">
-                                <span className="border">Completed At</span> :{" "}
-                                <span>10/10/2022</span>
+                                <a href="/">Frontend Source Code</a>
+                                <a href="/">Backend Source Code</a>
+                                <a href="/">Design</a>
                             </div>
                         </div>
-                        <div className="history-source-code">
-                            <span className="project-assets">
-                                Project Assets :
-                            </span>
-                            <a href="/">Frontend Source Code</a>
-                            <a href="/">Backend Source Code</a>
-                            <a href="/">Design</a>
-                        </div>
-                    </div>
-                    <div className="order-container">
-                        <div className="order-details">
-                            <div className="project-name">
-                                <span className="border">Project Name</span>:{" "}
-                                <span>Our Demo Project</span>
-                            </div>
-                            <div className="project-desc">
-                                <span className="border">Project </span>{" "}
-                                <span className="border">Description</span> :{" "}
-                                <span>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Voluptatibus reiciendis
-                                    itaque rerum nisi dolorum in perferendis nam
-                                    illum corporis deleniti at dolores et,
-                                    tenetur eligendi ipsa consequatur dolore
-                                    odio vitae!
-                                </span>
-                            </div>
-                            <div className="order-date ">
-                                <span className="border">Ordered At</span> :{" "}
-                                <span>10/10/2022</span>
-                            </div>
-                            <div className="complete-date">
-                                <span className="border">Completed At</span> :{" "}
-                                <span>10/10/2022</span>
-                            </div>
-                        </div>
-                        <div className="history-source-code">
-                            <span className="project-assets">
-                                Project Assets :
-                            </span>
-                            <a href="/">Frontend Source Code</a>
-                            <a href="/">Backend Source Code</a>
-                            <a href="/">Design</a>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </PageTemplate>
         </>

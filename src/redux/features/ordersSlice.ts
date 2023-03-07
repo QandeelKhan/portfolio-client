@@ -1,25 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-interface ordersDataTypes {
-    order_id: String;
+export interface ordersDataTypes {
+    order_id: string;
     order_count: number;
     order_type: string;
     completion_status: number;
     active_status: boolean;
     payment_status: string;
-    order_description: string;
+    description: string;
     project_description: string;
     project_name: string;
     total_price: number | any;
-    order_createdAt: string;
+    created_at: string;
     due_date: string;
     updated_at: string;
+    completed_at: string;
     orderIsLoading: false;
     orderError: null;
 }
 
-interface DataState {
-    allOrders: ordersDataTypes | null;
+export interface DataState {
+    allOrders: ordersDataTypes | null | any;
 }
 
 const initialState: DataState = {

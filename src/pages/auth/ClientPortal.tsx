@@ -87,14 +87,18 @@ const ClientsPortal = () => {
             dispatch(setOrderType(data.order_type));
             dispatch(setOrderCompletionStatus(data.status));
             dispatch(setOrderPaymentStatus(data.payment_status));
-            dispatch(setOrderDescription(data.description));
             dispatch(setProjectName(data.project_name));
             dispatch(setProjectDescription(data.project_description));
             dispatch(setTotalPrice(data.total_price));
             dispatch(setOrderCreatedAt(data.created_at));
             dispatch(setOrderDueDate(data.due_date));
             dispatch(setOrderUpdatedAt(data.updated_at));
+
+            // const mappedArray = Object.entries(data).map((myData: any) => (
+            //     <>{dispatch(setAllOrders(myData))}</>
+            // ));
             dispatch(setAllOrders(data));
+            // dispatch(setAllOrders(data));
 
             const activeOrders = data.filter(
                 (order: any) => order.active_status === true
@@ -106,7 +110,6 @@ const ClientsPortal = () => {
                 dispatch(setAoOrderType(data.order_type));
                 dispatch(setAoOrderCompletionStatus(data.status));
                 dispatch(setAoOrderPaymentStatus(activeOrders.payment_status));
-                dispatch(setAoOrderDescription(data.description));
                 dispatch(setAoProjectName(data.project_name));
                 dispatch(setAoProjectDescription(data.project_description));
                 dispatch(setAoTotalPrice(data.total_price));
