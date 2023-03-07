@@ -36,20 +36,22 @@ const PlaceOrderForm = () => {
     };
 
     return (
+<<<<<<< HEAD
+        <form onSubmit={handleSubmit}>
+            {/* <label>
+=======
         <form onSubmit={handleSubmit} className="place-order-form">
             <label className="order-type">
+>>>>>>> 167fccf547cb29412da4b631d30546fe467effc1
                 Order Type:
-                <select
+                <input
+                    type="text"
                     name="order_type"
                     value={order.order_type}
                     onChange={handleInputChange}
-                >
-                    <option value="">Select Order Type</option>
-                    <option value="e-commerce">E-commerce</option>
-                    <option value="blog">Blog</option>
-                    <option value="custom">Custom</option>
-                </select>
-            </label>
+                    required
+                />
+            </label> */}
 
             <label>
                 Order Type:
@@ -97,7 +99,7 @@ const PlaceOrderForm = () => {
                 />
             </label>
 
-            <label className="total-price">
+            <label>
                 Total Price:
                 <input
                     type="number"
