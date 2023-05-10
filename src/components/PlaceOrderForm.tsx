@@ -8,6 +8,8 @@ const PlaceOrderForm = () => {
         project_description: "",
         due_date: "",
         total_price: "",
+        zoom_meeting: "",
+        meeting_time: "",
     });
 
     const [createOrder, { isLoading, error }] = useCreateOrderMutation();
@@ -30,10 +32,20 @@ const PlaceOrderForm = () => {
                     project_description: "",
                     due_date: "",
                     total_price: "",
+                    zoom_meeting: "",
+                    meeting_time: "",
                 });
             })
             .catch((error) => console.error("Order creation failed", error));
     };
+
+    // Generate an array of timestamps for the next 6 days
+    const now = new Date();
+    const next6Days = Array.from({ length: 6 }, (_, i) => {
+        const date = new Date(now);
+        date.setDate(date.getDate() + i);
+        return date.getTime();
+    });
 
     return (
         <form onSubmit={handleSubmit} className="place-order-form">
@@ -89,6 +101,25 @@ const PlaceOrderForm = () => {
                     type="number"
                     name="total_price"
                     value={order.total_price}
+                    onChange={handleInputChange}
+                    required
+                />
+            </label>
+            <select
+                name="zoom_meeting"
+                value={order.zoom_meeting}
+                onChange={handleInputChange}
+            >
+                <option value="">Schedule a Zoom Meeting?</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <label className="meeting-time">
+                Meeting Time:
+                <input
+                    type="time"
+                    name="meeting_time"
+                    value={order.meeting_time}
                     onChange={handleInputChange}
                     required
                 />
