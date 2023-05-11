@@ -35,7 +35,7 @@ const About: React.FC = (props: any) => {
                     <div className="about-left-info">
                         <h3 className="ui-ux-designer">
                             {/* UI/UX Designer & Developer */}
-                            Full-tack Engineer & Author
+                            Full-Stack Engineer & Author
                         </h3>
                         <span className="uiux-dummy-text">
                             I am a Python and JavaScript developer with having
@@ -48,14 +48,21 @@ const About: React.FC = (props: any) => {
                             MVT/MVC (Model View Template/Controller) through
                             Django and DRF (Django rest framework) and have been
                             involved in maintaining versions of source code
-                            using git version control. I use a containerized
-                            system using Docker/Kubernetes for the portability
-                            of my web and mobile projects and deployment. When
-                            working on a new project, I like to speak with my
-                            clients to understand their needs and version of the
-                            project clearly. Thanks for going through my
-                            profile, looking forward to be working with you.
+                            using git version control. <br /> I use a
+                            containerized system using Docker/Kubernetes for the
+                            portability of my web and mobile projects and
+                            deployment. When working on a new project, I like to
+                            speak with my clients to understand their needs and
+                            version of the project clearly. <br /> Thank you so
+                            much for taking the time to review my profile. I
+                            look forward to the opportunity of working with you.
                             <br />
+                            {/* I am a Full-stack Engineer and Author with a Bachelor's degree in Computer Science (B.S.) from GC University Faisalabad. With over 4 years of software development experience, I specialize in Python and JavaScript development.
+
+On the front-end, I have expertise in JavaScript technologies, including ReactJS and React Native. For the back-end, I leverage Python technologies, particularly Django and Django REST Framework (DRF). I am well-versed in the MVT/MVC (Model View Template/Controller) architectural patterns. Additionally, I have hands-on experience with version control using Git.
+
+I adopt a containerized approach using Docker/Kubernetes to ensure the portability and seamless deployment of my web and mobile projects. When starting a new project, I prioritize effective communication with clients to gain a clear understanding of their requirements and project vision.
+ */}
                             <br />
                         </span>
                         <div className="signature-area">
