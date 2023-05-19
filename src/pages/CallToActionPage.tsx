@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import "./css/call-to-action.css";
-import { setCallToActionPageOpen } from "../redux/reducers/eventsSlice";
+import {
+    setCallToActionPageOpen,
+    setNavVisible,
+} from "../redux/reducers/eventsSlice";
 import { useDispatch } from "react-redux";
 
 const CallToActionPage = () => {
@@ -8,9 +11,11 @@ const CallToActionPage = () => {
 
     useEffect(() => {
         dispatch(setCallToActionPageOpen(true));
+        dispatch(setNavVisible(false));
 
         return () => {
             dispatch(setCallToActionPageOpen(false));
+            dispatch(setNavVisible(true));
         };
     }, [dispatch]);
 

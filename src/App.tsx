@@ -38,10 +38,10 @@ function App() {
                     />
                     <Route index element={<Home />} />
                     <Route path="/about" element={<About />} />
-                    <Route
+                    {/* <Route
                         path="/call-to-action"
                         element={<CallToActionPage />}
-                    />
+                    /> */}
                     <Route path="/resume" element={<Resume />} />
                     <Route path="/portfolio" element={<Portfolio />} />
                     <Route path="/blog" element={<Blog />} />
