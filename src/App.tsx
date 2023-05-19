@@ -23,6 +23,7 @@ import PlaceOrder from "./pages/auth/PlaceOrder";
 import TrackOrder from "./pages/auth/TrackOrder";
 import OrderHistory from "./pages/auth/OrderHistory";
 import Profile from "./pages/auth/Profile";
+import CallToActionPage from "./pages/CallToActionPage";
 
 function App() {
     const { access_token } = useSelector((state: RootState) => state.auth);
@@ -37,6 +38,10 @@ function App() {
                     />
                     <Route index element={<Home />} />
                     <Route path="/about" element={<About />} />
+                    <Route
+                        path="/call-to-action"
+                        element={<CallToActionPage />}
+                    />
                     <Route path="/resume" element={<Resume />} />
                     <Route path="/portfolio" element={<Portfolio />} />
                     <Route path="/blog" element={<Blog />} />

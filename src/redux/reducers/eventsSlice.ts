@@ -6,6 +6,7 @@ interface EventState {
     gearOpen: boolean;
     sideBarVisible: boolean;
     clientPortalClicked: boolean;
+    callToActionPageOpen: boolean;
 }
 
 const eventsState: EventState = {
@@ -18,6 +19,7 @@ const eventsState: EventState = {
     navVisible: true,
     gearOpen: false,
     clientPortalClicked: false,
+    callToActionPageOpen: false,
 };
 
 export const eventsSlice = createSlice({
@@ -38,6 +40,9 @@ export const eventsSlice = createSlice({
         },
         setClientPortalClicked: (state, action: { payload: boolean }) => {
             state.clientPortalClicked = action.payload;
+        },
+        setCallToActionPageOpen: (state, action) => {
+            state.callToActionPageOpen = action.payload;
         },
         // setCardClicked: (state, action) => {
         //     state.cardClicked = action.payload;
@@ -62,6 +67,7 @@ export const {
     // setCrossClicked,
     // setMyClassName,
     // setAnimate,
+    setCallToActionPageOpen,
     setGearOpen,
     setBlogCardClicked,
     setSideBarVisible,
