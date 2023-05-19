@@ -15,6 +15,8 @@ import {
     setProfileImage,
     setStaffStatus,
 } from "../redux/features/authSlice";
+// import WhatsAppButton from "../components/WhatsAppButton";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 const Home = () => {
     const dispatch = useDispatch();
