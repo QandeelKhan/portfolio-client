@@ -8,8 +8,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
   <link rel="manifest" href="favicon/site.webmanifest">
-  <!-- our-favicon -->
+  <!-- facebook meta -->
   <meta name="facebook-domain-verification" content="uqvwfcbsfpf84000pburvafgxky0rw" />
+  <!-- our-favicon -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- for seo -->
   <meta name="theme-color" content="#2c2d2f" />
@@ -34,6 +35,26 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- facebook pixel -->
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '770382081332320');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=770382081332320&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
   <!-- google analytics tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-590SF1LNWJ"></script>
   <script>
