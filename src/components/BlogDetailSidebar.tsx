@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import "./css/blog-detail-side-bar.css";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";

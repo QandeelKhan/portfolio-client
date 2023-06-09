@@ -5,27 +5,27 @@ export const blogItems = [
         category: "Web Design",
         date: "May 10, 2021",
         initialParagraph: `When designing a website, it's important to keep in mind the user experience.
-        This means considering things like navigation, layout, and overall aesthetic. 
+        This means considering things like navigation, layout, and overall aesthetic.
         A clean and intuitive design will make it easier for users to find what they're looking for and interact with your site.
-        One way to improve the user experience is to conduct user research and testing. 
+        One way to improve the user experience is to conduct user research and testing.
         This can be done by creating wireframes or mockups of your design and getting feedback from a diverse group of users.`,
-        paragraphHeading: `First, solve the problem. Then write 
+        paragraphHeading: `First, solve the problem. Then write
         the code.`,
         quote: "In some ways, programming is",
         quoteWriter: "Andrew Hunt",
-        secondParagraph: `Another key aspect of website design is ensuring that it is responsive, 
-        meaning that it looks and functions well on a variety of devices, including desktops, 
-        laptops, tablets, and smartphones. With the rise of mobile internet usage, 
+        secondParagraph: `Another key aspect of website design is ensuring that it is responsive,
+        meaning that it looks and functions well on a variety of devices, including desktops,
+        laptops, tablets, and smartphones. With the rise of mobile internet usage,
         it's important that your site can be easily accessed and used on a variety of screens.`,
         images: [
             "https://watson.cosmos-themes.com/dark/wp-content/uploads/2021/05/blog-img1.jpg",
             "https://watson.cosmos-themes.com/dark/wp-content/uploads/2021/05/blog-img2.jpg",
         ],
-        paragraphAfterImage: `Another important aspect to consider is the site's accessibility. 
-        This means making sure that it can be used by people with disabilities, such as those who use screen readers or have low vision. 
+        paragraphAfterImage: `Another important aspect to consider is the site's accessibility.
+        This means making sure that it can be used by people with disabilities, such as those who use screen readers or have low vision.
         Ensuring that your site is accessible can help to improve the user experience for a wider range of people and can also help to improve your search engine rankings.
-        In conclusion, designing a website is a process that involves considering the user experience, 
-        accessibility, and performance. By conducting user research, creating responsive design, 
+        In conclusion, designing a website is a process that involves considering the user experience,
+        accessibility, and performance. By conducting user research, creating responsive design,
         and optimizing the site's code and performance, you can create a website that is both visually appealing and easy to use.`,
         commentsData: [
             {
@@ -82,27 +82,27 @@ export const blogItems = [
         category: "Personal",
         date: "July 21, 2021",
         initialParagraph: `as a Full Stack Development Journey with Python Django and JavaScript React.
-        Are you ready to start your journey as a full stack developer? The path may seem daunting at first, 
+        Are you ready to start your journey as a full stack developer? The path may seem daunting at first,
         but with the right tools and mindset, you can turn your dream into a reality.
-        To get started, you'll need to have a solid understanding of both the front-end and back-end technologies involved. 
-        For the front-end, JavaScript and React are essential. React is a JavaScript library for building user interfaces, 
-        and it's widely used in the industry. For the back-end, Python and Django are the go-to choices. 
+        To get started, you'll need to have a solid understanding of both the front-end and back-end technologies involved.
+        For the front-end, JavaScript and React are essential. React is a JavaScript library for building user interfaces,
+        and it's widely used in the industry. For the back-end, Python and Django are the go-to choices.
         Django is a high-level Python web framework that makes it easy to build web applications.`,
         paragraphHeading: `First, solve the problem. Then write
         the code.`,
         quote: "The best way to predict your future is to create it.",
         quoteWriter: "Abraham Lincoln",
-        secondParagraph: `To deepen your understanding and skills in these technologies, 
-        there are plenty of resources available online. Websites such as Codecademy, Coursera, 
-        and Udemy offer courses that cover everything from the basics to advanced topics. In addition, 
+        secondParagraph: `To deepen your understanding and skills in these technologies,
+        there are plenty of resources available online. Websites such as Codecademy, Coursera,
+        and Udemy offer courses that cover everything from the basics to advanced topics. In addition,
         there are numerous tutorials and documentation available on the internet that can help you learn and understand the different concepts.`,
         images: [
             "images/blog/blog-2-img1.jpg",
             "images/blog/blog-2-img2.jpg",
             "images/blog/blog-2-img3.jpg",
         ],
-        paragraphAfterImage: `As you delve deeper into full stack development, it's important to remember 
-        that practice makes perfect. Building projects and experimenting with different technologies will 
+        paragraphAfterImage: `As you delve deeper into full stack development, it's important to remember
+        that practice makes perfect. Building projects and experimenting with different technologies will
         help you gain a better understanding and solidify your skills.`,
         commentsData: [{}],
         repliesData: [{}],
@@ -113,19 +113,19 @@ export const blogItems = [
         category: "Personal",
         date: "May 12, 2021",
         initialParagraph: `is
-        I was born in a small town where access to technology and computer science education was limited. 
-        Growing up, my only exposure to computers was through video games. 
-        I would spend hours playing the latest games and trying to beat my family's high scores. 
+        I was born in a small town where access to technology and computer science education was limited.
+        Growing up, my only exposure to computers was through video games.
+        I would spend hours playing the latest games and trying to beat my family's high scores.
         However, little did I know that this hobby would eventually lead me to a career in programming.
-        When I was a child, my mother broke my first video game console, 
-        thinking it was a waste of time for my education. I remember crying over it, 
-        feeling lost and without a hobby. But my father eventually bought me another console, 
+        When I was a child, my mother broke my first video game console,
+        thinking it was a waste of time for my education. I remember crying over it,
+        feeling lost and without a hobby. But my father eventually bought me another console,
         and my love for video games only grew stronger. It wasn't until I got my hands on my first personal computer that I realized the potential for creating something beyond just playing games.
-        In high school, I decided to study computer science in college, but my initial grades were not promising. 
-        I spent more time tinkering with my computer than focusing on my studies. However, 
+        In high school, I decided to study computer science in college, but my initial grades were not promising.
+        I spent more time tinkering with my computer than focusing on my studies. However,
         it was during this time that I discovered the CS50 lectures and realized that I could turn my passion for technology into a career.
         I started learning programming on my own, with the help of online resources like codingwithmosh.com, where I had the opportunity to learn from instructor Moshfegh Hamedani. I fell in love with the Python programming language and spent countless hours locked in my room, honing my skills and building projects. I eventually expanded my knowledge to frontend development with JavaScript, becoming a full stack developer.
-        Today, I am an independent software developer and entrepreneur, using platforms like Upwork to earn a living and teach others. 
+        Today, I am an independent software developer and entrepreneur, using platforms like Upwork to earn a living and teach others.
         My parents, who once thought my hobby was a waste of time, now see the value in what I do and are incredibly proud of my achievements.`,
         paragraphHeading: `First, solve the problem. Then write
         the code.`,
@@ -137,8 +137,8 @@ export const blogItems = [
             "https://watson.cosmos-themes.com/dark/wp-content/uploads/2021/05/blog-img2.jpg",
             // "https://watson.cosmos-themes.com/dark/wp-content/uploads/2021/05/blog-img3.jpg",
         ],
-        paragraphAfterImage: `In conclusion, my story is a testament to the fact that passion and perseverance can take you far, 
-        even in the face of obstacles. 
+        paragraphAfterImage: `In conclusion, my story is a testament to the fact that passion and perseverance can take you far,
+        even in the face of obstacles.
         I hope that my journey will inspire others to follow their dreams and never give up on what they truly love.`,
         commentsData: [{}],
         repliesData: [{}],

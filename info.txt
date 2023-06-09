@@ -16,3 +16,5 @@ to the package.json, to fix typescript v5 while importing fs(file system module)
 # increase seo, by dynamically changing the meta and title tag according to the page
 # Install the library: npm install react-helmet
 # Import the Helmet component in the React component where you want to manage the HTML head information:
+
+fb messenger api token: EAAD4V56078kBAEZCx0Rwhz02u38wehdjG19ZANm0hpkFSiSWPamq950FX2M8O2kME99MXZAwbTKVKkDBimFA1oH5EkuRMJ9ren2yIHzdn0JLZCMGwomt1fmHyougo2hWigMpZBYpfHkKsPJdYj5a9wEpdomVMRwcSOWwJQUPebguBWOsJdkFF

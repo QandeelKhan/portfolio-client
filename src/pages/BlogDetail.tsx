@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import CommentsForm from "../components/CommentsForm";
 import "./css/blog-detail.css";
 import "../components/css/comments.css";
-
-import PostTags from "../components/PostTags";
+// import PostTags from "../components/PostTags";
 // import Comments, { CommentProps, ReplyProps } from "../components/Comments";
 import PrevBtn from "../components/PrevBtn";
 import { useDispatch } from "react-redux";
@@ -13,25 +12,25 @@ import { Helmet } from "react-helmet";
 import { setBlogCardClicked } from "../redux/reducers/eventsSlice";
 
 const BlogDetail = () => {
-    interface FormData {
-        id: string;
-        name: string;
-        email: string;
-        comment: string;
-        checkbox: boolean;
-    }
+    // interface FormData {
+    //     id: string;
+    //     name: string;
+    //     email: string;
+    //     comment: string;
+    //     checkbox: boolean;
+    // }
 
-    const handleSubmit = (data: FormData) => {
-        const newComment = {
-            id: Date.now().toString(),
-            name: data.name,
-            email: data.email,
-            comment: data.comment,
-            checkbox: data.checkbox,
-        };
-    };
+    // const handleSubmit = (data: FormData) => {
+    //     const newComment = {
+    //         id: Date.now().toString(),
+    //         name: data.name,
+    //         email: data.email,
+    //         comment: data.comment,
+    //         checkbox: data.checkbox,
+    //     };
+    // };
 
-    const [isReplyOpen, setIsReplyOpen] = useState(false);
+    // const [isReplyOpen, setIsReplyOpen] = useState(false);
 
     const dispatch = useDispatch();
     useEffect(() => {
@@ -149,7 +148,7 @@ const BlogDetail = () => {
                                             {selectedPost.paragraph_after_image}
                                         </p>
                                     </div>
-                                    <PostTags />
+                                    {/* <PostTags /> */}
                                     <PrevBtn />
                                     {/* ---COMMENTS & REPLIES START */}
                                     <div className="comments-section">

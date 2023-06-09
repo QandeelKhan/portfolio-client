@@ -100,8 +100,8 @@ const TestimonialsSection: React.FC = (props) => {
                                     </div>
                                 </div>
                             </div>
-                            <div>
-                                {/* left side */}
+                            {/* left side */}
+                            {/* <div>
                                 <div className="left-testimonial">
                                     <div className="review-testimonial">
                                         <div className="testimonial-icon">
@@ -137,7 +137,7 @@ const TestimonialsSection: React.FC = (props) => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                             {/* left side */}
                             <div>
                                 <div className="right-testimonial">
@@ -170,19 +170,14 @@ const TestimonialsSection: React.FC = (props) => {
                                             </span>
                                             <span className="reviewer-skills">
                                                 e-commerce entrepreneur
-                                                {/* (Successful seller on ebay,
-                                                amazon and etsy, and crypto
-                                                expert.) facebook.com/ */}
-                                                {/* https://www.facebook.com/profile.php?id=100011154134681&sk=photos */}
-                                                {/* https://www.twitter.com/saadmah83015242 */}
                                             </span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div>
-                                {/* left side */}
-                                <div className="left-testimonial">
+                            {/* left side */}
+                            {/* <div> */}
+                            {/* <div className="left-testimonial">
                                     <div className="review-testimonial">
                                         <div className="testimonial-icon">
                                             <i className="fa-solid fa-comments"></i>
@@ -217,9 +212,9 @@ const TestimonialsSection: React.FC = (props) => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                             {/* left side */}
-                            <div>
+                            {/* <div>
                                 <div className="right-testimonial">
                                     <div className="review-testimonial">
                                         <div className="testimonial-icon">
@@ -255,10 +250,10 @@ const TestimonialsSection: React.FC = (props) => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div>
-                                {/* left side */}
-                                <div className="left-testimonial">
+                            </div> */}
+                            {/* <div> */}
+                            {/* left side */}
+                            {/* <div className="left-testimonial">
                                     <div className="review-testimonial">
                                         <div className="testimonial-icon">
                                             <i className="fa-solid fa-comments"></i>
@@ -292,10 +287,10 @@ const TestimonialsSection: React.FC = (props) => {
                                             </span>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                </div> */}
+                            {/* </div> */}
                             {/* left side */}
-                            <div>
+                            {/* <div>
                                 <div className="right-testimonial">
                                     <div className="review-testimonial">
                                         <div className="testimonial-icon">
@@ -331,7 +326,7 @@ const TestimonialsSection: React.FC = (props) => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </Slider>
                     </div>
                 </div>

@@ -14,8 +14,8 @@ const ClientsSlide: React.FC = (props) => {
             <div className="slider-client" style={{ maxWidth: "1050px" }}>
                 <Slider
                     dots={false}
-                    slidesToShow={5}
-                    slidesToScroll={1}
+                    slidesToShow={3}
+                    // slidesToScroll={1}
                     arrows={false}
                 >
                     <div className="slide-container">
@@ -26,7 +26,7 @@ const ClientsSlide: React.FC = (props) => {
                                 <img
                                     decoding="async"
                                     src="/images/logo/marketers-logo.png"
-                                    alt="Client-2"
+                                    alt="Client-1"
                                 />{" "}
                             </a>
                         </div>
@@ -44,71 +44,6 @@ const ClientsSlide: React.FC = (props) => {
                                     }}
                                     decoding="async"
                                     src="/images/logo/jojo.png"
-                                    alt="Client 3"
-                                />{" "}
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <div className="client-logo">
-                            {" "}
-                            <a href="#">
-                                {" "}
-                                <img
-                                    decoding="async"
-                                    src="https://watson.cosmos-themes.com/dark/wp-content/uploads/2021/05/client4.png"
-                                    alt="Client 4"
-                                />{" "}
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <div className="client-logo">
-                            {" "}
-                            <a href="#">
-                                {" "}
-                                <img
-                                    decoding="async"
-                                    src="https://watson.cosmos-themes.com/dark/wp-content/uploads/2021/05/client5.png"
-                                    alt="Client 5"
-                                />{" "}
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <div className="client-logo">
-                            {" "}
-                            <a href="#">
-                                {" "}
-                                <img
-                                    decoding="async"
-                                    src="https://watson.cosmos-themes.com/dark/wp-content/uploads/2021/05/client6.png"
-                                    alt="Client 6"
-                                />{" "}
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <div className="client-logo">
-                            {" "}
-                            <a href="#">
-                                {" "}
-                                <img
-                                    decoding="async"
-                                    src="https://watson.cosmos-themes.com/dark/wp-content/uploads/2021/05/client1.png"
-                                    alt="Client 1"
-                                />{" "}
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <div className="client-logo">
-                            {" "}
-                            <a href="#">
-                                {" "}
-                                <img
-                                    decoding="async"
-                                    src="https://watson.cosmos-themes.com/dark/wp-content/uploads/2021/05/client2.png"
                                     alt="Client 2"
                                 />{" "}
                             </a>
@@ -120,9 +55,14 @@ const ClientsSlide: React.FC = (props) => {
                             <a href="#">
                                 {" "}
                                 <img
+                                    style={{
+                                        color: "whitesmoke",
+                                        height: "150px",
+                                        width: "150px",
+                                    }}
                                     decoding="async"
-                                    src="https://watson.cosmos-themes.com/dark/wp-content/uploads/2021/05/client7.png"
-                                    alt="Client 7"
+                                    src="/images/logo/commerce-season.jpeg"
+                                    alt="Client 3"
                                 />{" "}
                             </a>
                         </div>
