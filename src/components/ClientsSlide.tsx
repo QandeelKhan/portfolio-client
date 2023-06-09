@@ -67,6 +67,24 @@ const ClientsSlide: React.FC = (props) => {
                             </a>
                         </div>
                     </div>
+                    <div>
+                        <div className="client-logo">
+                            {" "}
+                            <a href="#">
+                                {" "}
+                                <img
+                                    style={{
+                                        color: "whitesmoke",
+                                        height: "150px",
+                                        width: "150px",
+                                    }}
+                                    decoding="async"
+                                    src="/images/logo/al-haider.png"
+                                    alt="client-4"
+                                />{" "}
+                            </a>
+                        </div>
+                    </div>
                 </Slider>
             </div>
             {/* owl */}
