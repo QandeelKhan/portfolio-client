@@ -5,7 +5,7 @@ import {
     fetchBaseQuery,
     FetchBaseQueryError,
 } from "@reduxjs/toolkit/query/react";
-import { setUserToken, unSetUserToken } from "../../redux/features/authSlice";
+import { setUserToken, unSetUserToken } from "../features/authSlice";
 import {
     getToken,
     removeAccessToken,

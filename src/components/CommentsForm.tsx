@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import "../components/css/comments-form.css";
+import "./css/comments-form.css";
 import { RootState } from "../redux/store";
 import { useMutation } from "react-query";
 import { usePostingCommentsMutation } from "../redux/services/userAuthApi";

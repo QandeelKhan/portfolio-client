@@ -8,10 +8,10 @@ import {
     Tooltip,
     Legend,
 } from "chart.js";
-import { Bar } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
+import { Bar } from "react-chartjs-2";
 
 ChartJS.register(
     CategoryScale,

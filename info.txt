@@ -18,3 +18,6 @@ to the package.json, to fix typescript v5 while importing fs(file system module)
 # Import the Helmet component in the React component where you want to manage the HTML head information:
 
 fb messenger api token: EAAD4V56078kBAEZCx0Rwhz02u38wehdjG19ZANm0hpkFSiSWPamq950FX2M8O2kME99MXZAwbTKVKkDBimFA1oH5EkuRMJ9ren2yIHzdn0JLZCMGwomt1fmHyougo2hWigMpZBYpfHkKsPJdYj5a9wEpdomVMRwcSOWwJQUPebguBWOsJdkFF
+
+309mb frontend resume + 20mp build + 180 node/alpine almost 600mb image
+

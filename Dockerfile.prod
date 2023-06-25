@@ -1,0 +1,66 @@
+FROM node:19.9-alpine3.16 as build-stage
+WORKDIR /app
+COPY package*.json /app/
+RUN npm install
+COPY . /app/
+RUN npm install -g serve
+RUN npm run build
+EXPOSE 3001
+CMD ["serve", "-s", "build", "-l", "3001"]
+
+# FROM nginx:latest
+# COPY --from=build-stage /app/build /usr/share/nginx/html
+# COPY nginx.conf /etc/nginx/conf.d/default.conf
+# EXPOSE 3000
+# CMD ["nginx", "-g", "daemon off;"]
+# # FROM nginx:latest
+
+# WORKDIR /var/www/html
+# # Install Certbot and its nginx plugin
+# RUN apt-get update && apt-get install -y certbot python3-certbot-nginx
+# # Copy the nginx configuration file
+# COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
+# COPY ./nginx/certs /etc/my-ssl
+
+# # Set up a volume for Let's Encrypt certificates with a name
+# VOLUME ["/etc/letsencrypt:/etc/letsencrypt"]
+# # Set up a volume for your custom SSL certificates with a name
+# VOLUME ["/etc/my-ssl:/etc/my-ssl"]
+# # Set up a volume for the webroot directory with a name like /var/ww/html so that can give it a volume lable in my docmer-compose to easily understand which volume it is, rather then "VOLUME ["/var/www/html"]" simply writing here can give it a random number volume name and we can't be able to understand what volume is it just by seting these numbers on droplet or the local machine.
+# # VOLUME ["/var/www/html:/var/www/html"]
+# # Set the working directory to /var/www/html, on anywhere if we write dot (.) it means this address "/var/www/html"
+# RUN rm -rf ./var/www/html/*
+# # Copy the static files
+# COPY ./build .
+# # COPY --from=build-stage /app/build /var/www/html
+
+# # Expose ports
+# EXPOSE 80
+# EXPOSE 443
+
+# CMD ["nginx", "-g", "daemon off;"]
+
+# ------------------
+# CMD ["nginx", "-c", "/etc/nginx/nginx.conf", "-g", "daemon off;"]
+# Remove default Nginx configuration
+# RUN rm /etc/nginx/nginx.conf
+
+# Copy custom Nginx configuration
+# COPY ../nginx/default.conf /etc/nginx/nginx.conf
+# COPY --from=build-stage /app/build /usr/share/nginx/html
+# certbot --nginx -d lifesyncnow.com -d www.lifesyncnow.com
+# Step 2: Production stage, to run our production build we can use different production servers like nginx and some other
+# usr/share/nginx/html by default nginx mn current directory hti hy yahn na b mention krta to issue nhi tha.
+# nginx ki image ki current directory ki default files remove kr dete hen ke ye koi khas ni hti kam ki.
+# RUN rm -rf ./*
+# copying the files from our build-stage. so we go to the build stage and copy all the files from the /app/build to /usr/share/nginx/html, this second path "/usr/share/nginx/html" is standard path for serving application from nginx,
+# COPY lifesyncnow.conf /etc/nginx/conf.d/default.conf
+# this is the conf file that we created on server before stoping containers, and ssl cert and key.
+# COPY nginx.conf /etc/nginx/conf.d/default.conf
+# COPY --from=build-stage /app/nginx-selfsigned.crt /etc/ssl/certs/nginx-selfsigned.crt
+# COPY --from=build-stage /app/nginx-selfsigned.key /etc/ssl/private/nginx-selfsigned.key
+# rather then exposing port 3000, we export port 80, which is default port for web traffic.
+# now rather then using cmd command we use enterypoint, to make it a must have to run everytime container starts.
+# we don't need to export this port in prod environment, as this used for running the application.
+# these commands are used to specify to run when our container starts.
+# isy deamon off isliye kiya kio ke ham application mn isy as a background har time ke liye nahi blky as forground hi use karna chahty hen.
