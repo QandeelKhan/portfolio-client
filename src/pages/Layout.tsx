@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import ThemesGear from "../components/ThemesGear";
-import SideNav from "../components/SideNav";
+import SideNav from "../components/sideNav/SideNav";
 import ThemeWrapper from "../components/ThemeWrapper";
 import LandingPage from "./LandingPage";
 import BlogDetailSidebar from "../components/BlogDetailSidebar";

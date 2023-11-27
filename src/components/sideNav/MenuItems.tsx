@@ -6,8 +6,8 @@ import {
     BookIcon,
     EnvelopeIcon,
     SyncIcon,
-} from "./data/iconsIndex";
-import DiceIcon from "./icons/CPModeIcons/DiceIcon";
+} from "../data/iconsIndex";
+import DiceIcon from "../icons/CPModeIcons/DiceIcon";
 
 export type MenuListProps = {
     title?: string;

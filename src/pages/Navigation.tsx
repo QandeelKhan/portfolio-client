@@ -6,7 +6,7 @@ import Resume from "./Resume";
 import About from "./About";
 import Home from "./Home";
 import "./css/home.css";
-import SideNav from "../components/SideNav";
+import SideNav from "../components/sideNav/SideNav";
 
 interface Props {
     currentPage: string;

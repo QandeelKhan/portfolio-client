@@ -1,24 +1,24 @@
 import React, { useEffect } from "react";
-import UpworkIcon from "./icons/ResumeModeIcons/UpworkIcon";
+import UpworkIcon from "../icons/ResumeModeIcons/UpworkIcon";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { RootState } from "../redux/store";
+import { RootState } from "../../redux/store";
 import {
     setClientPortalClicked,
     setNavVisible,
-} from "../redux/reducers/eventsSlice";
-import { unSetUserToken } from "../redux/features/authSlice";
-import { removeToken } from "../redux/services/localStorageService";
+} from "../../redux/reducers/eventsSlice";
+import { unSetUserToken } from "../../redux/features/authSlice";
+import { removeToken } from "../../redux/services/localStorageService";
 import { useNavigate } from "react-router-dom";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import PowerSwitchIcon from "./icons/CPModeIcons/PowerSwitchIcon";
-import RedoIcon from "./icons/CPModeIcons/RedoIcon";
-import { UndoIcon } from "./data/iconsIndex";
+import PowerSwitchIcon from "../icons/CPModeIcons/PowerSwitchIcon";
+import RedoIcon from "../icons/CPModeIcons/RedoIcon";
+import { UndoIcon } from "../data/iconsIndex";
 import MenuList from "./MenuList";
 import { CPModeMenuItems, ResumeModeMenuItems } from "./MenuItems";
-import "./css/side-nav.css";
+import "./side-nav.css";
 
 const SideNav: React.FC = (props: any) => {
     const { access_token } = useSelector((state: RootState) => state.auth);
