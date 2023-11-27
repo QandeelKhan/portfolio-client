@@ -8,9 +8,6 @@ import {
     Tooltip,
     Legend,
 } from "chart.js";
-import { faker } from "@faker-js/faker";
-import { useSelector } from "react-redux";
-import { RootState } from "../redux/store";
 import { Bar } from "react-chartjs-2";
 
 ChartJS.register(
@@ -49,7 +46,7 @@ type AoBarChartProps = {
     backendData: number;
 };
 
-export function AoBarChart(props: AoBarChartProps) {
+export const AoBarChart: React.FC<AoBarChartProps> = (props) => {
     const labels = [""];
     const data = {
         labels,
@@ -79,4 +76,4 @@ export function AoBarChart(props: AoBarChartProps) {
     };
 
     return <Bar options={options} data={data} />;
-}
+};

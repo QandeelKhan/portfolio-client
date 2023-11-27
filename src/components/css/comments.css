@@ -52,7 +52,7 @@
 
 .comment-date {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     color: #a4a4a5;

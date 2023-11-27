@@ -23,7 +23,6 @@ import PlaceOrder from "./pages/auth/PlaceOrder";
 import TrackOrder from "./pages/auth/TrackOrder";
 import OrderHistory from "./pages/auth/OrderHistory";
 import Profile from "./pages/auth/Profile";
-import CallToActionPage from "./pages/CallToActionPage";
 
 function App() {
     const { access_token } = useSelector((state: RootState) => state.auth);

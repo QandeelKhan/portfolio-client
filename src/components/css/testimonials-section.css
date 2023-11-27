@@ -67,7 +67,7 @@
 
 .person-info {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     color: white;
     padding: 0px 15px;
     max-height: 90px;
