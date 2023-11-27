@@ -4,8 +4,6 @@ import ResponsivedesignIcon from "./icons/ResumeModeIcons/ResponsivedesignIcon";
 import WebdesignIcon from "./icons/ResumeModeIcons/WebdesignIcon";
 import WebdevelopmentIcon from "./icons/ResumeModeIcons/WebdevelopmentIcon";
 import "./css/service-area.css";
-import ResumeModeIcons from "./ResumeModeIcons";
-import { ResumeModeMenuItems } from "./MenuItems";
 
 const ServicesArea: React.FC = (props) => {
     return (

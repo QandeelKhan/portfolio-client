@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import "./css/side-nav.css";
+import React, { useEffect } from "react";
 import UpworkIcon from "./icons/ResumeModeIcons/UpworkIcon";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
@@ -14,11 +13,12 @@ import { useNavigate } from "react-router-dom";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import ResumeModeIcons from "./ResumeModeIcons";
-import ClientsPortalModeIcons from "./CPModeIcons";
 import PowerSwitchIcon from "./icons/CPModeIcons/PowerSwitchIcon";
 import RedoIcon from "./icons/CPModeIcons/RedoIcon";
 import { UndoIcon } from "./data/iconsIndex";
+import MenuList from "./MenuList";
+import { CPModeMenuItems, ResumeModeMenuItems } from "./MenuItems";
+import "./css/side-nav.css";
 
 const SideNav: React.FC = (props: any) => {
     const { access_token } = useSelector((state: RootState) => state.auth);
@@ -147,11 +147,13 @@ const SideNav: React.FC = (props: any) => {
                 </div>
                 <div className="menubar-area">
                     <ul>
-                        {clientPortalClicked ? (
-                            <ClientsPortalModeIcons />
-                        ) : (
-                            <ResumeModeIcons />
-                        )}
+                        <MenuList
+                            items={
+                                clientPortalClicked
+                                    ? CPModeMenuItems
+                                    : ResumeModeMenuItems
+                            }
+                        />
                     </ul>
                 </div>
                 {clientPortalClicked ? (
