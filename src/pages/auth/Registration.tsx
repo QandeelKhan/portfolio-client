@@ -1,12 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
-import RegFormGoogle from "../../components/forms/RegFormGoogle";
 import AboutUserIcon from "../../components/icons/ResumeModeIcons/AboutUser";
 import PageTemplate from "../../components/PageTemplate";
 import RegistrationForm from "../../components/forms/RegistrationForm";
 
-const Registration = () => {
+const Registration: React.FC = () => {
     return (
         <>
             {" "}

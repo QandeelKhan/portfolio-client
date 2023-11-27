@@ -1,11 +1,7 @@
 import "./button.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { useEffect } from "react";
-import {
-    setClientPortalClicked,
-    setNavVisible,
-} from "../../redux/reducers/eventsSlice";
+import { setNavVisible } from "../../redux/reducers/eventsSlice";
 
 export type ButtonProps = {
     NavBtnIcon?: React.ReactNode;

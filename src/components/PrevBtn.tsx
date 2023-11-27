@@ -8,9 +8,9 @@ const PrevBtn: React.FC = () => {
                     className="fa fa-chevron-left prev-icon"
                     aria-hidden="true"
                 ></i>
-                <a href="#" rel="prev">
+                <button rel="prev">
                     <span className="post-nav-next post-nav-text">Prev</span>
-                </a>
+                </button>
             </div>
         </nav>
     );

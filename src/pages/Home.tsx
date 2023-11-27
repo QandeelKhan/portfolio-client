@@ -4,8 +4,6 @@ import "./css/home.css";
 import { useDispatch } from "react-redux";
 import { getToken } from "../redux/services/localStorageService";
 import { useGetLoggedUserQuery } from "../redux/services/userAuthApi";
-import { useSelector } from "react-redux";
-import { RootState } from "../redux/store";
 import { useEffect } from "react";
 import {
     setEmail,
@@ -15,8 +13,6 @@ import {
     setProfileImage,
     setStaffStatus,
 } from "../redux/features/authSlice";
-// import WhatsAppButton from "../components/WhatsAppButton";
-import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -32,10 +28,6 @@ const Home = () => {
         refresh_token: refresh_token,
     });
     console.log("My user data", data);
-
-    const { firstName, lastName, email, id, loggedIn, staffUser } = useSelector(
-        (state: RootState) => state.auth
-    );
 
     // storing user profile data in state
     useEffect(() => {

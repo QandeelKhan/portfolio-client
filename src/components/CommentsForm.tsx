@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import React, { useState } from "react";
+
 import "./css/comments-form.css";
-import { RootState } from "../redux/store";
-import { useMutation } from "react-query";
+
 import { usePostingCommentsMutation } from "../redux/services/userAuthApi";
 
 interface commentProps {
@@ -13,8 +11,7 @@ interface commentProps {
 
 const CommentsForm: React.FC<commentProps> = ({ postId, commentText }) => {
     const [comment, setComment] = useState(commentText);
-    const { mutate, isLoading, error } = usePostingCommentsMutation() as any;
-    const dispatch = useDispatch();
+    const { mutate } = usePostingCommentsMutation() as any;
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();

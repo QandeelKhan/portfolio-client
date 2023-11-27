@@ -136,6 +136,7 @@ I adopt a containerized approach using Docker/Kubernetes to ensure the portabili
                         </ul>
                         <a
                             target="_blank"
+                            rel="noopener noreferrer"
                             href={require("../components/icons/resume.pdf")}
                             className="download-resume-btn"
                         >

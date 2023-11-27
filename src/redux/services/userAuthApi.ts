@@ -1,16 +1,8 @@
 // Need to use the React-specific entry point to import createApi
-import {
-    BaseQueryFn,
-    createApi,
-    FetchArgs,
-    fetchBaseQuery,
-    FetchBaseQueryError,
-} from "@reduxjs/toolkit/query/react";
-import { RootState } from "../store";
+import { fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 // import { setUserToken, unSetUserToken } from "../features/authSlice";
 import { userAuthApiExtended } from "./userAuthApiExtended";
-import { getToken, removeToken, storeToken } from "./localStorageService";
-import { setSelectedPost } from "../dataSlice";
+import { getToken } from "./localStorageService";
 
 export interface UpdatedUserProfileResponse {
     id: number;

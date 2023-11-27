@@ -1,5 +1,5 @@
 import { BaseSyntheticEvent, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useRegisterUserMutation } from "../../redux/services/userAuthApi";
 import { storeToken } from "../../redux/services/localStorageService";
 import RegFormGoogle from "./RegFormGoogle";
@@ -155,7 +155,11 @@ const RegistrationForm = () => {
                         </div>
                     )}
                 </div>
-                <button className="login-button" type="submit">
+                <button
+                    className="login-button"
+                    type="submit"
+                    disabled={isLoading}
+                >
                     Register
                 </button>
                 <a style={{ color: "white" }} href="/login">
@@ -169,70 +173,3 @@ const RegistrationForm = () => {
 };
 
 export default RegistrationForm;
-
-// </div>
-// <div>
-//     {/*  */}
-//     <div className="login password">
-//         <label htmlFor="password">Password</label>
-//         <input
-//             type="password"
-//             id="password"
-//             name="password"
-//             required
-//         />
-//     </div>
-//     {/*  */}
-//     {serverError.password && (
-//         <div
-//             style={{
-//                 color: "red",
-//                 fontSize: "12px",
-//                 paddingLeft: "10px",
-//             }}
-//         >
-//             {serverError.password[0]}
-//         </div>
-//     )}
-// </div>
-// <div>
-//     <label htmlFor="password2">Confirm Password</label>
-
-//     <input
-//         type="password"
-//         name="password2"
-//         id="password2"
-//         required
-//     />
-//     {serverError.password2 && (
-//         <div
-//             style={{
-//                 color: "red",
-//                 fontSize: "12px",
-//                 paddingLeft: "10px",
-//             }}
-//         >
-//             {serverError.password2[0]}
-//         </div>
-//     )}
-// </div>
-// <div>
-//     <input type="checkbox" id="tc" name="tc" required />
-//     <label htmlFor="tc">
-//         I accept the terms and conditions
-//     </label>
-//     {serverError.tc && (
-//         <div
-//             style={{
-//                 color: "red",
-//                 fontSize: "12px",
-//                 paddingLeft: "10px",
-//             }}
-//         >
-//             {serverError.tc[0]}
-//         </div>
-//     )}
-// </div>
-// <button className="login-button" type="submit">
-//     Submit
-// </button>

@@ -48,7 +48,7 @@
     /* color: #00a3e1; */
     font-weight: bold;
 }
-.source-buttons a {
+.source-buttons button {
     color: #00a3e1;
     width: 200px;
     height: 35px;
@@ -60,7 +60,7 @@
     font-weight: bold;
     transition: 0.3s;
 }
-.source-buttons a:hover {
+.source-buttons button:hover {
     background-color: #00a3e1;
     color: white;
 }

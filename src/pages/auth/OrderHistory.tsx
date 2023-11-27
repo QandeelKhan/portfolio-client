@@ -1,39 +1,16 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
-import AboutUserIcon from "../../components/icons/ResumeModeIcons/AboutUser";
 import PageTemplate from "../../components/PageTemplate";
-import { BarChart } from "../../components/BarChart";
-import { DoughnutChart } from "../../components/DoughnutChart";
 import "../../components/css/order-history.css";
 import { RootState } from "../../redux/store";
 import { useSelector } from "react-redux";
-import { AoBarChart } from "../../components/AoBarChart";
 import OrderHistoryIcon from "../../components/icons/CPModeIcons/OrderHistoryIcon";
 import { ordersDataTypes } from "../../redux/features/ordersSlice";
 
-const OrderHistory = () => {
-    const {
-        orderId,
-        orderCount,
-        orderType,
-        completionStatus,
-        paymentStatus,
-        orderDescription,
-        projectDescription,
-        projectName,
-        totalPrice,
-        orderCreatedAt,
-        orderDueDate,
-        orderUpdatedAt,
-        orderError,
-        activeStatus,
-        aoActiveStatus,
-        aoPaymentStatus,
-        aoOrderCount,
-        aoFrontendProgress,
-        aoBackendProgress,
-        aoDesignProgress,
-    } = useSelector((state: RootState) => state.order);
+const OrderHistory: React.FC = () => {
+    const { orderCount, aoActiveStatus } = useSelector(
+        (state: RootState) => state.order
+    );
     const { allOrders } = useSelector((state: RootState) => state.orders);
     useEffect(() => {});
     return (

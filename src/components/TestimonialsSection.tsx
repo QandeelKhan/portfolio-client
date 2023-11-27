@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./css/testimonials-section.css";
 
-const TestimonialsSection: React.FC = (props) => {
+const TestimonialsSection: React.FC = () => {
     return (
         <>
             <div className="testimonials-area">

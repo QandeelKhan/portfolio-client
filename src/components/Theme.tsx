@@ -1,6 +1,6 @@
 import React from "react";
 
-function Theme() {
+const Theme: React.FC = () => {
     return (
         <>
             <div className="toggle-btn">
@@ -54,6 +54,6 @@ function Theme() {
             </div>
         </>
     );
-}
+};
 
 export default Theme;

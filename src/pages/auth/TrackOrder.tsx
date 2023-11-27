@@ -2,29 +2,13 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import AboutUserIcon from "../../components/icons/ResumeModeIcons/AboutUser";
 import PageTemplate from "../../components/PageTemplate";
-import { BarChart } from "../../components/BarChart";
-import { DoughnutChart } from "../../components/DoughnutChart";
 import "../../components/css/track-order.css";
 import { RootState } from "../../redux/store";
 import { useSelector } from "react-redux";
 import { AoBarChart } from "../../components/AoBarChart";
 
-const TrackOrder = () => {
+const TrackOrder: React.FC = () => {
     const {
-        orderId,
-        orderCount,
-        orderType,
-        completionStatus,
-        paymentStatus,
-        orderDescription,
-        projectDescription,
-        projectName,
-        totalPrice,
-        orderCreatedAt,
-        orderDueDate,
-        orderUpdatedAt,
-        orderError,
-        activeStatus,
         aoActiveStatus,
         aoPaymentStatus,
         aoOrderCount,
@@ -83,9 +67,9 @@ const TrackOrder = () => {
                                 </span>
                             </div>
                             <div className="source-buttons">
-                                <a href="">Frontend Source Code</a>
-                                <a href="">Backend Source Code</a>
-                                <a href="">Design</a>
+                                <button>Frontend Source Code</button>
+                                <button>Backend Source Code</button>
+                                <button>Design</button>
                             </div>
                         </div>
                     </div>

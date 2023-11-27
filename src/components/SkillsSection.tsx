@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/skills-section.css";
 
-const ResumeSkills: React.FC = (props) => {
+const ResumeSkills: React.FC = () => {
     return (
         <>
             <div className="skills-area">

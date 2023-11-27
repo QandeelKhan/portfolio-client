@@ -1,4 +1,4 @@
-import { configureStore, isRejectedWithValue } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import eventsReducer from "./reducers/eventsSlice";
 import themesReducer from "./themeSlice";
 import dataReducer from "./dataSlice";

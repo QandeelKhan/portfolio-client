@@ -1,7 +1,5 @@
 import { useUpdateUserProfileMutation } from "../../redux/services/userAuthApi";
 import { ChangeEvent, useState } from "react";
-import { getToken } from "../../redux/services/localStorageService";
-import "../css/profile-update-form.css";
 import { useDispatch } from "react-redux";
 import {
     setFirstName,
@@ -10,13 +8,13 @@ import {
 } from "../../redux/features/authSlice";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
+import "../css/profile-update-form.css";
 
 const ProfileUpdateForm = () => {
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
     const [file, setFile] = useState<File | null>(null);
     const [imagePreview, setImagePreview] = useState<string | null>(null);
-    const [body, setBody] = useState<any>("");
 
-    const { access_token, refresh_token } = getToken();
     const [updateUserProfile, { isLoading, isSuccess, isError }] =
         useUpdateUserProfileMutation<any>();
 
@@ -63,7 +61,13 @@ const ProfileUpdateForm = () => {
         if (lastName) {
             formData.append("last_name", lastName);
         }
-        await updateUserProfile(formData);
+
+        try {
+            await updateUserProfile(formData);
+            setErrorMessage(null); // Reset the error message if the update is successful
+        } catch (error) {
+            setErrorMessage("An error occurred while updating the profile."); // Set the error message if there is an error
+        }
     };
 
     return (
@@ -108,6 +112,7 @@ const ProfileUpdateForm = () => {
                 {isLoading ? "Updating..." : "Update Profile"}
             </button>
             {isSuccess && <div>Profile updated successfully.</div>}
+            {isError && <div>{errorMessage}</div>}
         </form>
     );
 };

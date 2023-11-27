@@ -2,19 +2,16 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import AboutUserIcon from "../../components/icons/ResumeModeIcons/AboutUser";
 import PageTemplate from "../../components/PageTemplate";
 import { setOrderCount } from "../../redux/features/authSlice";
 import {
-    setActiveStatus,
     setAoBackendProgress,
     setAoDesignProgress,
     setAoFrontendProgress,
     setAoOrderCompletionStatus,
     setAoOrderCount,
     setAoOrderCreatedAt,
-    setAoOrderDescription,
     setAoOrderDueDate,
     setAoOrderPaymentStatus,
     setAoOrderType,
@@ -24,7 +21,6 @@ import {
     setAoTotalPrice,
     setOrderCompletionStatus,
     setOrderCreatedAt,
-    setOrderDescription,
     setOrderDueDate,
     setOrderId,
     setOrderPaymentStatus,
@@ -35,37 +31,16 @@ import {
     setTotalPrice,
 } from "../../redux/features/orderSlice";
 import { setAllOrders } from "../../redux/features/ordersSlice";
-import {
-    getToken,
-    removeToken,
-} from "../../redux/services/localStorageService";
-import {
-    useGetLoggedUserOrdersQuery,
-    useGetLoggedUserQuery,
-} from "../../redux/services/userAuthApi";
+import { getToken } from "../../redux/services/localStorageService";
+import { useGetLoggedUserOrdersQuery } from "../../redux/services/userAuthApi";
 import { RootState } from "../../redux/store";
 
-const ClientsPortal = () => {
-    const { firstName, lastName, email, id, loggedIn } = useSelector(
+const ClientsPortal: React.FC = () => {
+    const { firstName, lastName } = useSelector(
         (state: RootState) => state.auth
     );
-    const {
-        orderId,
-        orderCount,
-        orderType,
-        completionStatus,
-        paymentStatus,
-        orderDescription,
-        projectDescription,
-        projectName,
-        totalPrice,
-        orderCreatedAt,
-        orderDueDate,
-        orderUpdatedAt,
-        orderError,
-    } = useSelector((state: RootState) => state.order);
+    const { orderCount } = useSelector((state: RootState) => state.order);
     //
-    const navigate = useNavigate();
     const dispatch = useDispatch();
     const { access_token, refresh_token } = getToken();
 
@@ -122,14 +97,6 @@ const ClientsPortal = () => {
             }
         }
     }, [data, isSuccess, dispatch]);
-
-    // on logout, unset data in store,unset token in store.remove token from browser
-    const handleLogout = () => {
-        // dispatch(unSetUserInfo());
-
-        removeToken();
-        // navigate("/login");
-    };
 
     return (
         <>

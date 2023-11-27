@@ -1,18 +1,6 @@
-import {
-    BaseQueryFn,
-    createApi,
-    FetchArgs,
-    fetchBaseQuery,
-    FetchBaseQueryError,
-} from "@reduxjs/toolkit/query/react";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { setUserToken, unSetUserToken } from "../features/authSlice";
-import {
-    getToken,
-    removeAccessToken,
-    removeToken,
-    storeAccessToken,
-    storeToken,
-} from "./localStorageService";
+import { getToken, storeToken } from "./localStorageService";
 
 const baseQuery = fetchBaseQuery({
     // baseUrl: "http://127.0.0.1:8000/api/",

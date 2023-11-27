@@ -1,11 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import LoginForm from "../../components/forms/LoginForm";
-import RegFormGoogle from "../../components/forms/RegFormGoogle";
 import AboutUserIcon from "../../components/icons/ResumeModeIcons/AboutUser";
 import PageTemplate from "../../components/PageTemplate";
 
-const Login = () => {
+const Login: React.FC = () => {
     return (
         <>
             <Helmet>

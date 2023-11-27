@@ -179,7 +179,7 @@
     width: 14px;
 }
 
-.tag-links a {
+.tag-links button {
     margin: 0 7px 10px 0;
     display: inline-block;
     vertical-align: top;
@@ -209,7 +209,7 @@
     transform: translateX(-10px);
 }
 
-.nav-links a {
+.nav-links button {
     position: relative;
     text-transform: uppercase;
     color: white;

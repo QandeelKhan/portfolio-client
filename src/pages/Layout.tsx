@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Outlet, Route, useLocation } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import ThemesGear from "../components/ThemesGear";
 import SideNav from "../components/SideNav";
 import ThemeWrapper from "../components/ThemeWrapper";
