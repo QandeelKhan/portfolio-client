@@ -7,7 +7,7 @@ interface MenuListProps {
     items: Array<any>; // Update this with the correct type
 }
 
-const MenuList: React.FC<MenuListProps> = ({ items }) => {
+const SideNavList: React.FC<MenuListProps> = ({ items }) => {
     const handleClick = (isCPMenuItem: boolean) => {
         if (isCPMenuItem) {
             setClientPortalClicked(true);
@@ -34,4 +34,4 @@ const MenuList: React.FC<MenuListProps> = ({ items }) => {
     );
 };
 
-export default MenuList;
+export default SideNavList;

@@ -18,7 +18,7 @@ export type MenuListProps = {
     isCPMenuItem?: boolean;
 }[];
 
-export const ResumeModeMenuItems: MenuListProps = [
+export const ResumeModeNavItems: MenuListProps = [
     {
         title: "HOME",
         cName: "anchor",
@@ -69,7 +69,7 @@ export const ResumeModeMenuItems: MenuListProps = [
     },
 ];
 
-export const CPModeMenuItems = [
+export const CPModeNavItems = [
     {
         title: "PROFILE",
         cName: "anchor",

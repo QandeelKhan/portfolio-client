@@ -16,8 +16,8 @@ import "react-toastify/dist/ReactToastify.css";
 import PowerSwitchIcon from "../icons/CPModeIcons/PowerSwitchIcon";
 import RedoIcon from "../icons/CPModeIcons/RedoIcon";
 import { UndoIcon } from "../data/iconsIndex";
-import MenuList from "./MenuList";
-import { CPModeMenuItems, ResumeModeMenuItems } from "./MenuItems";
+import SideNavList from "./SideNavList";
+import { CPModeNavItems, ResumeModeNavItems } from "./SideNavItems";
 import "./side-nav.css";
 
 const SideNav: React.FC = (props: any) => {
@@ -147,11 +147,11 @@ const SideNav: React.FC = (props: any) => {
                 </div>
                 <div className="menubar-area">
                     <ul>
-                        <MenuList
+                        <SideNavList
                             items={
                                 clientPortalClicked
-                                    ? CPModeMenuItems
-                                    : ResumeModeMenuItems
+                                    ? CPModeNavItems
+                                    : ResumeModeNavItems
                             }
                         />
                     </ul>
