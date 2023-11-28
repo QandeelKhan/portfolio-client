@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Masonry from "react-masonry-css";
-import GridItem from "./GridItem";
+import GridItem from "../../components/grid/GridItem";
 import { gridItems, tabs } from "../../components/data/GridItems";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
