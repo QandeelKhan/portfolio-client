@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { myThemeState } from "../redux/themeSlice";
+import { myThemeState } from "../../redux/themeSlice";
 import { useSelector } from "react-redux";
-import { RootState } from "../redux/store";
+import { RootState } from "../../redux/store";
 import { useEffect } from "react";
 
 const ThemeWrapper: React.FC<{ children: React.ReactElement }> = ({

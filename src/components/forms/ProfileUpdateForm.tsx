@@ -1,14 +1,13 @@
-import { useUpdateUserProfileMutation } from "../../redux/services/userAuthApi";
 import { ChangeEvent, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useUpdateUserProfileMutation } from "../../redux/services/userAuthApi";
+import { useDispatch, useSelector } from "react-redux";
 import {
     setFirstName,
     setLastName,
     setProfileImage,
 } from "../../redux/features/authSlice";
-import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
-import "../css/profile-update-form.css";
+import "./profile-update-form.css";
 
 const ProfileUpdateForm = () => {
     const [errorMessage, setErrorMessage] = useState<string | null>(null);

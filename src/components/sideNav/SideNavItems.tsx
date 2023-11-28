@@ -1,3 +1,4 @@
+import { ButtonProps } from "./SideNavButton";
 import {
     HomeIcon,
     UserIcon,
@@ -9,18 +10,9 @@ import {
 } from "../data/iconsIndex";
 import DiceIcon from "../icons/CPModeIcons/DiceIcon";
 
-export type MenuListProps = {
-    title?: string;
-    cName?: string;
-    path?: string;
-    icon?: JSX.Element;
-    navigateTo?: string;
-    isCPMenuItem?: boolean;
-}[];
-
-export const ResumeModeNavItems: MenuListProps = [
+export const ResumeModeNavItems: ButtonProps[] = [
     {
-        title: "HOME",
+        navBtnTitle: "HOME",
         cName: "anchor",
         path: "/",
         icon: <HomeIcon />,
@@ -28,86 +20,86 @@ export const ResumeModeNavItems: MenuListProps = [
         isCPMenuItem: false, // Indicate it's not a CPMenuItem
     },
     {
-        title: "ABOUT ME",
+        navBtnTitle: "ABOUT ME",
         cName: "anchor",
         path: "/about",
         icon: <UserIcon />,
         navigateTo: "/about",
-        isCPMenuItem: false, // Indicate it's not a CPMenuItem
+        isCPMenuItem: false,
     },
     {
-        title: "RESUME",
+        navBtnTitle: "RESUME",
         cName: "anchor",
         path: "/resume",
         icon: <BriefcaseIcon />,
         navigateTo: "/resume",
-        isCPMenuItem: false, // Indicate it's not a CPMenuItem
+        isCPMenuItem: false,
     },
     {
-        title: "PORTFOLIO",
+        navBtnTitle: "PORTFOLIO",
         cName: "anchor",
         path: "/portfolio",
         icon: <LicenseIcon />,
         navigateTo: "/portfolio",
-        isCPMenuItem: false, // Indicate it's not a CPMenuItem
+        isCPMenuItem: false,
     },
     {
-        title: "BLOG",
+        navBtnTitle: "BLOG",
         cName: "anchor",
         path: "/blog",
         icon: <BookIcon />,
         navigateTo: "/blog",
-        isCPMenuItem: false, // Indicate it's not a CPMenuItem
+        isCPMenuItem: false,
     },
     {
-        title: "CONTACT",
+        navBtnTitle: "CONTACT",
         cName: "anchor",
         path: "/contact",
         icon: <EnvelopeIcon />,
         navigateTo: "/contact",
-        isCPMenuItem: false, // Indicate it's not a CPMenuItem
+        isCPMenuItem: false,
     },
 ];
 
 export const CPModeNavItems = [
     {
-        title: "PROFILE",
+        NavBtnTitle: "PROFILE",
         cName: "anchor",
         path: "/user-profile",
         icon: <UserIcon />,
         navigateTo: "/user-profile",
-        isCPMenuItem: true, // Indicate it's not a CPMenuItem
+        isCPMenuItem: true, // Indicate it's a CPMenuItem
     },
     {
-        title: "PLACE ORDER",
+        NavBtnTitle: "PLACE ORDER",
         cName: "anchor",
         path: "/place-order",
         icon: <EnvelopeIcon />,
         navigateTo: "/place-order",
-        isCPMenuItem: true, // Indicate it's not a CPMenuItem
+        isCPMenuItem: true,
     },
     {
-        title: "TRACK ORDER",
+        NavBtnTitle: "TRACK ORDER",
         cName: "anchor",
         path: "/track-order",
         icon: <SyncIcon />,
         navigateTo: "/track-order",
-        isCPMenuItem: true, // Indicate it's not a CPMenuItem
+        isCPMenuItem: true,
     },
     {
-        title: "ORDER HISTORY",
+        NavBtnTitle: "ORDER HISTORY",
         cName: "anchor",
         path: "/order-history",
         icon: <DiceIcon />,
         navigateTo: "/order-history",
-        isCPMenuItem: true, // Indicate it's not a CPMenuItem
+        isCPMenuItem: true,
     },
     {
-        title: "CONTACT",
+        NavBtnTitle: "CONTACT",
         cName: "anchor",
         path: "/contact",
         icon: <EnvelopeIcon />,
         navigateTo: "/contact",
-        isCPMenuItem: true, // Indicate it's not a CPMenuItem
+        isCPMenuItem: true,
     },
 ];

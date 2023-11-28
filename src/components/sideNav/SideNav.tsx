@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import UpworkIcon from "../icons/ResumeModeIcons/UpworkIcon";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import {
     setClientPortalClicked,
@@ -84,9 +83,6 @@ const SideNav: React.FC = (props: any) => {
         navigate("/");
         ResumePortalNotify();
     };
-    // useEffect(() => {
-    //     handleClick();
-    // }, [buttonClicked]);
 
     return (
         <>

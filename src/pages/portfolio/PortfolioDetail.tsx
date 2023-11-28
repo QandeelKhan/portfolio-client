@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./css/portfolio-detail.css";
+import "./portfolio-detail.css";
 
 const PortfolioDetail: React.FC = (props: any) => {
     return (

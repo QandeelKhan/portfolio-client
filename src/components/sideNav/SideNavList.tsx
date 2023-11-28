@@ -1,14 +1,10 @@
 // MenuList.tsx
 import React from "react";
 import { setClientPortalClicked } from "../../redux/reducers/eventsSlice";
-import Button from "../button/Button";
+import SideNavButton, { ButtonProps } from "./SideNavButton";
 
-interface MenuListProps {
-    items: Array<any>; // Update this with the correct type
-}
-
-const SideNavList: React.FC<MenuListProps> = ({ items }) => {
-    const handleClick = (isCPMenuItem: boolean) => {
+const SideNavList: React.FC<{ items: ButtonProps[] }> = ({ items }) => {
+    const handleClick = (isCPMenuItem?: boolean) => {
         if (isCPMenuItem) {
             setClientPortalClicked(true);
         } else {
@@ -20,11 +16,11 @@ const SideNavList: React.FC<MenuListProps> = ({ items }) => {
         <>
             {items.map((item, index) => (
                 <li key={index}>
-                    <Button
-                        NavBtnIcon={item.icon}
+                    <SideNavButton
+                        navBtnIcon={item.icon}
                         className={item.cName}
-                        NavBtnTitle={item.title}
-                        NavBtnHref={item.path}
+                        navBtnTitle={item.navBtnTitle}
+                        navBtnHref={item.path}
                         navigateTo={item.navigateTo}
                         onClick={() => handleClick(item.isCPMenuItem)}
                     />

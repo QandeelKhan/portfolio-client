@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import ThemesGear from "../components/ThemesGear";
+import ThemesGear from "../components/theme/ThemesGear";
 import SideNav from "../components/sideNav/SideNav";
-import ThemeWrapper from "../components/ThemeWrapper";
+import ThemeWrapper from "../components/theme/ThemeWrapper";
 import LandingPage from "./LandingPage";
 import BlogDetailSidebar from "../components/BlogDetailSidebar";
 import { useDispatch } from "react-redux";

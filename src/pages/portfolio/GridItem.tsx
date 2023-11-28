@@ -1,5 +1,4 @@
-import "../pages/css/portfolio-detail.css";
-import "../pages/css/portfolio.css";
+import "./grid-item.css";
 
 const GridItem = (props: any) => {
     const { navigateTo, imgSrc, title, category, icon, alt } = props;

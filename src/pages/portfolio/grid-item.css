@@ -1,0 +1,87 @@
+.grid-item {
+    position: relative;
+    transition: 0.5s;
+    cursor: pointer;
+    transition: all 2s;
+}
+
+
+.text-1 {
+    font-size: 20px;
+    font-weight: bold;
+    transform: translateY(-55px);
+    transition: 0.5s;
+}
+
+.text-2 {
+    transform: translateY(55px);
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s;
+}
+
+.grid-item:hover .overlay {
+    opacity: 1;
+    transition: 0.6s;
+}
+
+.grid-item:hover .text-1 {
+    transform: translateY(-5px);
+    transform: 0.5s;
+}
+
+.grid-item:hover .text-2 {
+    transform: translateY(5px);
+    transform: 0.5s;
+}
+
+.grid-item:hover .onhover-icon {
+    transform: translateX(-25px);
+    transition: 0.5s;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    transition: 0.5s;
+}
+
+
+/* Hover starts here */
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 98%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(0, 163, 225, 0.7);
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.onhover-text span {
+    color: white;
+    /* right: -20px; */
+    margin-left: 20px;
+}
+
+.onhover-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.onhover-icon {
+    font-size: 27px;
+    color: white;
+    /* margin-bottom: -175px; */
+    transform: translateX(5px);
+    transition: 0.5s;
+}
+.card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+}

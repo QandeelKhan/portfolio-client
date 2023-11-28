@@ -9,11 +9,10 @@ import {
 } from "react-router-dom";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
-import Portfolio from "./pages/Portfolio";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
 import Layout from "./pages/Layout";
-import PortfolioDetail from "./pages/PortfolioDetail";
+import PortfolioDetail from "./pages/portfolio/PortfolioDetail";
 import Registration from "./pages/auth/Registration";
 import Login from "./pages/auth/Login";
 import { RootState } from "./redux/store";
@@ -23,6 +22,7 @@ import PlaceOrder from "./pages/auth/PlaceOrder";
 import TrackOrder from "./pages/auth/TrackOrder";
 import OrderHistory from "./pages/auth/OrderHistory";
 import Profile from "./pages/auth/Profile";
+import Portfolio from "./pages/portfolio/Portfolio";
 
 function App() {
     const { access_token } = useSelector((state: RootState) => state.auth);
