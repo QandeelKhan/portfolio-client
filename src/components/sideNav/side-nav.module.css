@@ -338,6 +338,19 @@ li {
     /* color: white; */
 }
 
+.login-btn {
+    background-color: #17181b;
+    min-width: 200px;
+    min-height: 50px;
+    width: 100%;
+    margin: 0px 0px;
+    border-top: 1px dotted #444444;
+    border-bottom: 1px dotted #444444;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .power-icon {
     color: rgb(187, 186, 186);
     opacity: 0.6;
@@ -360,19 +373,6 @@ li {
     margin-right: 10px;
     margin-left: 20px;
     transition: transform 0.3s ease-in-out;
-}
-
-.login-btn {
-    background-color: #17181b;
-    min-width: 200px;
-    min-height: 50px;
-    width: 100%;
-    margin: 0px 0px;
-    border-top: 1px dotted #444444;
-    border-bottom: 1px dotted #444444;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
 }
 
 .login-btn:hover .undo-icon {
