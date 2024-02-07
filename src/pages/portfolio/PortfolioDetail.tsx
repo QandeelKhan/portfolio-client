@@ -57,7 +57,8 @@ const PortfolioDetail: React.FC = (props: any) => {
                     >
                         {item.description}
                     </Markdown> */}
-                    <MDText />
+                    {/* {item.description} */}
+                    <MDText descriptionMDText={item.description} />
                     <div className="view-live-container">
                         <div className="view-live">View Live Version</div>
                     </div>
