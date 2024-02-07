@@ -19,17 +19,18 @@ export const gridItems = [
         icon: "fa-solid fa-globe",
     },
     {
-        titleImgSrc: "/images/portfolio/portfolio-1.jpg",
+        titleImgSrc: "/images/portfolio/portfolio-9.jpg",
         descriptionImgSrc: [
-            "/images/portfolio/portfolio-1.jpg",
-            "/images/portfolio/portfolio-1.jpg",
+            "/images/portfolio/portfolio-9.jpg",
+            "/images/portfolio/portfolio-9.jpg",
         ],
         description: defaultDescription,
-        title: "Book DESIGN",
-        category: "GRAPHIC",
+        title: "Mobile App",
+        category: "MOBILE",
         client: "Qandeel Khan",
-        date: "16/1/2023",
-        icon: "fa-solid fa-file",
+        date: "5/12/2020",
+        // icon: "fa-solid fa-video",
+        icon: "fa-solid fa-mobile",
     },
     {
         titleImgSrc: "/images/portfolio/HeavensTrust/heavenstrust1.png",
@@ -47,6 +48,19 @@ export const gridItems = [
         icon: "fa-solid fa-globe",
     },
     {
+        titleImgSrc: "/images/portfolio/portfolio-1.jpg",
+        descriptionImgSrc: [
+            "/images/portfolio/portfolio-1.jpg",
+            "/images/portfolio/portfolio-1.jpg",
+        ],
+        description: defaultDescription,
+        title: "Book DESIGN",
+        category: "GRAPHIC",
+        client: "Qandeel Khan",
+        date: "16/1/2023",
+        icon: "fa-solid fa-file",
+    },
+    {
         titleImgSrc: "/images/portfolio/portfolio-10.jpg",
         descriptionImgSrc: [
             "/images/portfolio/portfolio-10.jpg",
@@ -59,20 +73,7 @@ export const gridItems = [
         date: "16/1/2023",
         icon: "fa-solid fa-image",
     },
-    {
-        titleImgSrc: "/images/portfolio/portfolio-9.jpg",
-        descriptionImgSrc: [
-            "/images/portfolio/portfolio-9.jpg",
-            "/images/portfolio/portfolio-9.jpg",
-        ],
-        description: defaultDescription,
-        title: "Mobile App",
-        category: "MOBILE",
-        client: "Qandeel Khan",
-        date: "5/12/2020",
-        // icon: "fa-solid fa-video",
-        icon: "fa-solid fa-mobile",
-    },
+
     {
         titleImgSrc: "/images/portfolio/portfolio-8.jpg",
         descriptionImgSrc: [
