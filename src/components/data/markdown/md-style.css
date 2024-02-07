@@ -1,0 +1,7 @@
+.description-md-container {
+    max-height: 230px;
+    overflow: auto;
+}
+.description-md {
+    overflow: auto;
+}

@@ -1,8 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./portfolio-detail.css";
-
+import { gridItems } from "../../components/data/GridItems";
+import MDText from "../../components/data/markdown/MDText";
 const PortfolioDetail: React.FC = (props: any) => {
+    const { index } = useParams<{ index: string | any }>();
+    const itemIndex = parseInt(index, 10);
+    console.log(itemIndex);
+    const item = gridItems[itemIndex];
+
     return (
         <div className="default-position">
             <div className="header-fix">
@@ -14,8 +20,8 @@ const PortfolioDetail: React.FC = (props: any) => {
             <div className="main-container">
                 {props.children}
                 <div className="left-content">
-                    <ul>
-                        <span className="heading">BOOK DESIGN</span>
+                    <ul className="left-content-list">
+                        <span className="heading">{item.title}</span>
                         <li>
                             <span className="second-heading">Project Info</span>
                         </li>
@@ -27,17 +33,17 @@ const PortfolioDetail: React.FC = (props: any) => {
                         <li>
                             <span className="key">Client </span>
                             <span>:</span>
-                            <span> Qandeel Khan</span>
+                            <span> {item.client}</span>
                         </li>
                         <li>
                             <span className="key">Date </span>
                             <span>:</span>
-                            <span> 16/1/2023</span>
+                            <span> {item.date}</span>
                         </li>
                         <li>
                             <span className="key">Category </span>
                             <span>:</span>
-                            <span> Development</span>
+                            <span> {item.category}</span>
                         </li>
                     </ul>
                 </div>
@@ -45,33 +51,29 @@ const PortfolioDetail: React.FC = (props: any) => {
                     <span className="project-description">
                         Project Description
                     </span>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Sem nulla pharetra diam sit amet nisl.
-                        Eget est lorem ipsum dolor sit. Tincidunt tortor aliquam
-                        nulla facilisi cras fermentum odio eu. Odio aenean sed
-                        adipiscing diam. Adipiscing tristique risus nec feugiat.
-                        Laoreet suspendisse interdum consectetur libero. Sem
-                        fringilla ut morbi tincidunt augue interdum velit
-                        euismod in. Amet volutpat consequat mauris nunc congue
-                        nisi vitae suscipit tellus. Elementum facilisis leo vel
-                        fringilla est ullamcorper eget nulla facilisi. Platea
-                        dictumst vestibulum rhoncus est pellentesque. Aliquet
-                        nibh praesent tristique magna. Senectus et netus et
-                        malesuada fames ac turpis egestas integer. Rutrum tellus
-                        pellentesque eu tincidunt tortor aliquam.
-                    </p>
-                    <span className="view-live">View Live Version</span>
+                    {/* <Markdown
+                        rehypePlugins={[rehypeRaw]}
+                        className="markdown-content"
+                    >
+                        {item.description}
+                    </Markdown> */}
+                    <MDText />
+                    <div className="view-live-container">
+                        <div className="view-live">View Live Version</div>
+                    </div>
                 </div>
                 <div className="footer">
                     <div className="images-area">
-                        <img src="img-1.jpg" alt="responsive" />
-                        <img
-                            src="img-2.jpg"
-                            alt="responsive"
-                            className="right-image"
-                        />
+                        {item.descriptionImgSrc.map(
+                            (descriptionImage, index) => (
+                                <div className="img-container" key={index}>
+                                    <img
+                                        src={descriptionImage}
+                                        alt="responsive"
+                                    />
+                                </div>
+                            )
+                        )}
                     </div>
                 </div>
             </div>

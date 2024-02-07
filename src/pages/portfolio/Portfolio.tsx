@@ -17,8 +17,8 @@ const Portfolio: React.FC = (props: any) => {
     };
 
     const navigate = useNavigate();
-    const handleNavigate = () => {
-        navigate("/portfolio-detail");
+    const handleNavigate = (index: string | number) => {
+        navigate(`/portfolio-detail/${index}`);
     };
 
     // tabs
@@ -92,8 +92,8 @@ const Portfolio: React.FC = (props: any) => {
                             {filteredItems.map((item, index) => (
                                 <GridItem
                                     key={index}
-                                    navigateTo={handleNavigate}
-                                    imgSrc={item.imgSrc}
+                                    navigateTo={() => handleNavigate(index)}
+                                    imgSrc={item.titleImgSrc}
                                     title={item.title}
                                     category={item.category}
                                     icon={<i className={item.icon}></i>}

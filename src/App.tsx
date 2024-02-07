@@ -32,7 +32,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route
-                        path="/portfolio-detail"
+                        path="/portfolio-detail/:index"
                         element={<PortfolioDetail />}
                     />
                     <Route index element={<Home />} />
