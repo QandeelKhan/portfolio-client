@@ -1,0 +1,14 @@
+.form-input__error {
+    position: absolute;
+    color: #ef4444;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-top: 0.25rem;
+    padding-left: 0.25rem;
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input__error:hover {
+    color: #fca5a5;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}

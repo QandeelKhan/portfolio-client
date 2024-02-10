@@ -1,0 +1,57 @@
+.form-input {
+    width: 50%;
+}
+
+/*  */
+.form-input__relative {
+    position: relative;
+}
+
+.form-input__input {
+    outline: none;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    /* Replace the border property with the outline property because it donot effect the layout by increment in size, because it's not on the edge of element just like border rather it's a little outside the edge of element and donot grow it's size toward inside of element that's why it's not disturbing inside layout of element*/
+    outline: 2px solid rgb(155, 154, 154);
+    color: var(--color-white-alpha);
+    padding: 0px 10px;
+    font-size: 15px;
+    transition: outline-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.form-input__input--profile {
+    height: 45px;
+}
+
+.form-input__input:focus {
+    outline: 3px solid rgb(192, 190, 190);
+}
+.form-input__input:hover {
+    outline: 3px solid rgb(192, 190, 190);
+}
+
+.form-input label {
+    color: var(--color-white-alpha);
+    font-size: 18px;
+}
+/*  */
+
+.button__show-hide-password {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0.25rem 0.75rem;
+    border: none;
+    color: rgb(107 114 128);
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button__show-hide-password:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+.button__show-hide-password:hover {
+    color: rgb(209 213 219);
+}

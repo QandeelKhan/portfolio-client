@@ -1,13 +1,16 @@
 import React, { BaseSyntheticEvent, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useLoginUserMutation } from "../../redux/services/userAuthApi";
-import { getToken, storeToken } from "../../redux/services/localStorageService";
+import { useLoginUserMutation } from "../../../redux/services/userAuthApi";
+import {
+    getToken,
+    storeToken,
+} from "../../../redux/services/localStorageService";
 import { useDispatch } from "react-redux";
-import { setUserToken } from "../../redux/features/authSlice";
-import RegFormGoogle from "./RegFormGoogle";
-import "./login-form.css";
+import { setUserToken } from "../../../redux/features/authSlice";
+import RegFormGoogle from "../RegFormGoogle";
+import "../login-form.css";
 
-const LoginForm = () => {
+const LoginFormOld = () => {
     const [serverError, setServerError] = useState<any>({});
     const navigate = useNavigate();
     const [loginUser, { isLoading }] = useLoginUserMutation();
@@ -91,4 +94,4 @@ const LoginForm = () => {
     );
 };
 
-export default LoginForm;
+export default LoginFormOld;

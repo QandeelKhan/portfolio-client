@@ -1,0 +1,30 @@
+.linkToRegistration {
+    /* color: #4eb6df; */
+    color: var(--color-blue);
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.linkToRegistration::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #02729e;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.2s ease-in-out;
+}
+
+.linkToRegistration:hover {
+    color: #73afc7;
+}
+
+.linkToRegistration:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

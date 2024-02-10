@@ -1,0 +1,88 @@
+.check-box-container {
+    width: 50%;
+}
+.check-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white-alpha);
+    font-size: 15px;
+    border: 2px solid #555;
+}
+
+.check-box__input[type="checkbox"] {
+    margin-right: 10px;
+    -webkit-appearance: none; /* Reset default browser styling for checkboxes */
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 2px solid #555;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+}
+.check-box__input[type="checkbox"]::after {
+    content: "\2714"; /* Unicode for checkmark symbol */
+    font-size: 28px;
+    color: #53aacc;
+    position: relative;
+    top: -4px;
+    left: 8px;
+    transform: rotate(-50deg);
+    line-height: 30px;
+    clip-path: inset(0 100% 0 0);
+    animation: tick-reverse 0.2s linear forwards;
+}
+
+.check-box__input[type="checkbox"]:checked::after {
+    animation-direction: normal; /* Reset animation-direction property */
+    content: "\2714";
+    font-size: 28px;
+    color: #53aacc;
+    position: relative;
+    top: -4px;
+    left: 7px; /* Shift the tick right by adjusting left position */
+    transform: rotate(-50deg);
+    line-height: 30px;
+    clip-path: inset(0 100% 0 0);
+    animation: tick-normal 0.2s linear forwards;
+}
+
+/* Keyframes for reverse animation */
+@keyframes tick-reverse {
+    0% {
+        transform: scale(1);
+        clip-path: inset(0 0 0 0);
+    }
+    50% {
+        transform: scale(1.2);
+        clip-path: inset(0 50% 0 0);
+    }
+    100% {
+        transform: scale(0);
+        clip-path: inset(0 100% 0 0);
+    }
+}
+
+/* Keyframes for the normal animation */
+@keyframes tick-normal {
+    0% {
+        transform: scale(0);
+        clip-path: inset(0 100% 0 0);
+    }
+    50% {
+        transform: scale(1.2);
+        clip-path: inset(0 50% 0 0);
+    }
+    100% {
+        transform: scale(1);
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.check-box__text {
+    color: var(--color-white-beta);
+    vertical-align: middle;
+}

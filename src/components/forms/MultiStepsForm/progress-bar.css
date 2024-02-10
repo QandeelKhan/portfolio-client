@@ -1,0 +1,66 @@
+.bar-container {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.progress-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2rem;
+    border: 2px solid #039ad8;
+    background: transparent;
+    border-radius: 999px;
+}
+
+.round-steps {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: #32a6f3;
+    color: #fff;
+    border: 4px solid #167ba3;
+    border-radius: 50%;
+    z-index: 20;
+    transition: all 0.3s ease;
+}
+
+.round-un-muted {
+    color: #fff;
+    background-color: #3b82f6;
+}
+.round-muted {
+    color: #6b7280;
+    background: transparent;
+}
+
+.bar-fill-container {
+    background-color: #127196;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 999px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3%;
+}
+/* Add margin to the left and right of each button */
+.buttons-container button {
+    margin-left: 15px;
+    margin-right: 15px;
+}

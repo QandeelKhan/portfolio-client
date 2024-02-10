@@ -1,8 +1,21 @@
-import { BaseSyntheticEvent, useState } from "react";
+import React, {
+    useState,
+    BaseSyntheticEvent,
+    useCallback,
+    useEffect,
+} from "react";
 import { useNavigate } from "react-router-dom";
-import { useRegisterUserMutation } from "../../redux/services/userAuthApi";
-import { storeToken } from "../../redux/services/localStorageService";
-import RegFormGoogle from "./RegFormGoogle";
+import { useRegisterUserMutation } from "../../../redux/services/userAuthApi";
+import { storeToken } from "../../../redux/services/localStorageService";
+import RegFormGoogle from "../RegFormGoogle";
+import { useDispatch } from "react-redux";
+import { setClientPortalClicked } from "../../../redux/reducers/eventsSlice";
+import InputField from "../InputField";
+import { CheckboxWithError } from "../CheckBox";
+import { RegistrationFormInputType, multiStepsFormSchema } from "../types";
+import { FormInputType } from "../playground";
+import StyledLink from "../StyledLink";
+import FormButton from "../FormButton";
 import "./reg-form.css";
 
 // const serverErrorInterface = {
@@ -13,10 +26,33 @@ import "./reg-form.css";
 //     tc: Boolean,
 // };
 
-const RegistrationForm = () => {
+const RegistrationFormOld = () => {
     // getting errors from server
     const [serverError, setServerError] = useState<any>({});
+    const [submitted, setSubmitted] = useState(false); // Track form submission
     const navigate = useNavigate();
+    const [formData, setFormData] = useState<RegistrationFormInputType>({
+        first_name: "",
+        last_name: "",
+        email: "",
+        password: "",
+        password2: "",
+        tc: "False",
+    });
+    const [formErrors, setFormErrors] = useState<
+        Partial<Record<keyof FormInputType, string[]>>
+    >({});
+
+    const handleCheckboxChange = useCallback(
+        (isChecked: boolean) => {
+            setFormData((prev: any) => ({
+                ...prev,
+                tc: isChecked ? "True" : "False",
+            }));
+            console.log(`parent---TC: ${isChecked ? "True" : "False"}`);
+        },
+        [] // No dependencies, only create the callback once
+    );
     // the work of redux: with hook "userRegisterUserMutation" we get some extra awesome properties in an obj
     // i.e isLoading, isFetching, is error etc and get a method "registerUser" and we can call this method
     // to send our data, rather then hook..
@@ -172,4 +208,4 @@ const RegistrationForm = () => {
     );
 };
 
-export default RegistrationForm;
+export default RegistrationFormOld;

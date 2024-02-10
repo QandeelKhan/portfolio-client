@@ -2,7 +2,8 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import AboutUserIcon from "../../components/icons/ResumeModeIcons/AboutUser";
 import PageTemplate from "../../components/PageTemplate";
-import RegistrationForm from "../../components/forms/RegistrationForm";
+import RegistrationFormOld from "../../components/forms/single/RegistrationFormOld";
+import RegistrationForm from "../../components/forms/single/RegistrationForm";
 
 const Registration: React.FC = () => {
     return (
@@ -32,6 +33,7 @@ const Registration: React.FC = () => {
                 iconComponent={<AboutUserIcon />}
                 pageName="Registration."
             >
+                {/* <RegistrationFormOld /> */}
                 <RegistrationForm />
             </PageTemplate>
         </>

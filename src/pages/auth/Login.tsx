@@ -1,8 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import LoginForm from "../../components/forms/LoginForm";
+import LoginFormOld from "../../components/forms/login/LoginFormOld";
 import AboutUserIcon from "../../components/icons/ResumeModeIcons/AboutUser";
 import PageTemplate from "../../components/PageTemplate";
+import LoginForm from "../../components/forms/login/LoginForm";
 
 const Login: React.FC = () => {
     return (
@@ -28,6 +29,7 @@ const Login: React.FC = () => {
                 />
             </Helmet>
             <PageTemplate iconComponent={<AboutUserIcon />} pageName="Login.">
+                {/* <LoginFormOld /> */}
                 <LoginForm />
             </PageTemplate>
         </>
