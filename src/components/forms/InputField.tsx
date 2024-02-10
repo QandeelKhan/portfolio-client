@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import clsx from "clsx";
 import FormFieldError from "./FormFieldError";
-import styles from "./input.module.css";
+import styles from "./css/input-field.module.css";
 
 type Variant = "default" | "profile" | "login" | "register";
 export type InputFieldProps = {

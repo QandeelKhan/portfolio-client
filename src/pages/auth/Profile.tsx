@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileUpdateForm from "../../components/forms/ProfileUpdateForm";
+import ProfileUpdateFormOld from "../../components/forms/ProfileUpdate/ProfileUpdateFormOld";
 import { Helmet } from "react-helmet";
 import PageTemplate from "../../components/PageTemplate";
 import AboutUserIcon from "../../components/icons/ResumeModeIcons/AboutUser";
@@ -25,7 +25,7 @@ const Profile = () => {
                 pageName="User Profile."
             >
                 <div className="profile-container">
-                    <ProfileUpdateForm />
+                    <ProfileUpdateFormOld />
                 </div>
             </PageTemplate>
         </>

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./StyledLink.module.css";
+import styles from "./css/StyledLink.module.css";
 
 interface StyledLinkProps {
     href: string;

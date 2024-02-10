@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
-import "./check-box.css";
 import FormFieldError from "./FormFieldError";
+import "./css/check-box.css";
 
 interface CheckboxProps {
     label?: string;

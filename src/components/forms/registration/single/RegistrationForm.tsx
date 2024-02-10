@@ -1,18 +1,18 @@
 import React, { useState, useCallback, useEffect } from "react";
-import RegFormGoogle from "../RegFormGoogle";
+import RegFormGoogle from "../../RegFormGoogle";
 // import CheckBox from "./CheckBox";
 import { useNavigate } from "react-router-dom";
-import InputField from "../InputField";
-import { CheckboxWithError } from "../CheckBox";
-import { RegistrationFormInputType, multiStepsFormSchema } from "../types";
+import InputField from "../../InputField";
+import { CheckboxWithError } from "../../CheckBox";
+import { RegistrationFormInputType, multiStepsFormSchema } from "../../types";
 import { useDispatch } from "react-redux";
-import { setClientPortalClicked } from "../../../redux/reducers/eventsSlice";
-import { FormInputType } from "../playground";
-import StyledLink from "../StyledLink";
-import FormButton from "../FormButton";
-import { useRegisterUserMutation } from "../../../redux/services/userAuthApi";
-import { storeToken } from "../../../redux/services/localStorageService";
-import "../form.css";
+import { setClientPortalClicked } from "../../../../redux/reducers/eventsSlice";
+import { FormInputType } from "../../playground";
+import StyledLink from "../../StyledLink";
+import FormButton from "../../FormButton";
+import { useRegisterUserMutation } from "../../../../redux/services/userAuthApi";
+import { storeToken } from "../../../../redux/services/localStorageService";
+import "../../form.css";
 
 const RegistrationForm = () => {
     const navigate = useNavigate();

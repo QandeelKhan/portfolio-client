@@ -1,15 +1,15 @@
 import { ChangeEvent, useState } from "react";
-import { useUpdateUserProfileMutation } from "../../redux/services/userAuthApi";
+import { useUpdateUserProfileMutation } from "../../../redux/services/userAuthApi";
 import { useDispatch, useSelector } from "react-redux";
 import {
     setFirstName,
     setLastName,
     setProfileImage,
-} from "../../redux/features/authSlice";
-import { RootState } from "../../redux/store";
+} from "../../../redux/features/authSlice";
+import { RootState } from "../../../redux/store";
 import "./profile-update-form.css";
 
-const ProfileUpdateForm = () => {
+const ProfileUpdateFormOld = () => {
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
     const [file, setFile] = useState<File | null>(null);
     const [imagePreview, setImagePreview] = useState<string | null>(null);
@@ -116,4 +116,4 @@ const ProfileUpdateForm = () => {
     );
 };
 
-export default ProfileUpdateForm;
+export default ProfileUpdateFormOld;

@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import styles from "./form-field-error.module.css";
+import styles from "./css/form-field-error.module.css";
 
 type Variant = "default" | "profile" | "login" | "register";
 

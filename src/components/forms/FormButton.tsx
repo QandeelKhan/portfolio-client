@@ -1,6 +1,6 @@
 import React, { ButtonHTMLAttributes } from "react";
 import clsx from "clsx";
-import styles from "./FormButton.module.css";
+import styles from "./css/FormButton.module.css";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?:
