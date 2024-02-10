@@ -39,24 +39,33 @@ const About: React.FC = (props: any) => {
                             Full-Stack Engineer & Author
                         </h3>
                         <span className="uiux-dummy-text">
-                            I am a Python and JavaScript developer with having
-                            bachelor's in Computer Science (B.S). from GC
-                            University Faisalabad and 4 years of software
+                            I am a Python and JavaScript developer with a
+                            bachelor’s degree in Computer Science from GC
+                            University Faisalabad and 6 years of software
                             development experience. I am experienced in web
-                            development with JavaScript technologies using React
-                            JS and React Native and on the back-end side, I'm
-                            using python technologies. I have experience with
-                            MVT/MVC (Model View Template/Controller) through
-                            Django and DRF (Django rest framework) and have been
-                            involved in maintaining versions of source code
-                            using git version control. <br /> I use a
-                            containerized system using Docker/Kubernetes for the
+                            development with JavaScript technologies using
+                            modern cutting edge technology stack for the
+                            front-end of my applications i.e React and Next.JS &
+                            React Native for hybrid mobile applications
+                            development & on the back-end side, I use python
+                            technologies. I have experience with MVT(Model View
+                            Template) and MVC(Model View Controller) through
+                            Django and DRF (Django rest framework), and I have
+                            been involved in maintaining versions of source code
+                            using git version control.
+                            <br />I use a containerized system using Docker for
                             portability of my web and mobile projects and
                             deployment. When working on a new project, I like to
                             speak with my clients to understand their needs and
-                            version of the project clearly. <br /> Thank you so
-                            much for taking the time to review my profile. I
-                            look forward to the opportunity of working with you.
+                            vision of the project clearly.
+                            <br />
+                            Thank you so much for taking the time to review my
+                            profile. I look forward to the opportunity of
+                            working with you.
+                            <br />
+                            If you are interested in collaborating with me,
+                            please feel free to contact me at
+                            com.qandeelhaider@gmail.com
                             <br />
                             <br />
                         </span>
