@@ -21,7 +21,7 @@
     Python, Django, JavaScript, React, portfolio, Facebook, LinkedIn, Twitter, Upwork, upwork python django, upwork django, upwork django and react, qandeel haider khan upwork, qandeel khan upwork" />
   <!-- for seo -->
 
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="apple-touch-icon" href="/logo192.png" />
   <!--  custom playfull font weight 700 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +30,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" href="/favicon.ico" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -52,8 +53,7 @@
     fbq('init', '770382081332320');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=770382081332320&ev=PageView&noscript=1" /></noscript>
+
   <!-- End Meta Pixel Code -->
   <!-- google analytics tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-590SF1LNWJ"></script>
@@ -95,7 +95,10 @@
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
-
+  <script type="module" src="/src/index.tsx"></script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=770382081332320&ev=PageView&noscript=1" />
+  </noscript>
 </body>
 
 </html>
