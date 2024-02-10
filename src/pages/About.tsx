@@ -3,9 +3,10 @@ import ClientsSlide from "../components/ClientsSlide";
 import AboutUserIcon from "../components/icons/ResumeModeIcons/AboutUser";
 import ServicesArea from "../components/ServicesArea";
 import TestimonialsSection from "../components/TestimonialsSection";
-import "./css/about.css";
 import PageTemplate from "../components/PageTemplate";
 import { Helmet } from "react-helmet";
+import "./css/about.css";
+import resume from "../assets/resume.pdf";
 
 const About: React.FC = (props: any) => {
     return (
@@ -57,12 +58,6 @@ const About: React.FC = (props: any) => {
                             much for taking the time to review my profile. I
                             look forward to the opportunity of working with you.
                             <br />
-                            {/* I am a Full-stack Engineer and Author with a Bachelor's degree in Computer Science (B.S.) from GC University Faisalabad. With over 4 years of software development experience, I specialize in Python and JavaScript development.
-
-On the front-end, I have expertise in JavaScript technologies, including ReactJS and React Native. For the back-end, I leverage Python technologies, particularly Django and Django REST Framework (DRF). I am well-versed in the MVT/MVC (Model View Template/Controller) architectural patterns. Additionally, I have hands-on experience with version control using Git.
-
-I adopt a containerized approach using Docker/Kubernetes to ensure the portability and seamless deployment of my web and mobile projects. When starting a new project, I prioritize effective communication with clients to gain a clear understanding of their requirements and project vision.
- */}
                             <br />
                         </span>
                         <div className="signature-area">
@@ -137,7 +132,8 @@ I adopt a containerized approach using Docker/Kubernetes to ensure the portabili
                         <a
                             target="_blank"
                             rel="noopener noreferrer"
-                            href={require("../components/icons/resume.pdf")}
+                            // href={require("../components/icons/resume.pdf")} // because vite do not support CommonJS require syntax for importing assets and only support ES modules "import" syntax or the "new URL" syntax.
+                            href={resume}
                             className="download-resume-btn"
                         >
                             DOWNLOAD RESUME

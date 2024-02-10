@@ -36,11 +36,11 @@ function App() {
                         element={<PortfolioDetail />}
                     />
                     <Route index element={<Home />} />
-                    <Route path="/about" element={<About />} />
                     {/* <Route
                         path="/call-to-action"
                         element={<CallToActionPage />}
                     /> */}
+                    <Route path="/about" element={<About />} />
                     <Route path="/resume" element={<Resume />} />
                     <Route path="/portfolio" element={<Portfolio />} />
                     <Route path="/blog" element={<Blog />} />

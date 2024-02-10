@@ -3,16 +3,16 @@ export const experience = [
         position: "Lead Backend Engineer",
         company: "INFOSYS IIT Software",
         startDate: "2022",
-        endDate: "2026",
+        endDate: "2023",
         description:
-            "I am a highly passionate lead backend engineer with expertise in Python, Django, and Flask. My experience in building scalable and efficient backends for web and mobile applications has been honed since 2017. My skills include mastery of database design, RESTful API development, and performance optimization. With a deep love for coding in Python, I am dedicated to creating top-quality solutions for my clients.",
+            "I am a highly passionate lead backend engineer with expertise in Core Python, Django & Python Scripting. My experience in building scalable and efficient backends for web and mobile applications has been honed since 2018. My skills include mastery of database design, RESTful API development, and performance optimization. With a deep love for coding in Python, I am dedicated to creating top-quality solutions for my clients.",
     },
     {
         position: "Frontend Mastery",
         company: "Online code school",
         startDate: "2020",
         endDate: "2022",
-        description: `I've honed my front-end skills through online coding school and INFOSYS IIT, mastering technologies like React, Angular, and Vue. I am able to create high-performance, responsive, and visually-appealing user interfaces, utilizing latest front-end engineering techniques and best practices. My strong attention to detail and ability to understand user needs make me a valuable asset to any team looking to create top-notch web applications.`,
+        description: `I've honed my front-end skills through online coding school and INFOSYS IIT, mastering technologies like React, Next.JS, and React Native. I am able to create high-performance, responsive, and visually-appealing user interfaces, utilizing latest front-end engineering techniques and best practices. My strong attention to detail and ability to understand user needs make me a valuable asset to any team looking to create top-notch web applications.`,
     },
     {
         position: "Data structuring and Algorithmic approach With AI concepts",
@@ -27,15 +27,8 @@ export const education = [
     {
         degree: "Bachelor of Science in Computer Science",
         school: "GC University",
-        startDate: "2016",
-        endDate: "2020",
+        startDate: "2019",
+        endDate: "2023",
         description: `I graduated with a Bachelor's in Computer Science from GC University. My award-winning final year project, "jsbook-qandeel," allows for writing and running React code in the browser, with the added functionality of saving code and taking notes.`,
-    },
-    {
-        degree: "Master of Science in Computer Science",
-        school: "Infosys IIt University",
-        startDate: "2020",
-        endDate: "2022",
-        description: `With a Master's in Computer Science from INFOSYS IIT, I tackled a real-life problem in the healthcare industry and successfully developed a final year project that left an impact. Ready to bring my expertise to the next level.`,
     },
 ];
