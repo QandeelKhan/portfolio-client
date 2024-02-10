@@ -2,6 +2,7 @@
     "name": "qandeel-khan-portfolio",
     "version": "0.1.0",
     "private": true,
+    "type": "module",
     "dependencies": {
         "@babel/plugin-proposal-private-property-in-object": "*",
         "@reduxjs/toolkit": "^1.9.1",
