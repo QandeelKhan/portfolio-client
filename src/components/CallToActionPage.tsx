@@ -39,7 +39,7 @@ const CallToActionPage = () => {
             <ul>
                 <li>Email: qandeel@example.com</li>
                 <li>Phone: +1234567890</li>
-                <li>Website: www.our-resume.com</li>
+                <li>Website: www.qandeelkhan.com</li>
             </ul>
             <p>
                 I look forward to discussing your project and working together!

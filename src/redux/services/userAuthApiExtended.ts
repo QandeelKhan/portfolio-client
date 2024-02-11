@@ -3,8 +3,7 @@ import { setUserToken, unSetUserToken } from "../features/authSlice";
 import { getToken, storeToken } from "./localStorageService";
 
 const baseQuery = fetchBaseQuery({
-    // baseUrl: "http://127.0.0.1:8000/api/",
-    baseUrl: "https://our-resume-backend-azr8u.ondigitalocean.app/api/",
+    baseUrl: "http://127.0.0.1:8000/api/",
     prepareHeaders: (headers, { getState }) => {
         let { access_token } = getToken();
         if (access_token) {
