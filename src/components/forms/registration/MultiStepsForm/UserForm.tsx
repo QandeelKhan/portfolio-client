@@ -1,6 +1,6 @@
 import React from "react";
-import InputField from "../InputField";
-import { RegistrationFormInputType } from "../types";
+import InputField from "../../InputField";
+import { RegistrationFormInputType } from "../../types";
 
 type UserFormProps = Partial<RegistrationFormInputType> & {
     formData: Partial<RegistrationFormInputType>;

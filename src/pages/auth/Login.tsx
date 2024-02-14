@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import LoginFormOld from "../../components/forms/login/LoginFormOld";
 import AboutUserIcon from "../../components/icons/ResumeModeIcons/AboutUser";
 import PageTemplate from "../../components/PageTemplate";
 import LoginForm from "../../components/forms/login/LoginForm";

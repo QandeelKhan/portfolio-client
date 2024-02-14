@@ -16,8 +16,6 @@ root.render(
     </React.StrictMode>
 );
 
-reportWebVitals();
-
 // babel converted output, to make it javascript compatible/understandable form.
 // import React from "react";
 // import ReactDOM from "react-dom/client";

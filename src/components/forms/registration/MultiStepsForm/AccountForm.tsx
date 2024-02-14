@@ -1,7 +1,7 @@
 import React from "react";
-import { CheckboxWithError } from "../CheckBox";
-import InputField from "../InputField";
-import { RegistrationFormInputType } from "../types";
+import { CheckboxWithError } from "../../CheckBox";
+import InputField from "../../InputField";
+import { RegistrationFormInputType } from "../../types";
 
 type AccountFormProps = {
     formData: Partial<RegistrationFormInputType>;
