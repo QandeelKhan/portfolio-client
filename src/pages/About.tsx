@@ -6,7 +6,7 @@ import TestimonialsSection from "../components/TestimonialsSection";
 import PageTemplate from "../components/PageTemplate";
 import { Helmet } from "react-helmet";
 import "./css/about.css";
-import resume from "../assets/resume.pdf";
+import cv from "../assets/cv.pdf";
 
 const About: React.FC = (props: any) => {
     return (
@@ -94,7 +94,7 @@ const About: React.FC = (props: any) => {
                                     <span>Age </span>
                                 </span>{" "}
                                 <span className="personal-info-value">
-                                    <span>26 Years</span>
+                                    <span>27 Years</span>
                                 </span>
                             </li>
                             <li>
@@ -141,8 +141,8 @@ const About: React.FC = (props: any) => {
                         <a
                             target="_blank"
                             rel="noopener noreferrer"
-                            // href={require("../components/icons/resume.pdf")} // because vite do not support CommonJS require syntax for importing assets and only support ES modules "import" syntax or the "new URL" syntax.
-                            href={resume}
+                            // href={require("../components/icons/cv.pdf")} // because vite do not support CommonJS require syntax for importing assets and only support ES modules "import" syntax or the "new URL" syntax.
+                            href={cv}
                             className="download-resume-btn"
                         >
                             DOWNLOAD RESUME
