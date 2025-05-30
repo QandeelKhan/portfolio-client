@@ -1,15 +1,20 @@
 .under-construction {
-    color: white;
+	color: white;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	overflow-x: hidden;
 }
 
 body {
-    /* background-color: #7a7a7a; */
-    background-color: var(--color-gray);
+	/* background-color: #7a7a7a; */
+	background-color: var(--color-gray);
 }
 
 /* .pageInitial {
@@ -21,20 +26,20 @@ body {
 }
  */
 :root {
-    /* backgrounds */
-    --color-blue: rgb(0, 163, 225);
-    --color-blue-dark: rgb(0, 130, 182);
-    --color-gray: rgb(44, 45, 47);
-    --color-light-gray: rgb(42, 45, 51);
-    --color-dark-gray: rgb(23, 24, 27);
-    --color-border: rgb(122, 122, 122);
-    /* foregrounds */
-    --color-white: rgb(255, 255, 255);
-    --color-white-alpha: rgb(242, 242, 242);
-    --color-white-beta: rgb(255, 255, 255, 0.8);
-    --color-black: rgb(0, 0, 0);
+	/* backgrounds */
+	--color-blue: rgb(0, 163, 225);
+	--color-blue-dark: rgb(0, 130, 182);
+	--color-gray: rgb(44, 45, 47);
+	--color-light-gray: rgb(42, 45, 51);
+	--color-dark-gray: rgb(23, 24, 27);
+	--color-border: rgb(122, 122, 122);
+	/* foregrounds */
+	--color-white: rgb(255, 255, 255);
+	--color-white-alpha: rgb(242, 242, 242);
+	--color-white-beta: rgb(255, 255, 255, 0.8);
+	--color-black: rgb(0, 0, 0);
 
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
 }
