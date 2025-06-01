@@ -1,85 +1,135 @@
 .pole-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    height: 100%;
-    margin-right: 15px; /* Add spacing between pole and content */
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	height: 100%;
+	margin-right: 15px; /* Add spacing between pole and content */
 }
 
 .line-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 20px;
 }
 
 .line {
-    width: 2px;
-    flex-grow: 1;
-    background-color: #00a3e1;
+	width: 2px;
+	flex-grow: 1;
+	background-color: #00a3e1;
 }
 
 .circle {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 2px solid #00a3e1;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 2px solid #00a3e1;
 }
 .circle {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 2px solid #00a3e1;
-    position: relative;
-    z-index: 1;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 2px solid #00a3e1;
+	position: relative;
+	z-index: 1;
 }
 
 .text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 10px;
-    padding: 5px 0;
-    height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-left: 10px;
+	padding: 5px 0;
+	height: 100%;
 }
 
 .date-group {
-    display: flex;
-    align-items: center;
-    height: 50%; /* Ensure equal space distribution */
+	display: flex;
+	align-items: center;
+	height: 50%; /* Ensure equal space distribution */
 }
 
 .date {
-    font-weight: bold;
-    color: #00a3e1;
-    font-size: 12px;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 2px;
+	font-weight: bold;
+	color: #00a3e1;
+	font-size: 12px;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	gap: 2px;
 }
 
 .separator {
-    font-size: 10px;
-    opacity: 0.7;
-    margin: 0 2px;
+	font-size: 10px;
+	opacity: 0.7;
+	margin: 0 2px;
 }
 
-
 .date-group .present {
-    color: #4CAF50;
-    font-weight: bold;
+	color: #4caf50;
+	font-weight: bold;
 }
 
 /* Alignment adjustments */
 .top-date {
-    align-items: flex-start;
-    margin-top: -5px; /* Adjust to match circle position */
+	align-items: flex-start;
+	margin-top: -5px; /* Adjust to match circle position */
 }
 
 .bottom-date {
-    align-items: flex-end;
-    margin-bottom: -5px; /* Adjust to match circle position */
+	align-items: flex-end;
+	margin-bottom: -5px; /* Adjust to match circle position */
 }
+
+/* Add pulse animation for current position */
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.circle.bottom-circle.pulse {
+	animation: pulse 2s infinite;
+	background-color: rgba(76, 175, 80, 0.2);
+	border-color: #4caf50;
+}
+
+.date-group .present {
+	color: #4caf50;
+	font-weight: bold;
+}
+
+/* Add 3D effect */
+.line-container {
+	position: relative;
+	z-index: 1;
+}
+
+.circle {
+	position: relative;
+	z-index: 2;
+	box-shadow: 0 0 8px rgba(0, 163, 225, 0.3);
+}
+
+.line {
+	position: relative;
+	z-index: 1;
+	box-shadow: 0 0 5px rgba(0, 163, 225, 0.2);
+}
+
+
+.pole-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 180px; /* Match resume item min-height */
+  }

@@ -26,28 +26,52 @@
 
 export const experience = [
     {
+        id: 1,
         position: "Full Stack Engineer",
         company: "Propertier pvt ltd",
         startDate: { month: "Nov", year: "2024" },
         endDate: { month: "Present", year: "" },
         description: `Led development of enterprise-level full-stack web and hybrid mobile applications. Architected centralized multi-container application workflow. Technologies: Django, React Native, Next.js, PostgreSQL, Docker, RabbitMQ, Grafana`,
         achievements: [
-            "Increased operational efficiency by 25% through optimized workflows",
-            "Implemented system observability with Prometheus/Grafana"
-        ]
+            {
+              id: 1,
+              text: "Increased operational efficiency by 25% through optimized workflows",
+              metrics: "+25% efficiency"
+            },
+            {
+              id: 2,
+              text: "Implemented system observability with Prometheus/Grafana",
+              metrics: "Improved monitoring"
+            }
+          ],
+          technologies: ["Django", "React Native", "Next.js", "PostgreSQL", "Docker", "RabbitMQ", "Grafana"],
+          companyUrl: "https://thepropertier.com"
     },
     {
+        id: 2,
         position: "Senior Full Stack Engineer",
         company: "Infintrix Technologies",
         startDate: { month: "Jan", year: "2024" },
         endDate: { month: "March", year: "2025" },
         description: `Led development of enterprise applications using Django/React/Next.JS. Mentored junior developers and improved team productivity.`,
+
         achievements: [
-            "Reduced application load time by 40% through performance optimization",
-            "Implemented CI/CD pipeline reducing deployment time by 30%"
-        ]
+            {
+              id: 1,
+              text: "Reduced application load time by 40% through performance optimization",
+              metrics: "+25% efficiency"
+            },
+            {
+              id: 2,
+              text: "Implemented CI/CD pipeline reducing deployment time by 30%",
+              metrics: "Improved monitoring"
+            }
+          ],
+          technologies: ["Django", "React Native", "Next.js", "PostgreSQL", "Docker", "RabbitMQ", "Grafana"],
+          companyUrl: "https://thepropertier.com"
     },
     {
+        id: 3,
         position: "Full Stack Developer",
         company: "Infosys IIT",
         startDate: { month: "May", year: "2021" },
@@ -55,19 +79,31 @@ export const experience = [
         endDate: { month: "Dec", year: "2022" },
         description: `Developed full-stack solutions for various clients using Django and React. Collaborated on backend-frontend integration.`,
         achievements: [
-            "Delivered 5+ client projects with 100% on-time completion",
-            "Implemented ElasticSearch improving data retrieval speed by 60%"
-        ]
+            {
+              id: 1,
+              text: "Delivered 5+ client projects with 100% on-time completion",
+              metrics: "+25% efficiency"
+            },
+            {
+              id: 2,
+              text: "Implemented ElasticSearch improving data retrieval speed by 60%",
+              metrics: "Improved monitoring"
+            }
+          ],
+          technologies: ["Django", "React Native", "Next.js", "PostgreSQL", "Docker", "RabbitMQ", "Grafana"],
+          companyUrl: "https://thepropertier.com"
     },
 ];
 
 
 export const education = [
     {
+        id: 1,
         degree: "Bachelor of Science in Computer Science",
         school: "GC University",
         startDate: { month: "Aug", year: "2019" },
         endDate: { month: "July", year: "2023" },
         description: `I graduated with a Bachelor's in Computer Science from GC University. My award-winning final year project, "jsbook-qandeel," allows for writing and running React code in the browser, with the added functionality of saving code and taking notes.`,
+        schoolUrl: "https://gcuf.edu.pk"
     },
 ];
