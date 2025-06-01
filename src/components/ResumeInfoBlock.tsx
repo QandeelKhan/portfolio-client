@@ -2,19 +2,25 @@ import React from "react";
 import "./css/resume-info-block.css";
 import LeftPole from "./LeftPole";
 
+
+interface DateObj {
+    month: string;
+    year: string;
+}
+
 interface headingProps {
     experience: {
         position: string;
         company: string;
-        startDate: string;
-        endDate: string;
+        startDate: DateObj;
+        endDate: DateObj;
         description: string;
     }[];
     education: {
         degree: string;
         school: string;
-        startDate: string;
-        endDate: string;
+        startDate: DateObj;
+        endDate: DateObj;
         description: string;
     }[];
 }

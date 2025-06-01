@@ -1,14 +1,21 @@
-/*  */
+.pole-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    height: 100%;
+    margin-right: 15px; /* Add spacing between pole and content */
+}
+
 .line-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 100px;
+    width: 20px;
 }
 
 .line {
     width: 2px;
-    height: 100%;
+    flex-grow: 1;
     background-color: #00a3e1;
 }
 
@@ -18,22 +25,61 @@
     border-radius: 50%;
     background-color: transparent;
     border: 2px solid #00a3e1;
-    top: 0;
+}
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #00a3e1;
+    position: relative;
+    z-index: 1;
 }
 
 .text-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: white;
-}
-
-.to {
     margin-left: 10px;
+    padding: 5px 0;
+    height: 100%;
+}
+
+.date-group {
+    display: flex;
+    align-items: center;
+    height: 50%; /* Ensure equal space distribution */
+}
+
+.date {
+    font-weight: bold;
+    color: #00a3e1;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.separator {
+    font-size: 10px;
+    opacity: 0.7;
+    margin: 0 2px;
+}
+
+
+.date-group .present {
+    color: #4CAF50;
     font-weight: bold;
 }
 
-.from {
-    font-weight: bold;
-    margin-left: 1em;
+/* Alignment adjustments */
+.top-date {
+    align-items: flex-start;
+    margin-top: -5px; /* Adjust to match circle position */
+}
+
+.bottom-date {
+    align-items: flex-end;
+    margin-bottom: -5px; /* Adjust to match circle position */
 }

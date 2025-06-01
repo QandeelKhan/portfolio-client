@@ -25,7 +25,7 @@ const Resume: React.FC = () => {
                 <ResumeInfoBlock
                     experience={experience}
                     education={education}
-                />
+                /> 
                 <ResumeSkills />
             </PageTemplate>
         </>
