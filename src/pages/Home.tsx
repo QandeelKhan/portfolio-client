@@ -1,6 +1,6 @@
 import ChangingText from "../components/ChangingText";
 import { Helmet } from "react-helmet";
-import "./css/home.css";
+import "./css/home-background.css";
 import { useDispatch } from "react-redux";
 import { getToken } from "../redux/services/localStorageService";
 import { useGetLoggedUserQuery } from "../redux/services/userAuthApi";
@@ -13,6 +13,19 @@ import {
     setProfileImage,
     setStaffStatus,
 } from "../redux/features/authSlice";
+import { CSSProperties } from "react";
+
+// Inline styles to ensure consistent positioning
+const homeStyles: CSSProperties = {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100vw',
+    height: '100vh',
+    margin: 0,
+    padding: 0,
+    zIndex: 0,
+};
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -21,7 +34,7 @@ const Home = () => {
     // data of server in our "data" property in hook, then we use "data" wherever in ui's.
     const { access_token, refresh_token } = getToken();
 
-    console.log(`Bearer ${access_token}`);
+    console.log(`Bearer ${ access_token }`);
 
     const { data, isSuccess } = useGetLoggedUserQuery<any>({
         access_token: access_token,
@@ -42,8 +55,9 @@ const Home = () => {
             }
         }
     }, [data, isSuccess, dispatch]);
+
     return (
-        <>
+        <div style={homeStyles}>
             <Helmet>
                 <title>
                     Qandeel Haider Khan - Full Stack Developer | Python, Django,
@@ -64,15 +78,19 @@ const Home = () => {
                     content="width=device-width, initial-scale=1.0"
                 />
             </Helmet>
-            <section id="home" className="home-container">
-                <div className="main-image-area"></div>
+
+            {/* Background div that covers the entire viewport */}
+            <div id="home-background" className="no-transition">
+                {/* Banner text */}
                 <div className="banner-text">
-                    <span className="banner-qandeel">QANDEEL</span>
-                    <span className="banner-khan">KHAN</span>
+                    <div className="name-container">
+                        <span className="banner-qandeel">QANDEEL</span>
+                        <span className="banner-khan">KHAN</span>
+                    </div>
                     <ChangingText />
                 </div>
-            </section>
-        </>
+            </div>
+        </div>
     );
 };
 

@@ -87,18 +87,16 @@ const SideNav: React.FC = (props: any) => {
     return (
         <>
             <div className="toggle-mode">
-                <>{console.log(`click status ${clientPortalClicked}`)}</>
-                <>{console.log(`profile image is: ${profileImage}`)}</>
+                <>{console.log(`click status ${ clientPortalClicked }`)}</>
+                <>{console.log(`profile image is: ${ profileImage }`)}</>
                 <div
-                    className={`toggler-container ${
-                        navVisible ? "toggler-clicked" : "toggler-unclicked"
-                    }`}
+                    className={`toggler-container ${ navVisible ? "toggler-clicked" : "toggler-unclicked"
+                        }`}
                 >
                     <button
                         onClick={handleToggleNav}
-                        className={`toggler ${
-                            navVisible ? "show-toggler" : "hide-toggler"
-                        }`}
+                        className={`toggler ${ navVisible ? "show-toggler" : "hide-toggler"
+                            }`}
                     >
                         {navVisible ? (
                             <i className="fa-solid fa-xmark toggle-icon"></i>
@@ -116,7 +114,7 @@ const SideNav: React.FC = (props: any) => {
             </div>
 
             <div
-                className={`nav ${!navVisible ? "nav-hidden" : "nav-visible"}`}
+                className={`nav ${ !navVisible ? "nav-hidden" : "nav-visible" }`}
             >
                 <div className="image-area">
                     {staffUser && (
@@ -125,10 +123,10 @@ const SideNav: React.FC = (props: any) => {
                     <img
                         src={
                             clientPortalClicked && profileImage
-                                ? `${profileImage}`
+                                ? `${ profileImage }`
                                 : !clientPortalClicked
-                                ? "images/other/profile-img.jpg"
-                                : "images/other/avatar-male.jpg"
+                                    ? "/images/other/profile-img.jpg"
+                                    : "/images/other/avatar-male.jpg"
                         }
                         alt="qandeel baloch profile"
                     />
@@ -137,7 +135,7 @@ const SideNav: React.FC = (props: any) => {
                         <span>
                             {!clientPortalClicked
                                 ? "QANDEEL KHAN"
-                                : `${firstName} ${lastName}`}
+                                : `${ firstName } ${ lastName }`}
                         </span>
                     </div>
                 </div>

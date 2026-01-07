@@ -93,3 +93,11 @@ Heavenstrust is a Django project that provides a platform for buying and selling
 - CSS
 - JavaScript
 `;
+
+// Add default export
+const MDText = {
+	defaultDescription,
+	jsBookDescription,
+	heavensTrustDescription,
+};
+export default MDText;

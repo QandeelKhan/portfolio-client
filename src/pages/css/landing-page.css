@@ -1,57 +1,189 @@
 .landing-page-container {
-    height: 100vh;
-    width: 100%;
-    background-color: #2c2d2f;
-    z-index: 0;
+	height: 100vh;
+	width: 100vw !important; /* Use viewport width */
+	background-color: #2c2d2f;
+	z-index: 999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 1;
+	visibility: visible;
+	margin: 0 !important;
+	padding: 0 !important;
+	/* Remove transitions that might cause flicker */
+	transition: opacity 0.2s ease-out !important;
 }
 
 .landing-hide {
-    display: hide;
+	display: none;
 }
 
+.landing-fade-out {
+	opacity: 0;
+	visibility: hidden;
+}
+
+/* Content-only loader styles - remove margin */
+.content-only-loader {
+	position: fixed !important; /* Use fixed instead of absolute */
+	left: 0 !important; /* Start from left edge */
+	width: 100vw !important; /* Use viewport width */
+	background-color: rgba(44, 45, 47, 0.8); /* Semi-transparent background */
+	backdrop-filter: blur(5px);
+	z-index: 900;
+}
+
+/* Layout container styles */
+.layout-container {
+	display: flex;
+	width: 100%;
+	min-height: 100vh;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.sidenav-container {
+	flex-shrink: 0;
+	width: 280px; /* Match SideNav width */
+	position: fixed;
+	height: 100vh;
+	z-index: 1000;
+}
+
+.content-container {
+	flex-grow: 1;
+	margin-left: 280px !important; /* Force correct margin */
+	min-height: 100vh;
+	position: relative;
+	width: calc(100% - 280px); /* Ensure exact width */
+	transition: none !important; /* Prevent transition flicker */
+}
+
+/* Special override for home page content container */
+.content-container:has(#home-background) {
+	margin-left: 0 !important;
+	width: 100% !important;
+}
+
+/* For mobile view */
+@media (max-width: 991px) {
+	.content-only-loader {
+		left: 0;
+		width: 100%;
+	}
+
+	.content-container {
+		margin-left: 0 !important;
+		width: 100%;
+	}
+}
+
+/* Landing info positioning */
 .landing-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .landing-name {
-    margin-top: 20%;
-    font-size: 25px;
-    opacity: 1;
-    transition: opacity 1s linear;
-    color: white;
-    font-family: "Playfair Display", serif;
+	font-size: 25px;
+	opacity: 1;
+	transition: opacity 1s linear;
+	color: white;
+	font-family: "Playfair Display", serif;
 }
 
 .landing-name-hide {
-    opacity: 0;
+	opacity: 0;
 }
 
 /* dots */
 .dots-container {
-    display: flex;
+	display: flex;
+	margin-top: 15px;
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin: 0 2px;
-    animation: blink 1s linear infinite;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin: 0 2px;
+	animation: blink 1s linear infinite;
 }
 
 @keyframes blink {
-    0% {
-        opacity: 1;
-    }
+	0% {
+		opacity: 1;
+	}
 
-    50% {
-        opacity: 0;
-    }
+	50% {
+		opacity: 0;
+	}
 
-    100% {
-        opacity: 1;
-    }
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Special case for home page */
+.home-container {
+	margin: 0 !important;
+	width: 100vw !important;
+	left: 0 !important;
+	position: fixed !important;
+	z-index: 0 !important;
+}
+
+/* Ensure home page content container doesn't have the standard margin */
+.content-container .home-container {
+	margin: 0 !important;
+	width: 100vw !important;
+}
+
+/* Special case for home page content */
+.home-page-content {
+	margin-left: 0 !important;
+	width: 100% !important;
+	background: transparent !important;
+	transition: none !important; /* Prevent transition flicker */
+}
+
+/* Special class for home layout */
+.home-layout {
+	overflow: hidden !important;
+}
+
+/* Special class for home page loader */
+.home-page-loader {
+	z-index: 998 !important; /* Lower z-index than sidebar */
+	background-color: rgba(
+		44,
+		45,
+		47,
+		0.95
+	) !important; /* More opaque background */
+}
+
+/* No transition class to prevent flicker */
+.no-transition,
+.no-transition * {
+	transition: none !important;
+	animation: none !important;
+}
+
+/* Special transform for landing info */
+.landing-info.no-transition {
+	transform: translate(-50%, -50%) !important; /* Keep centered */
+}
+
+/* Make content container transparent for home page */
+.home-page-content * {
+	background-color: transparent;
 }

@@ -1,0 +1,127 @@
+/* Home page background styles that override all other styles */
+#home-background {
+	position: fixed !important;
+	top: 0 !important;
+	left: 0 !important;
+	width: 100vw !important; /* Full viewport width */
+	height: 100vh !important;
+	background: rgb(0, 0, 0, 0.5) url("/images/other/home-bg.jpg") !important;
+	background-blend-mode: darken !important;
+	background-position: center !important;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	z-index: -1 !important;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	transform: none !important; /* Prevent any transforms */
+	transition: none !important; /* Disable transitions that might cause flicker */
+}
+
+/* Banner text positioning - using flexbox for perfect centering */
+.banner-text {
+	position: static !important; /* Changed to static to work with flexbox parent */
+	text-align: center !important;
+	z-index: 10 !important;
+	width: 100% !important;
+	max-width: 600px !important; /* Limit width for better readability */
+	margin: 0 auto !important; /* Center horizontally */
+	transform: none !important; /* Prevent any transforms */
+	transition: none !important; /* Disable transitions that might cause flicker */
+	left: auto !important; /* Override any left positioning */
+	right: auto !important; /* Override any right positioning */
+	top: auto !important; /* Override any top positioning */
+	bottom: auto !important; /* Override any bottom positioning */
+}
+
+/* Name styling */
+.name-container {
+	margin-bottom: 20px !important;
+	transform: none !important; /* Prevent any transforms */
+	transition: none !important; /* Disable transitions that might cause flicker */
+}
+
+.banner-qandeel {
+	color: white !important;
+	font-weight: bold !important;
+	letter-spacing: 2px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	display: block !important;
+	font-size: 4.1rem !important;
+	font-family: "Playfair Display", serif !important;
+	line-height: 1.2 !important;
+}
+
+.banner-khan {
+	color: #00a3e1 !important;
+	font-weight: bold !important;
+	letter-spacing: 2px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	display: block !important;
+	font-size: 4.1rem !important;
+	font-family: "Playfair Display", serif !important;
+	line-height: 1.2 !important;
+}
+
+/* Changing text styling */
+.animation-text {
+	width: 100% !important;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	margin-top: 10px !important;
+}
+
+.fixed-text {
+	font-size: 1.8rem !important;
+	color: white !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	display: inline-block !important;
+	font-weight: lighter !important;
+}
+
+.dynamic-text {
+	font-size: 1.8rem !important;
+	color: white !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	display: inline-block !important;
+	font-weight: bold !important;
+	position: relative !important;
+	border-bottom: 2px solid #00a3e1 !important;
+	font-weight: 700 !important;
+}
+
+/* Override any layout styles that might affect positioning */
+.home-page-content #home-background {
+	left: 0 !important;
+	margin: 0 !important;
+	width: 100vw !important;
+	transform: none !important;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+	.banner-qandeel,
+	.banner-khan {
+		font-size: 3rem !important;
+	}
+}
+
+@media (max-width: 425px) {
+	.banner-qandeel,
+	.banner-khan {
+		font-size: 2.3rem !important;
+	}
+
+	.animated-text {
+		font-size: 1.5rem !important;
+	}
+
+	.animation-text .fixed-text {
+		font-size: 1.2rem !important;
+	}
+}

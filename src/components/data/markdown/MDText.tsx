@@ -1,13 +1,13 @@
 import React from "react";
 import Markdown from "react-markdown";
 import "./md-style.css";
-import { defaultDescription } from "./mdText";
+import MDTextData from "./mdText";
 
 type MDTextProps = {
     descriptionMDText?: string;
 };
 const MDText: React.FC<MDTextProps> = ({
-    descriptionMDText = defaultDescription,
+    descriptionMDText = MDTextData.defaultDescription,
 }) => {
     return (
         <div className="description-md-container">

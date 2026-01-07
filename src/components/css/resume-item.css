@@ -1,0 +1,363 @@
+/* Resume Item Component Styles */
+.resume-item {
+	background: var(--cardBackground);
+	border-radius: 8px;
+	overflow: hidden;
+	margin-bottom: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: var(--transition);
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	position: relative;
+}
+
+.resume-item.expanded {
+	box-shadow: 0 8px 25px rgba(0, 163, 225, 0.3);
+	border-color: rgba(0, 163, 225, 0.3);
+}
+
+/* Expand Icon */
+.expand-icon-top-right {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	color: var(--primaryColor);
+	font-size: 16px;
+	cursor: pointer;
+	z-index: 2;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 163, 225, 0.1);
+	border-radius: 50%;
+	transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.resume-item.expanded .expand-icon-top-right {
+	transform: rotate(180deg);
+}
+
+.expand-icon-top-right:hover {
+	background: var(--primaryColor);
+	color: white;
+	transform: scale(1.1);
+}
+
+@keyframes glow-pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(0, 163, 225, 0.3);
+	}
+	70% {
+		box-shadow: 0 0 0 10px rgba(0, 163, 225, 0);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(0, 163, 225, 0);
+	}
+}
+
+.resume-item.expanded .expand-icon-top-right {
+	animation: glow-pulse 2s ease-out;
+}
+
+/* Item Header */
+.item-header {
+	display: flex;
+	padding: 20px 20px 20px 50px;
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.item-header:hover {
+	background: rgba(255, 255, 255, 0.02);
+}
+
+.item-content {
+	flex: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+}
+
+.position-info {
+	flex: 1;
+	position: relative;
+}
+
+/* Logo Container */
+.logo-container {
+	width: 60px;
+	height: 60px;
+	min-width: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 8px;
+	overflow: hidden;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	transition: var(--transition);
+}
+
+.resume-item.expanded .logo-container {
+	transform: scale(1.05);
+	box-shadow: 0 0 15px rgba(0, 163, 225, 0.2);
+}
+
+.company-logo {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	padding: 8px;
+	transition: var(--transition);
+}
+
+.logo-placeholder {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--primaryColor);
+	font-size: 24px;
+	background: rgba(0, 163, 225, 0.05);
+}
+
+/* Text Styling */
+.rsm-txt-heading {
+	color: white;
+	font-size: 18px;
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.rsm-txt-subheading {
+	color: var(--primaryColor);
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.company-link {
+	color: var(--primaryColor);
+	font-size: 14px;
+	transition: var(--transition);
+}
+
+.company-link:hover {
+	color: var(--hoverColor);
+	transform: translateY(-2px);
+}
+
+/* Description Section */
+.description-container {
+	padding: 0 20px 15px;
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+.description-text {
+	margin: 0;
+	color: rgba(255, 255, 255, 0.85);
+}
+
+.see-more {
+	color: var(--primaryColor);
+	cursor: pointer;
+	font-weight: 500;
+	transition: var(--transition);
+	display: inline-block;
+}
+
+.see-more:hover {
+	color: var(--hoverColor);
+	text-decoration: underline;
+}
+
+.see-more:focus {
+	outline: 2px solid var(--primaryColor);
+	outline-offset: 2px;
+	border-radius: 2px;
+}
+
+/* Item Details (Expanded Content) */
+.item-details {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s ease, padding 0.3s ease;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.item-details.visible {
+	max-height: 1000px;
+	padding: 0 20px 20px;
+}
+
+/* Sections */
+.section-title {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin: 20px 0 15px;
+	color: var(--primaryColor);
+}
+
+.section-title h4 {
+	font-size: 16px;
+	margin: 0;
+}
+
+.icon {
+	font-size: 18px;
+}
+
+/* Tech Stack */
+.tech-container {
+	margin-top: 20px;
+}
+
+.tech-stack {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 10px;
+}
+
+.tech-tag {
+	background: rgba(0, 163, 225, 0.15);
+	color: var(--primaryColor);
+	padding: 5px 12px;
+	border-radius: 20px;
+	font-size: 12px;
+	font-weight: 500;
+	transition: var(--transition);
+	position: relative;
+	cursor: default;
+}
+
+.tech-tag.highlighted {
+	background: var(--primaryColor);
+	color: white;
+	transform: translateY(-3px);
+	box-shadow: 0 4px 10px rgba(0, 163, 225, 0.3);
+}
+
+.tech-popup {
+	position: absolute;
+	top: -35px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: var(--primaryColor);
+	color: white;
+	padding: 4px 10px;
+	border-radius: 4px;
+	font-size: 12px;
+	white-space: nowrap;
+	z-index: 10;
+}
+
+.tech-popup::after {
+	content: "";
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid var(--primaryColor);
+}
+
+/* Achievements */
+.achievements-container {
+	margin-top: 15px;
+}
+
+.achievements-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.achievements-list li {
+	display: flex;
+	gap: 12px;
+	margin-bottom: 12px;
+	padding: 10px;
+	background: rgba(255, 255, 255, 0.03);
+	border-radius: 6px;
+	transition: var(--transition);
+}
+
+.achievements-list li:hover {
+	background: rgba(0, 163, 225, 0.1);
+	transform: translateX(5px);
+}
+
+.achievement-icon {
+	color: var(--successColor);
+	font-size: 16px;
+	min-width: 20px;
+	margin-top: 3px;
+}
+
+.achievement-text {
+	flex: 1;
+}
+
+.achievement-text span {
+	color: rgba(255, 255, 255, 0.85);
+	font-size: 14px;
+}
+
+.achievement-metrics {
+	color: var(--successColor);
+	font-size: 12px;
+	font-weight: 500;
+	margin-top: 5px;
+	background: rgba(76, 175, 80, 0.1);
+	padding: 3px 8px;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+	.expand-icon-top-right {
+		top: 12px;
+		right: 12px;
+		font-size: 14px;
+		width: 26px;
+		height: 26px;
+	}
+
+	.item-content {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 15px;
+	}
+
+	.logo-container {
+		width: 50px;
+		height: 50px;
+		min-width: 50px;
+	}
+
+	.rsm-txt-heading {
+		font-size: 16px;
+	}
+
+	.rsm-txt-subheading {
+		font-size: 14px;
+	}
+
+	.item-header {
+		padding: 15px 15px 15px 45px;
+	}
+}

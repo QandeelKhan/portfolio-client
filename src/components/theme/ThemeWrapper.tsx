@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { myThemeState } from "../../redux/themeSlice";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const ThemeWrapper: React.FC<{ children: React.ReactElement }> = ({
     children,
@@ -11,25 +11,30 @@ const ThemeWrapper: React.FC<{ children: React.ReactElement }> = ({
         (state: RootState) => state.themes.selectedTheme.theme
     );
 
+    // Track the current theme to ensure it's applied correctly
+    const [currentTheme, setCurrentTheme] = useState(
+        selectedTheme || myThemeState.themes[0].theme
+    );
+
+    // Update the current theme when the selected theme changes
     useEffect(() => {
-        // children
+        if (selectedTheme && Object.keys(selectedTheme).length > 0) {
+            setCurrentTheme(selectedTheme);
+            console.log("Theme updated to:", selectedTheme);
+        }
     }, [selectedTheme]);
 
     return (
         <>
-            {console.log(selectedTheme, "this is selected theme")}
-            <AnimatePresence>
+            {console.log("Current theme being applied:", currentTheme)}
+            <AnimatePresence mode="wait">
                 <motion.div
+                    key={JSON.stringify(currentTheme)} // Force re-render when theme changes
                     initial="pageInitial"
                     animate="pageAnimate"
                     exit="pageExit"
                     transition={{ duration: 1 }}
-                    // variants={selectedTheme}
-                    variants={
-                        !selectedTheme
-                            ? myThemeState.themes[0].theme
-                            : selectedTheme
-                    }
+                    variants={currentTheme}
                 >
                     {children}
                 </motion.div>

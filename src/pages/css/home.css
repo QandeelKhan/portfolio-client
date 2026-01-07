@@ -1,96 +1,102 @@
 .home-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed !important;
+	width: 100vw !important;
+	height: 100vh;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	z-index: 0;
 }
 
 .main-image-area {
-    width: 100%;
-    height: 100vh;
-    background: rgb(0, 0, 0, 0.5) url("/images/other/home-bg.jpg");
-    background-blend-mode: darken;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    object-fit: contain;
-    margin-left: 200px;
+	width: 100vw;
+	height: 100vh;
+	background: rgb(0, 0, 0, 0.5) url("/images/other/home-bg.jpg");
+	background-blend-mode: darken;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 0 !important;
+	padding: 0 !important;
+	z-index: -1;
 }
 
 @media (max-width: 768px) {
-    .main-image-area {
-        margin-left: 0px;
-    }
-}
+	.banner-qandeel {
+		font-size: 3rem;
+		font-weight: 700px;
+	}
 
-@media (max-width: 768px) {
-    .banner-qandeel {
-        font-size: 3rem;
-        font-weight: 700px;
-    }
+	.banner-khan {
+		font-size: 3rem;
+		font-weight: 700px;
+	}
 
-    .banner-khan {
-        font-size: 3rem;
-        font-weight: 700px;
-    }
-
-    .banner-text {
-        transform: translateX(-80px);
-    }
+	.banner-text {
+		transform: translateX(-50%) translateY(-50%);
+	}
 }
 
 @media (max-width: 425px) {
-    .banner-qandeel {
-        font-size: 2.3rem;
-        margin: 0px;
-        font-weight: 700px;
-    }
+	.banner-qandeel {
+		font-size: 2.3rem;
+		margin: 0px;
+		font-weight: 700px;
+	}
 
-    .banner-khan {
-        font-size: 2.3rem;
-        font-weight: 700px;
-        margin: 0px;
-    }
+	.banner-khan {
+		font-size: 2.3rem;
+		font-weight: 700px;
+		margin: 0px;
+	}
 }
 
 .banner-text {
-    position: absolute;
-    color: #00a3e1;
-    font-size: 4.1rem;
-    margin-left: 150px;
-    margin-bottom: 100px;
-    font-weight: 700px;
-    font-family: "Playfair Display", serif;
+	position: absolute;
+	color: #00a3e1;
+	font-size: 4.1rem;
+	font-weight: 700px;
+	font-family: "Playfair Display", serif;
+	z-index: 10;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	text-align: center;
+	width: auto;
 }
 
 .banner-qandeel {
-    color: white;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin: 0px 5px;
+	color: white;
+	font-weight: bold;
+	letter-spacing: 2px;
+	margin: 0px 5px;
+	display: block;
 }
 
 .banner-khan {
-    color: #00a3e1;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin: 0px 5px;
+	color: #00a3e1;
+	font-weight: bold;
+	letter-spacing: 2px;
+	margin: 0px 5px;
+	display: block;
 }
 
 @keyframes typetext {
-    0% {
-        left: 0;
-    }
+	0% {
+		left: 0;
+	}
 
-    50% {
-        left: 100%;
-    }
+	50% {
+		left: 100%;
+	}
 
-    100% {
-        left: 0;
-    }
+	100% {
+		left: 0;
+	}
 }

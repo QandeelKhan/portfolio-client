@@ -23,87 +23,116 @@
 //     },
 // ];
 
-
 export const experience = [
-    {
-        id: 1,
-        position: "Full Stack Engineer",
-        company: "Propertier pvt ltd",
-        startDate: { month: "Nov", year: "2024" },
-        endDate: { month: "Present", year: "" },
-        description: `Led development of enterprise-level full-stack web and hybrid mobile applications. Architected centralized multi-container application workflow. Technologies: Django, React Native, Next.js, PostgreSQL, Docker, RabbitMQ, Grafana`,
-        achievements: [
-            {
-              id: 1,
-              text: "Increased operational efficiency by 25% through optimized workflows",
-              metrics: "+25% efficiency"
-            },
-            {
-              id: 2,
-              text: "Implemented system observability with Prometheus/Grafana",
-              metrics: "Improved monitoring"
-            }
-          ],
-          technologies: ["Django", "React Native", "Next.js", "PostgreSQL", "Docker", "RabbitMQ", "Grafana"],
-          companyUrl: "https://thepropertier.com"
-    },
-    {
-        id: 2,
-        position: "Senior Full Stack Engineer",
-        company: "Infintrix Technologies",
-        startDate: { month: "Jan", year: "2024" },
-        endDate: { month: "March", year: "2025" },
-        description: `Led development of enterprise applications using Django/React/Next.JS. Mentored junior developers and improved team productivity.`,
-
-        achievements: [
-            {
-              id: 1,
-              text: "Reduced application load time by 40% through performance optimization",
-              metrics: "+25% efficiency"
-            },
-            {
-              id: 2,
-              text: "Implemented CI/CD pipeline reducing deployment time by 30%",
-              metrics: "Improved monitoring"
-            }
-          ],
-          technologies: ["Django", "React Native", "Next.js", "PostgreSQL", "Docker", "RabbitMQ", "Grafana"],
-          companyUrl: "https://thepropertier.com"
-    },
-    {
-        id: 3,
-        position: "Full Stack Developer",
-        company: "Infosys IIT",
-        startDate: { month: "May", year: "2021" },
-        
-        endDate: { month: "Dec", year: "2022" },
-        description: `Developed full-stack solutions for various clients using Django and React. Collaborated on backend-frontend integration.`,
-        achievements: [
-            {
-              id: 1,
-              text: "Delivered 5+ client projects with 100% on-time completion",
-              metrics: "+25% efficiency"
-            },
-            {
-              id: 2,
-              text: "Implemented ElasticSearch improving data retrieval speed by 60%",
-              metrics: "Improved monitoring"
-            }
-          ],
-          technologies: ["Django", "React Native", "Next.js", "PostgreSQL", "Docker", "RabbitMQ", "Grafana"],
-          companyUrl: "https://thepropertier.com"
-    },
+	{
+		id: 1,
+		position: "Full Stack Engineer",
+		company: "Propertier pvt ltd",
+		logo: "/images/companies-logo/propertier_logo.png",
+		startDate: { month: "Nov", year: "2024" },
+		endDate: { month: "Present", year: "" },
+		description: `Led and managed the development flow of enterprise-level full-stack web and hybrid mobile application of Propertier pvt ltd. Provided high quality and optimized code based solution over the previous implementations and fostered a centralized multi container application workflow.`,
+		achievements: [
+			{
+				id: 1,
+				text: "Led development of enterprise-level full-stack web and hybrid mobile applications",
+				metrics: "Enterprise-scale",
+			},
+			{
+				id: 2,
+				text: "Fostered centralized multi-container application workflow",
+				metrics: "Improved architecture",
+			},
+		],
+		technologies: [
+			"Django",
+			"React Native",
+			"Next.js",
+			"PostgreSQL",
+			"Docker",
+			"RabbitMQ",
+			"Prometheus",
+			"Grafana",
+			"WebSockets",
+			"ElasticSearch",
+		],
+		companyUrl: "https://thepropertier.com",
+	},
+	{
+		id: 2,
+		position: "Senior Full Stack Engineer",
+		company: "Infintrix Technologies",
+		logo: "/images/companies-logo/infintrix_logo.jpeg",
+		startDate: { month: "Jan", year: "2024" },
+		endDate: { month: "Nov", year: "2024" },
+		description: `Led the development of enterprise-level full-stack applications and achieved a 25% increase in operational efficiency. Working as a Senior Full Stack engineer role Being a team lead I managed and performed on various projects. Crafting high-quality frontend and robust application back-end with cutting edge technologies using Django/React/Next.JS.`,
+		achievements: [
+			{
+				id: 1,
+				text: "Achieved 25% increase in operational efficiency",
+				metrics: "+25% efficiency",
+			},
+			{
+				id: 2,
+				text: "Led team and managed various enterprise projects",
+				metrics: "Team leadership",
+			},
+		],
+		technologies: [
+			"Django",
+			"React",
+			"Next.js",
+			"PostgreSQL",
+			"Docker",
+			"TypeScript",
+			"CI/CD",
+		],
+		companyUrl: "https://infintrixtech.com",
+	},
+	{
+		id: 3,
+		position: "Full Stack Web Developer",
+		company: "Infosys IIT",
+		logo: "/images/companies-logo/infosys_logo.jpg",
+		startDate: { month: "May", year: "2021" },
+		endDate: { month: "Dec", year: "2022" },
+		description: `Worked as a Django/React Developer lead in projects for various clients of Infosys IIT. Built application pages on React.js on the client side and collaborated with back-end developers on the integration of elements.`,
+		achievements: [
+			{
+				id: 1,
+				text: "Led Django/React development projects for various clients",
+				metrics: "Project leadership",
+			},
+			{
+				id: 2,
+				text: "Built responsive React.js applications and integrated with backend systems",
+				metrics: "Full-stack integration",
+			},
+		],
+		technologies: [
+			"Django",
+			"React.js",
+			"PostgreSQL",
+			"SQLite3",
+			"MySQL",
+			"Docker",
+			"RabbitMQ",
+			"Redis",
+			"Celery",
+		],
+		companyUrl: "http://www.infosys.pk",
+	},
 ];
 
-
 export const education = [
-    {
-        id: 1,
-        degree: "Bachelor of Science in Computer Science",
-        school: "GC University",
-        startDate: { month: "Aug", year: "2019" },
-        endDate: { month: "July", year: "2023" },
-        description: `I graduated with a Bachelor's in Computer Science from GC University. My award-winning final year project, "jsbook-qandeel," allows for writing and running React code in the browser, with the added functionality of saving code and taking notes.`,
-        schoolUrl: "https://gcuf.edu.pk"
-    },
+	{
+		id: 1,
+		degree: "Bachelor of Science - Computer Science",
+		school: "Govt College University Faisalabad",
+		logo: "/images/companies-logo/gcuf-logo.png",
+		startDate: { month: "Aug", year: "2019" },
+		endDate: { month: "July", year: "2023" },
+		description: `Graduated with a Bachelor's in Computer Science from Govt College University Faisalabad. My award-winning final year project, "jsbook-qandeel," allows for writing and running React code in the browser, with the added functionality of saving code and taking notes.`,
+		schoolUrl: "https://gcuf.edu.pk",
+	},
 ];

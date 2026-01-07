@@ -15,6 +15,8 @@ body {
 body {
 	/* background-color: #7a7a7a; */
 	background-color: var(--color-gray);
+	margin: 0;
+	padding: 0;
 }
 
 /* .pageInitial {
@@ -42,4 +44,78 @@ body {
 	--foreground-rgb: 0, 0, 0;
 	--background-start-rgb: 214, 219, 220;
 	--background-end-rgb: 255, 255, 255;
+}
+
+/* Global layout styles */
+#root {
+	min-height: 100vh;
+	width: 100%;
+	position: relative;
+}
+
+/* Ensure smooth transitions */
+.layout-container * {
+	transition-property: opacity, transform, visibility;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+}
+
+/* Override any conflicting page container styles */
+.about-container,
+.main-image-area,
+.blog-container,
+.portfolio-container,
+.contact-container,
+.resume-container,
+.blog-detail-container,
+.auth-container,
+.place-order-container,
+.track-order-container,
+.order-history-container,
+.profile-container {
+	margin-left: 0 !important;
+}
+
+/* Ensure content is properly positioned */
+.main-about-area,
+.main-blog-area,
+.main-portfolio-area,
+.main-contact-area,
+.main-resume-area,
+.main-blog-detail-area,
+.main-auth-area,
+.main-place-order-area,
+.main-track-order-area,
+.main-order-history-area,
+.main-profile-area {
+	margin-left: 0 !important;
+}
+
+/* Full width container that extends behind sidebar */
+.full-width-container {
+	width: 100vw !important;
+	position: fixed !important;
+	left: 0 !important;
+	top: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	z-index: 0 !important;
+}
+
+/* Override for home page container */
+#home.home-container {
+	margin: 0 !important;
+	padding: 0 !important;
+	left: 0 !important;
+	width: 100vw !important;
+	position: fixed !important;
+	z-index: 0 !important;
+}
+
+/* For mobile view */
+@media (max-width: 991px) {
+	.full-width-container {
+		margin-left: 0 !important;
+		width: 100% !important;
+	}
 }

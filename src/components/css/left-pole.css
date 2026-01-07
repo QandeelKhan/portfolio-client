@@ -6,12 +6,7 @@
 	margin-right: 15px; /* Add spacing between pole and content */
 }
 
-.line-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 20px;
-}
+
 
 .line {
 	width: 2px;
@@ -42,7 +37,8 @@
 	justify-content: space-between;
 	margin-left: 10px;
 	padding: 5px 0;
-	height: 100%;
+	/* height: 100%; */
+    height: auto;
 }
 
 .date-group {
@@ -107,9 +103,13 @@
 	font-weight: bold;
 }
 
-/* Add 3D effect */
+
 .line-container {
-	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 20px;
+    position: relative;
 	z-index: 1;
 }
 
@@ -121,6 +121,8 @@
 
 .line {
 	position: relative;
+    min-height: 160px;
+    /* height: 180px; */
 	z-index: 1;
 	box-shadow: 0 0 5px rgba(0, 163, 225, 0.2);
 }

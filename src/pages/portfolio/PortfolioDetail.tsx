@@ -2,7 +2,18 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import "./portfolio-detail.css";
 import { gridItems } from "../../components/data/GridItems";
-import MDText from "../../components/data/markdown/MDText";
+import Markdown from "react-markdown";
+import "../../components/data/markdown/md-style.css";
+
+// Local MDText component to avoid case sensitivity issues
+const MDText = ({ descriptionMDText }: { descriptionMDText?: string }) => {
+    return (
+        <div className="description-md-container">
+            <Markdown className="description-md">{descriptionMDText}</Markdown>
+        </div>
+    );
+};
+
 const PortfolioDetail: React.FC = (props: any) => {
     const { index } = useParams<{ index: string | any }>();
     const itemIndex = parseInt(index, 10);

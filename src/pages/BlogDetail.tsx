@@ -63,7 +63,7 @@ const BlogDetail = () => {
                 <title>{selectedPost.title} - Qandeel Khan's Blog</title>
                 <meta
                     name="description"
-                    // content={selectedPost.initialParagraph}
+                // content={selectedPost.initialParagraph}
                 />
                 {/* <meta name="keywords" content={selectedPost.kewords} /> */}
                 <meta
@@ -162,7 +162,7 @@ const BlogDetail = () => {
                                             </h2>
                                         </div>
                                         {selectedPost.comments.comment_count ===
-                                        0 ? (
+                                            0 ? (
                                             <h4>No comments yet</h4>
                                         ) : (
                                             <>
