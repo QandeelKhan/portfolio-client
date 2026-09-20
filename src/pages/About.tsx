@@ -40,8 +40,8 @@ const About: React.FC = (props: any) => {
                         </h3>
                         <span className="uiux-dummy-text">
                             I am a Python and JavaScript developer with a
-                            bachelor’s degree in Computer Science from GC
-                            University Faisalabad and 6 years of software
+                            bachelor’s degree in Computer Science from Govt
+                            College University Faisalabad and 7 years of software
                             development experience. I am experienced in web
                             development with JavaScript technologies using
                             modern cutting edge technology stack for the
