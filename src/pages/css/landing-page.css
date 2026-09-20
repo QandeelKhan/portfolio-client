@@ -53,7 +53,7 @@
 .content-container {
 	flex-grow: 1;
 	margin-left: 280px !important; /* Force correct margin */
-	min-height: 100vh;
+	/* FIX: Removed min-height: 100vh to prevent double-stacking with layout-container */
 	position: relative;
 	width: calc(100% - 280px); /* Ensure exact width */
 	transition: none !important; /* Prevent transition flicker */

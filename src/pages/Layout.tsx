@@ -11,7 +11,7 @@ import {
     setNavVisible,
     setSideBarVisible,
 } from "../redux/reducers/eventsSlice";
-import { FloatingWhatsApp } from "react-floating-whatsapp";
+import CustomFloatingWhatsApp from "../components/CustomFloatingWhatsApp";
 import { RootState } from "../redux/store";
 
 const Layout: React.FC = () => {
@@ -86,7 +86,7 @@ const Layout: React.FC = () => {
                             <Outlet key={key} />
                         </div>
                     </ThemeWrapper>
-                    <FloatingWhatsApp
+                    <CustomFloatingWhatsApp
                         phoneNumber="03157051720"
                         accountName="Qandeel Haider Khan"
                         avatar="images/other/profile-img.jpg"
