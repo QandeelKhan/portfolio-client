@@ -39,33 +39,31 @@ const About: React.FC = (props: any) => {
                             Full-Stack Engineer & Author
                         </h3>
                         <span className="uiux-dummy-text">
-                            I am a Python and JavaScript developer with a
-                            bachelor’s degree in Computer Science from Govt
-                            College University Faisalabad and 7 years of software
-                            development experience. I am experienced in web
-                            development with JavaScript technologies using
-                            modern cutting edge technology stack for the
-                            front-end of my applications i.e React and Next.JS &
-                            React Native for hybrid mobile applications
-                            development & on the back-end side, I use python
-                            technologies. I have experience with MVT(Model View
-                            Template) and MVC(Model View Controller) through
-                            Django and DRF (Django rest framework), and I have
-                            been involved in maintaining versions of source code
-                            using git version control.
-                            <br />I use a containerized system using Docker for
-                            portability of my web and mobile projects and
-                            deployment. When working on a new project, I like to
-                            speak with my clients to understand their needs and
-                            vision of the project clearly.
+                            I am a Senior Full Stack Engineer with a bachelor’s degree 
+                            in Computer Science from Govt
+                            College University Faisalabad and 7 years of experience
+                            building enterprise grade software solutions. 
+                            I specialize in architecting full-stack applications using 
+                            modern technology stacks. On the frontend, I build 
+                            responsive, high-performance web applications with React, 
+                            Next.js, and TypeScript, and develop cross-platform 
+                            mobile applications using React Native. On the backend, 
+                            I architect scalable systems using Python, Django, and 
+                            Django REST Framework, designing robust APIs and 
+                            implementing microservices patterns. I implement 
+                            containerized, multi-service environments using Docker, 
+                            orchestrating complex deployments and ensuring seamless 
+                            scalability for production applications.
+                            <br />I collaborate closely with clients to translate 
+                            business requirements into technical solutions, ensuring 
+                            alignment between project vision and software architecture.
                             <br />
-                            Thank you so much for taking the time to review my
-                            profile. I look forward to the opportunity of
-                            working with you.
+                            Thank you for reviewing my profile. I'm excited about the 
+                            possibility of collaborating on innovative projects that 
+                            push technical boundaries.
                             <br />
-                            If you are interested in collaborating with me,
-                            please feel free to contact me at
-                            com.qandeelhaider@gmail.com
+                            If you're interested in working together, feel free to reach out 
+                            at com.qandeelhaider@gmail.com
                             <br />
                             <br />
                         </span>
