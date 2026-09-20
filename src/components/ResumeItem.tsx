@@ -99,7 +99,15 @@ const ResumeItem: React.FC<ResumeItemProps> = ({
         <div className={`resume-item ${ isExpanded ? 'expanded' : '' }`}>
             <div
                 className="expand-icon-top-right"
-                onClick={() => onToggle(item.id)}
+                onClick={(e) => {
+                    e.stopPropagation();
+                    onToggle(item.id);
+                }}
+                onTouchEnd={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    onToggle(item.id);
+                }}
                 title={isExpanded ? "Collapse details" : "Expand details"}
                 onKeyDown={(e) => e.key === 'Enter' && onToggle(item.id)}
                 tabIndex={0}
@@ -109,7 +117,13 @@ const ResumeItem: React.FC<ResumeItemProps> = ({
                 {isExpanded ? <FaChevronUp /> : <FaChevronDown />}
             </div>
 
-            <div className="item-header" onClick={() => onToggle(item.id)}>
+            <div className="item-header" onClick={(e) => {
+                const target = e.target as HTMLElement;
+                // Don't toggle if clicking on links or interactive elements
+                if (!target.closest('a') && !target.closest('.expand-icon-top-right')) {
+                    onToggle(item.id);
+                }
+            }}>
                 <LeftPole from={item.startDate} to={item.endDate} />
                 <div className="item-content">
                     <div className="position-info">
@@ -130,7 +144,7 @@ const ResumeItem: React.FC<ResumeItemProps> = ({
                         </h4>
                     </div>
 
-                    <div className="logo-container">
+                    <div className={`logo-container ${subtitle === 'KeyTax Accountants Ltd' ? 'light-bg' : ''}`}>
                         {item.logo ? (
                             <img
                                 src={item.logo}
@@ -158,7 +172,15 @@ const ResumeItem: React.FC<ResumeItemProps> = ({
                             {item.description.length > 150 && (
                                 <span
                                     className="see-more"
-                                    onClick={() => onToggle(item.id)}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        onToggle(item.id);
+                                    }}
+                                    onTouchEnd={(e) => {
+                                        e.preventDefault();
+                                        e.stopPropagation();
+                                        onToggle(item.id);
+                                    }}
                                     onKeyDown={(e) => e.key === 'Enter' && onToggle(item.id)}
                                     tabIndex={0}
                                     role="button"

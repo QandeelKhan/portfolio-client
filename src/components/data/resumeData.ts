@@ -27,10 +27,40 @@ export const experience = [
 	{
 		id: 1,
 		position: "Full Stack Engineer",
+		company: "KeyTax Accountants Ltd",
+		logo: "/images/companies-logo/keytax.png",
+		startDate: { month: "May", year: "2026" },
+		endDate: { month: "Present", year: "" },
+		description: `Fostered the best solution in reshaping and efficiency of the product EDOC21, ready to business and challenge the existing bookkeeping software solutions in UK market. Delivered highly optimized code based over the previous work the company was willing for and turned the idea into a business ready product that offers competitive features to the accounting firms in UK, following best pricing model to maintain the company expenses with only 4 client firms each month to fulfil the running system cost.`,
+		achievements: [
+			{
+				id: 1,
+				text: "Reshaped and optimized EDOC21 product for UK bookkeeping market",
+				metrics: "Business-ready product",
+			},
+			{
+				id: 2,
+				text: "Delivered competitive features with sustainable pricing model",
+				metrics: "4 client firms/month",
+			},
+		],
+		technologies: [
+			"Django",
+			"React",
+			"TypeScript",
+			"PostgreSQL",
+			"Docker",
+			"REST API",
+		],
+		companyUrl: "https://keytax.co.uk",
+	},
+	{
+		id: 2,
+		position: "Full Stack Engineer",
 		company: "Propertier pvt ltd",
 		logo: "/images/companies-logo/propertier_logo.png",
 		startDate: { month: "Nov", year: "2024" },
-		endDate: { month: "Present", year: "" },
+		endDate: { month: "April", year: "2026" },
 		description: `Led and managed the development flow of enterprise-level full-stack web and hybrid mobile application of Propertier pvt ltd. Provided high quality and optimized code based solution over the previous implementations and fostered a centralized multi container application workflow.`,
 		achievements: [
 			{
@@ -59,7 +89,7 @@ export const experience = [
 		companyUrl: "https://thepropertier.com",
 	},
 	{
-		id: 2,
+		id: 3,
 		position: "Senior Full Stack Engineer",
 		company: "Infintrix Technologies",
 		logo: "/images/companies-logo/infintrix_logo.jpeg",
@@ -90,7 +120,7 @@ export const experience = [
 		companyUrl: "https://infintrixtech.com",
 	},
 	{
-		id: 3,
+		id: 4,
 		position: "Full Stack Web Developer",
 		company: "Infosys IIT",
 		logo: "/images/companies-logo/infosys_logo.jpg",

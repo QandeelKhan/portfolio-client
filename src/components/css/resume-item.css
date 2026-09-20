@@ -32,6 +32,9 @@
 	background: rgba(0, 163, 225, 0.1);
 	border-radius: 50%;
 	transition: transform 0.3s ease, background 0.3s ease;
+	touch-action: manipulation;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 163, 225, 0.3);
 }
 
 .resume-item.expanded .expand-icon-top-right {
@@ -66,6 +69,7 @@
 	padding: 20px 20px 20px 50px;
 	cursor: pointer;
 	transition: var(--transition);
+	touch-action: manipulation;
 }
 
 .item-header:hover {
@@ -98,6 +102,11 @@
 	overflow: hidden;
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	transition: var(--transition);
+}
+
+/* Special styling for logos that need a light background (like KeyTax) */
+.logo-container.light-bg {
+	background: rgba(255, 255, 255, 0.95);
 }
 
 .resume-item.expanded .logo-container {
@@ -172,6 +181,9 @@
 	font-weight: 500;
 	transition: var(--transition);
 	display: inline-block;
+	touch-action: manipulation;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 163, 225, 0.2);
 }
 
 .see-more:hover {
