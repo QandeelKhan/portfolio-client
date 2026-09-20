@@ -6,83 +6,92 @@ const ResumeSkills: React.FC = () => {
         <>
             <div className="skills-area">
                 <div className="left-design-area">
-                    <span className="skills-heading">DESIGN SKILLS</span>
+                    <span className="skills-heading">BACKEND & ARCHITECTURE</span>
                     <div className="design-skills">
                         <div className="ist">
                             <div className="coral-draw">
-                                <span>CORAL DRAW</span>
-                                <span className="percentage per-91">91%</span>
+                                <span>PYTHON / DJANGO / DRF</span>
+                                <span className="percentage per-95">95%</span>
                             </div>
                             <div className="graph-div">
-                                <div className="fill fill-91"></div>
+                                <div className="fill fill-95"></div>
                             </div>
                         </div>
                         <div className="ist">
                             <div className="coral-draw">
-                                <span>PHOTOSHOP</span>
-                                <span className="percentage per-82">82%</span>
-                            </div>
-                            <div className="graph-div">
-                                <div className="fill fill-82"></div>
-                            </div>
-                        </div>
-                        <div className="ist">
-                            <div className="coral-draw">
-                                <span>FIGMA</span>
-                                <span className="percentage per-94">94%</span>
+                                <span>SYSTEM ARCHITECTURE</span>
+                                <span className="percentage per-92">92%</span>
                             </div>
                             <div className="graph-div">
                                 <div className="fill fill-92"></div>
+                            </div>
+                        </div>
+                        <div className="ist">
+                            <div className="coral-draw">
+                                <span>REST API DEVELOPMENT</span>
+                                <span className="percentage per-94">94%</span>
+                            </div>
+                            <div className="graph-div">
+                                <div className="fill fill-94"></div>
+                            </div>
+                        </div>
+                        <div className="ist">
+                            <div className="coral-draw">
+                                <span>POSTGRESQL / DATABASE DESIGN</span>
+                                <span className="percentage per-90">90%</span>
+                            </div>
+                            <div className="graph-div">
+                                <div className="fill fill-90"></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="right-coding-area">
                     <div className="left-design-area">
-                        <span className="skills-heading">CODING SKILLS</span>
+                        <span className="skills-heading">FRONTEND & DEVOPS</span>
                         <div className="design-skills">
                             <div className="ist">
                                 <div className="coral-draw">
-                                    <span>HTML5</span>
-                                    <span className="percentage per-83">
-                                        85%
+                                    <span>REACT / NEXT.JS / TYPESCRIPT</span>
+                                    <span className="percentage per-93">
+                                        93%
                                     </span>
                                 </div>
                                 <div className="graph-div">
-                                    <div className="fill fill-83"></div>
+                                    <div className="fill fill-93"></div>
                                 </div>
                             </div>
                             <div className="ist">
                                 <div className="coral-draw">
-                                    <span>CSS3</span>
-                                    <span className="percentage per-75">
-                                        75%
+                                    <span>REACT NATIVE (MOBILE)</span>
+                                    <span className="percentage per-88">
+                                        88%
                                     </span>
                                 </div>
                                 <div className="graph-div">
-                                    <div className="fill fill-75"></div>
+                                    <div className="fill fill-88"></div>
                                 </div>
                             </div>
                             <div className="ist">
                                 <div className="coral-draw">
-                                    <span>PYTHON3</span>
-                                    <span className="percentage per-92">
-                                        92%
+                                    <span>DOCKER / CONTAINERIZATION</span>
+                                    <span className="percentage per-91">
+                                        91%
                                     </span>
                                 </div>
                                 <div className="graph-div">
-                                    <div className="fill fill-92"></div>
+                                    <div className="fill fill-91"></div>
                                 </div>
                             </div>
                             <div className="ist">
                                 <div className="coral-draw">
-                                    <span>JAVASCRIPT</span>
-                                    <span className="percentage per-90">
-                                        90%
+                                    <span>REDIS / RABBITMQ / WEBSOCKETS</span>
+                                    <span className="percentage per-87">
+                                        87%
                                     </span>
                                 </div>
                                 <div className="graph-div">
-                                    <div className="fill fill-90"></div>
+                                    <div className="fill fill-87"></div>
                                 </div>
                             </div>
                         </div>
