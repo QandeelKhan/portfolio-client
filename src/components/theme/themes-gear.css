@@ -64,6 +64,7 @@
     flex-direction: column !important;
     width: 150px !important;
     align-items: flex-start !important;
+    background-color: white !important;
     padding: 15px !important;
     border-radius: 5px !important;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3) !important;
@@ -71,18 +72,19 @@
 }
 
 .gear-menu h6 {
+    color: #1a1a1a !important;
     margin: 0 0 10px 0 !important;
     font-size: 0.67em !important;
 }
 
 /* Dark theme - ensure menu stays light colored */
 [data-theme="dark"] .gear-menu {
-    background-color: #1a1a1a !important;
-    color: white !important;
+    background-color: white !important;
+    color: #1a1a1a !important;
 }
 
 [data-theme="dark"] .gear-menu h6 {
-    color: white;
+    color: #1a1a1a !important;
 }
 
 .gear-menu-open {
