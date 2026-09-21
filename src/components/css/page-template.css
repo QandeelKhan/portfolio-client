@@ -38,6 +38,11 @@
     color: var(--primaryColor);
 }
 
+/* Light theme - use dark heading color */
+[data-theme="light"] .aboutme-heading {
+    color: var(--pageHeadingColor);
+}
+
 @media (max-width: 768px) {
     .about-container {
         margin-left: 0px;

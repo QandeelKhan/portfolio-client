@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import eventsReducer from "./reducers/eventsSlice";
 import themesReducer from "./themeSlice";
+import colorThemeReducer from "./colorThemeSlice";
 import dataReducer from "./dataSlice";
 import authReducer from "./features/authSlice";
 import { userAuthApi } from "./services/userAuthApi";
@@ -12,6 +13,7 @@ export const store = configureStore({
         [userAuthApi.reducerPath]: userAuthApi.reducer,
         events: eventsReducer,
         themes: themesReducer,
+        colorTheme: colorThemeReducer,
         data: dataReducer,
         auth: authReducer,
         order: orderReducer,

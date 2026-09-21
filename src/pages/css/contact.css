@@ -12,7 +12,7 @@
     letter-spacing: 0.5px;
     font-family: "Playfair Display", serif;
     font-weight: 700;
-    color: white;
+    color: var(--textPrimary);
 }
 
 .name-email-area {
@@ -42,7 +42,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    color: white;
+    color: var(--textPrimary);
     display: flex;
     align-items: center;
     font-size: 1.4rem;
@@ -50,7 +50,7 @@
     cursor: text;
     margin-top: 0.5em;
     margin-left: 1.2em;
-    color: lightgrey;
+    color: var(--textSecondary);
     transition: all 0.2s ease;
 }
 
@@ -58,7 +58,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    color: white;
+    color: var(--textPrimary);
     display: flex;
     align-items: center;
     font-size: 1.4rem;
@@ -66,13 +66,13 @@
     cursor: text;
     margin-top: 0.5em;
     margin-left: 1.2em;
-    color: lightgrey;
+    color: var(--textSecondary);
     transition: all 0.2s ease;
 }
 
 .name-email-area input:focus+label,
 .name-email-area input:valid+label {
-    color: white;
+    color: var(--primaryColor);
     font-size: 1rem;
     font-weight: 500;
     top: -25px;
@@ -82,7 +82,7 @@
 
 .messsage-area input:focus+label,
 .messsage-area input:valid+label {
-    color: white;
+    color: var(--primaryColor);
     font-size: 1rem;
     font-weight: 500;
     top: -25px;
@@ -92,12 +92,12 @@
 
 .name-email-area input:focus,
 .name-email-area input:valid {
-    border: 2px solid white;
+    border: 2px solid var(--primaryColor);
 }
 
 .messsage-area input:focus,
 .messsage-area input:valid {
-    border: 2px solid white;
+    border: 2px solid var(--primaryColor);
 }
 
 .messsage-area {
@@ -129,8 +129,19 @@
     z-index: 1;
 }
 
+/* Light theme button styling */
+[data-theme="light"] .send-message-btn {
+    color: #222222;
+    border-color: #222222;
+}
+
 .send-message-btn:hover {
     color: black;
+}
+
+/* Light theme button hover */
+[data-theme="light"] .send-message-btn:hover {
+    color: #ffffff;
 }
 
 .send-message-btn::after {
@@ -159,6 +170,12 @@
     background-color: #029bd8;
     position: absolute;
     transition: 0.3s all ease;
+}
+
+/* Light theme button animation background */
+[data-theme="light"] .send-message-btn::after,
+[data-theme="light"] .send-message-btn::before {
+    background-color: #222222;
 }
 
 .send-message-btn:hover::after {
@@ -213,7 +230,7 @@ textarea {
 
 textarea:focus+.text-area-label,
 textarea:valid+.text-area-label {
-    color: white;
+    color: var(--primaryColor);
     font-size: 1rem;
     font-weight: 500;
     top: -32px;
@@ -223,13 +240,18 @@ textarea:valid+.text-area-label {
 
 textarea:focus,
 textarea:valid {
-    border: 2px solid white;
+    border: 2px solid var(--primaryColor);
 }
 
 ::placeholder {
     color: #dedede;
     font-weight: bold;
     font-size: 15px;
+}
+
+/* Light theme placeholder color */
+[data-theme="light"] ::placeholder {
+    color: #999999;
 }
 
 @media (max-width: 768px) {

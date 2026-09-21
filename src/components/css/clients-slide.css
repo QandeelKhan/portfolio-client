@@ -20,6 +20,29 @@
     max-height: 120px;
     margin: auto;
     opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.client-logo img:hover {
+    opacity: 1;
+}
+
+/* Light theme - add background for better logo visibility */
+[data-theme="light"] .client-logo {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+[data-theme="light"] .client-logo img {
+    opacity: 0.85;
+    filter: brightness(0.9) contrast(1.1);
+}
+
+[data-theme="light"] .client-logo img:hover {
+    opacity: 1;
+    filter: brightness(1) contrast(1);
 }
 
 /* .slider-client {

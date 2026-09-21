@@ -1,0 +1,130 @@
+.theme-toggle-container {
+    position: fixed;
+    top: 10px;
+    right: 0px;
+    z-index: 15;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle-button:hover {
+    transform: scale(1.1);
+}
+
+.theme-toggle-button:active {
+    transform: scale(0.95);
+}
+
+.theme-toggle-track {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle-track.dark {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border: 2px solid #0f3460;
+}
+
+.theme-toggle-track.light {
+    background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+    border: 2px solid #ffa500;
+}
+
+.theme-toggle-thumb {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle-track.dark .theme-toggle-thumb {
+    left: 3px;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+}
+
+.theme-toggle-track.light .theme-toggle-thumb {
+    left: calc(100% - 27px);
+    background: linear-gradient(135deg, #fff9e6 0%, #ffe066 100%);
+}
+
+.theme-icon {
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.moon-icon {
+    color: #1a1a2e;
+}
+
+.sun-icon {
+    color: #ff6b35;
+}
+
+/* Hover effects */
+.theme-toggle-button:hover .theme-toggle-track.dark {
+    box-shadow: 0 0 15px rgba(15, 52, 96, 0.5);
+}
+
+.theme-toggle-button:hover .theme-toggle-track.light {
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .theme-toggle-container {
+        top: 45px;
+        right: 5px;
+    }
+    
+    .theme-toggle-track {
+        width: 50px;
+        height: 26px;
+    }
+    
+    .theme-toggle-thumb {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .theme-toggle-track.light .theme-toggle-thumb {
+        left: calc(100% - 23px);
+    }
+    
+    .theme-icon {
+        font-size: 12px;
+    }
+}
+
+/* Animation for icon change */
+@keyframes iconRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.theme-toggle-button:active .theme-icon {
+    animation: iconRotate 0.5s ease-in-out;
+}

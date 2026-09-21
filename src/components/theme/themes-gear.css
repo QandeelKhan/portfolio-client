@@ -21,6 +21,11 @@
     margin-right: 10px;
 }
 
+/* Light theme gear icon color */
+[data-theme="light"] .gear-icon {
+    color: #777777;
+}
+
 /* .gear-open {
     transform: translateX(0%);
     transition: 1s; 

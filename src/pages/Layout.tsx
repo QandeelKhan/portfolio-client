@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import ThemesGear from "../components/theme/ThemesGear";
+import ThemeToggle from "../components/theme/ThemeToggle";
 import SideNav from "../components/sideNav/SideNav";
 import ThemeWrapper from "../components/theme/ThemeWrapper";
 import LandingPageAndLoadingSkeleton from "./LandingPageAndLoadingSkeleton";
@@ -79,6 +80,7 @@ const Layout: React.FC = () => {
             {/* Main content */}
             {showContent && (
                 <div className={`content-container ${ isHomePage ? 'home-page-content no-transition' : '' }`} ref={contentRef}>
+                    <ThemeToggle />
                     <ThemesGear />
                     <BlogDetailSidebar />
                     <ThemeWrapper key={key}>

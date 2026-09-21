@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setNavVisible } from "../../redux/reducers/eventsSlice";
 import "./side-nav-button.css";
@@ -31,6 +31,10 @@ const SideNavButton: React.FC<ButtonProps> = ({
 }: ButtonProps) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const location = useLocation();
+    
+    // Check if this button is for the current route
+    const isActive = location.pathname === navigateTo || location.pathname === path;
 
     const handleNavigate = () => {
         navigate(`${navigateTo}`);
@@ -45,7 +49,7 @@ const SideNavButton: React.FC<ButtonProps> = ({
     };
 
     return (
-        <div className={`nav-btn ${className}`}>
+        <div className={`nav-btn ${className} ${isActive ? 'nav-btn-active' : ''}`}>
             <div className="nav-btn-container" onClick={handleClick}>
                 {navBtnIcon}
                 <a href={navBtnHref} className="nav-btn-link">

@@ -72,12 +72,6 @@ const Portfolio: React.FC = (props: any) => {
                                         className={`tabs ${
                                             selectedTab === tab ? "active" : ""
                                         }`}
-                                        style={{
-                                            color:
-                                                selectedTab === tab
-                                                    ? "black"
-                                                    : "white",
-                                        }}
                                     >
                                         <div>{tab}</div>
                                     </li>

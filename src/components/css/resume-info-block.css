@@ -1,4 +1,8 @@
-:root {
+/* ============================================
+   THEME VARIABLES - Dark & Light Mode Support
+   ============================================ */
+:root,
+[data-theme="dark"] {
 	--primaryColor: #00a3e1;
 	--primaryLight: rgba(0, 163, 225, 0.1);
 	--secondaryColor: #17181b;
@@ -9,6 +13,27 @@
 	--blackColor: black;
 	--successColor: #4caf50;
 	--transition: all 0.3s ease;
+	--textPrimary: #ffffff;
+	--textSecondary: #d4d4d4;
+	--borderLight: #3b3c43;
+	--dividerColor: #444444;
+}
+
+[data-theme="light"] {
+	--primaryColor: #0082b6;
+	--primaryLight: rgba(0, 130, 182, 0.1);
+	--secondaryColor: #f8f9fa;
+	--backgroundColor: #FBFBFB;
+	--cardBackground: #ffffff;
+	--borderText: #d0d0d0;
+	--hoverColor: #0082b6;
+	--blackColor: #1a1a1a;
+	--successColor: #4caf50;
+	--transition: all 0.3s ease;
+	--textPrimary: #1a1a1a;
+	--textSecondary: #3a3a3a;
+	--borderLight: #e5e5e5;
+	--dividerColor: #dddddd;
 }
 
 /* Container Layout */
@@ -29,9 +54,9 @@
 	flex-direction: column;
 }
 
-/* Section Headings */
+/* Resume Section Headings */
 .resume-heading {
-	color: white;
+	color: var(--textPrimary);
 	font-family: "Playfair Display", serif;
 	font-weight: 700;
 	font-size: 22px;

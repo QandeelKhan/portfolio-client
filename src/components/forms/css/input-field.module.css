@@ -20,6 +20,17 @@
     transition: outline-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
+/* Light theme input styling */
+[data-theme="light"] .form-input__input {
+    color: #1a1a1a;
+    outline-color: #cccccc;
+}
+
+[data-theme="light"] .form-input__input:focus,
+[data-theme="light"] .form-input__input:hover {
+    outline-color: #999999;
+}
+
 .form-input__input--profile {
     height: 45px;
 }
@@ -34,6 +45,11 @@
 .form-input label {
     color: var(--color-white-alpha);
     font-size: 18px;
+}
+
+/* Light theme label styling */
+[data-theme="light"] .form-input label {
+    color: #000000;
 }
 /*  */
 

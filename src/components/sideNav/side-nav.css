@@ -10,13 +10,38 @@ body {
     line-height: 1.65;
 }
 
-:root {
-    --primaryColor: #00a3e1;
-    --secondaryColor: #17181b;
-    --backgroundColor: #2c2d2f;
-    --borderText: #7a7a7a;
-    --hoverColor: #fff;
-    --blackColor: black;
+/* ============================================
+   THEME VARIABLES - Dark & Light Mode Support
+   ============================================ */
+:root,
+[data-theme="dark"] {
+	--primaryColor: #00a3e1;
+	--secondaryColor: #17181b;
+	--backgroundColor: #2c2d2f;
+	--borderText: #7a7a7a;
+	--hoverColor: #fff;
+	--blackColor: black;
+	--textPrimary: #ffffff;
+	--textSecondary: rgb(156, 156, 156);
+	--textTertiary: rgb(146, 144, 144);
+	--borderLight: #3b3c43;
+	--dividerColor: #444444;
+	--sidebarBackground: black;
+}
+
+[data-theme="light"] {
+	--primaryColor: #0082b6;
+	--secondaryColor: #2A2B30;
+	--backgroundColor: #FBFBFB;
+	--borderText: #d0d0d0;
+	--hoverColor: #ffffff;
+	--blackColor: #1a1a1a;
+	--textPrimary: #1a1a1a;
+	--textSecondary: #cccccc;
+	--textTertiary: #b0b0b0;
+	--borderLight: #3a3b40;
+	--dividerColor: #3a3b40;
+	--sidebarBackground: #2A2B30;
 }
 
 /* ---Side Nav--- */
@@ -28,7 +53,7 @@ body {
     height: 40px;
     width: 100%;
     z-index: 10;
-    background-color: #17181b;
+    background-color: var(--secondaryColor);
     transform: translateY(-40px);
 }
 
@@ -48,7 +73,7 @@ body {
     height: 100%;
     transition: 0.3s;
     border: none;
-    border-right: 1px solid #3b3c43;
+    border-right: 1px solid var(--borderLight);
 }
 
 .toggler-clicked {
@@ -87,11 +112,11 @@ body {
     transition: 0.5s;
     cursor: pointer;
     text-decoration: none;
-    color: #fff;
+    color: var(--textPrimary);
 }
 
 .mobile-header-text:hover {
-    border: 1px solid #00a3e1;
+    border: 1px solid var(--primaryColor);
     transition: 0.5s;
     cursor: pointer;
     text-decoration: none;
@@ -121,11 +146,15 @@ li {
     top: 0;
     left: 0;
     position: fixed;
-    z-index: 10;
-    transition: 0.3s;
-    background-color: black;
+    z-index: 1000;
+    transition: none;
+    background-color: var(--sidebarBackground);
     overflow-y: auto;
     overflow-x: hidden;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    will-change: auto;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 /* .nav-hidden {
@@ -180,15 +209,20 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.9;
+    opacity: 0.95;
+}
+
+/* Light theme specific styling for person name */
+[data-theme="light"] .person-name {
+    background-color: rgba(42, 43, 48, 0.8);
 }
 
 .person-name span {
     font-size: 22px;
-    color: var(--hoverColor);
+    color: #ffffff;
     font-family: "Playfair Display", serif;
     font-weight: 600;
-    text-shadow: 1px 9px 12px #000;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* menu bar css starts here  */
@@ -221,13 +255,13 @@ li {
 .footer-icons {
     font-size: 18px;
     /* margin-top: 17px; */
-    color: rgb(156, 156, 156);
+    color: var(--textSecondary);
 }
 
 .footer-area .footer-text {
     font-size: 12px;
     margin-top: 7px;
-    color: rgb(146, 144, 144);
+    color: var(--textTertiary);
     text-align: center;
     line-height: 15px;
     margin-bottom: 1rem;
@@ -289,29 +323,29 @@ li {
 
 .location-icons {
     font-size: 32px;
-    color: #00a3e1;
+    color: var(--primaryColor);
     padding-bottom: 12px;
 }
 
 .location-area span {
-    color: #ffffff;
+    color: var(--textPrimary);
     font-size: 17px;
 }
 
 .side-nav-social-links {
     text-decoration: none;
-    color: grey;
+    color: var(--textSecondary);
     cursor: pointer;
 }
 
 .side-nav-social-links:hover {
-    color: white;
+    color: var(--textPrimary);
 }
 
 .upwork-icon {
     height: 21px;
     width: 21px;
-    fill: grey;
+    fill: var(--textSecondary);
     transition: 0.5s;
     cursor: pointer;
 }
@@ -327,19 +361,34 @@ li {
 }
 
 .login-sign {
-    background-color: #17181b;
+    background-color: var(--secondaryColor);
     margin: 0px 0px;
-    border-top: 1px dotted #444444;
-    border-bottom: 1px dotted #444444;
+    border-top: 1px dotted var(--dividerColor);
+    border-bottom: 1px dotted var(--dividerColor);
     border-left: none;
     border-right: none;
     width: 100%;
     height: 40px;
-    /* color: white; */
+    color: var(--primaryColor);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* Light theme - make text more visible */
+[data-theme="light"] .login-sign {
+    color: #cccccc;
+}
+
+.login-sign:hover {
+    color: black;
+}
+
+[data-theme="light"] .login-sign:hover {
+    color: #ffffff;
 }
 
 .power-icon {
-    color: rgb(187, 186, 186);
+    color: var(--textSecondary);
     opacity: 0.6;
     margin-right: 10px;
     margin-left: 20px;
@@ -347,7 +396,7 @@ li {
 }
 
 .redo-icon {
-    color: rgb(187, 186, 186);
+    color: var(--textSecondary);
     opacity: 0.6;
     margin-right: 10px;
     margin-left: 20px;
@@ -355,7 +404,7 @@ li {
 }
 
 .undo-icon {
-    color: rgb(187, 186, 186);
+    color: var(--textSecondary);
     opacity: 0.6;
     margin-right: 10px;
     margin-left: 20px;
@@ -363,13 +412,13 @@ li {
 }
 
 .login-btn {
-    background-color: #17181b;
+    background-color: var(--secondaryColor);
     min-width: 200px;
     min-height: 50px;
     width: 100%;
     margin: 0px 0px;
-    border-top: 1px dotted #444444;
-    border-bottom: 1px dotted #444444;
+    border-top: 1px dotted var(--dividerColor);
+    border-bottom: 1px dotted var(--dividerColor);
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -400,5 +449,5 @@ li {
     font-size: 30px;
     top: 10px;
     left: 10px;
-    color: #17181b;
+    color: var(--secondaryColor);
 }

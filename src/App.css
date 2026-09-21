@@ -14,9 +14,10 @@ body {
 
 body {
 	/* background-color: #7a7a7a; */
-	background-color: var(--color-gray);
+	background-color: var(--bodyBackground);
 	margin: 0;
 	padding: 0;
+	color: var(--textPrimary);
 }
 
 /* .pageInitial {
@@ -27,23 +28,135 @@ body {
     transform: translateX(0%);
 }
  */
-:root {
-	/* backgrounds */
+/* ============================================
+   DARK THEME (Default)
+   ============================================ */
+:root,
+[data-theme="dark"] {
+	/* Primary Colors */
+	--primaryColor: #00a3e1;
+	--primaryLight: rgba(0, 163, 225, 0.1);
+	--primaryDark: #0082b6;
+	--secondaryColor: #17181b;
+	
+	/* Background Colors */
+	--backgroundColor: #2c2d2f;
+	--cardBackground: #1e1f21;
+	--bodyBackground: #2c2d2f;
+	--sidebarBackground: #000000;
+	--headerBackground: #17181b;
+	
+	/* Text Colors */
+	--textPrimary: #ffffff;
+	--textSecondary: #d4d4d4;
+	--textTertiary: #a4a4a5;
+	--textMuted: #7a7a7a;
+	--pageHeadingColor: #ffffff;
+	
+	/* Border & Divider Colors */
+	--borderColor: #7a7a7a;
+	--borderLight: #3b3c43;
+	--borderDark: #222324;
+	--dividerColor: #444444;
+	
+	/* Interactive Colors */
+	--hoverColor: #fff;
+	--hoverBackground: rgba(0, 163, 225, 0.1);
+	--activeColor: #00a3e1;
+	
+	/* Utility Colors */
+	--blackColor: #000000;
+	--whiteColor: #ffffff;
+	--successColor: #4caf50;
+	--skillBarBackground: #404144;
+	--skillBarFill: #00a3e1;
+	
+	/* Shadow & Overlay */
+	--shadowColor: rgba(0, 0, 0, 0.3);
+	--overlayBackground: rgba(0, 0, 0, 0.5);
+	
+	/* Transition */
+	--transition: all 0.3s ease;
+	
+	/* Legacy support */
 	--color-blue: rgb(0, 163, 225);
 	--color-blue-dark: rgb(0, 130, 182);
 	--color-gray: rgb(44, 45, 47);
 	--color-light-gray: rgb(42, 45, 51);
 	--color-dark-gray: rgb(23, 24, 27);
 	--color-border: rgb(122, 122, 122);
-	/* foregrounds */
 	--color-white: rgb(255, 255, 255);
 	--color-white-alpha: rgb(242, 242, 242);
 	--color-white-beta: rgb(255, 255, 255, 0.8);
 	--color-black: rgb(0, 0, 0);
-
 	--foreground-rgb: 0, 0, 0;
 	--background-start-rgb: 214, 219, 220;
 	--background-end-rgb: 255, 255, 255;
+}
+
+/* ============================================
+   LIGHT THEME
+   ============================================ */
+[data-theme="light"] {
+	/* Primary Colors */
+	--primaryColor: #0082b6;
+	--primaryLight: rgba(0, 130, 182, 0.1);
+	--primaryDark: #006a95;
+	--secondaryColor: #f8f9fa;
+	
+	/* Background Colors */
+	--backgroundColor: #FBFBFB;
+	--cardBackground: #ffffff;
+	--bodyBackground: #FBFBFB;
+	--sidebarBackground: #2A2B30;
+	--headerBackground: #f8f9fa;
+	
+	/* Text Colors */
+	--textPrimary: #1a1a1a;
+	--textSecondary: #3a3a3a;
+	--textTertiary: #5a5a5a;
+	--textMuted: #888888;
+	--pageHeadingColor: #222222;
+	
+	/* Border & Divider Colors */
+	--borderColor: #d0d0d0;
+	--borderLight: #e5e5e5;
+	--borderDark: #b0b0b0;
+	--dividerColor: #dddddd;
+	
+	/* Interactive Colors */
+	--hoverColor: #0082b6;
+	--hoverBackground: rgba(0, 130, 182, 0.08);
+	--activeColor: #006a95;
+	
+	/* Utility Colors */
+	--blackColor: #1a1a1a;
+	--whiteColor: #ffffff;
+	--successColor: #4caf50;
+	--skillBarBackground: #e8eaed;
+	--skillBarFill: #0082b6;
+	
+	/* Shadow & Overlay */
+	--shadowColor: rgba(0, 0, 0, 0.08);
+	--overlayBackground: rgba(255, 255, 255, 0.9);
+	
+	/* Transition */
+	--transition: all 0.3s ease;
+	
+	/* Legacy support */
+	--color-blue: rgb(0, 130, 182);
+	--color-blue-dark: rgb(0, 106, 149);
+	--color-gray: rgb(251, 251, 251);
+	--color-light-gray: rgb(248, 249, 250);
+	--color-dark-gray: rgb(248, 249, 250);
+	--color-border: rgb(208, 208, 208);
+	--color-white: rgb(255, 255, 255);
+	--color-white-alpha: rgb(248, 249, 250);
+	--color-white-beta: rgb(26, 26, 26, 0.8);
+	--color-black: rgb(26, 26, 26);
+	--foreground-rgb: 26, 26, 26;
+	--background-start-rgb: 255, 255, 255;
+	--background-end-rgb: 251, 251, 251;
 }
 
 /* Global layout styles */

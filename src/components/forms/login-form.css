@@ -20,9 +20,19 @@
     padding: 0px 10px;
     font-size: 15px;
 }
+
+[data-theme="light"] #login-form .login input {
+    color: #1a1a1a;
+    border-color: #cccccc;
+}
+
 #login-form .login label {
     color: white;
     font-size: 18px;
+}
+
+[data-theme="light"] #login-form .login label {
+    color: #000000;
 }
 
 .login-button {
@@ -40,4 +50,8 @@
 }
 ::placeholder {
     color: white;
+}
+
+[data-theme="light"] ::placeholder {
+    color: #999999;
 }

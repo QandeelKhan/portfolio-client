@@ -45,15 +45,9 @@
 
 .menu-div ul li {
     text-align: center;
-    color: black;
-    padding: 10px 10px;
+    padding: 0;
     border-radius: 50px;
     min-width: 90px;
-}
-
-.active {
-    color: black;
-    background-color: black;
 }
 
 .tabs {
@@ -62,12 +56,27 @@
     background-color: transparent;
     cursor: pointer;
     transition: .3s;
+    color: white;
+    display: block;
 }
 
-.active {
+/* Light theme - default tab text color */
+[data-theme="light"] .tabs {
+    color: #555555;
+}
+
+/* Dark theme - active tab */
+.tabs.active {
     padding: 7px 10px;
     border-radius: 50px;
     background-color: #00a3e1;
+    color: black !important;
+}
+
+/* Light theme - active tab styling */
+[data-theme="light"] .tabs.active {
+    background-color: #000000 !important;
+    color: #ffffff !important;
 }
 
 /* .active {

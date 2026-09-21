@@ -2,17 +2,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #17181b;
+    background-color: var(--secondaryColor);
     min-width: 200px;
+    width: 100%;
     height: 46.8px;
-    border-bottom: 1px solid rgb(37, 37, 37);
+    border-bottom: 1px solid var(--borderLight);
     transition: 0.3s;
 }
 
 .nav-icon {
     background-color: transparent;
-    color: rgb(187, 186, 186);
-    opacity: 0.6;
+    color: var(--textSecondary);
+    opacity: 0.9;
     margin-right: 10px;
     margin-left: 13px;
     cursor: pointer;
@@ -20,8 +21,9 @@
 
 .nav-btn-link {
     font-size: 12px;
-    opacity: 0.9s;
-    color: rgb(202, 202, 202);
+    opacity: 1;
+    color: var(--textSecondary);
+    font-weight: 500;
     transition: 0.3s;
     letter-spacing: 1px;
     padding-top: 5px;
@@ -37,6 +39,27 @@
 }
 
 .nav-btn-container:hover * {
-    color: white !important;
-    fill: white;
+    color: var(--hoverColor) !important;
+    fill: var(--hoverColor);
+}
+
+/* Active state styling - Dark theme */
+.nav-btn-active {
+    background-color: #242428;
+}
+
+.nav-btn-active .nav-btn-container * {
+    color: var(--hoverColor) !important;
+    fill: var(--hoverColor);
+    opacity: 1;
+}
+
+/* Light theme active state */
+[data-theme="light"] .nav-btn-active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] .nav-btn-active .nav-btn-container * {
+    color: #ffffff !important;
+    fill: #ffffff;
 }
