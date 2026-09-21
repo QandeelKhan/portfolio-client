@@ -166,8 +166,8 @@ body {
 	position: relative;
 }
 
-/* Ensure smooth transitions */
-.layout-container * {
+/* Ensure smooth transitions - exclude gear-container and gear-icon */
+.layout-container *:not(.gear-container):not(.gear-container *):not(.gear-icon):not(.gear-icon *) {
 	transition-property: opacity, transform, visibility;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
@@ -213,6 +213,49 @@ body {
 	margin: 0 !important;
 	padding: 0 !important;
 	z-index: 0 !important;
+}
+
+/* Force enable transitions for gear components */
+.gear-container,
+.gear-container *,
+.gear-icon,
+.gear-icon *,
+.gear-menu,
+.gear-menu * {
+	animation: inherit !important;
+}
+
+/* Critical: Force gear container transform transition */
+.gear-container {
+	transition: transform 1s ease-in-out !important;
+}
+
+.gear-container-open {
+	transition: transform 1s ease-in-out !important;
+}
+
+/* Override for home page background */
+#home-background,
+#home-background *,
+.home-container,
+.home-container * {
+	transition: none !important;
+}
+
+/* But keep gear transitions enabled even on home */
+body .gear-container,
+html .gear-container,
+#root .gear-container,
+#home .gear-container {
+	transition: transform 1s ease-in-out !important;
+	will-change: transform !important;
+}
+
+body .gear-container-open,
+html .gear-container-open,
+#root .gear-container-open,
+#home .gear-container-open {
+	transition: transform 1s ease-in-out !important;
 }
 
 /* Override for home page container */

@@ -1,29 +1,52 @@
 .gear-container {
-    display: flex;
-    position: fixed;
-    display: flex;
-    top: 70px;
-    right: 0px;
-    z-index: 15;
-    transition: 1s;
-    transform: translateX(80%);
+    position: fixed !important;
+    display: flex !important;
+    top: 70px !important;
+    right: 0px !important;
+    z-index: 9999 !important;
+    transform: translateX(80%) !important;
+    pointer-events: auto !important;
+    will-change: transform !important;
+    -webkit-transition: -webkit-transform 1s ease-in-out !important;
+    -moz-transition: -moz-transform 1s ease-in-out !important;
+    -o-transition: -o-transform 1s ease-in-out !important;
+    transition: transform 1s ease-in-out !important;
 }
 
 .gear-container-open {
-    transition: 1s;
-    transform: translateX(0%);
+    transform: translateX(0%) !important;
+    -webkit-transition: -webkit-transform 1s ease-in-out !important;
+    -moz-transition: -moz-transform 1s ease-in-out !important;
+    -o-transition: -o-transform 1s ease-in-out !important;
+    transition: transform 1s ease-in-out !important;
 }
 
 .gear-icon {
-    cursor: pointer;
-    font-size: 30px;
-    color: rgb(68, 180, 224);
-    margin-right: 10px;
+    cursor: pointer !important;
+    font-size: 30px !important;
+    color: rgb(68, 180, 224) !important;
+    margin-right: 10px !important;
+    display: block !important;
+}
+
+.gear-icon i {
+    display: inline-block !important;
+    animation: gear-spin 2s linear infinite !important;
+}
+
+/* Custom spin animation to ensure it works everywhere */
+@keyframes gear-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Light theme gear icon color */
 [data-theme="light"] .gear-icon {
-    color: #777777;
+    color: #777777 !important;
 }
 
 /* .gear-open {
@@ -36,31 +59,30 @@
 
 
 .gear-menu {
-    display: flex;
-    font-size: 20px;
-    flex-direction: column;
-    width: 150px;
-    align-items: flex-start;
-    background-color: white;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    color: #1a1a1a;
+    display: flex !important;
+    font-size: 20px !important;
+    flex-direction: column !important;
+    width: 150px !important;
+    align-items: flex-start !important;
+    padding: 15px !important;
+    border-radius: 5px !important;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3) !important;
+    color: #1a1a1a !important;
 }
 
 .gear-menu h6 {
-    color: #1a1a1a;
-    margin: 0 0 10px 0;
+    margin: 0 0 10px 0 !important;
+    font-size: 0.67em !important;
 }
 
 /* Dark theme - ensure menu stays light colored */
 [data-theme="dark"] .gear-menu {
-    background-color: white;
-    color: #1a1a1a;
+    background-color: #1a1a1a !important;
+    color: white !important;
 }
 
 [data-theme="dark"] .gear-menu h6 {
-    color: #1a1a1a;
+    color: white;
 }
 
 .gear-menu-open {

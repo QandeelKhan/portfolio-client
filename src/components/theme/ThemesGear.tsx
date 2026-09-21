@@ -57,6 +57,12 @@ const ThemesGear: React.FC<Props> = () => {
             <div
                 className={`gear-container ${ currentThemeName } ${ gearOpen ? "gear-container-open" : ""
                     }`}
+                style={{
+                    transition: 'transform 1s ease-in-out',
+                    WebkitTransition: 'transform 1s ease-in-out',
+                    MozTransition: 'transform 1s ease-in-out',
+                    OTransition: 'transform 1s ease-in-out',
+                }}
             >
                 <div className={`gear-icon`} onClick={handleGearClick}>
                     <i className="fas fa-cog fa-spin" />
