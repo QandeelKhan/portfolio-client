@@ -45,6 +45,22 @@
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    color: #1a1a1a;
+}
+
+.gear-menu h6 {
+    color: #1a1a1a;
+    margin: 0 0 10px 0;
+}
+
+/* Dark theme - ensure menu stays light colored */
+[data-theme="dark"] .gear-menu {
+    background-color: white;
+    color: #1a1a1a;
+}
+
+[data-theme="dark"] .gear-menu h6 {
+    color: #1a1a1a;
 }
 
 .gear-menu-open {

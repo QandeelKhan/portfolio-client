@@ -54,9 +54,9 @@
     opacity: 1;
 }
 
-/* Light theme active state */
+/* Light theme active state - solid background */
 [data-theme="light"] .nav-btn-active {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #3a3b40;
 }
 
 [data-theme="light"] .nav-btn-active .nav-btn-container * {

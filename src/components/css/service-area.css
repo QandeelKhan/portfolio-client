@@ -30,9 +30,14 @@
 }
 
 .skills-description {
-    color: var(--textSecondary);
+    color: #d4d4d4;
     text-align: center;
     /* padding: 10px 0px; */
+}
+
+/* Light theme - skills description color */
+[data-theme="light"] .skills-description {
+    color: #555555;
 }
 @media (max-width: 768px) {
     .services {

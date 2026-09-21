@@ -209,7 +209,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.95;
+    opacity: 0.88;
 }
 
 /* Light theme specific styling for person name */
@@ -219,9 +219,19 @@ li {
 
 .person-name span {
     font-size: 22px;
-    color: #ffffff;
+    color: var(--hoverColor);
     font-family: "Playfair Display", serif;
     font-weight: 600;
+}
+
+/* Dark theme text shadow */
+[data-theme="dark"] .person-name span {
+    text-shadow: rgb(0, 0, 0) 1px 9px 12px;
+}
+
+/* Light theme text shadow */
+[data-theme="light"] .person-name span {
+    color: #ffffff;
     text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -434,6 +444,12 @@ li {
     fill: black;
     opacity: 1;
     transform: rotate(180deg);
+}
+
+/* Light theme - keep icons white on hover */
+[data-theme="light"] .login-btn:hover .undo-icon,
+[data-theme="light"] .login-btn:hover .redo-icon {
+    fill: #ffffff;
 }
 
 .login-btn:hover .power-icon {

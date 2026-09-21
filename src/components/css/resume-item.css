@@ -170,9 +170,19 @@
 	line-height: 1.6;
 }
 
+/* Light theme - description text color */
+[data-theme="light"] .description-container {
+	color: #555555;
+}
+
 .description-text {
 	margin: 0;
 	color: rgba(255, 255, 255, 0.85);
+}
+
+/* Light theme - description text color */
+[data-theme="light"] .description-text {
+	color: #555555;
 }
 
 .see-more {
@@ -326,6 +336,11 @@
 .achievement-text span {
 	color: rgba(255, 255, 255, 0.85);
 	font-size: 14px;
+}
+
+/* Light theme - achievement text color */
+[data-theme="light"] .achievement-text span {
+	color: #555555;
 }
 
 .achievement-metrics {

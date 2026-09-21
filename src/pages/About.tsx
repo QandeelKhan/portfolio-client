@@ -92,7 +92,7 @@ const About: React.FC = (props: any) => {
                                     <span>Age </span>
                                 </span>{" "}
                                 <span className="personal-info-value">
-                                    <span>27 Years</span>
+                                    <span>30 Years</span>
                                 </span>
                             </li>
                             <li>
