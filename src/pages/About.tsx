@@ -108,7 +108,7 @@ const About: React.FC = (props: any) => {
                                     <span>Address </span>
                                 </span>{" "}
                                 <span className="personal-info-value">
-                                    <span> Sargodha,Pakistan </span>
+                                    <span> Islamabad, Pakistan </span>
                                 </span>
                             </li>
                             <li>

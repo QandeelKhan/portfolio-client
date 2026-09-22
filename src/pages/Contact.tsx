@@ -60,6 +60,7 @@ const Contact = () => {
                                     type="text"
                                     name="user_name"
                                     className="form-input"
+                                    placeholder=" "
                                     required
                                 />
                                 <label>Name</label>
@@ -68,13 +69,14 @@ const Contact = () => {
                                 <input
                                     type="email"
                                     name="user_email"
+                                    placeholder=" "
                                     required
                                 />
                                 <label>Email</label>
                             </div>
                         </div>
                         <div className="messsage-area">
-                            <textarea required name="message" />
+                            <textarea required name="message" placeholder=" " />
                             <label className="text-area-label">
                                 How can we help you?
                             </label>

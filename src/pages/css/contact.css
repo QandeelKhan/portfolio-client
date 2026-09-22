@@ -38,6 +38,11 @@
     transition: all 0.5s ease;
 }
 
+/* Light theme - input text color */
+[data-theme="light"] .name-email-area input {
+    color: #555555;
+}
+
 .name-email-area label {
     position: absolute;
     top: 0;
@@ -51,7 +56,7 @@
     margin-top: 0.5em;
     margin-left: 1.2em;
     color: var(--textSecondary);
-    transition: all 0.2s ease;
+    transition: top 0.3s ease, left 0.3s ease, font-size 0.3s ease, color 0.3s ease, margin 0.3s ease !important;
 }
 
 .messsage-area label {
@@ -67,11 +72,12 @@
     margin-top: 0.5em;
     margin-left: 1.2em;
     color: var(--textSecondary);
-    transition: all 0.2s ease;
+    transition: top 0.3s ease, left 0.3s ease, font-size 0.3s ease, color 0.3s ease, margin 0.3s ease !important;
 }
 
 .name-email-area input:focus+label,
-.name-email-area input:valid+label {
+.name-email-area input:valid+label,
+.name-email-area input:not(:placeholder-shown)+label {
     color: var(--primaryColor);
     font-size: 1rem;
     font-weight: 500;
@@ -80,14 +86,29 @@
     pointer-events: none;
 }
 
+/* Light theme - focused/moved label color */
+[data-theme="light"] .name-email-area input:focus+label,
+[data-theme="light"] .name-email-area input:valid+label,
+[data-theme="light"] .name-email-area input:not(:placeholder-shown)+label {
+    color: #555555;
+}
+
 .messsage-area input:focus+label,
-.messsage-area input:valid+label {
+.messsage-area input:valid+label,
+.messsage-area input:not(:placeholder-shown)+label {
     color: var(--primaryColor);
     font-size: 1rem;
     font-weight: 500;
     top: -25px;
     left: -5px;
     pointer-events: none;
+}
+
+/* Light theme - focused/moved message label color */
+[data-theme="light"] .messsage-area input:focus+label,
+[data-theme="light"] .messsage-area input:valid+label,
+[data-theme="light"] .messsage-area input:not(:placeholder-shown)+label {
+    color: #555555;
 }
 
 .name-email-area input:focus,
@@ -95,9 +116,21 @@
     border: 2px solid var(--primaryColor);
 }
 
+/* Light theme - input focus/valid border color */
+[data-theme="light"] .name-email-area input:focus,
+[data-theme="light"] .name-email-area input:valid {
+    border: 2px solid #555555;
+}
+
 .messsage-area input:focus,
 .messsage-area input:valid {
     border: 2px solid var(--primaryColor);
+}
+
+/* Light theme - message area input focus/valid border color */
+[data-theme="light"] .messsage-area input:focus,
+[data-theme="light"] .messsage-area input:valid {
+    border: 2px solid #555555;
 }
 
 .messsage-area {
@@ -113,7 +146,20 @@
 
 .message {}
 
-.text-area-label {}
+.text-area-label {
+    transition: top 0.3s ease, left 0.3s ease, font-size 0.3s ease, color 0.3s ease, margin 0.3s ease !important;
+}
+
+/* Light theme - textarea label color */
+[data-theme="light"] .text-area-label {
+    color: #000000;
+}
+
+/* Light theme - name and email labels */
+[data-theme="light"] .name-email-area label,
+[data-theme="light"] .messsage-area label {
+    color: #555555;
+}
 
 .send-message-btn {
     background-color: transparent;
@@ -228,19 +274,39 @@ textarea {
     overflow: auto;
 }
 
+/* Light theme - textarea text color */
+[data-theme="light"] textarea {
+    color: #555555;
+}
+
 textarea:focus+.text-area-label,
-textarea:valid+.text-area-label {
+textarea:valid+.text-area-label,
+textarea:not(:placeholder-shown)+.text-area-label {
     color: var(--primaryColor);
     font-size: 1rem;
     font-weight: 500;
     top: -32px;
     left: -5px;
     pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+/* Light theme - focused/moved textarea label color */
+[data-theme="light"] textarea:focus+.text-area-label,
+[data-theme="light"] textarea:valid+.text-area-label,
+[data-theme="light"] textarea:not(:placeholder-shown)+.text-area-label {
+    color: #555555;
 }
 
 textarea:focus,
 textarea:valid {
     border: 2px solid var(--primaryColor);
+}
+
+/* Light theme - textarea focus/valid border color */
+[data-theme="light"] textarea:focus,
+[data-theme="light"] textarea:valid {
+    border: 2px solid #555555;
 }
 
 ::placeholder {
