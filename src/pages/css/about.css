@@ -34,7 +34,6 @@
 .about-all-info {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
     width: 100%;
     height: auto;
     margin-bottom: 50px;
@@ -57,9 +56,10 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     margin-top: 35px;
+    margin-left: 5%;
 }
 
 .personel-info-heading {
@@ -68,7 +68,6 @@
     font-weight: 700;
     font-size: 22px;
     margin-bottom: 20px;
-    margin-right: 47px;
 }
 
 .personal-info-list {
@@ -122,7 +121,6 @@
     border: 2px solid var(--primaryColor);
     font-family: Arial, Helvetica, sans-serif;
     margin: 20px 0px;
-    margin-right: 70px;
     padding: 6px 18px;
     font-size: 14px;
     position: relative;
@@ -181,5 +179,16 @@
 
     .about-right-info {
         align-items: flex-start;
+    }
+}
+
+/* iPad and tablet responsive - align columns to top */
+@media (min-width: 769px) and (max-width: 1100px) {
+    .about-all-info {
+        align-items: flex-start !important;
+    }
+    
+    .about-right-info {
+        margin-top: 35px;
     }
 }

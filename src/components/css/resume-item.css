@@ -183,6 +183,7 @@
 /* Light theme - description text color */
 [data-theme="light"] .description-text {
 	color: #555555;
+	font-size: 16px;
 }
 
 .see-more {

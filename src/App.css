@@ -133,8 +133,8 @@ body {
 	--blackColor: #1a1a1a;
 	--whiteColor: #ffffff;
 	--successColor: #4caf50;
-	--skillBarBackground: #e8eaed;
-	--skillBarFill: #0082b6;
+	--skillBarBackground: #E3E3E3;
+	--skillBarFill: #555555;
 	
 	/* Shadow & Overlay */
 	--shadowColor: rgba(0, 0, 0, 0.08);

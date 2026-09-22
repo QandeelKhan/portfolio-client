@@ -57,10 +57,20 @@
 	gap: 2px;
 }
 
+/* Light theme - date text color */
+[data-theme="light"] .date {
+	color: #000000;
+}
+
 .separator {
 	font-size: 10px;
 	opacity: 0.7;
 	margin: 0 2px;
+}
+
+/* Light theme - separator color */
+[data-theme="light"] .separator {
+	color: #000000;
 }
 
 .date-group .present {

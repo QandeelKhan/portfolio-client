@@ -20,6 +20,7 @@
 .skills-heading {
     color: var(--textPrimary);
     font-size: 22px;
+    font-weight: bold;
     border-bottom: 2px solid var(--primaryColor);
     padding: 0px 0px;
     margin-bottom: 20px;
@@ -59,6 +60,11 @@
 .percentage {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+}
+
+/* Light theme - percentage text color */
+[data-theme="light"] .percentage {
+    color: #222222;
 }
 
 /* Percentage margins */
@@ -154,6 +160,10 @@
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 20px solid var(--skillBarFill);
+}
+
+[data-theme="light"] .fill-93:after {
+    border-bottom: 20px solid #222222;
 }
 
 .fill-92 {
@@ -257,4 +267,37 @@
     .right-coding-area {
         margin-top: 50px;
     }
+}
+
+/* Light theme - progress indicator arrows */
+[data-theme="light"] .fill-95:after {
+    border-bottom: 20px solid #222222;
+}
+
+[data-theme="light"] .fill-94:after {
+    border-bottom: 20px solid #222222;
+}
+
+[data-theme="light"] .fill-93:after {
+    border-bottom: 20px solid #222222;
+}
+
+[data-theme="light"] .fill-92:after {
+    border-bottom: 20px solid #222222;
+}
+
+[data-theme="light"] .fill-91:after {
+    border-bottom: 20px solid #222222;
+}
+
+[data-theme="light"] .fill-90:after {
+    border-bottom: 20px solid #222222;
+}
+
+[data-theme="light"] .fill-88:after {
+    border-bottom: 20px solid #222222;
+}
+
+[data-theme="light"] .fill-87:after {
+    border-bottom: 20px solid #222222;
 }

@@ -83,6 +83,14 @@
 	}
 }
 
+/* For tablet view (iPad) */
+@media (min-width: 768px) and (max-width: 1100px) {
+	.content-container {
+		padding-left: 0px !important; /* Reduced from 80px */
+		padding-right: 15px !important; /* Even more reduced for right side */
+	}
+}
+
 /* Landing info positioning */
 .landing-info {
 	display: flex;
@@ -103,6 +111,11 @@
 	transition: opacity 1s linear;
 	color: var(--textPrimary);
 	font-family: "Playfair Display", serif;
+}
+
+/* Light theme - landing page name color */
+[data-theme="light"] .landing-name {
+	color: #ffffff;
 }
 
 .landing-name-hide {

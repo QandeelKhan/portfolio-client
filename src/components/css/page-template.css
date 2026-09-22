@@ -49,6 +49,14 @@
     }
 }
 
+/* iPad and tablet responsive */
+@media (min-width: 768px) and (max-width: 1100px) {
+    .page-content-area {
+        margin-left: 20px !important;
+        margin-right: 10px !important;
+    }
+}
+
 @media (max-width: 425px) {
     .page-content-area {
         margin-left: 10px;
