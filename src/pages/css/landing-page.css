@@ -175,6 +175,12 @@
 	padding-right: 0 !important; /* Remove padding for home page */
 }
 
+/* Remove padding for portfolio detail page */
+.content-container:has(.default-position) {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
 /* Special class for home layout */
 .home-layout {
 	overflow: hidden !important;

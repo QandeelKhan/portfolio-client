@@ -4,6 +4,8 @@
     height: 100vh;
     z-index: 15000;
     position: relative;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
 }
 
 .main-container {
@@ -14,6 +16,8 @@
     /* overflow-y: scroll; */
     scrollbar-width: none;
     z-index: 1500;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
 }
 
 .header-fix {

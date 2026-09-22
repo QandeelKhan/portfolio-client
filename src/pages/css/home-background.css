@@ -5,8 +5,7 @@
 	left: 200px !important; /* Start after sidebar */
 	width: calc(100vw - 200px) !important; /* Full width minus sidebar */
 	height: 100vh !important;
-	background: rgb(0, 0, 0, 0.5) url("/images/other/home-bg.jpg") !important;
-	background-blend-mode: darken !important;
+	background: url("/images/other/home-bg.jpg") !important;
 	background-position: center !important;
 	background-size: cover !important;
 	background-repeat: no-repeat !important;
@@ -18,6 +17,46 @@
 	align-items: center !important;
 	transform: none !important; /* Prevent any transforms */
 	transition: none !important; /* Disable transitions that might cause flicker */
+	position: relative;
+}
+
+/* Dark and Light theme - add dark tint overlay */
+#home-background::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #151515;
+	opacity: 0.6;
+	z-index: 1;
+}
+
+/* Light theme - add dark tint overlay */
+[data-theme="light"] #home-background {
+	background: url("/images/other/home-bg.jpg") !important;
+	background-position: center !important;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+	position: relative;
+}
+
+[data-theme="light"] #home-background::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #151515;
+	opacity: 0.6;
+	z-index: 1;
+}
+
+.banner-text {
+	position: relative;
+	z-index: 2;
 }
 
 [data-theme="light"] .banner-text {
