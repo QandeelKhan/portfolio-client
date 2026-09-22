@@ -44,7 +44,7 @@
 
 .sidenav-container {
 	flex-shrink: 0;
-	width: 280px; /* Match SideNav width */
+	width: 200px; /* Actual SideNav width */
 	position: fixed;
 	height: 100vh;
 	z-index: 1000;
@@ -52,11 +52,14 @@
 
 .content-container {
 	flex-grow: 1;
-	margin-left: 280px !important; /* Force correct margin */
+	margin-left: 200px !important; /* Match sidebar width exactly */
+	padding-left: 80px !important; /* Add spacing as padding with page background */
 	/* FIX: Removed min-height: 100vh to prevent double-stacking with layout-container */
 	position: relative;
-	width: calc(100% - 280px); /* Ensure exact width */
+	width: calc(100% - 200px); /* Ensure exact width */
 	transition: none !important; /* Prevent transition flicker */
+	background-color: var(--backgroundColor); /* Use page background, not body */
+	box-sizing: border-box; /* Include padding in width calculation */
 }
 
 /* Special override for home page content container */
@@ -74,6 +77,8 @@
 
 	.content-container {
 		margin-left: 0 !important;
+		padding-left: 20px !important; /* Reduce padding on mobile */
+		padding-right: 20px !important; /* Reduce padding on mobile */
 		width: 100%;
 	}
 }
@@ -153,6 +158,8 @@
 	width: 100% !important;
 	background: transparent !important;
 	transition: none !important; /* Prevent transition flicker */
+	padding-left: 0 !important; /* Remove padding for home page */
+	padding-right: 0 !important; /* Remove padding for home page */
 }
 
 /* Special class for home layout */

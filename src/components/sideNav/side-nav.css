@@ -115,6 +115,15 @@ body {
     color: var(--textPrimary);
 }
 
+/* Light theme - mobile header background and text */
+[data-theme="light"] .mobile-header {
+    background-color: #2A2B30;
+}
+
+[data-theme="light"] .mobile-header-text {
+    color: #ffffff;
+}
+
 .mobile-header-text:hover {
     border: 1px solid var(--primaryColor);
     transition: 0.5s;

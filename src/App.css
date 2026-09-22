@@ -107,7 +107,7 @@ body {
 	/* Background Colors */
 	--backgroundColor: #FBFBFB;
 	--cardBackground: #ffffff;
-	--bodyBackground: #FBFBFB;
+	--bodyBackground: rgb(85, 85, 85);
 	--sidebarBackground: #2A2B30;
 	--headerBackground: #f8f9fa;
 	
@@ -190,7 +190,7 @@ body {
 }
 
 /* Ensure content is properly positioned */
-.main-about-area,
+.page-content-area,
 .main-blog-area,
 .main-portfolio-area,
 .main-contact-area,
