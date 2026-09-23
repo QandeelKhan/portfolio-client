@@ -143,12 +143,14 @@
     opacity: 0;
     background-color: var(--primaryColor);
     position: absolute;
+    pointer-events: none;
     transition: 0.5s all ease;
 }
 
 .download-resume-btn:hover::after {
     left: 0;
     right: 0;
+    width: 100%;
     opacity: 1;
     transition: 0.5s all ease;
     z-index: -1;

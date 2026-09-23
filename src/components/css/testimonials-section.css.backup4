@@ -133,19 +133,6 @@
 .slick-slide > div {
     height: 100%;
 }
-/* Desktop and large laptops (>1400px) */
-@media (min-width: 1401px) {
-    .slick-list {
-        overflow: hidden !important;
-    }
-    
-    .testimonials {
-        max-width: 1080px;
-        margin: 0 auto;
-        padding: 0 30px;
-    }
-}
-
 
 /* Large tablets and laptops (iPad Pro 13, etc) */
 @media (min-width: 1025px) and (max-width: 1400px) {
@@ -153,7 +140,7 @@
         max-width: 100%;
         width: 100%;
         margin: 0 auto;
-        padding: 0 60px;
+        padding: 0 50px;
     }
     
     .slick-list {
@@ -181,7 +168,7 @@
     .slick-slide > div {
         width: 100% !important;
         height: 100%;
-        padding: 0 20px;
+        padding: 0 15px;
         box-sizing: border-box;
     }
     

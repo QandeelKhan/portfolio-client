@@ -181,7 +181,7 @@
     .slick-slide > div {
         width: 100% !important;
         height: 100%;
-        padding: 0 20px;
+        padding: 0 15px;
         box-sizing: border-box;
     }
     

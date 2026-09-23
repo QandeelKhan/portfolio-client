@@ -5,7 +5,7 @@
 	left: 200px !important; /* Start after sidebar */
 	width: calc(100vw - 200px) !important; /* Full width minus sidebar */
 	height: 100vh !important;
-	background: url("/images/other/home-bg.jpg") !important;
+	background: linear-gradient(rgba(21, 21, 21, 0.6), rgba(21, 21, 21, 0.6)), url("/images/other/home-bg.jpg") !important;
 	background-position: center !important;
 	background-size: cover !important;
 	background-repeat: no-repeat !important;
@@ -20,55 +20,30 @@
 	position: relative;
 }
 
-/* Dark and Light theme - add dark tint overlay */
-#home-background::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #151515;
-	opacity: 0.6;
-	z-index: 1;
-}
+/* Dark theme overlay removed - replaced with linear-gradient approach */
 
 /* Light theme - add dark tint overlay */
 [data-theme="light"] #home-background {
-	background: url("/images/other/home-bg.jpg") !important;
+	background: linear-gradient(rgba(21, 21, 21, 0.6), rgba(21, 21, 21, 0.6)), url("/images/other/home-bg.jpg") !important;
 	background-position: center !important;
 	background-size: cover !important;
 	background-repeat: no-repeat !important;
 	position: relative;
 }
 
-[data-theme="light"] #home-background::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #151515;
-	opacity: 0.6;
-	z-index: 1;
-}
+/* Light theme overlay removed - replaced with linear-gradient approach */
 
-.banner-text {
-	position: relative;
-	z-index: 2;
-}
-
+/* Banner text no longer needs elevated z-index since overlay is removed */
 [data-theme="light"] .banner-text {
 	position: relative;
-	z-index: 2;
+	/* z-index: 2 removed - no longer needed without overlay */
 }
 
 /* Banner text positioning - using flexbox for perfect centering */
 .banner-text {
 	position: static !important; /* Changed to static to work with flexbox parent */
 	text-align: center !important;
-	z-index: 10 !important;
+	/* z-index: 10 removed - no longer needed without overlay */
 	width: 100% !important;
 	max-width: 600px !important; /* Limit width for better readability */
 	margin: 0 auto !important; /* Center horizontally */

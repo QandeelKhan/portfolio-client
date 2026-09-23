@@ -57,6 +57,7 @@
     margin-left: 1.2em;
     color: var(--textSecondary);
     transition: top 0.3s ease, left 0.3s ease, font-size 0.3s ease, color 0.3s ease, margin 0.3s ease !important;
+    pointer-events: none; /* Allow clicks to pass through to input field */
 }
 
 .messsage-area label {
@@ -73,6 +74,7 @@
     margin-left: 1.2em;
     color: var(--textSecondary);
     transition: top 0.3s ease, left 0.3s ease, font-size 0.3s ease, color 0.3s ease, margin 0.3s ease !important;
+    pointer-events: none; /* Allow clicks to pass through to textarea */
 }
 
 .name-email-area input:focus+label,
@@ -148,6 +150,7 @@
 
 .text-area-label {
     transition: top 0.3s ease, left 0.3s ease, font-size 0.3s ease, color 0.3s ease, margin 0.3s ease !important;
+    pointer-events: none; /* Allow clicks to pass through to textarea */
 }
 
 /* Light theme - textarea label color */

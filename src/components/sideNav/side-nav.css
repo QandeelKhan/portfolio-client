@@ -55,6 +55,7 @@ body {
     z-index: 10;
     background-color: var(--secondaryColor);
     transform: translateY(-40px);
+	pointer-events: auto; /* Re-enable clicks on mobile header bar */
 }
 
 @media (max-width: 768px) {
@@ -74,6 +75,7 @@ body {
     transition: 0.3s;
     border: none;
     border-right: 1px solid var(--borderLight);
+	pointer-events: auto; /* Re-enable clicks on hamburger menu */
 }
 
 .toggler-clicked {
@@ -94,6 +96,7 @@ body {
     color: white;
     background-color: var(--secondaryColor);
     cursor: pointer;
+	pointer-events: auto; /* Re-enable clicks on hamburger icon */
 }
 
 .mobile-header {
@@ -106,6 +109,7 @@ body {
     text-align: center;
     font-family: "Playfair Display", serif;
     font-weight: 700;
+	pointer-events: auto; /* Re-enable clicks on mobile header text */
 }
 
 .mobile-header-text {
@@ -164,6 +168,7 @@ li {
     will-change: auto;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+	pointer-events: auto; /* Re-enable pointer events on the sidebar itself */
 }
 
 /* .nav-hidden {

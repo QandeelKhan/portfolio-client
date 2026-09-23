@@ -20,7 +20,6 @@ const TestimonialsSection: React.FC = () => {
                             slidesToScroll={1}
                             initialSlide={0}
                             infinite={true}
-                            centerMode={false}
                             responsive={[
                                 {
                                     breakpoint: 768,

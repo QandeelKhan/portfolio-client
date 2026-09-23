@@ -48,6 +48,7 @@
 	position: fixed;
 	height: 100vh;
 	z-index: 1000;
+	pointer-events: none; /* Allow touch events to pass through to content below */
 }
 
 .content-container {
