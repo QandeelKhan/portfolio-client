@@ -39,8 +39,34 @@
 [data-theme="light"] .skills-description {
     color: #555555;
 }
+/* Tablet view - 2x2 grid layout */
+@media (min-width: 769px) and (max-width: 1000px) {
+    .services {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 30px;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .skills {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+}
+
+/* Mobile view - single column */
 @media (max-width: 768px) {
     .services {
         flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    .skills {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }

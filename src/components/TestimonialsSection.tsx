@@ -23,6 +23,25 @@ const TestimonialsSection: React.FC = () => {
                             centerMode={false}
                             responsive={[
                                 {
+                                    breakpoint: 1400,
+                                    settings: {
+                                        slidesToShow: 2,
+                                        slidesToScroll: 1,
+                                        infinite: false,
+                                        centerMode: false,
+                                        initialSlide: 0,
+                                    }
+                                },
+                                {
+                                    breakpoint: 1000,
+                                    settings: {
+                                        slidesToShow: 1,
+                                        slidesToScroll: 1,
+                                        centerMode: false,
+                                        infinite: true,
+                                    }
+                                },
+                                {
                                     breakpoint: 768,
                                     settings: {
                                         slidesToShow: 1,

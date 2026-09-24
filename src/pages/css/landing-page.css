@@ -54,7 +54,7 @@
 .content-container {
 	flex-grow: 1;
 	margin-left: 200px !important; /* Match sidebar width exactly */
-	padding-left: 80px !important; /* Add spacing as padding with page background */
+	/* padding-left: 80px important; Add spacing as padding with page background */
 	/* FIX: Removed min-height: 100vh to prevent double-stacking with layout-container */
 	position: relative;
 	width: calc(100% - 200px); /* Ensure exact width */
@@ -70,7 +70,7 @@
 }
 
 /* For mobile view */
-@media (max-width: 991px) {
+@media (max-width: 768px) {
 	.content-only-loader {
 		left: 0;
 		width: 100%;
@@ -84,11 +84,13 @@
 	}
 }
 
-/* For tablet view (iPad) */
-@media (min-width: 768px) and (max-width: 1100px) {
+/* For tablet view (iPad) - sidenav is visible */
+@media (min-width: 769px) and (max-width: 999px) {
 	.content-container {
-		padding-left: 0px !important; /* Reduced from 80px */
-		padding-right: 15px !important; /* Even more reduced for right side */
+		margin-left: 200px !important; /* Keep margin for sidenav */
+		padding-left: 20px !important; /* Reduced from 80px */
+		padding-right: 20px !important;
+		width: calc(100% - 200px);
 	}
 }
 

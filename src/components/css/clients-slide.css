@@ -4,11 +4,16 @@
     margin-top: 50px;
     margin-bottom: 20px;
     align-items: center;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .slide-container {
-    width: 50%;
+    width: 100%;
+}
+
+.slider-client {
+    width: 100%;
+    max-width: 1050px;
 }
 
 .subheading span {
@@ -45,6 +50,20 @@
     filter: brightness(1) contrast(1);
 }
 
-/* .slider-client {
-    width: 50%;
-} */
+/* Responsive adjustments for 1000-1400px range */
+@media (min-width: 1000px) and (max-width: 1400px) {
+    .clients-slide {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .slider-client {
+        width: 100%;
+        padding: 0 40px;
+    }
+    
+    .slick-slider {
+        width: 100%;
+    }
+}

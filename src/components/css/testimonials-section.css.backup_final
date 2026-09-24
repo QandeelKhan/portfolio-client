@@ -54,11 +54,6 @@
     border: none;
 }
 
-[data-theme="light"] .reviewer-skills {
-    color: black;
-}
-
-
 .testimonial-icon {
     margin-right: 25px;
 }
@@ -90,7 +85,7 @@
     justify-content: flex-start;
     color: var(--textPrimary);
     padding: 0px 15px;
-    /* max-height: 120px; */
+    max-height: 90px;
     overflow: hidden;
 }
 
@@ -124,7 +119,7 @@
 }
 
 .slick-list {
-    overflow: visible !important;
+    overflow: hidden !important;
 }
 
 .slick-track {
@@ -152,105 +147,15 @@
 }
 
 
-
-/* Tablet view - 1 review at a time (769-1000px) */
-@media (min-width: 769px) and (max-width: 1000px) {
-    .testimonials-area {
-        width: 100%;
-        /* padding: 0 20px; */
-        overflow: hidden;
-    }
-    
-    .testimonials {
-        width: 100%;
-        max-width: 100%;
-    }
-    
-    .testimonials > div {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-    
-    .slick-slider {
-        width: 100%;
-    }
-    
-    .slick-list {
-        width: 100%;
-        overflow: hidden;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-    
-    .slick-track {
-        display: flex !important;
-    }
-    
-    .slick-slide {
-        width: 100% !important;
-    }
-    
-    .slick-slide > div {
-        width: 100%;
-        display: flex !important;
-        justify-content: center;
-    }
-    
-    .left-testimonial,
-    .right-testimonial {
-        width: calc(100% - 40px) !important;
-        margin: 0 20px !important;
-    }
-    
-    .review-testimonial {
-        padding: 18px 15px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-    
-    .testimonial-icon {
-        margin-right: 12px;
-    }
-    
-    .fa-comments {
-        font-size: 32px;
-    }
-    
-    .comment-review {
-        font-size: 14px;
-        line-height: 1.4;
-    }
-    
-    .person-info {
-        padding: 0 10px;
-        max-height: none;
-        overflow: visible;
-    }
-    
-    .reviewer-name {
-        font-size: 16px;
-    }
-    
-    .person-info img {
-        width: 55px;
-        max-width: 55px;
-        max-height: 65px;
-    }
-    
-    .reviewer-skills {
-        font-size: 13px;
-        line-height: 1.3;
-        display: block;
-        white-space: normal;
-        word-wrap: break-word;
-    }
-}
-
 /* Large tablets and laptops (iPad Pro 13, etc) */
-@media (min-width: 1000px) and (max-width: 1400px) {
-    .reviewer-name {
-        font-size: 15px;
+@media (min-width: 1025px) and (max-width: 1400px) {
+    .testimonials {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 80px;
     }
+    
     .slick-list {
         overflow: visible !important;
         padding: 0 !important;
@@ -260,14 +165,23 @@
     .slick-track {
         display: flex !important;
         gap: 0;
+        width: 100% !important;
     }
     
+    .slick-slide {
+        padding: 0 !important;
+        width: 50% !important;
+        min-width: 50% !important;
+        max-width: 50% !important;
+        flex: 0 0 50% !important;
+        float: none !important;
+    }
     
     /* Force the wrapper divs created by Slick to take full width */
     .slick-slide > div {
         width: 100% !important;
-        height: 100% !important;
-        padding: 0 20px;
+        height: 100%;
+        padding: 0 25px;
         box-sizing: border-box;
     }
     
@@ -282,15 +196,18 @@
     .review-testimonial {
         width: 100% !important;
         box-sizing: border-box;
-        height: 100%;
     }
 }
 
 /* Medium tablets (iPad Pro mini, regular iPad) */
-@media (min-width: 769px) and (max-width: 999px) {
-    .reviewer-name {
-            font-size: 15px;
+@media (min-width: 769px) and (max-width: 1024px) {
+    .testimonials {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 70px;
     }
+    
     .slick-list {
         overflow: visible !important;
         padding: 0 !important;
@@ -300,14 +217,23 @@
     .slick-track {
         display: flex !important;
         gap: 0;
+        width: 100% !important;
     }
     
+    .slick-slide {
+        padding: 0 !important;
+        width: 50% !important;
+        min-width: 50% !important;
+        max-width: 50% !important;
+        flex: 0 0 50% !important;
+        float: none !important;
+    }
     
-    /* Force the wrapper divs created by Slick to take full width */
+    /* Force the wrapper divs to take full width */
     .slick-slide > div {
         width: 100% !important;
-        height: 100% !important;
-        padding: 0 20px;
+        height: 100%;
+        padding: 0 18px;
         box-sizing: border-box;
     }
     
@@ -320,9 +246,9 @@
     }
     
     .review-testimonial {
+        padding: 16px 14px;
         width: 100% !important;
         box-sizing: border-box;
-        height: 100%;
     }
     
     .testimonial-icon {
@@ -424,25 +350,5 @@
         display: block;
         white-space: normal;
         word-wrap: break-word;
-    }
-}
-
-/* Additional fix for 1000-1400px centering */
-@media (min-width: 1000px) and (max-width: 1400px) {
-    .testimonials-area {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .testimonials {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-
-    }
-    
-    .slick-slider {
-        width: 100%;
     }
 }
