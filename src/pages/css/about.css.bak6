@@ -192,7 +192,7 @@
     .about-right-info ul {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px 30px;
+        gap: 10px 15px;
         width: 100%;
     }
     
@@ -208,12 +208,9 @@
         width: 100%;
     }
     
-    /* Download button takes full width on its own line */
-    .about-right-info ul a.download-resume-btn {
-        display: block;
-        text-align: center;
-        flex-basis: 100%;
-        width: 100%;
+    /* Download button takes full width */
+    .download-resume-btn {
+        width: auto;
         margin-top: 20px;
     }
 }

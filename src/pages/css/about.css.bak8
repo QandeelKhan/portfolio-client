@@ -210,8 +210,6 @@
     
     /* Download button takes full width on its own line */
     .about-right-info ul a.download-resume-btn {
-        display: block;
-        text-align: center;
         flex-basis: 100%;
         width: 100%;
         margin-top: 20px;
