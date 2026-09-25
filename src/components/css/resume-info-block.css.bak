@@ -62,7 +62,7 @@
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
-	margin: 0;
+	margin: 0px 20px;
 }
 
 /* Resume Section Headings */
@@ -222,7 +222,7 @@
 	
 	.resume-skills-left,
 	.resume-skills-right {
-		margin: 0;
+		margin: 0px 10px;
 	}
 }
 

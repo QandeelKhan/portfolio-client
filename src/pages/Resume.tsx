@@ -1,7 +1,6 @@
 import React from "react";
 import "./css/resume.css";
 import ResumeInfoBlock from "../components/ResumeInfoBlock";
-import ResumeSkills from "../components/SkillsSection";
 import AboutUserIcon from "../components/icons/ResumeModeIcons/AboutUser";
 import PageTemplate from "../components/PageTemplate";
 import { education, experience } from "../components/data/resumeData";
@@ -26,7 +25,6 @@ const Resume: React.FC = () => {
                     experience={experience}
                     education={education}
                 /> 
-                <ResumeSkills />
             </PageTemplate>
         </>
     );
