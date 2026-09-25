@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes } from "react";
+import React, { ButtonHTMLAttributes, ReactNode } from "react";
 import clsx from "clsx";
 import styles from "./css/FormButton.module.css";
 
@@ -14,6 +14,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     tabIndex?: number;
     title?: string;
     loading?: boolean;
+    children?: ReactNode;
 }
 
 const FormButton: React.FC<ButtonProps> = ({
@@ -22,10 +23,14 @@ const FormButton: React.FC<ButtonProps> = ({
     type = "button",
     disabled = false,
     tabIndex,
-    title = "button",
+    title,
     loading = false,
+    children,
     ...props
 }) => {
+    // Use children if provided, otherwise fall back to title prop
+    const buttonText = children || title || "button";
+
     return (
         <button
             className={clsx(
@@ -46,7 +51,7 @@ const FormButton: React.FC<ButtonProps> = ({
                         loading && styles["title-muted"]
                     )}
                 >
-                    {title}
+                    {buttonText}
                 </div>
             </div>
         </button>

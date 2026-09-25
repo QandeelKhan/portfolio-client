@@ -50,3 +50,8 @@
 .title-muted {
     opacity: 0.5;
 }
+
+/* Registration button variant - add top margin from checkbox */
+.login-button--registration {
+    margin-top: 25px;
+}

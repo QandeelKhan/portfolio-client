@@ -70,16 +70,6 @@ const InputField: React.FC<InputFieldProps> = ({
                 styles[`form-input--${inputVariant}`]
             )}
         >
-            <label
-                title={labelToolTip}
-                className={clsx(
-                    styles["form-input__label"],
-                    styles[`form-input__label--${inputVariant}`]
-                )}
-                htmlFor={htmlFor}
-            >
-                {label}
-            </label>
             <div className={clsx(styles["form-input__relative"])}>
                 <input
                     className={clsx(
@@ -95,10 +85,20 @@ const InputField: React.FC<InputFieldProps> = ({
                     onBlur={handleBlur}
                     onFocus={handleFocus}
                     tabIndex={tabIndex}
-                    // this changed
                     autoFocus={autoFocus}
                     title={InputFieldToolTip}
+                    placeholder=" "
                 />
+                <label
+                    title={labelToolTip}
+                    className={clsx(
+                        styles["form-input__label"],
+                        styles[`form-input__label--${inputVariant}`]
+                    )}
+                    htmlFor={htmlFor}
+                >
+                    {label}
+                </label>
                 {type === "password" && (
                     <button
                         type="button"

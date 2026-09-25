@@ -137,12 +137,12 @@ const LoginForm = () => {
                 >
                     Login
                 </FormButton>
+            </form>
                 <StyledLink
                     href="/registration"
                     title="Click the link to create an account"
                     text="Do not have an account?"
                 />
-            </form>
             <div>
                 <GoogleLoginButton text="Sign Up with Google" />
             </div>

@@ -1,12 +1,11 @@
 .form-input {
-    width: 75%;
-    margin-bottom: 50px;
+    width: 50%;
 }
 
 /*  */
 .form-input__relative {
     position: relative;
-    margin-bottom: 5px;
+    margin-bottom: 50px;
 }
 
 .form-input__input {
@@ -55,6 +54,8 @@
     font-size: 1.4rem;
     font-weight: 500;
     cursor: text;
+    margin-top: 0.5em;
+    margin-left: 0.7em;
     color: var(--textSecondary);
     transition: top 0.3s ease, left 0.3s ease, font-size 0.3s ease, color 0.3s ease, margin 0.3s ease !important;
     pointer-events: none; /* Allow clicks to pass through to input field */
