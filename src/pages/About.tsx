@@ -75,10 +75,10 @@ const About: React.FC = (props: any) => {
                         </div>
                     </div>
                     <div className="about-right-info">
-                        <h3 className="personel-info-heading">
+                        <ul>
+                            <h3 className="personel-info-heading">
                             Personal Information
                         </h3>
-                        <ul>
                             <li className="personal-info-list">
                                 <span className="personal-info-title">
                                     <span> Name </span>
@@ -135,7 +135,6 @@ const About: React.FC = (props: any) => {
                                     <span> Available </span>
                                 </span>
                             </li>
-                        </ul>
                         <a
                             target="_blank"
                             rel="noopener noreferrer"
@@ -145,6 +144,7 @@ const About: React.FC = (props: any) => {
                         >
                             DOWNLOAD RESUME
                         </a>
+                        </ul>
                     </div>
                 </div>
                 {/* service area */}
