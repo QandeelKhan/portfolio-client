@@ -69,31 +69,6 @@
 	width: 100% !important;
 }
 
-/* For mobile view */
-@media (max-width: 768px) {
-	.content-only-loader {
-		left: 0;
-		width: 100%;
-	}
-
-	.content-container {
-		margin-left: 0 !important;
-		padding-left: 20px !important; /* Reduce padding on mobile */
-		padding-right: 20px !important; /* Reduce padding on mobile */
-		width: 100%;
-	}
-}
-
-/* For tablet view (iPad) - sidenav is visible */
-@media (min-width: 769px) and (max-width: 999px) {
-	.content-container {
-		margin-left: 200px !important; /* Keep margin for sidenav */
-		padding-left: 20px !important; /* Reduced from 80px */
-		padding-right: 20px !important;
-		width: calc(100% - 200px);
-	}
-}
-
 /* Landing info positioning */
 .landing-info {
 	display: flex;
@@ -215,4 +190,49 @@
 /* Make content container transparent for home page */
 .home-page-content * {
 	background-color: transparent;
+}
+
+/* RESPONSIVE FIXES FOR LOADING SKELETON CENTERING */
+
+/* Desktop (768px+): Account for sidebar */
+@media (min-width: 768px) {
+	.landing-page-container {
+		left: 200px !important;
+		width: calc(100vw - 200px) !important;
+	}
+	
+	.content-only-loader {
+		left: 200px !important;
+		width: calc(100vw - 200px) !important;
+	}
+}
+
+/* Mobile (< 768px): Full width, no sidebar */
+@media (max-width: 767px) {
+	.landing-page-container {
+		left: 0 !important;
+		width: 100vw !important;
+	}
+	
+	.content-only-loader {
+		left: 0 !important;
+		width: 100vw !important;
+	}
+	
+	.content-container {
+		margin-left: 0 !important;
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+		width: 100%;
+	}
+}
+
+/* For tablet view (iPad) - sidenav is visible */
+@media (min-width: 769px) and (max-width: 999px) {
+	.content-container {
+		margin-left: 200px !important;
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+		width: calc(100% - 200px);
+	}
 }
