@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/resume.css";
 import ResumeInfoBlock from "../components/ResumeInfoBlock";
-import AboutUserIcon from "../components/icons/ResumeModeIcons/AboutUser";
+import BriefcaseResume from "../components/icons/ResumeModeIcons/BriefcaseResume";
 import PageTemplate from "../components/PageTemplate";
 import { education, experience } from "../components/data/resumeData";
 import { Helmet } from "react-helmet";
@@ -20,7 +20,7 @@ const Resume: React.FC = () => {
                     content="Qandeel Khan, Full Stack Developer, Python Django, React, TypeScript, Redux, DevOps, Web Applications, Resume"
                 />
             </Helmet>
-            <PageTemplate iconComponent={<AboutUserIcon />} pageName="Resume.">
+            <PageTemplate iconComponent={<BriefcaseResume />} pageName="Resume.">
                 <ResumeInfoBlock
                     experience={experience}
                     education={education}

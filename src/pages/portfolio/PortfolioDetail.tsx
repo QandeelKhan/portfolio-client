@@ -1,5 +1,5 @@
-import React from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import "./portfolio-detail.css";
 import { gridItems } from "../../components/data/GridItems";
 import Markdown from "react-markdown";
@@ -16,16 +16,42 @@ const MDText = ({ descriptionMDText }: { descriptionMDText?: string }) => {
 
 const PortfolioDetail: React.FC = (props: any) => {
     const { index } = useParams<{ index: string | any }>();
+    const navigate = useNavigate();
     const itemIndex = parseInt(index, 10);
     console.log(itemIndex);
     const item = gridItems[itemIndex];
+    
+    const [isClosing, setIsClosing] = useState(false);
+
+    // Handle close with animation
+    const handleClose = (e: React.MouseEvent) => {
+        e.preventDefault();
+        setIsClosing(true);
+        
+        // Wait for animation to complete before navigating
+        setTimeout(() => {
+            navigate('/portfolio');
+        }, 400); // Match animation duration
+    };
+
+    // Trigger enter animation on mount
+    useEffect(() => {
+        // Small delay to ensure CSS transition triggers
+        const timer = setTimeout(() => {
+            const element = document.querySelector('.default-position');
+            element?.classList.add('enter');
+        }, 10);
+        
+        return () => clearTimeout(timer);
+    }, []);
 
     return (
-        <div className="default-position">
+        <div className={`default-position ${isClosing ? 'exit' : ''}`}>
             <div className="header-fix">
                 <Link
                     to="/portfolio"
                     className="fa-solid fa-circle-xmark"
+                    onClick={handleClose}
                 ></Link>
             </div>
             <div className="main-container">
@@ -62,13 +88,6 @@ const PortfolioDetail: React.FC = (props: any) => {
                     <span className="project-description">
                         Project Description
                     </span>
-                    {/* <Markdown
-                        rehypePlugins={[rehypeRaw]}
-                        className="markdown-content"
-                    >
-                        {item.description}
-                    </Markdown> */}
-                    {/* {item.description} */}
                     <MDText descriptionMDText={item.description} />
                     <div className="view-live-container">
                         <div className="view-live">View Live Version</div>

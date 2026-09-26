@@ -53,7 +53,7 @@
     height: 100%;
     padding: 7px 10px;
     cursor: text;
-    transition: 0.2s;
+    transition: top 0.3s ease, left 0.3s ease, font-size 0.3s ease, color 0.3s ease, margin 0.3s ease !important;
     background: transparent;
     /* border: 2px solid white; */
     /* outline: white; */
@@ -74,7 +74,7 @@
 }
 
 .input-group textarea {
-    transition: 0.2s;
+    transition: border 0.3s ease, background 0.3s ease;
 }
 
 .checkbox label {
@@ -93,4 +93,37 @@
 }
 form {
     width: 100%;
+}
+
+/* Light theme - textarea text color */
+[data-theme="light"] .input-group textarea {
+    color: #555555;
+}
+
+/* Light theme - label color (default state) */
+[data-theme="light"] .input-group label {
+    color: #555555;
+}
+
+/* Light theme - focused/moved label color */
+[data-theme="light"] .input-message textarea:focus ~ label,
+[data-theme="light"] .input-message textarea:valid ~ label {
+    color: #555555;
+}
+
+/* Light theme - textarea focus/valid border color */
+[data-theme="light"] .input-group textarea:focus,
+[data-theme="light"] .input-group textarea:valid {
+    border: 2px solid #555555;
+}
+
+/* Light theme - button styling */
+[data-theme="light"] .send-message-btn {
+    color: #222222;
+    border-color: #222222;
+}
+
+/* Light theme - button hover */
+[data-theme="light"] .send-message-btn:hover {
+    color: #ffffff;
 }

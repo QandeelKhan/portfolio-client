@@ -89,3 +89,7 @@
     font-style: italic;
     font-size: 14px;
 }
+
+[data-theme="light"] .blog-date {
+    color: #777777;
+}
