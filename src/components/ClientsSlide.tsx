@@ -14,7 +14,7 @@ const ClientsSlide: React.FC = (props) => {
             <div className="slider-client" style={{ width: "100%", maxWidth: "1050px" }}>
                 <Slider
                     dots={false}
-                    slidesToShow={3}
+                    slidesToShow={4}
                     slidesToScroll={1}
                     arrows={false}
                     infinite={true}
@@ -34,6 +34,11 @@ const ClientsSlide: React.FC = (props) => {
                             <a href="#">
                                 {" "}
                                 <img
+                                    className="marketers-logo"
+                                    style={{
+                                        height: "150px",
+                                        width: "150px",
+                                    }}
                                     decoding="async"
                                     src="/images/logo/marketers-logo.png"
                                     alt="Client-1"
@@ -83,6 +88,7 @@ const ClientsSlide: React.FC = (props) => {
                             <a href="#">
                                 {" "}
                                 <img
+                                    className="al-haider-logo"
                                     style={{
                                         color: "whitesmoke",
                                         height: "150px",

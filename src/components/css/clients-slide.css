@@ -1,69 +1,40 @@
-.clients-slide {
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    align-items: center;
-    overflow: visible;
+
+/* Al-Haider logo - invert black text to brighter white in dark theme */
+.al-haider-logo {
+    filter: invert(1) brightness(1.2);
 }
 
-.slide-container {
-    width: 100%;
+/* Light theme - keep original black text (no inversion) */
+[data-theme="light"] .al-haider-logo {
+    filter: none;
 }
 
-.slider-client {
-    width: 100%;
-    max-width: 1050px;
+/* Marketers logo - white colors in dark theme, black in light theme */
+.marketers-logo {
+    /* No filter in dark theme - keep white colors as-is */
 }
 
-.subheading span {
-    border-bottom: 2px solid var(--primaryColor);
-    padding: 0px 9px;
+/* Light theme - invert white colors to black */
+[data-theme="light"] .marketers-logo {
+    filter: invert(1);
 }
 
-.client-logo img {
-    max-height: 120px;
-    margin: auto;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
+/* Al-Haider logo - invert black text to brighter white in dark theme */
+.al-haider-logo {
+    filter: invert(1) brightness(1.2);
 }
 
-.client-logo img:hover {
-    opacity: 1;
+/* Light theme - keep original black text (no inversion) */
+[data-theme="light"] .al-haider-logo {
+    filter: none;
 }
 
-/* Light theme - add background for better logo visibility */
-[data-theme="light"] .client-logo {
-    background: #f5f5f5;
-    padding: 20px;
-    border-radius: 8px;
-    display: inline-block;
+/* Marketers logo - white colors in dark theme, black in light theme */
+.marketers-logo {
+    /* No filter in dark theme - keep white colors as-is */
 }
 
-[data-theme="light"] .client-logo img {
-    opacity: 0.85;
-    filter: brightness(0.9) contrast(1.1);
-}
-
-[data-theme="light"] .client-logo img:hover {
-    opacity: 1;
-    filter: brightness(1) contrast(1);
-}
-
-/* Responsive adjustments for 1000-1400px range */
-@media (min-width: 1000px) and (max-width: 1400px) {
-    .clients-slide {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .slider-client {
-        width: 100%;
-        padding: 0 40px;
-    }
-    
-    .slick-slider {
-        width: 100%;
-    }
+/* Light theme - invert white colors to black */
+[data-theme="light"] .marketers-logo {
+    filter: invert(1);
 }

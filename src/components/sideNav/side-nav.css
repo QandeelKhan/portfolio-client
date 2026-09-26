@@ -481,3 +481,23 @@ li {
     left: 10px;
     color: var(--secondaryColor);
 }
+
+/* Active state for Login/Sign Up button - Dark theme */
+.login-sign-active {
+    background-color: #242428 !important;
+}
+
+.login-sign-active * {
+    color: var(--hoverColor) !important;
+    fill: var(--hoverColor) !important;
+}
+
+/* Light theme active state for Login/Sign Up */
+[data-theme="light"] .login-sign-active {
+    background-color: #3a3b40 !important;
+}
+
+[data-theme="light"] .login-sign-active * {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+}

@@ -8,7 +8,7 @@ import {
 } from "../../redux/reducers/eventsSlice";
 import { unSetUserToken } from "../../redux/features/authSlice";
 import { removeToken } from "../../redux/services/localStorageService";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -25,6 +25,11 @@ const SideNav: React.FC = (props: any) => {
     const { navVisible, clientPortalClicked } = useSelector(
         (state: RootState) => state.events
     );
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    // Check if current page is login or registration
+    const isLoginPage = location.pathname === '/login' || location.pathname === '/registration';
 
     const handleResize = () => {
         if (navVisible) {
@@ -42,7 +47,6 @@ const SideNav: React.FC = (props: any) => {
         handleResize();
     }, []);
 
-    const navigate = useNavigate();
     const {
         id,
         firstName,
@@ -171,7 +175,9 @@ const SideNav: React.FC = (props: any) => {
                 {!access_token ? (
                     <a
                         href="/login"
-                        className="login-btn send-message-btn login-sign"
+                        className={`login-btn send-message-btn login-sign ${
+                            isLoginPage ? 'login-sign-active' : ''
+                        }`}
                     >
                         <PowerSwitchIcon />
                         <div>Login / Sign Up</div>

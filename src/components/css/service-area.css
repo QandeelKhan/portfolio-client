@@ -4,6 +4,10 @@
     flex-direction: column;
 }
 
+.srevice-area{
+    margin-bottom: 50px;
+}
+
 .services {
     display: flex;
     justify-content: center;
