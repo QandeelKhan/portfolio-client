@@ -42,7 +42,7 @@ const ServicesArea: React.FC = (props) => {
                 <div className="skills">
                     <PhoneIcon />
                     <span className="skills-heading">
-                        Mobile App Development
+                        App Development
                     </span>
                     <span className="skills-description">
                         With proficiency in React Native and Python, I develop
