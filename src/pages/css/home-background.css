@@ -149,7 +149,22 @@
 }
 
 /* Responsive styles */
-@media (max-width: 991px) {
+
+/* 768-992px: Sidebar visible, account for it - FIXED */
+@media (min-width: 768px) and (max-width: 992px) {
+	#home-background {
+		left: 200px !important;
+		width: calc(100vw - 200px) !important;
+	}
+	
+	.home-page-content #home-background {
+		left: 200px !important;
+		width: calc(100vw - 200px) !important;
+	}
+}
+
+/* Below 768px: Sidebar hidden, use full width */
+@media (max-width: 767px) {
 	#home-background {
 		left: 0 !important;
 		width: 100vw !important;
@@ -158,6 +173,66 @@
 	.home-page-content #home-background {
 		left: 0 !important;
 		width: 100vw !important;
+	}
+}
+
+/* Specific centering for tablet range 768-992px - CRITICAL FIX */
+@media (min-width: 768px) and (max-width: 992px) {
+	/* Force centering on parent container */
+	#home-background {
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		padding: 0 !important;
+	}
+	
+	/* Banner text container - fully centered */
+	.banner-text {
+		position: static !important;
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: center !important;
+		justify-content: center !important;
+		text-align: center !important;
+		padding: 0 40px !important;
+		margin: 0 auto !important;
+		width: 100% !important;
+		max-width: 600px !important;
+		left: 0 !important;
+		right: 0 !important;
+		transform: none !important;
+	}
+	
+	/* Name container - centered */
+	.name-container {
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: center !important;
+		justify-content: center !important;
+		width: 100% !important;
+		text-align: center !important;
+		margin: 0 auto !important;
+	}
+	
+	/* Individual name elements - centered */
+	.banner-qandeel,
+	.banner-khan {
+		text-align: center !important;
+		width: 100% !important;
+		display: block !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+	
+	/* Animation text - centered */
+	.animation-text {
+		width: 100% !important;
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		text-align: center !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
 	}
 }
 
