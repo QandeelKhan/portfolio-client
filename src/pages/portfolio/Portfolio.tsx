@@ -26,9 +26,6 @@ const Portfolio: React.FC = (props: any) => {
 
     const handleTabClick = (tab: string) => {
         setSelectedTab(tab);
-        setTimeout(() => {
-            setSelectedTab(tab);
-        }, 1000);
     };
 
     const filteredItems = gridItems.filter((item) => {
@@ -79,13 +76,14 @@ const Portfolio: React.FC = (props: any) => {
                             </ul>
                         </div>
                         <Masonry
+                            key={selectedTab}
                             className="masonry-grid"
                             columnClassName="masonry-grid_column"
                             breakpointCols={breakpointColumnsObj}
                         >
                             {filteredItems.map((item, index) => (
                                 <GridItem
-                                    key={index}
+                                    key={`${selectedTab}-${index}`}
                                     navigateTo={() => handleNavigate(index)}
                                     imgSrc={item.titleImgSrc}
                                     title={item.title}
