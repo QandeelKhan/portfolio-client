@@ -31,7 +31,7 @@ export const experience = [
 		logo: "/images/companies-logo/keytax.png",
 		startDate: { month: "May", year: "2026" },
 		endDate: { month: "Present", year: "" },
-		description: `Fostered the best solution in reshaping and efficiency of the product EDOC21, ready to business and challenge the existing bookkeeping software solutions in UK market. Delivered highly optimized code based over the previous work the company was willing for and turned the idea into a business ready product that offers competitive features to the accounting firms in UK, following best pricing model to maintain the company expenses with only 4 client firms each month to fulfil the running system cost.`,
+		description: `Fostered the best solution in reshaping and efficiency of the product EDOC21, ready to business and challenge the existing bookkeeping software solutions in UK market. Delivered highly optimized code based over the previous work the company was willing for and turned the idea into a business ready product that offers competitive features to the accounting firms in UK, following best pricing model to maintain the company expenses with only 4 client firms each month to fulfill the running system cost.`,
 		achievements: [
 			{
 				id: 1,

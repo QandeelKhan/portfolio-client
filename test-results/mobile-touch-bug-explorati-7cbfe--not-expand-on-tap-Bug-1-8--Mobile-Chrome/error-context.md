@@ -116,7 +116,7 @@ Received: false
                     - link [ref=e125]:
                       - /url: https://keytax.co.uk
                 - img "KeyTax Accountants Ltd logo" [ref=e129]
-            - paragraph [ref=e131]: Fostered the best solution in reshaping and efficiency of the product EDOC21, ready to business and challenge the existing bookkeeping software solutions in UK market. Delivered highly optimized code based over the previous work the company was willing for and turned the idea into a business ready product that offers competitive features to the accounting firms in UK, following best pricing model to maintain the company expenses with only 4 client firms each month to fulfil the running system cost.
+            - paragraph [ref=e131]: Fostered the best solution in reshaping and efficiency of the product EDOC21, ready to business and challenge the existing bookkeeping software solutions in UK market. Delivered highly optimized code based over the previous work the company was willing for and turned the idea into a business ready product that offers competitive features to the accounting firms in UK, following best pricing model to maintain the company expenses with only 4 client firms each month to fulfill the running system cost.
             - generic [ref=e132]:
               - generic [ref=e133]:
                 - heading "Key Achievements" [level=4] [ref=e137]
