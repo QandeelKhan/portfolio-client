@@ -213,21 +213,8 @@
    RESPONSIVE LAYOUTS
    ============================================ */
 
-/* Tablet view (769-1000px) - 2x2 grid maintained */
-@media (min-width: 769px) and (max-width: 1000px) {
-	.main-resume-container {
-		grid-template-columns: 1fr 1fr;
-		gap: 25px;
-	}
-	
-	.resume-skills-left,
-	.resume-skills-right {
-		margin: 0;
-	}
-}
-
-/* Mobile and small tablets - single column */
-@media (max-width: 768px) {
+/* Single column layout for screens 1000px and below */
+@media (max-width: 1000px) {
 	.main-resume-container {
 		grid-template-columns: 1fr;
 		gap: 40px;
