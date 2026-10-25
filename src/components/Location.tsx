@@ -7,7 +7,14 @@ const Location: React.FC = (props) => {
             <div className="location-area">
                 <div className="box">
                     <i className="fa-brands fa-telegram location-icons"></i>
-                    <span>com.qandeelhaider@gmail.com</span>
+                    <a 
+                        href="mailto:com.qandeelhaider@gmail.com"
+                        className="contact-link email-link"
+                        title="Send me an email"
+                    >
+                        <span>com.qandeelhaider@gmail.com</span>
+                        <i className="fa-solid fa-envelope contact-icon"></i>
+                    </a>
                 </div>
                 <div className="box">
                     <i className="fa-solid fa-location-dot location-icons"></i>
@@ -15,7 +22,14 @@ const Location: React.FC = (props) => {
                 </div>
                 <div className="box">
                     <i className="fa-solid fa-phone-flip location-icons"></i>
-                    <span>(+92) 315 70 51720</span>
+                    <a 
+                        href="tel:+923157051720"
+                        className="contact-link phone-link"
+                        title="Call me"
+                    >
+                        <span>(+92) 315 70 51720</span>
+                        <i className="fa-solid fa-phone contact-icon"></i>
+                    </a>
                 </div>
             </div>
             <div className="map">

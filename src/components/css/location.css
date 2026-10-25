@@ -22,11 +22,98 @@
     width: 100%;
     margin-bottom: 0px;
 }
+
+/* Contact Links Styling - Professional UX/UI */
+.location-area .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--textPrimary);
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 4px 8px;
+    border-radius: 6px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Icons hidden by default */
+.location-area .contact-link .contact-icon {
+    font-size: 14px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    order: 2; /* Place icon after text */
+}
+
+/* Show icons on hover - smooth fade and slide in from left */
+.location-area .contact-link:hover .contact-icon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Email Link Specific Styling */
+.location-area .email-link {
+    color: var(--textPrimary);
+}
+
+.location-area .email-link:hover {
+    color: var(--primaryColor);
+    background-color: rgba(0, 163, 225, 0.1);
+    transform: translateX(2px);
+}
+
+/* Phone Link Specific Styling */
+.location-area .phone-link {
+    color: var(--textPrimary);
+}
+
+.location-area .phone-link:hover {
+    color: var(--primaryColor);
+    background-color: rgba(0, 163, 225, 0.1);
+    transform: translateX(2px);
+}
+
+.location-area .phone-link:hover .contact-icon {
+    animation: phoneRing 0.5s ease;
+}
+
+/* Phone ring animation */
+@keyframes phoneRing {
+    0%, 100% { transform: rotate(0deg); }
+    10%, 30% { transform: rotate(-10deg); }
+    20%, 40% { transform: rotate(10deg); }
+}
+
+/* Active/Click state */
+.location-area .contact-link:active {
+    transform: scale(0.98);
+}
+
+/* Light theme adjustments */
+[data-theme="light"] .location-area .email-link:hover {
+    background-color: rgba(0, 163, 225, 0.15);
+}
+
+[data-theme="light"] .location-area .phone-link:hover {
+    background-color: rgba(0, 163, 225, 0.15);
+}
+
 @media (max-width: 768px) {
     .location-area {
         flex-wrap: wrap;
     }
     .box {
         margin-top: 0px;
+    }
+    
+    /* Mobile responsive - make links easier to tap */
+    .location-area .contact-link {
+        padding: 8px 12px;
+        gap: 10px;
+    }
+    
+    .location-area .contact-link .contact-icon {
+        font-size: 16px;
     }
 }

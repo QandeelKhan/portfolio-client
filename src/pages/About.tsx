@@ -116,7 +116,14 @@ const About: React.FC = (props: any) => {
                                     <span>Email </span>
                                 </span>{" "}
                                 <span className="personal-info-value">
-                                    <span>com.qandeelhaider@gmail.com</span>
+                                    <a 
+                                        href="mailto:com.qandeelhaider@gmail.com"
+                                        className="contact-link email-link"
+                                        title="Send me an email"
+                                    >
+                                        <span>com.qandeelhaider@gmail.com</span>
+                                        <i className="fa-solid fa-envelope contact-icon"></i>
+                                    </a>
                                 </span>
                             </li>
                             <li>
@@ -124,7 +131,14 @@ const About: React.FC = (props: any) => {
                                     <span> Phone </span>
                                 </span>{" "}
                                 <span className="personal-info-value">
-                                    <span> (+92) 315 7051 720 </span>
+                                    <a 
+                                        href="tel:+923157051720"
+                                        className="contact-link phone-link"
+                                        title="Call me"
+                                    >
+                                        <span> (+92) 315 7051 720 </span>
+                                        <i className="fa-solid fa-phone contact-icon"></i>
+                                    </a>
                                 </span>
                             </li>
                             <li>

@@ -240,3 +240,115 @@
         align-items: flex-start !important;
     }
 }
+
+/* Contact Links Styling - Professional UX/UI */
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--textPrimary);
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 4px 8px;
+    border-radius: 6px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Icons hidden by default */
+.contact-link .contact-icon {
+    font-size: 14px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    order: 2; /* Place icon after text */
+}
+
+/* Show icons on hover - smooth fade and slide in from left */
+.contact-link:hover .contact-icon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Email Link Specific Styling */
+.email-link {
+    color: var(--textPrimary);
+}
+
+.email-link:hover {
+    color: var(--primaryColor);
+    background-color: rgba(0, 163, 225, 0.1);
+    transform: translateX(2px);
+}
+
+/* Phone Link Specific Styling */
+.phone-link {
+    color: var(--textPrimary);
+}
+
+.phone-link:hover {
+    color: var(--primaryColor);
+    background-color: rgba(0, 163, 225, 0.1);
+    transform: translateX(2px);
+}
+
+.phone-link:hover .contact-icon {
+    animation: phoneRing 0.5s ease;
+}
+
+/* Phone ring animation */
+@keyframes phoneRing {
+    0%, 100% { transform: rotate(0deg); }
+    10%, 30% { transform: rotate(-10deg); }
+    20%, 40% { transform: rotate(10deg); }
+}
+
+/* Active/Click state */
+.contact-link:active {
+    transform: scale(0.98);
+}
+
+/* Light theme adjustments */
+[data-theme="light"] .email-link:hover {
+    background-color: rgba(0, 163, 225, 0.15);
+}
+
+[data-theme="light"] .phone-link:hover {
+    background-color: rgba(0, 163, 225, 0.15);
+}
+
+/* Tooltip effect (optional enhancement) */
+.contact-link::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px);
+    background: var(--textPrimary);
+    color: var(--backgroundColor);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.contact-link:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-4px);
+}
+
+/* Mobile responsive - make links easier to tap */
+@media (max-width: 768px) {
+    .contact-link {
+        padding: 8px 12px;
+        gap: 10px;
+    }
+    
+    .contact-link .contact-icon {
+        font-size: 16px;
+    }
+}

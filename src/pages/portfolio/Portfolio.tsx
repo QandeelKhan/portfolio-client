@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import Masonry from "react-masonry-css";
+import React, { useState, useRef, useEffect } from "react";
 import GridItem from "../../components/grid/GridItem";
 import { gridItems, tabs } from "../../components/data/GridItems";
 import { useNavigate } from "react-router-dom";
@@ -8,31 +7,88 @@ import PageTemplate from "../../components/PageTemplate";
 import PortfolioBriefcase from "../../components/icons/ResumeModeIcons/PortfolioBriefcase";
 import "./portfolio.css";
 
-const Portfolio: React.FC = (props: any) => {
-    const breakpointColumnsObj = {
-        default: 3,
-        1100: 3,
-        900: 2,
-        700: 1,
-    };
+interface ItemPosition {
+    element: HTMLElement;
+    rect: DOMRect;
+}
 
+const Portfolio: React.FC = (props: any) => {
     const navigate = useNavigate();
     const handleNavigate = (index: string | number) => {
         navigate(`/portfolio-detail/${index}`);
     };
 
-    // tabs
     const [selectedTab, setSelectedTab] = useState("ALL");
+    const gridRef = useRef<HTMLDivElement>(null);
 
     const handleTabClick = (tab: string) => {
-        setSelectedTab(tab);
+        if (tab === selectedTab) return;
+
+        // FLIP animation technique
+        if (gridRef.current) {
+            const items = Array.from(gridRef.current.querySelectorAll('.grid-item-container'));
+            
+            // First: Record current positions
+            const firstPositions = items.map(item => ({
+                element: item as HTMLElement,
+                rect: item.getBoundingClientRect()
+            }));
+
+            // Update the state (this causes re-layout)
+            setSelectedTab(tab);
+
+            // Use requestAnimationFrame to ensure DOM has updated
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    // Last: Record new positions
+                    const newItems = Array.from(gridRef.current!.querySelectorAll('.grid-item-container'));
+                    
+                    newItems.forEach((item) => {
+                        const element = item as HTMLElement;
+                        const oldPosition = firstPositions.find(p => p.element.dataset.title === element.dataset.title);
+                        
+                        if (oldPosition) {
+                            const newRect = element.getBoundingClientRect();
+                            const deltaX = oldPosition.rect.left - newRect.left;
+                            const deltaY = oldPosition.rect.top - newRect.top;
+
+                            // Invert: Apply transform to move element back to old position
+                            element.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+                            element.style.transition = 'none';
+
+                            // Play: Animate to new position
+                            requestAnimationFrame(() => {
+                                element.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease';
+                                element.style.transform = '';
+                            });
+                        } else {
+                            // New items fade in
+                            element.style.opacity = '0';
+                            element.style.transform = 'scale(0.8)';
+                            requestAnimationFrame(() => {
+                                element.style.transition = 'transform 0.4s ease, opacity 0.4s ease';
+                                element.style.opacity = '1';
+                                element.style.transform = 'scale(1)';
+                            });
+                        }
+                    });
+                });
+            });
+        } else {
+            setSelectedTab(tab);
+        }
     };
 
     const filteredItems = gridItems.filter((item) => {
         if (selectedTab === "ALL") {
             return true;
         } else {
-            return item.category === selectedTab;
+            // Handle both string and array categories
+            if (Array.isArray(item.category)) {
+                return item.category.includes(selectedTab);
+            } else {
+                return item.category === selectedTab;
+            }
         }
     });
 
@@ -75,24 +131,27 @@ const Portfolio: React.FC = (props: any) => {
                                 ))}
                             </ul>
                         </div>
-                        <Masonry
-                            key={selectedTab}
-                            className="masonry-grid"
-                            columnClassName="masonry-grid_column"
-                            breakpointCols={breakpointColumnsObj}
-                        >
-                            {filteredItems.map((item, index) => (
-                                <GridItem
-                                    key={`${selectedTab}-${index}`}
-                                    navigateTo={() => handleNavigate(index)}
-                                    imgSrc={item.titleImgSrc}
-                                    title={item.title}
-                                    category={item.category}
-                                    icon={<i className={item.icon}></i>}
-                                    alt={item.title}
-                                />
-                            ))}
-                        </Masonry>
+                        <div ref={gridRef} className="portfolio-grid">
+                            {filteredItems.map((item) => {
+                                const originalIndex = gridItems.findIndex(g => g.title === item.title);
+                                return (
+                                    <div
+                                        key={item.title}
+                                        className="grid-item-container"
+                                        data-title={item.title}
+                                    >
+                                        <GridItem
+                                            navigateTo={() => handleNavigate(originalIndex)}
+                                            imgSrc={item.titleImgSrc}
+                                            title={item.title}
+                                            category={item.category}
+                                            icon={<i className={item.icon}></i>}
+                                            alt={item.title}
+                                        />
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </div>
                 </>
             </PageTemplate>
