@@ -4,6 +4,26 @@
     width: 100%;
     max-width: 100%;
     transition: transform 0.3s ease;
+    outline: none; /* Remove default outline */
+}
+
+/* Keyboard focus indicator */
+.grid-item:focus {
+    outline: 3px solid var(--primaryColor);
+    outline-offset: 4px;
+    border-radius: 10px;
+}
+
+/* Focus visible (modern browsers) - only show on keyboard focus */
+.grid-item:focus-visible {
+    outline: 3px solid var(--primaryColor);
+    outline-offset: 4px;
+    border-radius: 10px;
+}
+
+/* Remove focus outline when clicked (not keyboard) */
+.grid-item:focus:not(:focus-visible) {
+    outline: none;
 }
 
 /* Special styling for mobile phone frame images - make them taller */

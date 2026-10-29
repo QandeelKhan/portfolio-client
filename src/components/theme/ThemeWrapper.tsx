@@ -26,7 +26,6 @@ const ThemeWrapper: React.FC<{ children: React.ReactElement }> = ({
 
     return (
         <>
-            {console.log("Current theme being applied:", currentTheme)}
             <AnimatePresence mode="wait">
                 <motion.div
                     key={JSON.stringify(currentTheme)} // Force re-render when theme changes

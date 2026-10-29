@@ -21,10 +21,44 @@ const CustomFloatingWhatsApp: React.FC<CustomFloatingWhatsAppProps> = ({
 }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [message, setMessage] = useState("");
+    const chatBoxRef = React.useRef<HTMLDivElement>(null);
 
     const toggleChat = () => {
         setIsOpen(!isOpen);
     };
+
+    // Close popup when clicking outside
+    React.useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                isOpen &&
+                chatBoxRef.current &&
+                !chatBoxRef.current.contains(event.target as Node)
+            ) {
+                // Check if the click is not on the floating button
+                const floatButton = document.querySelector('.whatsapp-float-button');
+                if (floatButton && !floatButton.contains(event.target as Node)) {
+                    setIsOpen(false);
+                }
+            }
+        };
+
+        const handleEscapeKey = (event: KeyboardEvent) => {
+            if (event.key === 'Escape' && isOpen) {
+                setIsOpen(false);
+            }
+        };
+
+        if (isOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+            document.addEventListener('keydown', handleEscapeKey);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('keydown', handleEscapeKey);
+        };
+    }, [isOpen]);
 
     const handleSendMessage = () => {
         if (message.trim()) {
@@ -53,7 +87,7 @@ const CustomFloatingWhatsApp: React.FC<CustomFloatingWhatsAppProps> = ({
     return (
         <div className="custom-floating-whatsapp">
             {isOpen && (
-                <div className="whatsapp-chat-box">
+                <div className="whatsapp-chat-box" ref={chatBoxRef}>
                     <div className="chat-header">
                         <div className="header-content">
                             <img

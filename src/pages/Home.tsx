@@ -34,13 +34,10 @@ const Home = () => {
     // data of server in our "data" property in hook, then we use "data" wherever in ui's.
     const { access_token, refresh_token } = getToken();
 
-    console.log(`Bearer ${ access_token }`);
-
     const { data, isSuccess } = useGetLoggedUserQuery<any>({
         access_token: access_token,
         refresh_token: refresh_token,
     });
-    console.log("My user data", data);
 
     // storing user profile data in state
     useEffect(() => {

@@ -30,7 +30,7 @@ export const blogItems = [
         commentsData: [
             {
                 id: "1",
-                authorName: "John-Doe",
+                authorName: "Ahtisham",
                 commentDate: "May 12, 2021 at 7:39 am",
                 commentText:
                     "Great post! It's clear that you've put a lot of thought into the different aspects of full-stack development and how they relate to website design. I especially appreciate the attention you've paid to the user experience and how to make sure that it's seamless and intuitive for the end user. Keep up the good work!",
@@ -38,7 +38,7 @@ export const blogItems = [
             },
             {
                 id: "2",
-                authorName: "Jane-Doe",
+                authorName: "Mike Henry",
                 commentDate: "May 12, 2021 at 8:39 am",
                 commentText:
                     "Great post! I found it very informative and helpful. It's clear that you have a lot of experience in full-stack development and website design. I would like to know how you approach responsive design while building a website.",
@@ -49,7 +49,7 @@ export const blogItems = [
             {
                 id: "6",
                 parentCommentId: "1",
-                authorName: "Muhammad",
+                authorName: "Qandeel Khan",
                 replyDate: "May 12, 2021 at 9:39 am",
                 replyText:
                     "Thanks for the kind words! I always try to keep the user experience top of mind when I'm designing and building websites. I believe that it's what ultimately sets a good website apart from a great one.",
@@ -67,7 +67,7 @@ export const blogItems = [
             {
                 id: "7",
                 parentCommentId: "2",
-                authorName: "Saad",
+                authorName: "Qandeel Khan",
                 replyDate: "May 12, 2021 at 10:39 am",
                 replyText:
                     "Thanks for reading and your kind words! I'm glad you found it informative. When it comes to responsive design, my approach is to first design for mobile devices and then progressively enhance the design for larger screens. This way, the site will look great on any device and will provide a seamless experience for the users. I also use CSS media queries to adjust the layout and typography according to the screen size. Additionally, I test the website on different devices during the development process to ensure that it looks and works well on all of them.",

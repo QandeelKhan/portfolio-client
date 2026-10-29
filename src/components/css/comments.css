@@ -34,6 +34,21 @@
     border-radius: 50%;
 }
 
+/* Override Avatar component sizing to match original */
+.author-image .avatar {
+    width: 80px !important;
+    height: 80px !important;
+}
+
+.author-image .avatar-large {
+    width: 80px !important;
+    height: 80px !important;
+}
+
+.author-image .avatar-text {
+    font-size: 28px !important;
+}
+
 .author-name {
     display: flex;
     justify-content: space-between;

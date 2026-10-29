@@ -1,15 +1,26 @@
-import React, { FormEvent } from "react";
+import React, { FormEvent, useState } from "react";
 import Location from "../components/Location";
 import emailjs from "emailjs-com";
 import PageTemplate from "../components/PageTemplate";
 import "./css/contact.css";
 import { Helmet } from "react-helmet";
 import ContactEnvelopeIcon from "../components/icons/ResumeModeIcons/ContactEnvelopIcon";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+    
     function sendEmail(e: FormEvent<HTMLFormElement> & { target: any }) {
-        console.log(e.currentTarget.type);
         e.preventDefault();
+        
+        // Prevent double submission
+        if (isSubmitting) return;
+        
+        setIsSubmitting(true);
+        setSubmitStatus('idle');
+        
         emailjs
             .sendForm(
                 "portfolio.1995",
@@ -18,10 +29,36 @@ const Contact = () => {
                 "YoR-HqOyLGpenVETJ"
             )
             .then((res) => {
-                console.log(res);
+                console.log('Email sent successfully:', res);
+                setSubmitStatus('success');
+                setIsSubmitting(false);
+                e.target.reset();
+                
+                // Show success toast
+                toast.success('Message sent successfully! I\'ll get back to you soon.', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                });
             })
-            .catch((err) => console.log(err));
-        e.target.reset();
+            .catch((err) => {
+                console.error('Email send error:', err);
+                setSubmitStatus('error');
+                setIsSubmitting(false);
+                
+                // Show error toast
+                toast.error('Failed to send message. Please try again or contact me directly at com.qandeelhaider@gmail.com', {
+                    position: "top-right",
+                    autoClose: 7000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                });
+            });
     }
 
     return (
@@ -83,9 +120,20 @@ const Contact = () => {
                             <button
                                 type="submit"
                                 className="send-message-btn"
-                                value="Send Message"
+                                disabled={isSubmitting}
+                                style={{
+                                    opacity: isSubmitting ? 0.7 : 1,
+                                    cursor: isSubmitting ? 'not-allowed' : 'pointer',
+                                }}
                             >
-                                SEND MESSAGE
+                                {isSubmitting ? (
+                                    <>
+                                        <i className="fa-solid fa-spinner fa-spin" style={{ marginRight: '8px' }}></i>
+                                        SENDING...
+                                    </>
+                                ) : (
+                                    'SEND MESSAGE'
+                                )}
                             </button>
                         </div>
                     </div>
@@ -93,6 +141,7 @@ const Contact = () => {
                     <Location />
                 </PageTemplate>
             </form>
+            <ToastContainer />
         </>
     );
 };

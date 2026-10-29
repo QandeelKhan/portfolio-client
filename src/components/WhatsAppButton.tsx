@@ -3,9 +3,10 @@ import whatsappLogo from "../assets/images/wa.png";
 
 const WhatsAppButton = () => {
     const handleWhatsAppClick = () => {
-        // Logic to redirect user to WhatsApp
+        // International format with country code for Pakistan (+92)
+        // Removes leading 0 and adds country code
         window.open(
-            "https://api.whatsapp.com/send?phone=03157051720",
+            "https://api.whatsapp.com/send?phone=923157051720",
             "_blank"
         );
     };

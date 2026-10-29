@@ -10,6 +10,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import { Helmet } from "react-helmet";
 import { setBlogCardClicked } from "../redux/reducers/eventsSlice";
+import Avatar from "../components/Avatar";
 
 const BlogDetail = () => {
     // interface FormData {
@@ -123,27 +124,7 @@ const BlogDetail = () => {
                                             </cite>
                                         </blockquote>
                                         <p>{selectedPost.second_paragraph}</p>
-                                        <div className="content-images-wrapper">
-                                            {selectedPost.post_images.map(
-                                                (
-                                                    postImages: any,
-                                                    index: any
-                                                ) => (
-                                                    <figure
-                                                        key={index}
-                                                        className="content-image-container"
-                                                    >
-                                                        <img
-                                                            src={
-                                                                postImages.images
-                                                            }
-                                                            alt=""
-                                                            className="content-image"
-                                                        />
-                                                    </figure>
-                                                )
-                                            )}
-                                        </div>
+                                        
                                         <p>
                                             {selectedPost.paragraph_after_image}
                                         </p>
@@ -174,9 +155,10 @@ const BlogDetail = () => {
                                                                 className="comment-div"
                                                             >
                                                                 <div className="author-image">
-                                                                    <img
-                                                                        src="images/other/profile-img.jpg"
-                                                                        alt="qandeel's profile img"
+                                                                    <Avatar
+                                                                        name={comment.author_full_name}
+                                                                        imageSource="/images/other/profile-img.jpg"
+                                                                        size="large"
                                                                     />
                                                                 </div>
                                                                 <div className="comment-area">
@@ -218,9 +200,10 @@ const BlogDetail = () => {
                                                                         className="replies-div comment-reply"
                                                                     >
                                                                         <div className="author-image">
-                                                                            <img
-                                                                                src="images/other/profile-img.jpg"
-                                                                                alt="qandeel haider khan comment"
+                                                                            <Avatar
+                                                                                name={reply.author_full_name}
+                                                                                imageSource="/images/other/profile-img.jpg"
+                                                                                size="large"
                                                                             />
                                                                         </div>
                                                                         <div className="comment-area">

@@ -91,7 +91,7 @@ const Layout: React.FC = () => {
                     <CustomFloatingWhatsApp
                         phoneNumber="03157051720"
                         accountName="Qandeel Haider Khan"
-                        avatar="images/other/profile-img.jpg"
+                        avatar="/images/other/profile-img.jpg"
                     />
                 </div>
             )}

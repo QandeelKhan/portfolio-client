@@ -30,11 +30,26 @@ const GridItem = (props: any) => {
     
     // Check if there are multiple categories
     const hasMultipleCategories = Array.isArray(category) && category.length > 1;
+    
+    // Keyboard navigation handler
+    const handleKeyDown = (e: React.KeyboardEvent) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            navigateTo();
+        }
+    };
 
     return (
-        <div className={`grid-item ${isMobileFrame ? 'grid-item-mobile-frame' : ''}`}>
+        <div 
+            className={`grid-item ${isMobileFrame ? 'grid-item-mobile-frame' : ''}`}
+            onClick={navigateTo}
+            onKeyDown={handleKeyDown}
+            tabIndex={0}
+            role="button"
+            aria-label={`View ${title} project details`}
+        >
             <div className="card-wrapper">
-                <div onClick={navigateTo} className="overlay">
+                <div className="overlay">
                     <div className="onhover-text">
                         <span className="text-1">{title}</span>
                         <span className="text-2">{categoryDisplay}</span>

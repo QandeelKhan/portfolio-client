@@ -21,7 +21,12 @@ const Tab: React.FC = () => {
         if (selectedTab === "ALL") {
             return true;
         } else {
-            return item.category === selectedTab;
+            // Handle both string and array categories
+            if (Array.isArray(item.category)) {
+                return item.category.includes(selectedTab);
+            } else {
+                return item.category === selectedTab;
+            }
         }
     });
 

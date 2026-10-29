@@ -44,8 +44,6 @@ const ClientsPortal: React.FC = () => {
     const dispatch = useDispatch();
     const { access_token, refresh_token } = getToken();
 
-    console.log(`Bearer ${access_token}`);
-
     const { data, isSuccess } = useGetLoggedUserOrdersQuery<any>({
         access_token: access_token,
         refresh_token: refresh_token,

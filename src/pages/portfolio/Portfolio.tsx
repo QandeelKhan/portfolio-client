@@ -117,11 +117,21 @@ const Portfolio: React.FC = (props: any) => {
 
                     <div className="projects-area">
                         <div className="menu-div">
-                            <ul>
+                            <ul role="tablist" aria-label="Portfolio category filters">
                                 {tabs.map((tab, index) => (
                                     <li
                                         key={index}
+                                        role="tab"
+                                        aria-selected={selectedTab === tab}
+                                        aria-controls="portfolio-grid"
+                                        tabIndex={selectedTab === tab ? 0 : -1}
                                         onClick={() => handleTabClick(tab)}
+                                        onKeyDown={(e) => {
+                                            if (e.key === 'Enter' || e.key === ' ') {
+                                                e.preventDefault();
+                                                handleTabClick(tab);
+                                            }
+                                        }}
                                         className={`tabs ${
                                             selectedTab === tab ? "active" : ""
                                         }`}
@@ -131,26 +141,42 @@ const Portfolio: React.FC = (props: any) => {
                                 ))}
                             </ul>
                         </div>
-                        <div ref={gridRef} className="portfolio-grid">
-                            {filteredItems.map((item) => {
-                                const originalIndex = gridItems.findIndex(g => g.title === item.title);
-                                return (
-                                    <div
-                                        key={item.title}
-                                        className="grid-item-container"
-                                        data-title={item.title}
-                                    >
-                                        <GridItem
-                                            navigateTo={() => handleNavigate(originalIndex)}
-                                            imgSrc={item.titleImgSrc}
-                                            title={item.title}
-                                            category={item.category}
-                                            icon={<i className={item.icon}></i>}
-                                            alt={item.title}
-                                        />
-                                    </div>
-                                );
-                            })}
+                        <div 
+                            ref={gridRef} 
+                            className="portfolio-grid"
+                            id="portfolio-grid"
+                            role="tabpanel"
+                            aria-label={`${selectedTab} projects`}
+                        >
+                            {filteredItems.length === 0 ? (
+                                <div className="empty-state">
+                                    <i className="fa-solid fa-folder-open empty-state-icon"></i>
+                                    <h3 className="empty-state-title">No Projects Found</h3>
+                                    <p className="empty-state-text">
+                                        There are no projects in the {selectedTab} category yet.
+                                    </p>
+                                </div>
+                            ) : (
+                                filteredItems.map((item) => {
+                                    const originalIndex = gridItems.findIndex(g => g.title === item.title);
+                                    return (
+                                        <div
+                                            key={item.title}
+                                            className="grid-item-container"
+                                            data-title={item.title}
+                                        >
+                                            <GridItem
+                                                navigateTo={() => handleNavigate(originalIndex)}
+                                                imgSrc={item.titleImgSrc}
+                                                title={item.title}
+                                                category={item.category}
+                                                icon={<i className={item.icon}></i>}
+                                                alt={item.title}
+                                            />
+                                        </div>
+                                    );
+                                })
+                            )}
                         </div>
                     </div>
                 </>

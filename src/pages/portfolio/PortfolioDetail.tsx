@@ -18,7 +18,20 @@ const PortfolioDetail: React.FC = (props: any) => {
     const { index } = useParams<{ index: string | any }>();
     const navigate = useNavigate();
     const itemIndex = parseInt(index, 10);
-    console.log(itemIndex);
+    
+    // Validate index - redirect to portfolio if invalid
+    useEffect(() => {
+        if (isNaN(itemIndex) || itemIndex < 0 || itemIndex >= gridItems.length) {
+            console.error(`Invalid portfolio index: ${index}`);
+            navigate('/portfolio', { replace: true });
+        }
+    }, [itemIndex, index, navigate]);
+    
+    // Early return if invalid to prevent errors
+    if (isNaN(itemIndex) || itemIndex < 0 || itemIndex >= gridItems.length) {
+        return null; // Will redirect via useEffect
+    }
+    
     const item = gridItems[itemIndex];
     
     const [isClosing, setIsClosing] = useState(false);
@@ -80,7 +93,7 @@ const PortfolioDetail: React.FC = (props: any) => {
                         <li>
                             <span className="key">Category </span>
                             <span>:</span>
-                            <span> {item.category}</span>
+                            <span> {Array.isArray(item.category) ? item.category.join(' | ') : item.category}</span>
                         </li>
                     </ul>
                 </div>

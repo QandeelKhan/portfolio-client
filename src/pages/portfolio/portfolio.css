@@ -56,6 +56,23 @@
     color: white;
     display: block;
     position: relative;
+    outline: none;
+}
+
+/* Keyboard focus indicator for tabs */
+.tabs:focus {
+    outline: 2px solid var(--primaryColor);
+    outline-offset: 2px;
+}
+
+.tabs:focus-visible {
+    outline: 2px solid var(--primaryColor);
+    outline-offset: 2px;
+}
+
+/* Remove focus outline when clicked (not keyboard) */
+.tabs:focus:not(:focus-visible) {
+    outline: none;
 }
 
 .tabs:hover {
@@ -121,3 +138,49 @@
     }
 }
 
+
+/* Empty state styling */
+.empty-state {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    text-align: center;
+    min-height: 400px;
+}
+
+.empty-state-icon {
+    font-size: 80px;
+    color: var(--primaryColor);
+    opacity: 0.3;
+    margin-bottom: 20px;
+}
+
+.empty-state-title {
+    font-size: 24px;
+    color: var(--textPrimary);
+    margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+}
+
+.empty-state-text {
+    font-size: 16px;
+    color: var(--textSecondary);
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+/* Light theme empty state adjustments */
+[data-theme="light"] .empty-state-icon {
+    opacity: 0.2;
+}
+
+[data-theme="light"] .empty-state-title {
+    color: var(--textPrimary);
+}
+
+[data-theme="light"] .empty-state-text {
+    color: #666666;
+}

@@ -1,0 +1,64 @@
+/* Avatar Container */
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* Avatar Sizes */
+.avatar-small {
+    width: 40px;
+    height: 40px;
+}
+
+.avatar-medium {
+    width: 60px;
+    height: 60px;
+}
+
+.avatar-large {
+    width: 80px;
+    height: 80px;
+}
+
+/* Avatar Image */
+.avatar-image {
+    background-color: transparent;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Avatar Initials */
+.avatar-initials {
+    color: #ffffff;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.avatar-small .avatar-text {
+    font-size: 16px;
+}
+
+.avatar-medium .avatar-text {
+    font-size: 20px;
+}
+
+.avatar-large .avatar-text {
+    font-size: 28px;
+}
+
+/* Light theme - no changes needed, initials work in both themes */
+[data-theme="light"] .avatar-initials {
+    color: #ffffff;
+}

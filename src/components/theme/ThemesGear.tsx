@@ -53,7 +53,6 @@ const ThemesGear: React.FC<Props> = () => {
 
     return (
         <>
-            {console.log("Current theme name:", currentThemeName)}
             <div
                 className={`gear-container ${ currentThemeName } ${ gearOpen ? "gear-container-open" : ""
                     }`}
